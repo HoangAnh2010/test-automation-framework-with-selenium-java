@@ -1,21 +1,23 @@
 package report;
 
+import constants.FrwConstants;
+import driver.DriverManager;
+import enums.AuthorType;
+import enums.CategoryType;
+import utils.CapturesUtils;
+import utils.BrowserInfoUtils;
+import utils.DateUtils;
+import utils.IconUtils;
+import utils.ReportUtils;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.Markup;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-import constants.FrwConstants;
-import driver.DriverManager;
-import enums.AuthorType;
-import enums.CategoryType;
-import helpers.CaptureHelpers;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import tech.grasshopper.reporter.ExtentPDFReporter;
-import utils.BrowserInfoUtils;
-import utils.DateUtils;
 import utils.IconUtils;
 import utils.ReportUtils;
 
@@ -92,14 +94,13 @@ public class ExtentReportManager {
      *
      * @param message the message
      */
-    public static void addScreenShot(String message) {
-        String base64Image = "data:image/png;base64," + ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(OutputType.BASE64);
+        public static void addScreenShot(String message) {
+//        String base64Image = "data:image/png;base64," + ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(OutputType.BASE64);
 
         //Base64 from Screenshot of Selenium
-        //ExtentTestManager.getExtentTest().log(Status.INFO, MediaEntityBuilder.createScreenCaptureFromBase64String(base64Image).build());
 
         //File Path from Screenshot of Java
-        ExtentTestManager.getExtentTest().log(Status.INFO, MediaEntityBuilder.createScreenCaptureFromPath(String.valueOf(CaptureHelpers.getScreenshot(message))).build());
+        ExtentTestManager.getExtentTest().log(Status.INFO, MediaEntityBuilder.createScreenCaptureFromPath(String.valueOf(CapturesUtils.getScreenshot(message))).build());
 
     }
 
@@ -112,17 +113,17 @@ public class ExtentReportManager {
     public static void addScreenShot(Status status, String message) {
         String base64Image = "data:image/png;base64," + ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(OutputType.BASE64);
 
-        //Base64 from Screenshot of Selenium
-        //ExtentTestManager.getExtentTest().log(status, MediaEntityBuilder.createScreenCaptureFromBase64String(base64Image).build());
+//        Base64 from Screenshot of Selenium
+        ExtentTestManager.getExtentTest().log(status, MediaEntityBuilder.createScreenCaptureFromBase64String(base64Image).build());
 
         //File Path from Screenshot of Java
-        ExtentTestManager.getExtentTest().log(status, MediaEntityBuilder.createScreenCaptureFromPath(String.valueOf(CaptureHelpers.getScreenshot(message))).build());
+        ExtentTestManager.getExtentTest().log(status, MediaEntityBuilder.createScreenCaptureFromPath(String.valueOf(CapturesUtils.getScreenshot(message))).build());
 
     }
 
     synchronized public static void addAuthors(AuthorType[] authors) {
         if (authors == null) {
-            ExtentTestManager.getExtentTest().assignAuthor("ANHTESTER");
+            ExtentTestManager.getExtentTest().assignAuthor("NGUYEN HOANG ANH");
         } else {
             for (AuthorType author : authors) {
                 ExtentTestManager.getExtentTest().assignAuthor(author.toString());

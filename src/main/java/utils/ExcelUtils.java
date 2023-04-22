@@ -56,7 +56,7 @@ public class ExcelUtils {
     }
     
 	public static Sheet getSheet(String SheetName) {
-		 Sheet ws=wb.getSheet(SheetName);
+		 Sheet ws= wb.getSheet(SheetName);
 		if(!isSheet(SheetName)) {
 			ws=wb.createSheet(SheetName);
 		}

@@ -4,23 +4,22 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 
+import com.aventstack.extentreports.Status;
 import model.Data;
 import model.DataOfSignIn;
 import model.Locator;
 import model.SignInPage;
-import report.ExtentTestManager;
+import org.testng.annotations.Listeners;
 
 import org.apache.poi.ss.usermodel.Sheet;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
-import com.aventstack.extentreports.Status;
 
 import keyword.*;
-
+//import report.ExtentReportManager;
 import utils.*;
 
-import static report.ExtentManager.getExtentReports;
-
+@Listeners(listeners.TestListener.class)
 public class ExecutionEngine {
     private static String scriptID;
     private static String description;
@@ -36,11 +35,11 @@ public class ExecutionEngine {
     ArrayList<String> arrPasswordCfSignUp = new ArrayList<String>();
     ArrayList<String> arrResultSignUp = new ArrayList<String>();
 
-    public static String excelPath = System.getProperty("user.dir") + "\\dataEngine\\data.xlsx";
-    public static String jsonPath = System.getProperty("user.dir") + "\\dataEngine\\data.json";
-    public static String xmlPath = System.getProperty("user.dir") + "\\dataEngine\\data.xml";
-    public static String signInCSVpath = System.getProperty("user.dir") + "\\dataEngine\\signIn.csv";
-    public static String dataOfsignInCSVpath = System.getProperty("user.dir") + "\\dataEngine\\DataSignIn.csv";
+    public static String excelPath = System.getProperty("user.dir") + "\\src\\test\\resources\\data\\data.xlsx";
+    public static String jsonPath = System.getProperty("user.dir") + "\\src\\test\\resources\\data\\data.json";
+    public static String xmlPath = System.getProperty("user.dir") + "\\src\\test\\resources\\data\\data.xml";
+    public static String signInCSVpath = System.getProperty("user.dir") + "\\src\\test\\resources\\data\\signIn.csv";
+    public static String dataOfsignInCSVpath = System.getProperty("user.dir") + "\\src\\test\\resources\\data\\DataSignIn.csv";
 
     int casePass = 0;
     int caseFail = 0;
@@ -54,7 +53,7 @@ public class ExecutionEngine {
         List<DataOfSignIn> dataOfSignIns = xmlData.getDataOfSignIn();
         CapturesUtils.startRecord("SignIn");
         List<Locator> locators = new ArrayList<>();
-        for (DataOfSignIn dataOfSignIn : dataOfSignIns){
+        for (DataOfSignIn dataOfSignIn : dataOfSignIns) {
             Locator lct = new Locator();
             lct.setSignInTcId(dataOfSignIn.getTcId());
             lct.setSignInEmail(dataOfSignIn.getEmail());
@@ -64,7 +63,7 @@ public class ExecutionEngine {
         }
         // get data from list data to run script
         for (int i = 0; i < locators.size(); i++) { //sheet dataofsignin
-            for (SignInPage signInPage : signInPages){ //signin
+            for (SignInPage signInPage : signInPages) { //signin
                 reuseSignIn(signInPage);
                 execute_Actions(testData, null, locators.get(i).getSignInEmail(), locators.get(i).getSignInPw(), null,
                         locators.get(i).getSignInResult(), locators.get(i).getSignInTcId());
@@ -82,36 +81,7 @@ public class ExecutionEngine {
         List<DataOfSignIn> dataOfSignIns = jsonData.getDataOfSignIn();
         CapturesUtils.startRecord("SignIn");
         List<Locator> locators = new ArrayList<>();
-        for (DataOfSignIn dataOfSignIn : dataOfSignIns){
-            Locator lct = new Locator();
-                lct.setSignInTcId(dataOfSignIn.getTcId());
-                lct.setSignInEmail(dataOfSignIn.getEmail());
-                lct.setSignInPw(dataOfSignIn.getPassword());
-                lct.setSignInResult(dataOfSignIn.getResult());
-            locators.add(lct);
-        }
-        // get data from list data to run script
-//        System.out.println(locators.size());
-
-        for (int i = 0; i < locators.size(); i++) { //sheet dataofsignin
-            for (SignInPage signInPage : signInPages){
-                reuseSignIn(signInPage);
-                execute_Actions(testData, null, locators.get(i).getSignInEmail(), locators.get(i).getSignInPw(), null,
-                        locators.get(i).getSignInResult(), locators.get(i).getSignInTcId());
-            }
-        }
-        reportInConsole();
-        CapturesUtils.stopRecord();
-    }
-
-    //    @Ignore
-    @Test //(priority = 3) // Sign in
-    public void TestScript_SignIn_CSVFile() throws Exception {
-        List<SignInPage> signInPages = CsvUtils.readSignInPageCSVfile(signInCSVpath);
-        List<DataOfSignIn> dataOfSignIns = CsvUtils.readDataOfSignInCSVfile(dataOfsignInCSVpath);
-        CapturesUtils.startRecord("SignIn");
-        List<Locator> locators = new ArrayList<>();
-        for (DataOfSignIn dataOfSignIn : dataOfSignIns){
+        for (DataOfSignIn dataOfSignIn : dataOfSignIns) {
             Locator lct = new Locator();
             lct.setSignInTcId(dataOfSignIn.getTcId());
             lct.setSignInEmail(dataOfSignIn.getEmail());
@@ -120,8 +90,9 @@ public class ExecutionEngine {
             locators.add(lct);
         }
         // get data from list data to run script
+
         for (int i = 0; i < locators.size(); i++) { //sheet dataofsignin
-            for (SignInPage signInPage : signInPages){
+            for (SignInPage signInPage : signInPages) {
                 reuseSignIn(signInPage);
                 execute_Actions(testData, null, locators.get(i).getSignInEmail(), locators.get(i).getSignInPw(), null,
                         locators.get(i).getSignInResult(), locators.get(i).getSignInTcId());
@@ -132,6 +103,33 @@ public class ExecutionEngine {
     }
 
     @Ignore
+    @Test //(priority = 3) // Sign in
+    public void TestScript_SignIn_CSVFile() throws Exception {
+        List<SignInPage> signInPages = CsvUtils.readSignInPageCSVfile(signInCSVpath);
+        List<DataOfSignIn> dataOfSignIns = CsvUtils.readDataOfSignInCSVfile(dataOfsignInCSVpath);
+        CapturesUtils.startRecord("SignIn");
+        List<Locator> locators = new ArrayList<>();
+        for (DataOfSignIn dataOfSignIn : dataOfSignIns) {
+            Locator lct = new Locator();
+            lct.setSignInTcId(dataOfSignIn.getTcId());
+            lct.setSignInEmail(dataOfSignIn.getEmail());
+            lct.setSignInPw(dataOfSignIn.getPassword());
+            lct.setSignInResult(dataOfSignIn.getResult());
+            locators.add(lct);
+        }
+        // get data from list data to run script
+        for (int i = 0; i < locators.size(); i++) { //sheet dataofsignin
+            for (SignInPage signInPage : signInPages) {
+                reuseSignIn(signInPage);
+                execute_Actions(testData, null, locators.get(i).getSignInEmail(), locators.get(i).getSignInPw(), null,
+                        locators.get(i).getSignInResult(), locators.get(i).getSignInTcId());
+            }
+        }
+        reportInConsole();
+        CapturesUtils.stopRecord();
+    }
+
+//    @Ignore
     @Test //(priority = 3)
     public void TestScript_SignIn_ExcelFile() throws Exception {
         ExcelUtils.setExcelFile(excelPath, "SignInPage");
@@ -172,7 +170,7 @@ public class ExecutionEngine {
     public void reuseSignIn(SignInPage signInPage) {
         scriptID = signInPage.getScriptID();
         sActionKeyword = signInPage.getKeyword();
-        locatorType =signInPage.getLocatorType();
+        locatorType = signInPage.getLocatorType();
         locatorValue = signInPage.getLocatorValue();
         testData = signInPage.getTestData();
     }
@@ -322,15 +320,12 @@ public class ExecutionEngine {
     }
 
     private void execute_Actions(String testData, String sName, String sEmail, String sPass, String sPassCf,
-                                String sResult, String sTCID) throws Exception {
+                                 String sResult, String sTCID) throws Exception {
         try {
             switch (sActionKeyword) {
                 case "openBrowser":
-                    // Log.info("--------------Execute Test Case--------------");
-//                        ExtentTestManager.saveToReport("Test Case", "");
                     try {
                         ActionKeywords.openBrowser(testData);
-                        //ExtentTestManager.logMessage(Status.PASS, description);
                     } catch (Exception e) {
                         //ExtentTestManager.logMessage(Status.FAIL, description);
                     }
@@ -429,118 +424,50 @@ public class ExecutionEngine {
                     break;
                 case "verifyResults":
                     if (ActionKeywords.verifyResults(sResult)) {
-                        Log.info("Same result ---> Pass");
-                        casePass++;
+                        LogUtils.info("Same result ---> Pass");
+                        onPass();
                         //ExtentTestManager.logMessage(Status.PASS, description);
                     } else {
-                        Log.error("Different result ---> Fail");
-                        caseFail++;
-                        //ExtentTestManager.logMessage(Status.FAIL, description);
-                    }
-                    break;
-                case "verifyTextInSignIn":
-                    if (ActionKeywords.verifyTextInSignIn(sResult)) {
-                        Log.info("Same result ---> Pass");
-                        casePass++;
-                        //ExtentTestManager.logMessage(Status.PASS, description);
-                    } else {
-                        Log.error("Different result ---> Fail");
-                        caseFail++;
-                        //ExtentTestManager.logMessage(Status.FAIL, description);
-                    }
-                    break;
-                case "alertInSignInPage":
-                    if (ActionKeywords.verifyAlertInSignIn(sResult)) {
-                        Log.info("Same result ---> Pass");
-                        casePass++;
-                        //ExtentTestManager.logMessage(Status.PASS, description);
-                    } else {
-                        Log.error("Different result ---> Fail");
-                        caseFail++;
-                        //ExtentTestManager.logMessage(Status.FAIL, description);
-                    }
-                    break;
-                case "alertOfEmailinSignInPagehtml5":
-                    if (ActionKeywords.verifyAlertOfEmailinSignInPagehtml5(locatorType, locatorValue, sResult)) {
-                        Log.info("Same result ---> Pass");
-                        casePass++;
-                        //ExtentTestManager.logMessage(Status.PASS, description);
-                    } else {
-                        Log.error("Different result ---> Fail");
-                        caseFail++;
-                        //ExtentTestManager.logMessage(Status.FAIL, description);
-                    }
-                    break;
-                case "alertOfPasswordinSignInPagehtml5":
-                    if (ActionKeywords.verifyAlertOfPasswordinSignInPagehtml5(sResult)) {
-                        Log.info("Same result ---> Pass");
-                        casePass++;
-                        //ExtentTestManager.logMessage(Status.PASS, description);
-                    } else {
-                        Log.error("Different result ---> Fail");
-                        caseFail++;
-                        //ExtentTestManager.logMessage(Status.FAIL, description);
-                    }
-                    break;
-                case "alertNameSignUp":
-                    if (ActionKeywords.verifyAlertNameSignUp(sResult)) {
-                        Log.info("Same result ---> Pass");
-                        casePass++;
-                        //ExtentTestManager.logMessage(Status.PASS, description);
-                    } else {
-                        Log.error("Different result ---> Fail");
-                        caseFail++;
-                        //ExtentTestManager.logMessage(Status.FAIL, description);
+                        LogUtils.error("Different result ---> Fail");
+                        onFailed();
+                        break;
                     }
                     break;
                 case "verifyText":
                     if (ActionKeywords.verifyText(locatorType, locatorValue, testData)) {
-                        Log.info("Same result ---> Pass");
-                        casePass++;
-                        //ExtentTestManager.logMessage(Status.PASS, description);
+                        LogUtils.info("Same result ---> Pass");
+                        onPass();
                     } else {
-                        Log.error("Different result ---> Fail");
-                        caseFail++;
-                        //ExtentTestManager.logMessage(Status.FAIL, description);
+                        LogUtils.error("Different result ---> Fail");
+                        onFailed();
                     }
                     break;
                 case "verifyTitle":
                     if (ActionKeywords.verifyTitle(testData)) {
-                        Log.info("Same result ---> Pass");
-                        casePass++;
-                        //ExtentTestManager.logMessage(Status.PASS, description);
+                        LogUtils.info("Same result ---> Pass");
+                        onPass();
                     } else {
-                        Log.error("Different result ---> Fail");
-                        caseFail++;
-                        //ExtentTestManager.logMessage(Status.FAIL, description);
+                        LogUtils.error("Different result ---> Fail");
+                        onFailed();
                     }
                     break;
                 case "verifyUrl":
                     if (ActionKeywords.getUrl(testData)) {
-                        Log.info("Same result ---> Pass");
-                        casePass++;
+                        LogUtils.info("Same result ---> Pass");
+                        onPass();
                         //ExtentTestManager.logMessage(Status.PASS, description);
                     } else {
-                        Log.error("Different result ---> Fail");
-                        caseFail++;
+                        LogUtils.error("Different result ---> Fail");
+                        onFailed();
                         //ExtentTestManager.logMessage(Status.FAIL, description);
                     }
                     break;
                 case "displayed":
                     try {
                         ActionKeywords.displayed(locatorType, locatorValue);
-                        casePass++;
-                        //ExtentTestManager.logMessage(Status.PASS, description);
+                        onPass();
                     } catch (Exception e) {
-                        caseFail++;
-                        //ExtentTestManager.logMessage(Status.FAIL, description);
-                    }
-                    break;
-                case "screenShot":
-                    try {
-                        ActionKeywords.screenShot(scriptID + "_" + sTCID);
-                        //ExtentTestManager.logMessage(Status.PASS, description);
-                    } catch (Exception e) {
+                        onFailed();
                         //ExtentTestManager.logMessage(Status.FAIL, description);
                     }
                     break;
@@ -577,15 +504,20 @@ public class ExecutionEngine {
                     }
                     break;
                 default:
-                    Log.info("[>>ERROR<<]: |Keyword Not Found " + sActionKeyword);
+                    LogUtils.info("[>>ERROR<<]: |Keyword Not Found " + sActionKeyword);
             }
         } catch (Exception e) {
             e.getMessage();
         }
-        getExtentReports().flush();
-
     }
 
+    void onPass(){
+        casePass++;
+    }
+    void onFailed(){
+        caseFail++;
+        ActionKeywords.addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDate());
+    }
     public void reportInConsole() {
         java.util.Date date = new java.util.Date();
         System.out.println("==========================================================");
@@ -595,5 +527,6 @@ public class ExecutionEngine {
         System.out.println("Total number of failed Testcases: " + caseFail);
         System.out.println("Total number of skiped Testcases: " + caseSkip);
         System.out.println("==========================================================");
+        EmailSendUtils.sendEmail(casePass + caseFail + caseSkip, casePass, caseFail, caseSkip);
     }
 }

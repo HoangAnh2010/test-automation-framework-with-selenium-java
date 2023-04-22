@@ -1,13 +1,18 @@
+/*
+ * Copyright (c) 2022 Anh Tester
+ * Automation Framework Selenium
+ */
+
 package report;
 
-import com.github.automatedowl.tools.AllureEnvironmentWriter;
-import com.google.common.collect.ImmutableMap;
 import constants.FrwConstants;
 import driver.DriverManager;
 import enums.Browser;
+import utils.BrowserInfoUtils;
+import com.github.automatedowl.tools.AllureEnvironmentWriter;
+import com.google.common.collect.ImmutableMap;
 import io.qameta.allure.Attachment;
 import org.openqa.selenium.TakesScreenshot;
-import utils.BrowserInfoUtils;
 
 import static org.openqa.selenium.OutputType.BYTES;
 

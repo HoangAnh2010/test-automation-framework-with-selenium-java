@@ -1,0 +1,8 @@
+ScriptID,ScriptTitle,StepID,Description,Keywords,LocatorType,LocatorValue,TestData
+SSI_01,Validate data in textbox,S_01,M? trình duy?t,openBrowser,null,null,Chrome
+,,S_02,Chuy?n t?i trang web,navigate,null,null,https://www.careerlink.vn/nguoi-tim-viec/login
+,,S_03,Nh?p email,setText,name,_username,varEmail
+,,S_04,Nh?p password,setText,name,_password,varPassword
+,,S_05,Nh?n nút ??ng nh?p,clickButton,xpath,"//button[contains(text(),'??ng nh?p')]",
+,,S_06,So sánh k?t qu? mong ??i,verifyResults,,,varResult
+,,S_07,?óng trình duy?t,closeBrowser,,,

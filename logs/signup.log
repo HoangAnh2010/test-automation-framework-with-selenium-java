@@ -1,0 +1,439 @@
+[INFO ] 10-01-2023 02:14:28 [main] Log - Executing: Recording...
+[INFO ] 10-01-2023 02:14:28 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:14:32 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/dang-ky
+[INFO ] 10-01-2023 02:14:35 [main] Log - Executing: Enter text: 
+[INFO ] 10-01-2023 02:14:35 [main] Log - Executing: Enter text: hoanganh04092001@gmail.com
+[INFO ] 10-01-2023 02:14:35 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:14:35 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:14:35 [main] Log - Executing: Click button: id= register_submit
+[INFO ] 10-01-2023 02:14:37 [main] Log - Executing: Screenshot taken: TSDK01_TC_DK2
+[INFO ] 10-01-2023 02:14:38 [main] Log - Executing: Verify the alert of name in sign up page
+[INFO ] 10-01-2023 02:14:38 [main] Log - Expected Result: Please fill out this field.
+[INFO ] 10-01-2023 02:14:38 [main] Log - Actual Result: Please fill out this field.
+[INFO ] 10-01-2023 02:14:38 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 02:14:38 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:14:38 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:14:39 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/dang-ky
+[INFO ] 10-01-2023 02:14:42 [main] Log - Executing: Enter text: 
+[INFO ] 10-01-2023 02:14:42 [main] Log - Executing: Enter text: hoanganh04092001@gmail.com
+[INFO ] 10-01-2023 02:14:42 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:14:42 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:14:42 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:14:43 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/dang-ky
+[INFO ] 10-01-2023 02:14:46 [main] Log - Executing: Enter text: Anh
+[INFO ] 10-01-2023 02:14:46 [main] Log - Executing: Enter text: 
+[INFO ] 10-01-2023 02:14:46 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:14:47 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:14:47 [main] Log - Executing: Click button: id= register_submit
+[INFO ] 10-01-2023 02:14:49 [main] Log - Executing: Screenshot taken: TSDK02_TC_DK8
+[INFO ] 10-01-2023 02:14:49 [main] Log - Executing: Verify the alert of email in sign up page
+[INFO ] 10-01-2023 02:14:49 [main] Log - Expected Result: Please fill out this field.
+[INFO ] 10-01-2023 02:14:49 [main] Log - Actual Result: Please fill out this field.
+[INFO ] 10-01-2023 02:14:49 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 02:14:49 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:14:50 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:14:51 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/dang-ky
+[INFO ] 10-01-2023 02:14:54 [main] Log - Executing: Enter text: Anh
+[INFO ] 10-01-2023 02:14:54 [main] Log - Executing: Enter text: 
+[INFO ] 10-01-2023 02:14:54 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:14:55 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:14:56 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/dang-ky
+[INFO ] 10-01-2023 02:14:58 [main] Log - Executing: Enter text: Anh
+[INFO ] 10-01-2023 02:14:58 [main] Log - Executing: Enter text:         
+[INFO ] 10-01-2023 02:14:59 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:14:59 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:14:59 [main] Log - Executing: Click button: id= register_submit
+[INFO ] 10-01-2023 02:15:01 [main] Log - Executing: Screenshot taken: TSDK02_TC_DK9
+[INFO ] 10-01-2023 02:15:01 [main] Log - Executing: Verify the alert of email in sign up page
+[INFO ] 10-01-2023 02:15:01 [main] Log - Expected Result: Please fill out this field.
+[INFO ] 10-01-2023 02:15:01 [main] Log - Actual Result: Please fill out this field.
+[INFO ] 10-01-2023 02:15:01 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 02:15:02 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:15:02 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:15:03 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/dang-ky
+[INFO ] 10-01-2023 02:15:06 [main] Log - Executing: Enter text: Anh
+[INFO ] 10-01-2023 02:15:06 [main] Log - Executing: Enter text:         
+[INFO ] 10-01-2023 02:15:07 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:15:07 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:15:08 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/dang-ky
+[INFO ] 10-01-2023 02:15:11 [main] Log - Executing: Enter text: Anh
+[INFO ] 10-01-2023 02:15:11 [main] Log - Executing: Enter text: hoanganh 04092001@gmail.com
+[INFO ] 10-01-2023 02:15:11 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:15:12 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:15:12 [main] Log - Executing: Click button: id= register_submit
+[INFO ] 10-01-2023 02:15:14 [main] Log - Executing: Screenshot taken: TSDK02_TC_DK10
+[INFO ] 10-01-2023 02:15:14 [main] Log - Executing: Verify the alert of email in sign up page
+[INFO ] 10-01-2023 02:15:14 [main] Log - Expected Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 10-01-2023 02:15:14 [main] Log - Actual Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 10-01-2023 02:15:14 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 02:15:14 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:15:15 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:15:16 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/dang-ky
+[INFO ] 10-01-2023 02:15:19 [main] Log - Executing: Enter text: Anh
+[INFO ] 10-01-2023 02:15:19 [main] Log - Executing: Enter text: hoanganh 04092001@gmail.com
+[INFO ] 10-01-2023 02:15:19 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:15:19 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:15:20 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/dang-ky
+[INFO ] 10-01-2023 02:15:23 [main] Log - Executing: Enter text: Anh
+[INFO ] 10-01-2023 02:15:23 [main] Log - Executing: Enter text: hoànganh04092001@gmail.com
+[INFO ] 10-01-2023 02:15:24 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:15:24 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:15:24 [main] Log - Executing: Click button: id= register_submit
+[INFO ] 10-01-2023 02:15:27 [main] Log - Executing: Screenshot taken: TSDK02_TC_DK13
+[INFO ] 10-01-2023 02:15:27 [main] Log - Executing: Verify the alert of email in sign up page
+[INFO ] 10-01-2023 02:15:27 [main] Log - Expected Result: A part followed by '@' should not contain the symbol 'à'.
+[INFO ] 10-01-2023 02:15:27 [main] Log - Actual Result: A part followed by '@' should not contain the symbol 'à'.
+[INFO ] 10-01-2023 02:15:27 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 02:15:27 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:15:29 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:15:30 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/dang-ky
+[INFO ] 10-01-2023 02:15:32 [main] Log - Executing: Enter text: Anh
+[INFO ] 10-01-2023 02:15:33 [main] Log - Executing: Enter text: hoànganh04092001@gmail.com
+[INFO ] 10-01-2023 02:15:33 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:15:33 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:15:35 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/dang-ky
+[INFO ] 10-01-2023 02:15:38 [main] Log - Executing: Enter text: Anh
+[INFO ] 10-01-2023 02:15:38 [main] Log - Executing: Enter text: hoanganh04092001gmail.com
+[INFO ] 10-01-2023 02:15:38 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:15:39 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:15:39 [main] Log - Executing: Click button: id= register_submit
+[INFO ] 10-01-2023 02:15:41 [main] Log - Executing: Screenshot taken: TSDK02_TC_DK14
+[INFO ] 10-01-2023 02:15:41 [main] Log - Executing: Verify the alert of email in sign up page
+[INFO ] 10-01-2023 02:15:41 [main] Log - Expected Result: Please include an '@' in the email address. 'hoanganh04092001gmail.com' is missing an '@'.
+[INFO ] 10-01-2023 02:15:42 [main] Log - Actual Result: Please include an '@' in the email address. 'hoanganh04092001gmail.com' is missing an '@'.
+[INFO ] 10-01-2023 02:15:42 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 02:15:42 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:15:44 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:15:44 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/dang-ky
+[INFO ] 10-01-2023 02:15:48 [main] Log - Executing: Enter text: Anh
+[INFO ] 10-01-2023 02:15:48 [main] Log - Executing: Enter text: hoanganh04092001gmail.com
+[INFO ] 10-01-2023 02:15:49 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:15:49 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:15:50 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/dang-ky
+[INFO ] 10-01-2023 02:15:53 [main] Log - Executing: Enter text: Anh
+[INFO ] 10-01-2023 02:15:54 [main] Log - Executing: Enter text: hoang(anh)04,09,2001@gmail.com
+[INFO ] 10-01-2023 02:15:55 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:15:55 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:15:56 [main] Log - Executing: Click button: id= register_submit
+[INFO ] 10-01-2023 02:15:58 [main] Log - Executing: Screenshot taken: TSDK02_TC_DK17
+[INFO ] 10-01-2023 02:15:59 [main] Log - Executing: Verify the alert of email in sign up page
+[INFO ] 10-01-2023 02:15:59 [main] Log - Expected Result: A part followed by '@' should not contain the symbol '('.
+[INFO ] 10-01-2023 02:15:59 [main] Log - Actual Result: A part followed by '@' should not contain the symbol '('.
+[INFO ] 10-01-2023 02:15:59 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 02:16:00 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:16:00 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:16:02 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/dang-ky
+[INFO ] 10-01-2023 02:16:05 [main] Log - Executing: Enter text: Anh
+[INFO ] 10-01-2023 02:16:05 [main] Log - Executing: Enter text: hoang(anh)04,09,2001@gmail.com
+[INFO ] 10-01-2023 02:16:06 [main] Log - Executing: Verify the alert of email in sign up page
+[INFO ] 10-01-2023 02:16:06 [main] Log - Expected Result: Email không hợp lệ
+[INFO ] 10-01-2023 02:16:06 [main] Log - Actual Result: A part followed by '@' should not contain the symbol '('.
+[ERROR] 10-01-2023 02:16:06 [main] Log - Different result ---> Fail
+[INFO ] 10-01-2023 02:16:06 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:16:06 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:16:08 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/dang-ky
+[INFO ] 10-01-2023 02:16:11 [main] Log - Executing: Enter text: Anh
+[INFO ] 10-01-2023 02:16:11 [main] Log - Executing: Enter text: hoanganh04092001@gmailcom
+[INFO ] 10-01-2023 02:16:12 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:16:12 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:16:13 [main] Log - Executing: Click button: id= register_submit
+[INFO ] 10-01-2023 02:16:15 [main] Log - Executing: Screenshot taken: TSDK03_TC_DK15
+[INFO ] 10-01-2023 02:16:16 [main] Log - Executing: |Verify the alert of email in sign up|
+[INFO ] 10-01-2023 02:16:16 [main] Log - Expected Result: Email không hợp lệ
+[INFO ] 10-01-2023 02:16:16 [main] Log - Actual Result: Email không hợp lệ
+[INFO ] 10-01-2023 02:16:16 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 02:16:16 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:16:17 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:16:18 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/dang-ky
+[INFO ] 10-01-2023 02:16:22 [main] Log - Executing: Enter text: Anh
+[INFO ] 10-01-2023 02:16:22 [main] Log - Executing: Verify the alert of email in sign up page
+[INFO ] 10-01-2023 02:16:22 [main] Log - Expected Result: Email không hợp lệ
+[INFO ] 10-01-2023 02:16:22 [main] Log - Actual Result: Please fill out this field.
+[ERROR] 10-01-2023 02:16:22 [main] Log - Different result ---> Fail
+[INFO ] 10-01-2023 02:16:22 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:16:23 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:16:24 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/dang-ky
+[INFO ] 10-01-2023 02:16:28 [main] Log - Executing: Enter text: Anh
+[INFO ] 10-01-2023 02:16:28 [main] Log - Executing: Enter text: hoanganh04092001.gmail@com
+[INFO ] 10-01-2023 02:16:29 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:16:29 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:16:30 [main] Log - Executing: Click button: id= register_submit
+[INFO ] 10-01-2023 02:16:32 [main] Log - Executing: Screenshot taken: TSDK03_TC_DK16
+[INFO ] 10-01-2023 02:16:33 [main] Log - Executing: |Verify the alert of email in sign up|
+[INFO ] 10-01-2023 02:16:33 [main] Log - Expected Result: Email không hợp lệ
+[INFO ] 10-01-2023 02:16:33 [main] Log - Actual Result: Email không hợp lệ
+[INFO ] 10-01-2023 02:16:33 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 02:16:34 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:16:34 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:16:36 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/dang-ky
+[INFO ] 10-01-2023 02:16:39 [main] Log - Executing: Enter text: Anh
+[INFO ] 10-01-2023 02:16:40 [main] Log - Executing: Screenshot taken: TSDK03_TC_DK19
+[INFO ] 10-01-2023 02:16:40 [main] Log - Executing: |Verify the alert of email in sign up|
+[INFO ] 10-01-2023 02:16:40 [main] Log - Expected Result: Please fill out this field.
+[INFO ] 10-01-2023 02:16:40 [main] Log - Actual Result: 
+[ERROR] 10-01-2023 02:16:40 [main] Log - Different result ---> Fail
+[INFO ] 10-01-2023 02:16:41 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:16:42 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:16:43 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/dang-ky
+[INFO ] 10-01-2023 02:16:47 [main] Log - Executing: Enter text: Anh
+[INFO ] 10-01-2023 02:16:47 [main] Log - Executing: Enter text: hoanganh04092001@gmail.com
+[INFO ] 10-01-2023 02:16:48 [main] Log - Executing: Enter text: 
+[INFO ] 10-01-2023 02:16:48 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:16:49 [main] Log - Executing: Click button: id= register_submit
+[INFO ] 10-01-2023 02:16:53 [main] Log - Executing: Screenshot taken: TSDK04_TC_DK19
+[INFO ] 10-01-2023 02:16:53 [main] Log - Executing: |Verify the alert of password in sign in page|
+[INFO ] 10-01-2023 02:16:53 [main] Log - Expected Result: Please fill out this field.
+[INFO ] 10-01-2023 02:16:53 [main] Log - Actual Result: Please fill out this field.
+[INFO ] 10-01-2023 02:16:53 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 02:16:54 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:16:55 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:16:56 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/dang-ky
+[INFO ] 10-01-2023 02:17:00 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:17:01 [main] Log - Executing: Click button: id= register_submit
+[INFO ] 10-01-2023 02:17:04 [main] Log - Executing: Screenshot taken: TSDK05_TC_DK20
+[INFO ] 10-01-2023 02:17:06 [main] Log - Executing: |Verify the alert of password confirm in sign in page|
+[INFO ] 10-01-2023 02:17:06 [main] Log - Expected Result: Mật khẩu không khớp. Hãy nhập lại
+[INFO ] 10-01-2023 02:17:06 [main] Log - Actual Result: 
+[ERROR] 10-01-2023 02:17:06 [main] Log - Different result ---> Fail
+[INFO ] 10-01-2023 02:17:07 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:17:08 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:17:09 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/dang-ky
+[INFO ] 10-01-2023 02:17:13 [main] Log - Executing: Enter text: Anh
+[INFO ] 10-01-2023 02:17:13 [main] Log - Executing: Enter text: hoanganh04092001@gmail.com
+[INFO ] 10-01-2023 02:17:15 [main] Log - Executing: Enter text:            
+[INFO ] 10-01-2023 02:17:15 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:17:16 [main] Log - Executing: Click button: id= register_submit
+[INFO ] 10-01-2023 02:17:19 [main] Log - Executing: Screenshot taken: TSDK06_TC_DK20
+[INFO ] 10-01-2023 02:17:21 [main] Log - Executing: |Verify the alert of password confirm in sign in page|
+[INFO ] 10-01-2023 02:17:21 [main] Log - Expected Result: Mật khẩu không khớp. Hãy nhập lại
+[INFO ] 10-01-2023 02:17:21 [main] Log - Actual Result: Mật khẩu không khớp. Hãy nhập lại
+[INFO ] 10-01-2023 02:17:21 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 02:17:21 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:17:22 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:17:22 [main] Log - Executing: Click button: id= register_submit
+[ERROR] 10-01-2023 02:17:23 [main] Log - Executing: Screenshot taken: TSDK05_TC_DK21FAIL
+[INFO ] 10-01-2023 02:17:24 [main] Log - Executing: |Verify the alert of password confirm in sign in page|
+[INFO ] 10-01-2023 02:17:24 [main] Log - Executing: Closing...
+[ERROR] 10-01-2023 02:17:24 [main] Log - Executing: Close FAIL
+[INFO ] 10-01-2023 02:17:25 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:17:27 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/dang-ky
+[INFO ] 10-01-2023 02:17:30 [main] Log - Executing: Enter text: Anh
+[INFO ] 10-01-2023 02:17:31 [main] Log - Executing: Enter text: hoanganh04092001@gmail.com
+[INFO ] 10-01-2023 02:17:33 [main] Log - Executing: Enter text: 20 10 2001
+[INFO ] 10-01-2023 02:17:34 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:17:34 [main] Log - Executing: Click button: id= register_submit
+[INFO ] 10-01-2023 02:17:38 [main] Log - Executing: Screenshot taken: TSDK06_TC_DK21
+[INFO ] 10-01-2023 02:17:39 [main] Log - Executing: |Verify the alert of password confirm in sign in page|
+[INFO ] 10-01-2023 02:17:39 [main] Log - Expected Result: Mật khẩu không khớp. Hãy nhập lại
+[INFO ] 10-01-2023 02:17:39 [main] Log - Actual Result: Mật khẩu không khớp. Hãy nhập lại
+[INFO ] 10-01-2023 02:17:39 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 02:17:40 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:17:41 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:17:41 [main] Log - Executing: Click button: id= register_submit
+[ERROR] 10-01-2023 02:17:42 [main] Log - Executing: Screenshot taken: TSDK05_TC_DK22FAIL
+[INFO ] 10-01-2023 02:17:43 [main] Log - Executing: |Verify the alert of password confirm in sign in page|
+[INFO ] 10-01-2023 02:17:44 [main] Log - Executing: Closing...
+[ERROR] 10-01-2023 02:17:44 [main] Log - Executing: Close FAIL
+[INFO ] 10-01-2023 02:17:44 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:17:46 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/dang-ky
+[INFO ] 10-01-2023 02:17:51 [main] Log - Executing: Enter text: Anh
+[INFO ] 10-01-2023 02:17:52 [main] Log - Executing: Enter text: hoanganh04092001@gmail.com
+[INFO ] 10-01-2023 02:17:53 [main] Log - Executing: Enter text: hoàng
+[INFO ] 10-01-2023 02:17:53 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:17:56 [main] Log - Executing: Click button: id= register_submit
+[INFO ] 10-01-2023 02:17:59 [main] Log - Executing: Screenshot taken: TSDK06_TC_DK22
+[INFO ] 10-01-2023 02:17:59 [main] Log - Executing: |Verify the alert of password confirm in sign in page|
+[INFO ] 10-01-2023 02:17:59 [main] Log - Expected Result: Mật khẩu không khớp. Hãy nhập lại
+[INFO ] 10-01-2023 02:17:59 [main] Log - Actual Result: Mật khẩu không khớp. Hãy nhập lại
+[INFO ] 10-01-2023 02:17:59 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 02:18:02 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:18:03 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:18:03 [main] Log - Executing: Click button: id= register_submit
+[ERROR] 10-01-2023 02:18:04 [main] Log - Executing: Screenshot taken: TSDK05_TC_DK23FAIL
+[INFO ] 10-01-2023 02:18:05 [main] Log - Executing: |Verify the alert of password confirm in sign in page|
+[INFO ] 10-01-2023 02:18:06 [main] Log - Executing: Closing...
+[ERROR] 10-01-2023 02:18:06 [main] Log - Executing: Close FAIL
+[INFO ] 10-01-2023 02:18:07 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:18:09 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/dang-ky
+[INFO ] 10-01-2023 02:18:14 [main] Log - Executing: Enter text: Anh
+[INFO ] 10-01-2023 02:18:16 [main] Log - Executing: Enter text: hoanganh04092001@gmail.com
+[INFO ] 10-01-2023 02:18:17 [main] Log - Executing: Enter text: 123456
+[INFO ] 10-01-2023 02:18:18 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:18:20 [main] Log - Executing: Click button: id= register_submit
+[INFO ] 10-01-2023 02:18:24 [main] Log - Executing: Screenshot taken: TSDK06_TC_DK23
+[INFO ] 10-01-2023 02:18:26 [main] Log - Executing: |Verify the alert of password confirm in sign in page|
+[INFO ] 10-01-2023 02:18:26 [main] Log - Expected Result: Mật khẩu không khớp. Hãy nhập lại
+[INFO ] 10-01-2023 02:18:26 [main] Log - Actual Result: Mật khẩu không khớp. Hãy nhập lại
+[INFO ] 10-01-2023 02:18:26 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 02:18:27 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:18:28 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:18:29 [main] Log - Executing: Click button: id= register_submit
+[ERROR] 10-01-2023 02:18:30 [main] Log - Executing: Screenshot taken: TSDK05_TC_DK24FAIL
+[INFO ] 10-01-2023 02:18:31 [main] Log - Executing: |Verify the alert of password confirm in sign in page|
+[INFO ] 10-01-2023 02:18:32 [main] Log - Executing: Closing...
+[ERROR] 10-01-2023 02:18:32 [main] Log - Executing: Close FAIL
+[INFO ] 10-01-2023 02:18:32 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:18:35 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/dang-ky
+[INFO ] 10-01-2023 02:18:38 [main] Log - Executing: Enter text: Anh
+[INFO ] 10-01-2023 02:18:40 [main] Log - Executing: Enter text: hoanganh04092001@gmail.com
+[INFO ] 10-01-2023 02:18:41 [main] Log - Executing: Enter text: abcdef
+[INFO ] 10-01-2023 02:18:43 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:18:45 [main] Log - Executing: Click button: id= register_submit
+[INFO ] 10-01-2023 02:18:48 [main] Log - Executing: Screenshot taken: TSDK06_TC_DK24
+[INFO ] 10-01-2023 02:18:50 [main] Log - Executing: |Verify the alert of password confirm in sign in page|
+[INFO ] 10-01-2023 02:18:50 [main] Log - Expected Result: Mật khẩu không khớp. Hãy nhập lại
+[INFO ] 10-01-2023 02:18:50 [main] Log - Actual Result: Mật khẩu không khớp. Hãy nhập lại
+[INFO ] 10-01-2023 02:18:50 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 02:18:51 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:18:53 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:18:54 [main] Log - Executing: Click button: id= register_submit
+[ERROR] 10-01-2023 02:18:54 [main] Log - Executing: Screenshot taken: TSDK05_TC_DK25FAIL
+[INFO ] 10-01-2023 02:18:56 [main] Log - Executing: |Verify the alert of password confirm in sign in page|
+[INFO ] 10-01-2023 02:18:57 [main] Log - Executing: Closing...
+[ERROR] 10-01-2023 02:18:57 [main] Log - Executing: Close FAIL
+[INFO ] 10-01-2023 02:18:57 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:19:00 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/dang-ky
+[INFO ] 10-01-2023 02:19:04 [main] Log - Executing: Enter text: Anh
+[INFO ] 10-01-2023 02:19:06 [main] Log - Executing: Enter text: hoanganh04092001@gmail.com
+[INFO ] 10-01-2023 02:19:08 [main] Log - Executing: Enter text: @#$&*
+[INFO ] 10-01-2023 02:19:10 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:19:13 [main] Log - Executing: Click button: id= register_submit
+[INFO ] 10-01-2023 02:19:17 [main] Log - Executing: Screenshot taken: TSDK06_TC_DK25
+[INFO ] 10-01-2023 02:19:20 [main] Log - Executing: |Verify the alert of password confirm in sign in page|
+[INFO ] 10-01-2023 02:19:20 [main] Log - Expected Result: Mật khẩu không khớp. Hãy nhập lại
+[INFO ] 10-01-2023 02:19:20 [main] Log - Actual Result: Mật khẩu không khớp. Hãy nhập lại
+[INFO ] 10-01-2023 02:19:20 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 02:19:22 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:19:23 [main] Log - Executing: Click button: id= register_submit
+[ERROR] 10-01-2023 02:19:24 [main] Log - Executing: Screenshot taken: TSDK04_TC_DK26FAIL
+[INFO ] 10-01-2023 02:19:25 [main] Log - Executing: |Verify the alert of password in sign in page|
+[INFO ] 10-01-2023 02:19:26 [main] Log - Executing: Closing...
+[ERROR] 10-01-2023 02:19:26 [main] Log - Executing: Close FAIL
+[INFO ] 10-01-2023 02:19:27 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:19:30 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/dang-ky
+[INFO ] 10-01-2023 02:19:35 [main] Log - Executing: Enter text: Anh
+[INFO ] 10-01-2023 02:19:37 [main] Log - Executing: Enter text: hoanganh04092001@gmail.com
+[INFO ] 10-01-2023 02:19:38 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:19:41 [main] Log - Executing: Enter text: 
+[INFO ] 10-01-2023 02:19:43 [main] Log - Executing: Click button: id= register_submit
+[INFO ] 10-01-2023 02:19:48 [main] Log - Executing: Screenshot taken: TSDK05_TC_DK26
+[INFO ] 10-01-2023 02:19:50 [main] Log - Executing: |Verify the alert of password confirm in sign in page|
+[INFO ] 10-01-2023 02:19:50 [main] Log - Expected Result: Please fill out this field.
+[INFO ] 10-01-2023 02:19:50 [main] Log - Actual Result: Please fill out this field.
+[INFO ] 10-01-2023 02:19:50 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 02:19:52 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:19:53 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:19:56 [main] Log - Executing: Enter text:            
+[INFO ] 10-01-2023 02:20:28 [main] Log - Executing: Click button: id= register_submit
+[INFO ] 10-01-2023 02:21:00 [main] Log - Executing: Screenshot taken: TSDK05_TC_DK27
+[INFO ] 10-01-2023 02:21:01 [main] Log - Executing: |Verify the alert of password confirm in sign in page|
+[INFO ] 10-01-2023 02:21:34 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:21:35 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:21:36 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/dang-ky
+[INFO ] 10-01-2023 02:21:42 [main] Log - Executing: Enter text: Anh
+[INFO ] 10-01-2023 02:21:43 [main] Log - Executing: Enter text: hoanganh04092001@gmail.com
+[INFO ] 10-01-2023 02:21:45 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:21:49 [main] Log - Executing: Enter text:            
+[INFO ] 10-01-2023 02:21:50 [main] Log - Executing: Click button: id= register_submit
+[INFO ] 10-01-2023 02:21:56 [main] Log - Executing: Screenshot taken: TSDK06_TC_DK27
+[INFO ] 10-01-2023 02:21:57 [main] Log - Executing: |Verify the alert of password confirm in sign in page|
+[INFO ] 10-01-2023 02:21:57 [main] Log - Expected Result: Mật khẩu không khớp. Hãy nhập lại
+[INFO ] 10-01-2023 02:21:57 [main] Log - Actual Result: Mật khẩu không khớp. Hãy nhập lại
+[INFO ] 10-01-2023 02:21:57 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 02:22:01 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:22:02 [main] Log - Executing: Enter text: 20 10 2001
+[INFO ] 10-01-2023 02:22:03 [main] Log - Executing: Click button: id= register_submit
+[ERROR] 10-01-2023 02:22:05 [main] Log - Executing: Screenshot taken: TSDK05_TC_DK28FAIL
+[INFO ] 10-01-2023 02:22:06 [main] Log - Executing: |Verify the alert of password confirm in sign in page|
+[INFO ] 10-01-2023 02:22:07 [main] Log - Executing: Closing...
+[ERROR] 10-01-2023 02:22:07 [main] Log - Executing: Close FAIL
+[INFO ] 10-01-2023 02:22:08 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:22:12 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/dang-ky
+[INFO ] 10-01-2023 02:22:19 [main] Log - Executing: Enter text: Anh
+[INFO ] 10-01-2023 02:22:20 [main] Log - Executing: Enter text: hoanganh04092001@gmail.com
+[INFO ] 10-01-2023 02:22:24 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:22:26 [main] Log - Executing: Enter text: 20 10 2001
+[INFO ] 10-01-2023 02:22:31 [main] Log - Executing: Click button: id= register_submit
+[INFO ] 10-01-2023 02:22:37 [main] Log - Executing: Screenshot taken: TSDK06_TC_DK28
+[INFO ] 10-01-2023 02:22:38 [main] Log - Executing: |Verify the alert of password confirm in sign in page|
+[INFO ] 10-01-2023 02:22:38 [main] Log - Expected Result: Mật khẩu không khớp. Hãy nhập lại
+[INFO ] 10-01-2023 02:22:38 [main] Log - Actual Result: Mật khẩu không khớp. Hãy nhập lại
+[INFO ] 10-01-2023 02:22:38 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 02:22:42 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:22:43 [main] Log - Executing: Enter text: hoàng
+[INFO ] 10-01-2023 02:22:45 [main] Log - Executing: Click button: id= register_submit
+[ERROR] 10-01-2023 02:22:47 [main] Log - Executing: Screenshot taken: TSDK05_TC_DK29FAIL
+[INFO ] 10-01-2023 02:22:48 [main] Log - Executing: |Verify the alert of password confirm in sign in page|
+[INFO ] 10-01-2023 02:22:49 [main] Log - Executing: Closing...
+[ERROR] 10-01-2023 02:22:49 [main] Log - Executing: Close FAIL
+[INFO ] 10-01-2023 02:22:50 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:22:54 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/dang-ky
+[INFO ] 10-01-2023 02:23:02 [main] Log - Executing: Enter text: Anh
+[INFO ] 10-01-2023 02:23:03 [main] Log - Executing: Enter text: hoanganh04092001@gmail.com
+[INFO ] 10-01-2023 02:23:07 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:23:09 [main] Log - Executing: Enter text: hoàng
+[INFO ] 10-01-2023 02:23:14 [main] Log - Executing: Click button: id= register_submit
+[INFO ] 10-01-2023 02:23:20 [main] Log - Executing: Screenshot taken: TSDK06_TC_DK29
+[INFO ] 10-01-2023 02:23:21 [main] Log - Executing: |Verify the alert of password confirm in sign in page|
+[INFO ] 10-01-2023 02:23:21 [main] Log - Expected Result: Mật khẩu không khớp. Hãy nhập lại
+[INFO ] 10-01-2023 02:23:21 [main] Log - Actual Result: Mật khẩu không khớp. Hãy nhập lại
+[INFO ] 10-01-2023 02:23:21 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 02:23:26 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:23:27 [main] Log - Executing: Enter text: 123456
+[INFO ] 10-01-2023 02:23:29 [main] Log - Executing: Click button: id= register_submit
+[ERROR] 10-01-2023 02:23:31 [main] Log - Executing: Screenshot taken: TSDK05_TC_DK30FAIL
+[INFO ] 10-01-2023 02:23:32 [main] Log - Executing: |Verify the alert of password confirm in sign in page|
+[INFO ] 10-01-2023 02:23:33 [main] Log - Executing: Closing...
+[ERROR] 10-01-2023 02:23:33 [main] Log - Executing: Close FAIL
+[INFO ] 10-01-2023 02:23:36 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:23:39 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/dang-ky
+[INFO ] 10-01-2023 02:23:47 [main] Log - Executing: Enter text: Anh
+[INFO ] 10-01-2023 02:23:48 [main] Log - Executing: Enter text: hoanganh04092001@gmail.com
+[INFO ] 10-01-2023 02:23:53 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:23:55 [main] Log - Executing: Enter text: 123456
+[INFO ] 10-01-2023 02:24:00 [main] Log - Executing: Click button: id= register_submit
+[INFO ] 10-01-2023 02:24:06 [main] Log - Executing: Screenshot taken: TSDK06_TC_DK30
+[INFO ] 10-01-2023 02:24:08 [main] Log - Executing: |Verify the alert of password confirm in sign in page|
+[INFO ] 10-01-2023 02:24:08 [main] Log - Expected Result: Mật khẩu không khớp. Hãy nhập lại
+[INFO ] 10-01-2023 02:24:08 [main] Log - Actual Result: Mật khẩu không khớp. Hãy nhập lại
+[INFO ] 10-01-2023 02:24:08 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 02:24:13 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:24:14 [main] Log - Executing: Enter text: abcdef
+[INFO ] 10-01-2023 02:24:16 [main] Log - Executing: Click button: id= register_submit
+[ERROR] 10-01-2023 02:24:18 [main] Log - Executing: Screenshot taken: TSDK05_TC_DK31FAIL
+[INFO ] 10-01-2023 02:24:19 [main] Log - Executing: |Verify the alert of password confirm in sign in page|
+[INFO ] 10-01-2023 02:24:21 [main] Log - Executing: Closing...
+[ERROR] 10-01-2023 02:24:21 [main] Log - Executing: Close FAIL
+[INFO ] 10-01-2023 02:24:23 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:24:26 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/dang-ky
+[INFO ] 10-01-2023 02:24:33 [main] Log - Executing: Enter text: Anh
+[INFO ] 10-01-2023 02:24:35 [main] Log - Executing: Enter text: hoanganh04092001@gmail.com
+[INFO ] 10-01-2023 02:24:40 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:24:43 [main] Log - Executing: Enter text: abcdef
+[INFO ] 10-01-2023 02:24:48 [main] Log - Executing: Click button: id= register_submit
+[INFO ] 10-01-2023 02:24:54 [main] Log - Executing: Screenshot taken: TSDK06_TC_DK31
+[INFO ] 10-01-2023 02:24:59 [main] Log - Executing: |Verify the alert of password confirm in sign in page|
+[INFO ] 10-01-2023 02:25:00 [main] Log - Expected Result: Mật khẩu không khớp. Hãy nhập lại
+[INFO ] 10-01-2023 02:25:00 [main] Log - Actual Result: Mật khẩu không khớp. Hãy nhập lại
+[INFO ] 10-01-2023 02:25:00 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 02:25:03 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:25:05 [main] Log - Executing: Enter text: @#$&*
+[INFO ] 10-01-2023 02:25:07 [main] Log - Executing: Click button: id= register_submit
+[ERROR] 10-01-2023 02:25:08 [main] Log - Executing: Screenshot taken: TSDK05_TC_DK32FAIL
+[INFO ] 10-01-2023 02:25:11 [main] Log - Executing: |Verify the alert of password confirm in sign in page|
+[INFO ] 10-01-2023 02:25:13 [main] Log - Executing: Closing...
+[ERROR] 10-01-2023 02:25:13 [main] Log - Executing: Close FAIL
+[INFO ] 10-01-2023 02:25:14 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:25:19 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/dang-ky
+[INFO ] 10-01-2023 02:25:26 [main] Log - Executing: Enter text: Anh
+[INFO ] 10-01-2023 02:25:28 [main] Log - Executing: Enter text: hoanganh04092001@gmail.com
+[INFO ] 10-01-2023 02:25:33 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:25:35 [main] Log - Executing: Enter text: @#$&*
+[INFO ] 10-01-2023 02:25:40 [main] Log - Executing: Click button: id= register_submit
+[INFO ] 10-01-2023 02:25:48 [main] Log - Executing: Screenshot taken: TSDK06_TC_DK32
+[INFO ] 10-01-2023 02:25:53 [main] Log - Executing: |Verify the alert of password confirm in sign in page|
+[INFO ] 10-01-2023 02:25:53 [main] Log - Expected Result: Mật khẩu không khớp. Hãy nhập lại
+[INFO ] 10-01-2023 02:25:53 [main] Log - Actual Result: Mật khẩu không khớp. Hãy nhập lại
+[INFO ] 10-01-2023 02:25:53 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 02:25:59 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:26:01 [main] Log - Stop record

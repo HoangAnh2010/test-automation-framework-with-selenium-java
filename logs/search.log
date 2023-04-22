@@ -1,0 +1,15 @@
+[INFO ] 10-01-2023 00:43:38 [main] Log - Executing: Recording...
+[INFO ] 10-01-2023 00:43:38 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 00:43:42 [main] Log - Executing: Opening Url: https://www.careerlink.vn/
+[INFO ] 10-01-2023 00:43:47 [main] Log - Executing: Enter text: Tester
+[INFO ] 10-01-2023 00:43:48 [main] Log - Executing: Click element: xpath= //input[@placeholder='Nhập tỉnh, thành phố']
+[INFO ] 10-01-2023 00:43:50 [main] Log - Executing: Selection option: Hà Nội
+[INFO ] 10-01-2023 00:43:50 [main] Log - Executing: Selection option: Hồ Chí Minh
+[INFO ] 10-01-2023 00:43:50 [main] Log - Executing: Click button: xpath= //button[contains(text(),'Tìm kiếm')]
+[INFO ] 10-01-2023 00:43:52 [main] Log - Executing: Screenshot taken: TSTK01_null
+[INFO ] 10-01-2023 00:43:52 [main] Log - Executing: Verify Title
+[INFO ] 10-01-2023 00:43:52 [main] Log - Title expected: Kết quả tìm việc làm
+[INFO ] 10-01-2023 00:43:52 [main] Log - Title actual: Kết quả tìm việc làm | Việc Làm, Tìm Việc, Tuyển Dụng | CareerLink.vn
+[INFO ] 10-01-2023 00:43:52 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 00:43:52 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 00:43:53 [main] Log - Stop record

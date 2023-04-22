@@ -1,0 +1,273 @@
+[INFO ] 10-01-2023 01:57:42 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 01:57:45 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 10-01-2023 01:57:48 [main] Log - Executing: Enter text: 
+[INFO ] 10-01-2023 01:57:48 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 01:57:48 [main] Log - Executing: Click button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 10-01-2023 01:57:50 [main] Log - Executing: Screenshot taken: TSDN01_TC_DN2
+[INFO ] 10-01-2023 01:57:50 [main] Log - Executing: |Verify the alert of email in sign in page|
+[INFO ] 10-01-2023 01:57:50 [main] Log - Expected Result: Please fill out this field.
+[INFO ] 10-01-2023 01:57:50 [main] Log - Actual Result: Please fill out this field.
+[INFO ] 10-01-2023 01:57:50 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 01:57:50 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 01:57:51 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 01:57:51 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 10-01-2023 01:57:53 [main] Log - Executing: Enter text: 
+[INFO ] 10-01-2023 01:57:53 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 01:57:54 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 10-01-2023 01:57:56 [main] Log - Executing: Enter text:         
+[INFO ] 10-01-2023 01:57:56 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 01:57:56 [main] Log - Executing: Click button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 10-01-2023 01:57:58 [main] Log - Executing: Screenshot taken: TSDN01_TC_DN3
+[INFO ] 10-01-2023 01:57:58 [main] Log - Executing: |Verify the alert of email in sign in page|
+[INFO ] 10-01-2023 01:57:58 [main] Log - Expected Result: Please fill out this field.
+[INFO ] 10-01-2023 01:57:58 [main] Log - Actual Result: Please fill out this field.
+[INFO ] 10-01-2023 01:57:58 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 01:57:58 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 01:57:59 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 01:58:00 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 10-01-2023 01:58:01 [main] Log - Executing: Enter text:         
+[INFO ] 10-01-2023 01:58:01 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 01:58:02 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 10-01-2023 01:58:04 [main] Log - Executing: Enter text: hoanganh 04092001@gmail.com
+[INFO ] 10-01-2023 01:58:04 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 01:58:05 [main] Log - Executing: Click button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 10-01-2023 01:58:07 [main] Log - Executing: Screenshot taken: TSDN01_TC_DN4
+[INFO ] 10-01-2023 01:58:07 [main] Log - Executing: |Verify the alert of email in sign in page|
+[INFO ] 10-01-2023 01:58:07 [main] Log - Expected Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 10-01-2023 01:58:07 [main] Log - Actual Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 10-01-2023 01:58:07 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 01:58:07 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 01:58:08 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 01:58:09 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 10-01-2023 01:58:13 [main] Log - Executing: Enter text: hoanganh 04092001@gmail.com
+[INFO ] 10-01-2023 01:58:13 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 01:58:15 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 10-01-2023 01:58:19 [main] Log - Executing: Enter text: hoànganh04092001@gmail.com
+[INFO ] 10-01-2023 01:58:20 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 01:58:20 [main] Log - Executing: Click button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 10-01-2023 01:58:22 [main] Log - Executing: Screenshot taken: TSDN01_TC_DN7
+[INFO ] 10-01-2023 01:58:22 [main] Log - Executing: |Verify the alert of email in sign in page|
+[INFO ] 10-01-2023 01:58:22 [main] Log - Expected Result: A part followed by '@' should not contain the symbol 'à'.
+[INFO ] 10-01-2023 01:58:22 [main] Log - Actual Result: A part followed by '@' should not contain the symbol 'à'.
+[INFO ] 10-01-2023 01:58:22 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 01:58:23 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 01:58:23 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 01:58:25 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 10-01-2023 01:58:27 [main] Log - Executing: Enter text: hoànganh04092001@gmail.com
+[INFO ] 10-01-2023 01:58:28 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 01:58:29 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 10-01-2023 01:58:33 [main] Log - Executing: Enter text: hoanganh04092001gmail.com
+[INFO ] 10-01-2023 01:58:33 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 01:58:33 [main] Log - Executing: Click button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 10-01-2023 01:58:36 [main] Log - Executing: Screenshot taken: TSDN01_TC_DN8
+[INFO ] 10-01-2023 01:58:36 [main] Log - Executing: |Verify the alert of email in sign in page|
+[INFO ] 10-01-2023 01:58:36 [main] Log - Expected Result: Please include an '@' in the email address. 'hoanganh04092001gmail.com' is missing an '@'.
+[INFO ] 10-01-2023 01:58:36 [main] Log - Actual Result: Please include an '@' in the email address. 'hoanganh04092001gmail.com' is missing an '@'.
+[INFO ] 10-01-2023 01:58:36 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 01:58:36 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 01:58:38 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 01:58:39 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 10-01-2023 01:58:41 [main] Log - Executing: Enter text: hoanganh04092001gmail.com
+[INFO ] 10-01-2023 01:58:41 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 01:58:43 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 10-01-2023 01:58:47 [main] Log - Executing: Enter text: hoang(anh)04,09,2001@gmail.com
+[INFO ] 10-01-2023 01:58:48 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 01:58:48 [main] Log - Executing: Click button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 10-01-2023 01:58:50 [main] Log - Executing: Screenshot taken: TSDN01_TC_DN11
+[INFO ] 10-01-2023 01:58:50 [main] Log - Executing: |Verify the alert of email in sign in page|
+[INFO ] 10-01-2023 01:58:51 [main] Log - Expected Result: A part followed by '@' should not contain the symbol '('.
+[INFO ] 10-01-2023 01:58:51 [main] Log - Actual Result: A part followed by '@' should not contain the symbol '('.
+[INFO ] 10-01-2023 01:58:51 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 01:58:51 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 01:58:53 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 01:58:54 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 10-01-2023 01:58:58 [main] Log - Executing: Enter text: hoang(anh)04,09,2001@gmail.com
+[INFO ] 10-01-2023 01:58:58 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 01:58:59 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 01:59:00 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 10-01-2023 01:59:02 [main] Log - Executing: Enter text: hoanganh#04092001@gmail.com
+[INFO ] 10-01-2023 01:59:03 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 01:59:04 [main] Log - Executing: Click button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 10-01-2023 01:59:07 [main] Log - Executing: Screenshot taken: TSDN02_TC_DN6
+[INFO ] 10-01-2023 01:59:08 [main] Log - Executing: |Verify the alert of email|
+[INFO ] 10-01-2023 01:59:08 [main] Log - Expected Result: E-Mail hoặc mật khẩu bị sai. Vui lòng nhập lại
+[INFO ] 10-01-2023 01:59:08 [main] Log - Actual Result: E-Mail hoặc mật khẩu bị sai. Vui lòng nhập lại
+[INFO ] 10-01-2023 01:59:08 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 01:59:08 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 01:59:09 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 01:59:10 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 10-01-2023 01:59:12 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 01:59:12 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 01:59:13 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 10-01-2023 01:59:16 [main] Log - Executing: Enter text: hoanganh04092001@gmailcom
+[INFO ] 10-01-2023 01:59:16 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 01:59:17 [main] Log - Executing: Click button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 10-01-2023 01:59:20 [main] Log - Executing: Screenshot taken: TSDN02_TC_DN9
+[INFO ] 10-01-2023 01:59:20 [main] Log - Executing: |Verify the alert of email|
+[INFO ] 10-01-2023 01:59:20 [main] Log - Expected Result: E-Mail hoặc mật khẩu bị sai. Vui lòng nhập lại
+[INFO ] 10-01-2023 01:59:20 [main] Log - Actual Result: E-Mail hoặc mật khẩu bị sai. Vui lòng nhập lại
+[INFO ] 10-01-2023 01:59:20 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 01:59:21 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 01:59:22 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 01:59:23 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 10-01-2023 01:59:25 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 01:59:26 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 01:59:28 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 10-01-2023 01:59:30 [main] Log - Executing: Enter text: hoanganh04092001.gmail@com
+[INFO ] 10-01-2023 01:59:31 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 01:59:31 [main] Log - Executing: Click button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 10-01-2023 01:59:35 [main] Log - Executing: Screenshot taken: TSDN02_TC_DN10
+[INFO ] 10-01-2023 01:59:35 [main] Log - Executing: |Verify the alert of email|
+[INFO ] 10-01-2023 01:59:35 [main] Log - Expected Result: E-Mail hoặc mật khẩu bị sai. Vui lòng nhập lại
+[INFO ] 10-01-2023 01:59:35 [main] Log - Actual Result: E-Mail hoặc mật khẩu bị sai. Vui lòng nhập lại
+[INFO ] 10-01-2023 01:59:35 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 01:59:36 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 01:59:36 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 01:59:37 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 10-01-2023 01:59:40 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 01:59:40 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 01:59:42 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 10-01-2023 01:59:44 [main] Log - Executing: Enter text: hoanganhoriole2010@gmail.com
+[INFO ] 10-01-2023 01:59:44 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 01:59:46 [main] Log - Executing: Click button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 10-01-2023 01:59:49 [main] Log - Executing: Screenshot taken: TSDN02_TC_DN12
+[INFO ] 10-01-2023 01:59:49 [main] Log - Executing: |Verify the alert of email|
+[INFO ] 10-01-2023 01:59:49 [main] Log - Expected Result: E-Mail hoặc mật khẩu bị sai. Vui lòng nhập lại
+[INFO ] 10-01-2023 01:59:49 [main] Log - Actual Result: E-Mail hoặc mật khẩu bị sai. Vui lòng nhập lại
+[INFO ] 10-01-2023 01:59:49 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 01:59:49 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 01:59:52 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 01:59:53 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 10-01-2023 01:59:55 [main] Log - Executing: |Verify the alert of email|
+[INFO ] 10-01-2023 01:59:55 [main] Log - Expected Result: Please fill out this field.
+[INFO ] 10-01-2023 01:59:55 [main] Log - Actual Result: 
+[ERROR] 10-01-2023 01:59:55 [main] Log - Different result ---> Fail
+[INFO ] 10-01-2023 01:59:56 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 01:59:57 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 01:59:58 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 10-01-2023 02:00:00 [main] Log - Executing: Enter text: hoanganh04092001@gmail.com
+[INFO ] 10-01-2023 02:00:01 [main] Log - Executing: Enter text: 
+[INFO ] 10-01-2023 02:00:01 [main] Log - Executing: Click button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 10-01-2023 02:00:04 [main] Log - Executing: Screenshot taken: TSDN03_TC_DN13
+[INFO ] 10-01-2023 02:00:04 [main] Log - Executing: |Verify the alert of password in sign in page|
+[INFO ] 10-01-2023 02:00:04 [main] Log - Expected Result: Please fill out this field.
+[INFO ] 10-01-2023 02:00:05 [main] Log - Actual Result: Please fill out this field.
+[INFO ] 10-01-2023 02:00:05 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 02:00:05 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:00:06 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:00:07 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:00:08 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:00:10 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 10-01-2023 02:00:13 [main] Log - Executing: Enter text: hoanganh04092001@gmail.com
+[INFO ] 10-01-2023 02:00:13 [main] Log - Executing: Enter text:            
+[INFO ] 10-01-2023 02:00:14 [main] Log - Executing: Click button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 10-01-2023 02:00:18 [main] Log - Executing: Screenshot taken: TSDN02_TC_DN14
+[INFO ] 10-01-2023 02:00:18 [main] Log - Executing: |Verify the alert of email|
+[INFO ] 10-01-2023 02:00:18 [main] Log - Expected Result: E-Mail hoặc mật khẩu bị sai. Vui lòng nhập lại
+[INFO ] 10-01-2023 02:00:18 [main] Log - Actual Result: E-Mail hoặc mật khẩu bị sai. Vui lòng nhập lại
+[INFO ] 10-01-2023 02:00:18 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 02:00:19 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:00:20 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:00:22 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 10-01-2023 02:00:25 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:00:25 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:00:27 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 10-01-2023 02:00:30 [main] Log - Executing: Enter text: hoanganh04092001@gmail.com
+[INFO ] 10-01-2023 02:00:31 [main] Log - Executing: Enter text: 20 10 2001
+[INFO ] 10-01-2023 02:00:31 [main] Log - Executing: Click button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 10-01-2023 02:00:36 [main] Log - Executing: Screenshot taken: TSDN02_TC_DN15
+[INFO ] 10-01-2023 02:00:37 [main] Log - Executing: |Verify the alert of email|
+[INFO ] 10-01-2023 02:00:37 [main] Log - Expected Result: E-Mail hoặc mật khẩu bị sai. Vui lòng nhập lại
+[INFO ] 10-01-2023 02:00:37 [main] Log - Actual Result: E-Mail hoặc mật khẩu bị sai. Vui lòng nhập lại
+[INFO ] 10-01-2023 02:00:37 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 02:00:38 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:00:38 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:00:41 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 10-01-2023 02:00:43 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:00:45 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:00:47 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 10-01-2023 02:00:50 [main] Log - Executing: Enter text: hoanganh04092001@gmail.com
+[INFO ] 10-01-2023 02:00:50 [main] Log - Executing: Enter text: hoàng
+[INFO ] 10-01-2023 02:00:51 [main] Log - Executing: Click button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 10-01-2023 02:00:55 [main] Log - Executing: Screenshot taken: TSDN02_TC_DN16
+[INFO ] 10-01-2023 02:00:56 [main] Log - Executing: |Verify the alert of email|
+[INFO ] 10-01-2023 02:00:56 [main] Log - Expected Result: E-Mail hoặc mật khẩu bị sai. Vui lòng nhập lại
+[INFO ] 10-01-2023 02:00:56 [main] Log - Actual Result: E-Mail hoặc mật khẩu bị sai. Vui lòng nhập lại
+[INFO ] 10-01-2023 02:00:56 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 02:00:56 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:00:58 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:00:59 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 10-01-2023 02:01:03 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:01:04 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:01:05 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 10-01-2023 02:01:09 [main] Log - Executing: Enter text: hoanganh04092001@gmail.com
+[INFO ] 10-01-2023 02:01:10 [main] Log - Executing: Enter text: 123456
+[INFO ] 10-01-2023 02:01:11 [main] Log - Executing: Click button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 10-01-2023 02:01:15 [main] Log - Executing: Screenshot taken: TSDN02_TC_DN17
+[INFO ] 10-01-2023 02:01:16 [main] Log - Executing: |Verify the alert of email|
+[INFO ] 10-01-2023 02:01:16 [main] Log - Expected Result: E-Mail hoặc mật khẩu bị sai. Vui lòng nhập lại
+[INFO ] 10-01-2023 02:01:16 [main] Log - Actual Result: E-Mail hoặc mật khẩu bị sai. Vui lòng nhập lại
+[INFO ] 10-01-2023 02:01:16 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 02:01:17 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:01:18 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:01:21 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 10-01-2023 02:01:23 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:01:26 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:01:28 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 10-01-2023 02:01:32 [main] Log - Executing: Enter text: hoanganh04092001@gmail.com
+[INFO ] 10-01-2023 02:01:33 [main] Log - Executing: Enter text: abcdef
+[INFO ] 10-01-2023 02:01:34 [main] Log - Executing: Click button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 10-01-2023 02:01:40 [main] Log - Executing: Screenshot taken: TSDN02_TC_DN18
+[INFO ] 10-01-2023 02:01:41 [main] Log - Executing: |Verify the alert of email|
+[INFO ] 10-01-2023 02:01:41 [main] Log - Expected Result: E-Mail hoặc mật khẩu bị sai. Vui lòng nhập lại
+[INFO ] 10-01-2023 02:01:41 [main] Log - Actual Result: E-Mail hoặc mật khẩu bị sai. Vui lòng nhập lại
+[INFO ] 10-01-2023 02:01:41 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 02:01:42 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:01:46 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:01:47 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 10-01-2023 02:01:52 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:01:53 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:01:55 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 10-01-2023 02:01:59 [main] Log - Executing: Enter text: hoanganh04092001@gmail.com
+[INFO ] 10-01-2023 02:02:00 [main] Log - Executing: Enter text: @#$&*
+[INFO ] 10-01-2023 02:02:02 [main] Log - Executing: Click button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 10-01-2023 02:02:07 [main] Log - Executing: Screenshot taken: TSDN02_TC_DN19
+[INFO ] 10-01-2023 02:02:08 [main] Log - Executing: |Verify the alert of email|
+[INFO ] 10-01-2023 02:02:09 [main] Log - Expected Result: E-Mail hoặc mật khẩu bị sai. Vui lòng nhập lại
+[INFO ] 10-01-2023 02:02:09 [main] Log - Actual Result: E-Mail hoặc mật khẩu bị sai. Vui lòng nhập lại
+[INFO ] 10-01-2023 02:02:09 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 02:02:09 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:02:12 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:02:14 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 10-01-2023 02:02:19 [main] Log - Executing: Screenshot taken: TSDN03_TC_DN5
+[INFO ] 10-01-2023 02:02:21 [main] Log - Executing: |Verify the alert of password in sign in page|
+[INFO ] 10-01-2023 02:02:21 [main] Log - Expected Result: Nguyễn Hoàng Anh
+[INFO ] 10-01-2023 02:02:21 [main] Log - Actual Result: Please fill out this field.
+[ERROR] 10-01-2023 02:02:21 [main] Log - Different result ---> Fail
+[INFO ] 10-01-2023 02:02:22 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 02:02:26 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:02:28 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 10-01-2023 02:02:32 [main] Log - Executing: Enter text:        hoanganh04092001@gmail.com
+[INFO ] 10-01-2023 02:02:33 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:02:35 [main] Log - Executing: Click button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 10-01-2023 02:02:41 [main] Log - Executing: Screenshot taken: TSDN04_TC_DN5
+[INFO ] 10-01-2023 02:02:42 [main] Log - Executing: |Verify the result when successfully signed in|
+[INFO ] 10-01-2023 02:02:42 [main] Log - Expected Result: Nguyễn Hoàng Anh
+[INFO ] 10-01-2023 02:02:42 [main] Log - Actual Result: Nguyễn Hoàng Anh
+[INFO ] 10-01-2023 02:02:42 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 02:02:44 [main] Log - Executing: Closing...
+[ERROR] 10-01-2023 02:02:48 [main] Log - Executing: Screenshot taken: TSDN03_TC_DN1FAIL
+[INFO ] 10-01-2023 02:02:49 [main] Log - Executing: |Verify the alert of password in sign in page|
+[INFO ] 10-01-2023 02:02:52 [main] Log - Executing: Closing...
+[ERROR] 10-01-2023 02:02:52 [main] Log - Executing: Close FAIL
+[INFO ] 10-01-2023 02:02:54 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 02:02:57 [main] Log - Executing: Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 10-01-2023 02:03:05 [main] Log - Executing: Enter text: hoanganh04092001@gmail.com
+[INFO ] 10-01-2023 02:03:07 [main] Log - Executing: Enter text: 20102001
+[INFO ] 10-01-2023 02:03:10 [main] Log - Executing: Click button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 10-01-2023 02:03:19 [main] Log - Executing: Screenshot taken: TSDN04_TC_DN1
+[INFO ] 10-01-2023 02:03:21 [main] Log - Executing: |Verify the result when successfully signed in|
+[INFO ] 10-01-2023 02:03:21 [main] Log - Expected Result: Nguyễn Hoàng Anh
+[INFO ] 10-01-2023 02:03:21 [main] Log - Actual Result: Nguyễn Hoàng Anh
+[INFO ] 10-01-2023 02:03:21 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 02:03:26 [main] Log - Executing: Closing...

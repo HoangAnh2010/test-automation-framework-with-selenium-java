@@ -1,0 +1,109 @@
+[INFO ] 09-01-2023 20:27:19 [main] Log - Executing: Open browser Chrome
+[INFO ] 09-01-2023 20:27:22 [main] Log - executing: Open Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 09-01-2023 20:27:32 [main] Log - Executing: Enter text: hoanganh04092001@gmail.com
+[INFO ] 09-01-2023 20:27:32 [main] Log - Executing: Enter text: 20102001
+[INFO ] 09-01-2023 20:27:32 [main] Log - Executing: Click button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 09-01-2023 20:27:47 [main] Log - Executing: Screenshot taken: TSCV11_DN_null
+[INFO ] 09-01-2023 20:27:47 [main] Log - Executing: Verify Text
+[INFO ] 09-01-2023 20:27:47 [main] Log - Executing: Click button: xpath= //a[@class='nav-link py-3'][contains(text(),'xin vi')]
+[INFO ] 09-01-2023 20:27:48 [main] Log - Executing: Click button: xpath= //div/div/button/i
+[INFO ] 09-01-2023 20:27:50 [main] Log - Executing: Click element: xpath= //a[@href='/nguoi-tim-viec/ho-so/moi']
+[INFO ] 09-01-2023 20:27:55 [main] Log - Executing: Verify Text
+[INFO ] 09-01-2023 20:27:55 [main] Log - Text result: Thông tin cá nhân
+[INFO ] 09-01-2023 20:27:55 [main] Log - Text expected: Thông tin cá nhân
+[INFO ] 09-01-2023 20:27:55 [main] Log - Same result ---> pass
+[INFO ] 09-01-2023 20:27:55 [main] Log - Executing: Enter text: Hồ sơ xin việc
+[INFO ] 09-01-2023 20:27:55 [main] Log - Executing: Selection option: Việt Nam
+[INFO ] 09-01-2023 20:27:55 [main] Log - Executing: Selection option: 20
+[INFO ] 09-01-2023 20:27:55 [main] Log - Executing: Selection option: Tháng 10
+[INFO ] 09-01-2023 20:27:55 [main] Log - Executing: Selection option: 2001
+[INFO ] 09-01-2023 20:27:56 [main] Log - Executing: Upload image: G:\\cute.jpg
+[INFO ] 09-01-2023 20:28:26 [main] Log - Executing: Click button: className= btn btn-primary ml-auto font-weight-bold d-flex align-items-center mr-2
+[INFO ] 09-01-2023 20:28:26 [main] Log - Executing: Scroll mouse down and click element: //div[@id='form-edit-container']/div/form/div/div/label[3]/div[2]/label/div
+[INFO ] 09-01-2023 20:28:26 [main] Log - Executing: Click element: xpath= //div[@id='form-edit-container']/div/form/div/div/label[3]/div[2]/label/div
+[INFO ] 09-01-2023 20:28:28 [main] Log - Executing: Click element: xpath= //div[@id='form-edit-container']/div/form/div/div/label[4]/div[2]/label[2]/div
+[INFO ] 09-01-2023 20:28:30 [main] Log - Executing: Click button: id= go-to-next
+[INFO ] 09-01-2023 20:28:31 [main] Log - Executing: Verify Text
+[INFO ] 09-01-2023 20:28:32 [main] Log - Text result: Thông tin liên hệ
+[INFO ] 09-01-2023 20:28:32 [main] Log - Text expected: Thông tin liên hệ
+[INFO ] 09-01-2023 20:28:32 [main] Log - Same result ---> pass
+[INFO ] 09-01-2023 20:28:32 [main] Log - Executing: Enter text: 0978227010
+[INFO ] 09-01-2023 20:28:32 [main] Log - Executing: Click element: xpath= /html/body/div[3]/div[2]/div/div/form/div[3]/div/button/div/div
+[INFO ] 09-01-2023 20:28:34 [main] Log - Executing: Click element: xpath= //button[@type = 'button' and (text() = 'Viet Nam' or . = 'Viet Nam')]
+[INFO ] 09-01-2023 20:28:35 [main] Log - Executing: Scroll mouse down and click element: //div[@id='form-edit-container']/div/form/div[4]/div/div/button
+[INFO ] 09-01-2023 20:28:36 [main] Log - Executing: Click element: xpath= /html/body/div[3]/div[2]/div/div/form/div[4]/div[1]/div/button/div/div
+[INFO ] 09-01-2023 20:28:37 [main] Log - Executing: Click element: xpath= //button[@type = 'button' and (text() = 'Hưng Yên' or . = 'Hưng Yên')]
+[INFO ] 09-01-2023 20:28:39 [main] Log - Executing: Click element: xpath= /html/body/div[3]/div[2]/div/div/form/div[4]/div[2]/div/button/div/div
+[INFO ] 09-01-2023 20:28:41 [main] Log - Executing: Click element: xpath= //button[@type = 'button' and (text() = 'Huyện Phù Cừ' or . = 'Huyện Phù Cừ')]
+[INFO ] 09-01-2023 20:28:43 [main] Log - Executing: Enter text: Xã Minh Hoàng
+[INFO ] 09-01-2023 20:28:43 [main] Log - Executing: Click button: id= go-to-next
+[INFO ] 09-01-2023 20:28:45 [main] Log - Executing: Verify Text
+[INFO ] 09-01-2023 20:28:45 [main] Log - Text result: Học vấn
+[INFO ] 09-01-2023 20:28:45 [main] Log - Text expected: Học vấn
+[INFO ] 09-01-2023 20:28:45 [main] Log - Same result ---> pass
+[INFO ] 09-01-2023 20:28:45 [main] Log - Executing: Click element: xpath= /html/body/div[3]/div[2]/div/div/form/div[1]/div/button/div/div
+[INFO ] 09-01-2023 20:28:47 [main] Log - Executing: Click element: xpath= //button[@type = 'button' and (text() = 'Kỹ sư' or . = 'Kỹ sư')]
+[INFO ] 09-01-2023 20:28:49 [main] Log - Executing: Scroll mouse down and click element: //div[@id='form-edit-container']/div/form/div[4]/div/div/div/div/select
+[INFO ] 09-01-2023 20:28:49 [main] Log - Executing: Click element: xpath= /html/body/div[3]/div[2]/div/div/form/div[2]/div/div/div/button/div/div
+[INFO ] 09-01-2023 20:28:51 [main] Log - Executing: Click element: xpath= //div[@id='form-edit-container']/div/form/div[2]/div/div/div/div/div[4]/div/button[36]
+[INFO ] 09-01-2023 20:28:53 [main] Log - Executing: Click element: xpath= /html/body/div[3]/div[2]/div/div/form/div[3]/div/div/button/div/div
+[INFO ] 09-01-2023 20:28:55 [main] Log - Executing: Click element: xpath= //button[@type = 'button' and (text() = 'Khoa học Máy tính / Công nghệ thông tin' or . = 'Khoa học Máy tính / Công nghệ thông tin')]
+[INFO ] 09-01-2023 20:28:57 [main] Log - Executing: Selection option: Tháng 8
+[INFO ] 09-01-2023 20:28:57 [main] Log - Executing: Selection option: 2019
+[INFO ] 09-01-2023 20:28:57 [main] Log - Executing: Selection option: Tháng 6
+[INFO ] 09-01-2023 20:28:57 [main] Log - Executing: Selection option: 2023
+[INFO ] 09-01-2023 20:28:57 [main] Log - Executing: Enter text: Quá trình học vấn
+[INFO ] 09-01-2023 20:28:58 [main] Log - Executing: Click button: id= go-to-next
+[INFO ] 09-01-2023 20:29:00 [main] Log - Executing: Click button: id= go-to-next
+[INFO ] 09-01-2023 20:29:02 [main] Log - Executing: Verify Text
+[INFO ] 09-01-2023 20:29:02 [main] Log - Text result: Ngoại ngữ
+[INFO ] 09-01-2023 20:29:02 [main] Log - Text expected: Ngoại ngữ
+[INFO ] 09-01-2023 20:29:02 [main] Log - Same result ---> pass
+[INFO ] 09-01-2023 20:29:02 [main] Log - Executing: Click button: id= go-to-next
+[INFO ] 09-01-2023 20:29:04 [main] Log - Executing: Verify Text
+[INFO ] 09-01-2023 20:29:04 [main] Log - Text result: Kinh nghiệp làm việc
+[INFO ] 09-01-2023 20:29:04 [main] Log - Text expected: Kinh nghiệm làm việc
+[ERROR] 09-01-2023 20:29:04 [main] Log - Different result ---> Fail
+[INFO ] 09-01-2023 20:29:04 [main] Log - Executing: Selection option: 0
+[INFO ] 09-01-2023 20:29:04 [main] Log - Executing: Click button: id= go-to-next
+[INFO ] 09-01-2023 20:29:06 [main] Log - Executing: Verify Text
+[INFO ] 09-01-2023 20:29:06 [main] Log - Text result: Người tham khảo
+[INFO ] 09-01-2023 20:29:06 [main] Log - Text expected: Người tham khảo
+[INFO ] 09-01-2023 20:29:06 [main] Log - Same result ---> pass
+[INFO ] 09-01-2023 20:29:06 [main] Log - Executing: Click button: id= go-to-next
+[INFO ] 09-01-2023 20:29:08 [main] Log - Executing: Verify Text
+[INFO ] 09-01-2023 20:29:08 [main] Log - Text result: Kỹ năng
+[INFO ] 09-01-2023 20:29:08 [main] Log - Text expected: Kỹ năng
+[INFO ] 09-01-2023 20:29:08 [main] Log - Same result ---> pass
+[INFO ] 09-01-2023 20:29:08 [main] Log - Executing: Click button: id= go-to-next
+[INFO ] 09-01-2023 20:29:10 [main] Log - Executing: Verify Text
+[INFO ] 09-01-2023 20:29:10 [main] Log - Text result: Mục tiêu nghề nghiệp
+[INFO ] 09-01-2023 20:29:10 [main] Log - Text expected: Mục tiêu nghề nghiệp
+[INFO ] 09-01-2023 20:29:10 [main] Log - Same result ---> pass
+[INFO ] 09-01-2023 20:29:10 [main] Log - Executing: Enter text: Tester
+[INFO ] 09-01-2023 20:29:10 [main] Log - Executing: Enter text: 10000000
+[INFO ] 09-01-2023 20:29:11 [main] Log - Executing: Click element: xpath= //div[contains(@class,'checkmark')])[1]
+[INFO ] 09-01-2023 20:29:11 [main] Log - Executing: Selection option: Thương lượng
+[INFO ] 09-01-2023 20:29:11 [main] Log - Executing: Selection option: Nhân viên toàn thời gian
+[INFO ] 09-01-2023 20:29:11 [main] Log - Executing: Selection option: Nhân viên
+[INFO ] 09-01-2023 20:29:12 [main] Log - Executing: Scroll mouse down and click element: //div[@id='form-edit-container']/div/form/div[6]/div/div/div
+[INFO ] 09-01-2023 20:29:12 [main] Log - Executing: Click element: xpath= /html/body/div[3]/div[2]/div/div/form/div[6]/div/div[2]/div[1]
+[INFO ] 09-01-2023 20:29:14 [main] Log - Executing: Click element: xpath= //div[@id='form-edit-container']/div/form/div[6]/div/div[2]/div[2]/button[13]
+[INFO ] 09-01-2023 20:29:16 [main] Log - Executing: Click element: xpath= /html/body/div[3]/div[2]/div/div/form/div[7]/div/div[1]/div/div[1]/div/button/div/div
+[INFO ] 09-01-2023 20:29:18 [main] Log - Executing: Click element: xpath= //div[@id='form-edit-container']/div/form/div[7]/div/div/div/div/div/div/button[2]
+[INFO ] 09-01-2023 20:29:20 [main] Log - Executing: Enter text: Trở thành Senior Tester trong 3 - 5 năm tới
+[INFO ] 09-01-2023 20:29:20 [main] Log - Executing: Click element: xpath= //div[@id='form-edit-container']/div/form/div[9]/div/div/label[2]/div
+[INFO ] 09-01-2023 20:29:22 [main] Log - Executing: Click element: xpath= //div[@id='form-edit-container']/div/form/div[10]/div/div/label/div
+[INFO ] 09-01-2023 20:29:24 [main] Log - Executing: Click button: id= go-to-next
+[INFO ] 09-01-2023 20:29:26 [main] Log - Executing: Verify Text
+[INFO ] 09-01-2023 20:29:26 [main] Log - Text result: Trạng thái hồ sơ
+[INFO ] 09-01-2023 20:29:26 [main] Log - Text expected: Trạng thái hồ sơ
+[INFO ] 09-01-2023 20:29:26 [main] Log - Same result ---> pass
+[INFO ] 09-01-2023 20:29:26 [main] Log - Executing: Click element: xpath= //div[@id='form-edit-container']/div/div/form/div[3]/label/div
+[INFO ] 09-01-2023 20:29:28 [main] Log - Executing: Click button: id= go-to-next
+[INFO ] 09-01-2023 20:29:30 [main] Log - Executing: Screenshot taken: TSCV11_CreateCV_null
+[INFO ] 09-01-2023 20:29:31 [main] Log - Executing: Verify Text
+[INFO ] 09-01-2023 20:29:31 [main] Log - Text result: Hồ sơ xin việcĐang chờ
+[INFO ] 09-01-2023 20:29:31 [main] Log - Text expected: Hồ sơ xin việc
+[INFO ] 09-01-2023 20:29:31 [main] Log - Same result ---> pass
+[INFO ] 09-01-2023 20:29:32 [main] Log - Executing: Closing...

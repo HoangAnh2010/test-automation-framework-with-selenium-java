@@ -1,0 +1,34 @@
+[INFO ] 10-01-2023 01:38:45 [main] Log - Executing: Recording...
+[INFO ] 10-01-2023 01:38:46 [main] Log - Executing: Open browser Chrome
+[INFO ] 10-01-2023 01:38:49 [main] Log - Executing: Opening Url: https://www.careerlink.vn/
+[INFO ] 10-01-2023 01:38:53 [main] Log - Executing: Enter text: Tester
+[INFO ] 10-01-2023 01:38:54 [main] Log - Executing: Click element: xpath= //input[@placeholder='Nhập tỉnh, thành phố']
+[INFO ] 10-01-2023 01:38:55 [main] Log - Executing: Selection option: Hà Nội
+[INFO ] 10-01-2023 01:38:56 [main] Log - Executing: Selection option: Hồ Chí Minh
+[INFO ] 10-01-2023 01:38:56 [main] Log - Executing: Click button: xpath= //button[contains(text(),'Tìm kiếm')]
+[INFO ] 10-01-2023 01:38:58 [main] Log - Executing: Screenshot taken: TSTK01_Search_null
+[INFO ] 10-01-2023 01:38:58 [main] Log - Executing: Verify Title
+[INFO ] 10-01-2023 01:38:58 [main] Log - Title expected: Kết quả tìm việc làm
+[INFO ] 10-01-2023 01:38:58 [main] Log - Title actual: Kết quả tìm việc làm | Việc Làm, Tìm Việc, Tuyển Dụng | CareerLink.vn
+[INFO ] 10-01-2023 01:38:58 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 01:38:58 [main] Log - Executing: Click element: xpath= //a[@title='IT Tester - Kiểm Thử Phần Mềm (8 - 15 Triệu - Làm Việc Ở Tân Bình, Tp. HCM)']
+[INFO ] 10-01-2023 01:38:59 [main] Log - Executing: Switch to new tab
+[INFO ] 10-01-2023 01:39:00 [main] Log - Executing: Verify Text
+[INFO ] 10-01-2023 01:39:00 [main] Log - Title expected: Mô tả công việc
+[INFO ] 10-01-2023 01:39:00 [main] Log - Title actual: Mô tả công việc
+[INFO ] 10-01-2023 01:39:00 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 01:39:00 [main] Log - Executing: Verify Text
+[INFO ] 10-01-2023 01:39:00 [main] Log - Title expected: IT Tester - Kiểm Thử Phần Mềm (8 - 15 Triệu - Làm Việc Ở Tân Bình, Tp. HCM)
+[INFO ] 10-01-2023 01:39:00 [main] Log - Title actual: IT Tester - Kiểm Thử Phần Mềm (8 - 15 Triệu - Làm Việc Ở Tân Bình, Tp. HCM)
+[INFO ] 10-01-2023 01:39:00 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 01:39:00 [main] Log - Executing: Verify Text
+[INFO ] 10-01-2023 01:39:00 [main] Log - Title expected: Hồ Chí Minh
+[INFO ] 10-01-2023 01:39:00 [main] Log - Title actual: Hồ Chí Minh
+[INFO ] 10-01-2023 01:39:00 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 01:39:00 [main] Log - Executing: Verify Text
+[INFO ] 10-01-2023 01:39:00 [main] Log - Title expected: 8,000,000 VND - 15,000,000 VND
+[INFO ] 10-01-2023 01:39:00 [main] Log - Title actual: 8,000,000 VND - 15,000,000 VND
+[INFO ] 10-01-2023 01:39:00 [main] Log - Same result ---> Pass
+[INFO ] 10-01-2023 01:39:01 [main] Log - Executing: Screenshot taken: TSTK01_JobDetails_null
+[INFO ] 10-01-2023 01:39:01 [main] Log - Executing: Closing...
+[INFO ] 10-01-2023 01:39:01 [main] Log - Stop record

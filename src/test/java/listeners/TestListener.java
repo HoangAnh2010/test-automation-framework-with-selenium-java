@@ -19,9 +19,6 @@ import com.github.automatedowl.tools.AllureEnvironmentWriter;
 import com.google.common.collect.ImmutableMap;
 import org.testng.*;
 
-import java.awt.*;
-import java.io.IOException;
-
 import static constants.FrwConstants.*;
 
 public class TestListener implements ITestListener, ISuiteListener, IInvokedMethodListener {
@@ -70,10 +67,12 @@ public class TestListener implements ITestListener, ISuiteListener, IInvokedMeth
     public void onFinish(ISuite iSuite) {
         LogUtils.info("End Suite: " + iSuite.getName());
         ActionKeywords.stopSoftAssertAll();
+//        ExtentReportManager.createTest(iSuite.getName(),"asdasd");
         //End Suite and execute Extents Report
+
         ExtentReportManager.flushReports();
         //Send mail
-        EmailSendUtils.sendEmail(count_totalTCs, count_passedTCs, count_failedTCs, count_skippedTCs);
+//        EmailSendUtils.sendEmail(count_totalTCs, count_passedTCs, count_failedTCs, count_skippedTCs);
 
         //Write information in Allure Report
         AllureEnvironmentWriter.allureEnvironmentWriter(
@@ -145,6 +144,7 @@ public class TestListener implements ITestListener, ISuiteListener, IInvokedMeth
         count_failedTCs = count_failedTCs + 1;
 
         if (SCREENSHOT_FAILED_STEPS.equals(YES)) {
+            System.out.println("Helloo em vao ham nay");
             CapturesUtils.captureScreenshot(DriverManager.getDriver(), getTestName(iTestResult));
         }
 
@@ -156,8 +156,8 @@ public class TestListener implements ITestListener, ISuiteListener, IInvokedMeth
         AllureManager.saveTextLog(iTestResult.getThrowable().toString());
 
         //Extent report screenshot file and log
-        ExtentReportManager.addScreenShot(Status.FAIL, getTestName(iTestResult));
-        ExtentReportManager.logMessage(Status.FAIL, iTestResult.getThrowable().toString());
+        ExtentReportManager.addScreenShot(Status.PASS, getTestName(iTestResult));
+//        ExtentReportManager.logMessage(Status.FAIL, iTestResult.getThrowable().toString());
 
     }
 

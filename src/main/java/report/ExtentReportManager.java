@@ -75,12 +75,10 @@ public class ExtentReportManager {
     }
 
     public static void createTest(String testCaseName) {
-        // ExtentManager.setExtentTest(extent.createTest(testCaseName));
         ExtentTestManager.setExtentTest(extentReports.createTest(IconUtils.getBrowserIcon() + " : " + testCaseName));
     }
 
     public static void createTest(String testCaseName, String description) {
-        // ExtentManager.setExtentTest(extent.createTest(testCaseName));
         ExtentTestManager.setExtentTest(extentReports.createTest(testCaseName, description));
     }
 

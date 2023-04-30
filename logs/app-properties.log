@@ -1,0 +1,1555 @@
+[INFO ] 23-04-2023 23:55:51 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 23-04-2023 23:55:51 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 23-04-2023 23:55:52 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 23-04-2023 23:55:52 [main] LogUtils - Test case:  is starting...
+[INFO ] 23-04-2023 23:55:54 [main] LogUtils - Executing: Recording...
+[INFO ] 23-04-2023 23:55:54 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 23-04-2023 23:56:00 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 23-04-2023 23:56:02 [main] LogUtils - Entering text: "         "
+[INFO ] 23-04-2023 23:56:02 [main] LogUtils - Entering text: 20102002
+[INFO ] 23-04-2023 23:56:03 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 23-04-2023 23:56:04 [main] LogUtils - Executing: | Verify the result
+[INFO ] 23-04-2023 23:56:04 [main] LogUtils - Expected Result: Demo
+[INFO ] 23-04-2023 23:56:04 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 23-04-2023 23:56:04 [main] LogUtils - Different result ---> Fail
+[INFO ] 23-04-2023 23:56:05 [main] LogUtils - Executing: Screenshot taken: onFailed_Sun_Apr_23_23_56_04_ICT_2023
+[INFO ] 23-04-2023 23:56:05 [main] LogUtils - Executing: Closing...
+[INFO ] 23-04-2023 23:56:05 [main] LogUtils - Stop record
+[INFO ] 23-04-2023 23:56:06 [main] LogUtils - Test case:  is passed.
+[INFO ] 23-04-2023 23:56:06 [main] LogUtils - End Suite: Default Suite
+[INFO ] 24-04-2023 00:01:51 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 00:01:51 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 00:01:55 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[ERROR] 24-04-2023 00:01:57 [main] LogUtils - Opening Url:https://www.careerlink.vn/nguoi-tim-viec/loginFAIL
+[INFO ] 24-04-2023 00:01:57 [main] LogUtils - Entering text: "         "
+[INFO ] 24-04-2023 00:01:57 [main] LogUtils - Entering text: 20102002
+[INFO ] 24-04-2023 00:01:57 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 00:01:57 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 00:01:57 [main] LogUtils - Executing: Closing...
+[ERROR] 24-04-2023 00:01:58 [main] LogUtils - Executing: Close FAIL
+[INFO ] 24-04-2023 00:01:58 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 00:01:58 [main] LogUtils - Stop record
+[INFO ] 24-04-2023 00:02:26 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 00:02:26 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 00:02:31 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[ERROR] 24-04-2023 00:02:33 [main] LogUtils - Opening Url:https://www.careerlink.vn/nguoi-tim-viec/loginFAIL
+[INFO ] 24-04-2023 00:02:33 [main] LogUtils - Entering text: "         "
+[INFO ] 24-04-2023 00:02:33 [main] LogUtils - Entering text: 20102002
+[INFO ] 24-04-2023 00:02:34 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 00:02:34 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 00:02:34 [main] LogUtils - Executing: Closing...
+[ERROR] 24-04-2023 00:02:34 [main] LogUtils - Executing: Close FAIL
+[INFO ] 24-04-2023 00:02:34 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 00:02:34 [main] LogUtils - Stop record
+[INFO ] 24-04-2023 00:04:09 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 00:04:09 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 00:04:10 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 24-04-2023 00:04:10 [main] LogUtils - Test case:  is starting...
+[INFO ] 24-04-2023 00:04:12 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 00:04:12 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 00:04:18 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 00:04:21 [main] LogUtils - Entering text: "         "
+[INFO ] 24-04-2023 00:04:22 [main] LogUtils - Entering text: 20102002
+[INFO ] 24-04-2023 00:04:22 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 00:04:23 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 00:04:24 [main] LogUtils - Expected Result: Demo
+[INFO ] 24-04-2023 00:04:24 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 24-04-2023 00:04:24 [main] LogUtils - Different result ---> Fail
+[INFO ] 24-04-2023 00:04:24 [main] LogUtils - Executing: Screenshot taken: onFailed_Mon_Apr_24_00_04_24_ICT_2023
+[INFO ] 24-04-2023 00:04:24 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 00:04:25 [main] LogUtils - Stop record
+[INFO ] 24-04-2023 00:04:25 [main] LogUtils - Test case:  is passed.
+[INFO ] 24-04-2023 00:04:25 [main] LogUtils - End Suite: Default Suite
+[INFO ] 24-04-2023 00:17:57 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 00:17:57 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 00:18:04 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[ERROR] 24-04-2023 00:18:06 [main] LogUtils - Opening Url:https://www.careerlink.vn/nguoi-tim-viec/loginFAIL
+[INFO ] 24-04-2023 00:18:06 [main] LogUtils - Entering text: "         "
+[INFO ] 24-04-2023 00:18:06 [main] LogUtils - Entering text: 20102002
+[INFO ] 24-04-2023 00:18:06 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 00:18:06 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 00:18:06 [main] LogUtils - Executing: Closing...
+[ERROR] 24-04-2023 00:18:06 [main] LogUtils - Executing: Close FAIL
+[INFO ] 24-04-2023 00:18:06 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 00:18:06 [main] LogUtils - Stop record
+[INFO ] 24-04-2023 00:31:03 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 00:31:03 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 00:31:08 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[ERROR] 24-04-2023 00:31:10 [main] LogUtils - Opening Url:https://www.careerlink.vn/nguoi-tim-viec/loginFAIL
+[INFO ] 24-04-2023 00:31:10 [main] LogUtils - Entering text: "         "
+[INFO ] 24-04-2023 00:31:10 [main] LogUtils - Entering text: 20102002
+[INFO ] 24-04-2023 00:31:10 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 00:31:11 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 00:31:11 [main] LogUtils - Executing: Closing...
+[ERROR] 24-04-2023 00:31:11 [main] LogUtils - Executing: Close FAIL
+[INFO ] 24-04-2023 00:31:11 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 00:31:11 [main] LogUtils - Stop record
+[INFO ] 24-04-2023 00:31:29 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 00:31:30 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 00:31:35 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[ERROR] 24-04-2023 00:31:36 [main] LogUtils - Opening Url:https://www.careerlink.vn/nguoi-tim-viec/loginFAIL
+[INFO ] 24-04-2023 00:31:36 [main] LogUtils - Entering text: "         "
+[INFO ] 24-04-2023 00:31:36 [main] LogUtils - Entering text: 20102002
+[INFO ] 24-04-2023 00:31:37 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 00:31:37 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 00:31:37 [main] LogUtils - Executing: Closing...
+[ERROR] 24-04-2023 00:31:37 [main] LogUtils - Executing: Close FAIL
+[INFO ] 24-04-2023 00:31:37 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 00:31:37 [main] LogUtils - Stop record
+[INFO ] 24-04-2023 00:32:13 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 00:32:13 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 00:32:18 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[ERROR] 24-04-2023 00:32:20 [main] LogUtils - Opening Url:https://www.careerlink.vn/nguoi-tim-viec/loginFAIL
+[INFO ] 24-04-2023 00:32:20 [main] LogUtils - Entering text: "         "
+[INFO ] 24-04-2023 00:32:20 [main] LogUtils - Entering text: 20102002
+[INFO ] 24-04-2023 00:32:20 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 00:32:20 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 00:32:20 [main] LogUtils - Executing: Closing...
+[ERROR] 24-04-2023 00:32:21 [main] LogUtils - Executing: Close FAIL
+[INFO ] 24-04-2023 00:32:21 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 00:32:21 [main] LogUtils - Stop record
+[INFO ] 24-04-2023 00:32:50 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 00:32:50 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 00:32:51 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 24-04-2023 00:32:51 [main] LogUtils - Test case:  is starting...
+[INFO ] 24-04-2023 00:32:53 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 00:32:53 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 00:32:58 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 00:33:02 [main] LogUtils - Entering text: "         "
+[INFO ] 24-04-2023 00:33:02 [main] LogUtils - Entering text: 20102002
+[INFO ] 24-04-2023 00:33:03 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 00:33:04 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 00:33:04 [main] LogUtils - Expected Result: Demo
+[INFO ] 24-04-2023 00:33:04 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 24-04-2023 00:33:04 [main] LogUtils - Different result ---> Fail
+[INFO ] 24-04-2023 00:33:05 [main] LogUtils - Executing: Screenshot taken: onFailed_Mon_Apr_24_00_33_04_ICT_2023
+[INFO ] 24-04-2023 00:33:05 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 00:33:06 [main] LogUtils - Stop record
+[INFO ] 24-04-2023 00:33:06 [main] LogUtils - Test case:  is passed.
+[INFO ] 24-04-2023 00:37:05 [main] LogUtils - End Suite: Default Suite
+[INFO ] 24-04-2023 00:39:41 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 00:39:41 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 00:39:42 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 24-04-2023 00:39:42 [main] LogUtils - Test case:  is starting...
+[INFO ] 24-04-2023 00:39:45 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 00:39:45 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 00:39:51 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 00:39:53 [main] LogUtils - Entering text: "         "
+[INFO ] 24-04-2023 00:39:54 [main] LogUtils - Entering text: 20102002
+[INFO ] 24-04-2023 00:39:54 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 00:39:55 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 00:39:56 [main] LogUtils - Expected Result: Demo
+[INFO ] 24-04-2023 00:39:56 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 24-04-2023 00:39:56 [main] LogUtils - Different result ---> Fail
+[INFO ] 24-04-2023 00:39:56 [main] LogUtils - Executing: Screenshot taken: onFailed_Mon_Apr_24_00_39_56_ICT_2023
+[INFO ] 24-04-2023 00:39:56 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 00:39:57 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 00:39:59 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 00:40:01 [main] LogUtils - Entering text: "         "
+[INFO ] 24-04-2023 00:40:01 [main] LogUtils - Entering text: 20102003
+[INFO ] 24-04-2023 00:40:01 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 00:40:03 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 00:40:03 [main] LogUtils - Expected Result: Demo
+[INFO ] 24-04-2023 00:40:03 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 24-04-2023 00:40:03 [main] LogUtils - Different result ---> Fail
+[INFO ] 24-04-2023 00:40:03 [main] LogUtils - Executing: Screenshot taken: onFailed_Mon_Apr_24_00_40_03_ICT_2023
+[INFO ] 24-04-2023 00:40:04 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 00:40:04 [main] LogUtils - Stop record
+[INFO ] 24-04-2023 00:40:04 [main] LogUtils - Test case:  is passed.
+[INFO ] 24-04-2023 00:40:07 [main] LogUtils - End Suite: Default Suite
+[INFO ] 24-04-2023 00:49:37 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 00:49:37 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 00:49:38 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 24-04-2023 00:49:38 [main] LogUtils - Test case:  is starting...
+[INFO ] 24-04-2023 00:49:40 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 00:49:40 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 00:49:46 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 00:49:48 [main] LogUtils - Entering text: "         "
+[INFO ] 24-04-2023 00:49:48 [main] LogUtils - Entering text: 20102002
+[INFO ] 24-04-2023 00:49:48 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 00:49:50 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 00:49:50 [main] LogUtils - Expected Result: Demo
+[INFO ] 24-04-2023 00:49:50 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 24-04-2023 00:49:50 [main] LogUtils - Different result ---> Fail
+[INFO ] 24-04-2023 00:49:50 [main] LogUtils - Executing: Screenshot taken: onFailed_Mon_Apr_24_00_49_50_ICT_2023
+[INFO ] 24-04-2023 00:49:51 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 00:49:51 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 00:49:52 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 00:49:54 [main] LogUtils - Entering text: "         "
+[INFO ] 24-04-2023 00:49:54 [main] LogUtils - Entering text: 20102003
+[INFO ] 24-04-2023 00:49:54 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 00:49:56 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 00:49:56 [main] LogUtils - Expected Result: Demo
+[INFO ] 24-04-2023 00:49:56 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 24-04-2023 00:49:56 [main] LogUtils - Different result ---> Fail
+[INFO ] 24-04-2023 00:49:56 [main] LogUtils - Executing: Screenshot taken: onFailed_Mon_Apr_24_00_49_56_ICT_2023
+[INFO ] 24-04-2023 00:49:56 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 00:49:56 [main] LogUtils - Stop record
+[INFO ] 24-04-2023 00:49:57 [main] LogUtils - Test case:  is passed.
+[INFO ] 24-04-2023 00:49:57 [main] LogUtils - End Suite: Default Suite
+[INFO ] 24-04-2023 18:45:51 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 18:45:51 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 18:45:52 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 24-04-2023 18:45:53 [main] LogUtils - Test case:  is starting...
+[INFO ] 24-04-2023 18:45:55 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 18:45:55 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 18:46:03 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 18:46:06 [main] LogUtils - Entering text: "         "
+[INFO ] 24-04-2023 18:46:06 [main] LogUtils - Entering text: 20102002
+[INFO ] 24-04-2023 18:46:06 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 18:46:08 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 18:46:08 [main] LogUtils - Expected Result: Demo
+[INFO ] 24-04-2023 18:46:08 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 24-04-2023 18:46:08 [main] LogUtils - Different result ---> Fail
+[INFO ] 24-04-2023 18:46:08 [main] LogUtils - Executing: Screenshot taken: onFailed_Mon_Apr_24_18_46_08_ICT_2023
+[INFO ] 24-04-2023 18:46:09 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 18:46:09 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 18:46:10 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 18:46:12 [main] LogUtils - Entering text: "         "
+[INFO ] 24-04-2023 18:46:13 [main] LogUtils - Entering text: 20102003
+[INFO ] 24-04-2023 18:46:13 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 18:46:14 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 18:46:15 [main] LogUtils - Expected Result: Demo
+[INFO ] 24-04-2023 18:46:15 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 24-04-2023 18:46:15 [main] LogUtils - Different result ---> Fail
+[INFO ] 24-04-2023 18:46:15 [main] LogUtils - Executing: Screenshot taken: onFailed_Mon_Apr_24_18_46_15_ICT_2023
+[INFO ] 24-04-2023 18:46:15 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 18:46:16 [main] LogUtils - Stop record
+[INFO ] 24-04-2023 18:46:16 [main] LogUtils - Test case:  is passed.
+[INFO ] 24-04-2023 18:46:16 [main] LogUtils - End Suite: Default Suite
+[INFO ] 24-04-2023 18:47:59 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 18:47:59 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 18:48:00 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 24-04-2023 18:48:00 [main] LogUtils - Test case:  is starting...
+[INFO ] 24-04-2023 18:48:02 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 18:48:02 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 18:48:08 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 18:48:10 [main] LogUtils - Entering text: "         "
+[INFO ] 24-04-2023 18:48:10 [main] LogUtils - Entering text: 20102002
+[INFO ] 24-04-2023 18:48:10 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 18:48:12 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 18:48:12 [main] LogUtils - Expected Result: Demo
+[INFO ] 24-04-2023 18:48:12 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[INFO ] 24-04-2023 18:48:13 [main] LogUtils - Executing: Screenshot taken: onFailed_Mon_Apr_24_18_48_12_ICT_2023
+[INFO ] 24-04-2023 18:48:13 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 18:48:13 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 18:48:15 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 18:48:17 [main] LogUtils - Entering text: "         "
+[INFO ] 24-04-2023 18:48:17 [main] LogUtils - Entering text: 20102003
+[INFO ] 24-04-2023 18:48:17 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 18:48:19 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 18:48:19 [main] LogUtils - Expected Result: Demo
+[INFO ] 24-04-2023 18:48:19 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[INFO ] 24-04-2023 18:48:20 [main] LogUtils - Executing: Screenshot taken: onFailed_Mon_Apr_24_18_48_19_ICT_2023
+[INFO ] 24-04-2023 18:48:20 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 18:48:20 [main] LogUtils - Stop record
+[INFO ] 24-04-2023 18:48:21 [main] LogUtils - Test case:  is passed.
+[INFO ] 24-04-2023 18:48:21 [main] LogUtils - End Suite: Default Suite
+[INFO ] 24-04-2023 18:51:18 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 18:51:18 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 18:51:19 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 24-04-2023 18:51:20 [main] LogUtils - Test case:  is starting...
+[INFO ] 24-04-2023 18:51:22 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 18:51:22 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 18:51:30 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 18:51:32 [main] LogUtils - Entering text: "         "
+[INFO ] 24-04-2023 18:51:32 [main] LogUtils - Entering text: 20102002
+[INFO ] 24-04-2023 18:51:32 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 18:51:34 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 18:51:34 [main] LogUtils - Expected Result: Demo
+[INFO ] 24-04-2023 18:51:34 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 24-04-2023 18:51:34 [main] LogUtils - Different result ---> Fail
+[INFO ] 24-04-2023 18:51:35 [main] LogUtils - Executing: Screenshot taken: onFailed_Mon_Apr_24_18_51_34_ICT_2023
+[INFO ] 24-04-2023 18:51:35 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 18:51:36 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 18:51:37 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 18:51:40 [main] LogUtils - Entering text: "         "
+[INFO ] 24-04-2023 18:51:40 [main] LogUtils - Entering text: 20102003
+[INFO ] 24-04-2023 18:51:40 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 18:51:42 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 18:51:42 [main] LogUtils - Expected Result: Demo
+[INFO ] 24-04-2023 18:51:42 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 24-04-2023 18:51:42 [main] LogUtils - Different result ---> Fail
+[INFO ] 24-04-2023 18:51:42 [main] LogUtils - Executing: Screenshot taken: onFailed_Mon_Apr_24_18_51_42_ICT_2023
+[INFO ] 24-04-2023 18:51:43 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 18:51:43 [main] LogUtils - Stop record
+[INFO ] 24-04-2023 18:51:43 [main] LogUtils - Test case:  is passed.
+[INFO ] 24-04-2023 18:51:43 [main] LogUtils - End Suite: Default Suite
+[INFO ] 24-04-2023 21:41:38 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 21:41:38 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 21:41:39 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 24-04-2023 21:41:40 [main] LogUtils - Test case:  is starting...
+[INFO ] 24-04-2023 21:41:42 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 21:41:42 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 21:41:49 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 21:41:51 [main] LogUtils - Entering text: "         "
+[INFO ] 24-04-2023 21:41:51 [main] LogUtils - Entering text: 20102002
+[INFO ] 24-04-2023 21:41:51 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 21:41:53 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 21:41:53 [main] LogUtils - Expected Result: Demo
+[INFO ] 24-04-2023 21:41:53 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 24-04-2023 21:41:53 [main] LogUtils - Different result ---> Fail
+[INFO ] 24-04-2023 21:41:53 [main] LogUtils - Executing: Screenshot taken: onFailed_Mon_Apr_24_21_41_53_ICT_2023
+[INFO ] 24-04-2023 21:41:54 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 21:41:54 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 21:41:55 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 21:41:57 [main] LogUtils - Entering text: "         "
+[INFO ] 24-04-2023 21:41:57 [main] LogUtils - Entering text: 20102003
+[INFO ] 24-04-2023 21:41:57 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 21:41:59 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 21:41:59 [main] LogUtils - Expected Result: Demo
+[INFO ] 24-04-2023 21:41:59 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 24-04-2023 21:41:59 [main] LogUtils - Different result ---> Fail
+[INFO ] 24-04-2023 21:41:59 [main] LogUtils - Executing: Screenshot taken: onFailed_Mon_Apr_24_21_41_59_ICT_2023
+[INFO ] 24-04-2023 21:41:59 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 21:42:00 [main] LogUtils - Stop record
+[INFO ] 24-04-2023 21:42:00 [main] LogUtils - Test case:  is passed.
+[INFO ] 24-04-2023 21:42:00 [main] LogUtils - End Suite: Default Suite
+[INFO ] 24-04-2023 21:46:39 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 21:46:39 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 21:46:40 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 24-04-2023 21:46:40 [main] LogUtils - Test case:  is starting...
+[INFO ] 24-04-2023 21:46:41 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 21:46:41 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 21:46:45 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 21:46:47 [main] LogUtils - Entering text: "         "
+[INFO ] 24-04-2023 21:46:47 [main] LogUtils - Entering text: 20102002
+[INFO ] 24-04-2023 21:46:47 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 21:46:49 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 21:46:49 [main] LogUtils - Expected Result: Demo
+[INFO ] 24-04-2023 21:46:49 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 24-04-2023 21:46:49 [main] LogUtils - Different result ---> Fail
+[INFO ] 24-04-2023 21:46:49 [main] LogUtils - Executing: Screenshot taken: onFailed_Mon_Apr_24_21_46_49_ICT_2023
+[INFO ] 24-04-2023 21:46:50 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 21:46:50 [main] LogUtils - Stop record
+[INFO ] 24-04-2023 21:46:50 [main] LogUtils - Test case:  is passed.
+[INFO ] 24-04-2023 21:46:50 [main] LogUtils - End Suite: Default Suite
+[INFO ] 24-04-2023 21:53:25 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 21:53:25 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 21:53:26 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 24-04-2023 21:53:26 [main] LogUtils - Test case:  is starting...
+[INFO ] 24-04-2023 21:53:27 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 21:53:27 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 21:53:31 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 21:53:33 [main] LogUtils - Entering text: 
+[INFO ] 24-04-2023 21:53:34 [main] LogUtils - Entering text: 20102001
+[INFO ] 24-04-2023 21:53:34 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'??ng nh?p')]
+[INFO ] 24-04-2023 21:53:34 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 21:53:34 [main] LogUtils - Expected Result: Please fill out this field.
+[INFO ] 24-04-2023 21:53:34 [main] LogUtils - Actual Result: Please fill out this field.
+[INFO ] 24-04-2023 21:53:34 [main] LogUtils - Same result ---> Pass
+[INFO ] 24-04-2023 21:53:34 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 21:53:34 [main] LogUtils - Stop record
+[INFO ] 24-04-2023 21:53:35 [main] LogUtils - Test case:  is passed.
+[INFO ] 24-04-2023 21:53:35 [main] LogUtils - Test case:  is starting...
+[INFO ] 24-04-2023 21:53:37 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 21:53:37 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 21:53:38 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 21:53:41 [main] LogUtils - Entering text: "         "
+[INFO ] 24-04-2023 21:53:41 [main] LogUtils - Entering text: 20102002
+[INFO ] 24-04-2023 21:53:41 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 21:53:43 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 21:53:43 [main] LogUtils - Expected Result: Demo
+[INFO ] 24-04-2023 21:53:43 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 24-04-2023 21:53:43 [main] LogUtils - Different result ---> Fail
+[INFO ] 24-04-2023 21:53:44 [main] LogUtils - Executing: Screenshot taken: onFailed_Mon_Apr_24_21_53_43_ICT_2023
+[INFO ] 24-04-2023 21:53:44 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 21:53:45 [main] LogUtils - Stop record
+[INFO ] 24-04-2023 21:53:45 [main] LogUtils - Test case:  is passed.
+[INFO ] 24-04-2023 21:53:45 [main] LogUtils - Test case:  is starting...
+[INFO ] 24-04-2023 21:53:45 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 21:53:45 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 21:53:46 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 21:53:48 [main] LogUtils - Entering text: null
+[INFO ] 24-04-2023 21:53:48 [main] LogUtils - Entering text: 20102001
+[INFO ] 24-04-2023 21:53:48 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 21:53:50 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 21:53:50 [main] LogUtils - Expected Result: Please fill out this field.
+[INFO ] 24-04-2023 21:53:50 [main] LogUtils - Actual Result: Please fill out this field.
+[INFO ] 24-04-2023 21:53:50 [main] LogUtils - Same result ---> Pass
+[INFO ] 24-04-2023 21:53:50 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 21:53:50 [main] LogUtils - Stop record
+[INFO ] 24-04-2023 21:53:50 [main] LogUtils - Test case:  is passed.
+[INFO ] 24-04-2023 21:53:50 [main] LogUtils - Test case:  is starting...
+[INFO ] 24-04-2023 21:53:52 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 21:53:52 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 21:53:53 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 21:53:54 [main] LogUtils - Entering text: 
+[INFO ] 24-04-2023 21:53:55 [main] LogUtils - Entering text: 20102001
+[INFO ] 24-04-2023 21:53:55 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 21:53:56 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 21:53:56 [main] LogUtils - Expected Result: Please fill out this field.
+[INFO ] 24-04-2023 21:53:56 [main] LogUtils - Actual Result: Please fill out this field.
+[INFO ] 24-04-2023 21:53:56 [main] LogUtils - Same result ---> Pass
+[INFO ] 24-04-2023 21:53:56 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 21:53:57 [main] LogUtils - Stop record
+[INFO ] 24-04-2023 21:53:57 [main] LogUtils - Test case:  is passed.
+[INFO ] 24-04-2023 21:53:57 [main] LogUtils - Test case:  is starting...
+[INFO ] 24-04-2023 21:53:57 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 21:53:57 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 21:53:59 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 21:54:00 [main] LogUtils - Entering text: hoanganh04092001@gmail.com
+[INFO ] 24-04-2023 21:54:01 [main] LogUtils - Entering text: 20102001
+[INFO ] 24-04-2023 21:54:01 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 21:54:04 [main] LogUtils - [>>ERROR<<]: |Keyword Not Found screenShot
+[INFO ] 24-04-2023 21:54:04 [main] LogUtils - Executing: | Verify Text
+[INFO ] 24-04-2023 21:54:04 [main] LogUtils - Executing: Click on button: xpath= //a[@class='nav-link py-3'][contains(text(),'xin vi')]
+[INFO ] 24-04-2023 21:54:06 [main] LogUtils - Executing: Click on button: xpath= //div/div/button/i
+[INFO ] 24-04-2023 21:54:07 [main] LogUtils - Executing: Click on element: xpath= //a[@href='/nguoi-tim-viec/ho-so/moi']
+[INFO ] 24-04-2023 21:54:09 [main] LogUtils - Executing: | Verify Text
+[INFO ] 24-04-2023 21:54:09 [main] LogUtils - Title expected: Thông tin cá nhân
+[INFO ] 24-04-2023 21:54:09 [main] LogUtils - Title actual: Thông tin cá nhân
+[INFO ] 24-04-2023 21:54:09 [main] LogUtils - Same result ---> Pass
+[INFO ] 24-04-2023 21:54:09 [main] LogUtils - Entering text: Hồ sơ xin việc
+[INFO ] 24-04-2023 21:54:10 [main] LogUtils - Executing: | Selection option: Việt Nam
+[INFO ] 24-04-2023 21:54:10 [main] LogUtils - Executing: | Selection option: 20
+[INFO ] 24-04-2023 21:54:10 [main] LogUtils - Executing: | Selection option: Tháng 10
+[INFO ] 24-04-2023 21:54:10 [main] LogUtils - Executing: | Selection option: 2001
+[INFO ] 24-04-2023 21:54:10 [main] LogUtils - Executing: Upload image: G:\\cute.jpg
+[INFO ] 24-04-2023 21:54:10 [main] LogUtils - Executing: Click on button: className= btn btn-primary ml-auto font-weight-bold d-flex align-items-center mr-2
+[INFO ] 24-04-2023 21:54:10 [main] LogUtils - Executing: Scroll mouse down and click element: //div[@id='form-edit-container']/div/form/div/div/label[3]/div[2]/label/div
+[INFO ] 24-04-2023 21:54:10 [main] LogUtils - Executing: Click on element: xpath= //div[@id='form-edit-container']/div/form/div/div/label[3]/div[2]/label/div
+[INFO ] 24-04-2023 21:54:12 [main] LogUtils - Executing: Click on element: xpath= //div[@id='form-edit-container']/div/form/div/div/label[4]/div[2]/label[2]/div
+[INFO ] 24-04-2023 21:54:13 [main] LogUtils - Executing: Click on button: id= go-to-next
+[INFO ] 24-04-2023 21:54:15 [main] LogUtils - Executing: | Verify Text
+[INFO ] 24-04-2023 21:54:15 [main] LogUtils - Title expected: Thông tin liên hệ
+[INFO ] 24-04-2023 21:54:15 [main] LogUtils - Title actual: Thông tin liên hệ
+[INFO ] 24-04-2023 21:54:15 [main] LogUtils - Same result ---> Pass
+[INFO ] 24-04-2023 21:54:15 [main] LogUtils - Entering text: 0978227010
+[INFO ] 24-04-2023 21:54:15 [main] LogUtils - Executing: Click on element: xpath= /html/body/div[3]/div[2]/div/div/form/div[3]/div/button/div/div
+[INFO ] 24-04-2023 21:54:17 [main] LogUtils - Executing: Click on element: xpath= //button[@type = 'button' and (text() = 'Viet Nam' or . = 'Viet Nam')]
+[INFO ] 24-04-2023 21:54:18 [main] LogUtils - Executing: Scroll mouse down and click element: //div[@id='form-edit-container']/div/form/div[4]/div/div/button
+[INFO ] 24-04-2023 21:54:18 [main] LogUtils - Executing: Click on element: xpath= /html/body/div[3]/div[2]/div/div/form/div[4]/div[1]/div/button/div/div
+[INFO ] 24-04-2023 21:54:20 [main] LogUtils - Executing: Click on element: xpath= //button[@type = 'button' and (text() = 'Hưng Yên' or . = 'Hưng Yên')]
+[INFO ] 24-04-2023 21:54:22 [main] LogUtils - Executing: Click on element: xpath= /html/body/div[3]/div[2]/div/div/form/div[4]/div[2]/div/button/div/div
+[INFO ] 24-04-2023 21:54:23 [main] LogUtils - Executing: Click on element: xpath= //button[@type = 'button' and (text() = 'Huyện Phù Cừ' or . = 'Huyện Phù Cừ')]
+[INFO ] 24-04-2023 21:54:25 [main] LogUtils - Entering text: Xã Minh Hoàng
+[INFO ] 24-04-2023 21:54:25 [main] LogUtils - Executing: Click on button: id= go-to-next
+[INFO ] 24-04-2023 21:54:26 [main] LogUtils - Executing: | Verify Text
+[INFO ] 24-04-2023 21:54:26 [main] LogUtils - Title expected: Học vấn
+[INFO ] 24-04-2023 21:54:26 [main] LogUtils - Title actual: Học vấn
+[INFO ] 24-04-2023 21:54:26 [main] LogUtils - Same result ---> Pass
+[INFO ] 24-04-2023 21:54:26 [main] LogUtils - Executing: Click on element: xpath= /html/body/div[3]/div[2]/div/div/form/div[1]/div/button/div/div
+[INFO ] 24-04-2023 21:54:28 [main] LogUtils - Executing: Click on element: xpath= //button[@type = 'button' and (text() = 'Kỹ sư' or . = 'Kỹ sư')]
+[INFO ] 24-04-2023 21:54:30 [main] LogUtils - Executing: Scroll mouse down and click element: //div[@id='form-edit-container']/div/form/div[4]/div/div/div/div/select
+[INFO ] 24-04-2023 21:54:30 [main] LogUtils - Executing: Click on element: xpath= /html/body/div[3]/div[2]/div/div/form/div[2]/div/div/div/button/div/div
+[INFO ] 24-04-2023 21:54:31 [main] LogUtils - Executing: Click on element: xpath= //div[@id='form-edit-container']/div/form/div[2]/div/div/div/div/div[4]/div/button[36]
+[INFO ] 24-04-2023 21:54:33 [main] LogUtils - Executing: Click on element: xpath= /html/body/div[3]/div[2]/div/div/form/div[3]/div/div/button/div/div
+[INFO ] 24-04-2023 21:54:34 [main] LogUtils - Executing: Click on element: xpath= //button[@type = 'button' and (text() = 'Khoa học Máy tính / Công nghệ thông tin' or . = 'Khoa học Máy tính / Công nghệ thông tin')]
+[INFO ] 24-04-2023 21:54:36 [main] LogUtils - Executing: | Selection option: Tháng 8
+[INFO ] 24-04-2023 21:54:36 [main] LogUtils - Executing: | Selection option: 2019
+[INFO ] 24-04-2023 21:54:36 [main] LogUtils - Executing: | Selection option: Tháng 6
+[INFO ] 24-04-2023 21:54:36 [main] LogUtils - Executing: | Selection option: 2023
+[INFO ] 24-04-2023 21:54:36 [main] LogUtils - Entering text: Quá trình học vấn
+[INFO ] 24-04-2023 21:54:37 [main] LogUtils - Executing: Click on button: id= go-to-next
+[INFO ] 24-04-2023 21:54:38 [main] LogUtils - Executing: Click on button: id= go-to-next
+[INFO ] 24-04-2023 21:54:40 [main] LogUtils - Executing: | Verify Text
+[INFO ] 24-04-2023 21:54:40 [main] LogUtils - Title expected: Ngoại ngữ
+[INFO ] 24-04-2023 21:54:40 [main] LogUtils - Title actual: Ngoại ngữ
+[INFO ] 24-04-2023 21:54:40 [main] LogUtils - Same result ---> Pass
+[INFO ] 24-04-2023 21:54:40 [main] LogUtils - Executing: Click on button: id= go-to-next
+[INFO ] 24-04-2023 21:54:41 [main] LogUtils - Executing: | Verify Text
+[INFO ] 24-04-2023 21:54:41 [main] LogUtils - Title expected: Kinh nghiệm làm việc
+[INFO ] 24-04-2023 21:54:41 [main] LogUtils - Title actual: Kinh nghiệp làm việc
+[ERROR] 24-04-2023 21:54:41 [main] LogUtils - Different result ---> Fail
+[INFO ] 24-04-2023 21:54:42 [main] LogUtils - Executing: Screenshot taken: onFailed_Mon_Apr_24_21_54_41_ICT_2023
+[INFO ] 24-04-2023 21:54:42 [main] LogUtils - Executing: | Selection option: 0
+[INFO ] 24-04-2023 21:54:42 [main] LogUtils - Executing: Click on button: id= go-to-next
+[INFO ] 24-04-2023 21:54:43 [main] LogUtils - Executing: | Verify Text
+[INFO ] 24-04-2023 21:54:44 [main] LogUtils - Title expected: Người tham khảo
+[INFO ] 24-04-2023 21:54:44 [main] LogUtils - Title actual: Người tham khảo
+[INFO ] 24-04-2023 21:54:44 [main] LogUtils - Same result ---> Pass
+[INFO ] 24-04-2023 21:54:44 [main] LogUtils - Executing: Click on button: id= go-to-next
+[INFO ] 24-04-2023 21:54:45 [main] LogUtils - Executing: | Verify Text
+[INFO ] 24-04-2023 21:54:45 [main] LogUtils - Title expected: Kỹ năng
+[INFO ] 24-04-2023 21:54:45 [main] LogUtils - Title actual: Kỹ năng
+[INFO ] 24-04-2023 21:54:45 [main] LogUtils - Same result ---> Pass
+[INFO ] 24-04-2023 21:54:45 [main] LogUtils - Executing: Click on button: id= go-to-next
+[INFO ] 24-04-2023 21:54:47 [main] LogUtils - Executing: | Verify Text
+[INFO ] 24-04-2023 21:54:47 [main] LogUtils - Title expected: Mục tiêu nghề nghiệp
+[INFO ] 24-04-2023 21:54:47 [main] LogUtils - Title actual: Mục tiêu nghề nghiệp
+[INFO ] 24-04-2023 21:54:47 [main] LogUtils - Same result ---> Pass
+[INFO ] 24-04-2023 21:54:47 [main] LogUtils - Entering text: Tester
+[INFO ] 24-04-2023 21:54:47 [main] LogUtils - Entering text: 10000000
+[INFO ] 24-04-2023 21:54:47 [main] LogUtils - Executing: Click on element: xpath= //div[contains(@class,'checkmark')])[1]
+[INFO ] 24-04-2023 21:54:47 [main] LogUtils - Executing: | Selection option: Thương lượng
+[INFO ] 24-04-2023 21:54:47 [main] LogUtils - Executing: | Selection option: Nhân viên toàn thời gian
+[INFO ] 24-04-2023 21:54:47 [main] LogUtils - Executing: | Selection option: Nhân viên
+[INFO ] 24-04-2023 21:54:47 [main] LogUtils - Executing: Scroll mouse down and click element: //div[@id='form-edit-container']/div/form/div[6]/div/div/div
+[INFO ] 24-04-2023 21:54:47 [main] LogUtils - Executing: Click on element: xpath= /html/body/div[3]/div[2]/div/div/form/div[6]/div/div[2]/div[1]
+[INFO ] 24-04-2023 21:54:49 [main] LogUtils - Executing: Click on element: xpath= //div[@id='form-edit-container']/div/form/div[6]/div/div[2]/div[2]/button[13]
+[INFO ] 24-04-2023 21:54:51 [main] LogUtils - Executing: Click on element: xpath= /html/body/div[3]/div[2]/div/div/form/div[7]/div/div[1]/div/div[1]/div/button/div/div
+[INFO ] 24-04-2023 21:54:52 [main] LogUtils - Executing: Click on element: xpath= //div[@id='form-edit-container']/div/form/div[7]/div/div/div/div/div/div/button[2]
+[INFO ] 24-04-2023 21:54:54 [main] LogUtils - Entering text: Trở thành Senior Tester trong 3 - 5 năm tới
+[INFO ] 24-04-2023 21:54:54 [main] LogUtils - Executing: Click on element: xpath= //div[@id='form-edit-container']/div/form/div[9]/div/div/label[2]/div
+[INFO ] 24-04-2023 21:54:56 [main] LogUtils - Executing: Click on element: xpath= //div[@id='form-edit-container']/div/form/div[10]/div/div/label/div
+[INFO ] 24-04-2023 21:54:57 [main] LogUtils - Executing: Click on button: id= go-to-next
+[INFO ] 24-04-2023 21:54:59 [main] LogUtils - Executing: | Verify Text
+[INFO ] 24-04-2023 21:54:59 [main] LogUtils - Title expected: Trạng thái hồ sơ
+[INFO ] 24-04-2023 21:54:59 [main] LogUtils - Title actual: Trạng thái hồ sơ
+[INFO ] 24-04-2023 21:54:59 [main] LogUtils - Same result ---> Pass
+[INFO ] 24-04-2023 21:54:59 [main] LogUtils - Executing: Click on element: xpath= //div[@id='form-edit-container']/div/div/form/div[3]/label/div
+[INFO ] 24-04-2023 21:55:00 [main] LogUtils - Executing: Click on button: id= go-to-next
+[INFO ] 24-04-2023 21:55:02 [main] LogUtils - [>>ERROR<<]: |Keyword Not Found screenShot
+[INFO ] 24-04-2023 21:55:02 [main] LogUtils - Executing: | Verify Text
+[INFO ] 24-04-2023 21:55:02 [main] LogUtils - Title expected: Hồ sơ xin việc
+[INFO ] 24-04-2023 21:55:02 [main] LogUtils - Title actual: Hồ sơ xin việcĐang chờ
+[INFO ] 24-04-2023 21:55:02 [main] LogUtils - Same result ---> Pass
+[INFO ] 24-04-2023 21:55:02 [main] LogUtils - [>>ERROR<<]: |Keyword Not Found closeBrower
+[INFO ] 24-04-2023 21:55:02 [main] LogUtils - Stop record
+[INFO ] 24-04-2023 21:55:02 [main] LogUtils - Test case:  is passed.
+[INFO ] 24-04-2023 21:55:02 [main] LogUtils - End Suite: Default Suite
+[INFO ] 24-04-2023 22:18:55 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 22:18:55 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 22:18:56 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 24-04-2023 22:18:56 [main] LogUtils - End Suite: Default Suite
+[INFO ] 24-04-2023 22:20:49 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 22:20:49 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 22:20:50 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 24-04-2023 22:20:50 [main] LogUtils - Test case:  is starting...
+[INFO ] 24-04-2023 22:20:51 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 22:20:51 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 22:20:55 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 22:20:57 [main] LogUtils - Entering text: 
+[INFO ] 24-04-2023 22:20:57 [main] LogUtils - Entering text: 20102001
+[INFO ] 24-04-2023 22:20:57 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 22:20:59 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 22:20:59 [main] LogUtils - Expected Result: Please fill out this field.
+[INFO ] 24-04-2023 22:20:59 [main] LogUtils - Actual Result: Please fill out this field.
+[INFO ] 24-04-2023 22:20:59 [main] LogUtils - Same result ---> Pass
+[INFO ] 24-04-2023 22:20:59 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 22:20:59 [main] LogUtils - Stop record
+[INFO ] 24-04-2023 22:21:00 [main] LogUtils - Test case:  is passed.
+[INFO ] 24-04-2023 22:21:00 [main] LogUtils - End Suite: Default Suite
+[INFO ] 24-04-2023 22:39:18 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 22:39:18 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 22:39:19 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 24-04-2023 22:39:19 [main] LogUtils - Test case:  is starting...
+[INFO ] 24-04-2023 22:39:20 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 22:39:20 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 22:39:24 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 22:39:26 [main] LogUtils - Entering text: 
+[INFO ] 24-04-2023 22:39:26 [main] LogUtils - Entering text: 20102001
+[INFO ] 24-04-2023 22:39:26 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'??ng nh?p')]
+[INFO ] 24-04-2023 22:39:26 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 22:39:26 [main] LogUtils - Expected Result: Please fill out this field.
+[INFO ] 24-04-2023 22:39:26 [main] LogUtils - Actual Result: Please fill out this field.
+[INFO ] 24-04-2023 22:39:26 [main] LogUtils - Same result ---> Pass
+[INFO ] 24-04-2023 22:39:26 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 22:39:27 [main] LogUtils - Stop record
+[INFO ] 24-04-2023 22:39:27 [main] LogUtils - Test case:  is passed.
+[INFO ] 24-04-2023 22:39:27 [main] LogUtils - Test case:  is starting...
+[INFO ] 24-04-2023 22:39:30 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 22:39:30 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 22:39:31 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 22:39:33 [main] LogUtils - Entering text: "         "
+[INFO ] 24-04-2023 22:39:33 [main] LogUtils - Entering text: 20102002
+[INFO ] 24-04-2023 22:39:33 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 22:39:35 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 22:39:35 [main] LogUtils - Expected Result: Demo
+[INFO ] 24-04-2023 22:39:35 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 24-04-2023 22:39:35 [main] LogUtils - Different result ---> Fail
+[INFO ] 24-04-2023 22:39:35 [main] LogUtils - Executing: Screenshot taken: onFailed_Mon_Apr_24_22_39_35_ICT_2023
+[INFO ] 24-04-2023 22:39:36 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 22:39:36 [main] LogUtils - Stop record
+[INFO ] 24-04-2023 22:39:36 [main] LogUtils - Test case:  is passed.
+[INFO ] 24-04-2023 22:39:36 [main] LogUtils - Test case:  is starting...
+[INFO ] 24-04-2023 22:39:36 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 22:39:36 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 22:39:38 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 22:39:42 [main] LogUtils - Entering text: null
+[INFO ] 24-04-2023 22:39:42 [main] LogUtils - Entering text: 20102001
+[INFO ] 24-04-2023 22:39:42 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 22:39:44 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 22:39:44 [main] LogUtils - Expected Result: Please fill out this field.
+[INFO ] 24-04-2023 22:39:44 [main] LogUtils - Actual Result: Please fill out this field.
+[INFO ] 24-04-2023 22:39:44 [main] LogUtils - Same result ---> Pass
+[INFO ] 24-04-2023 22:39:44 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 22:39:44 [main] LogUtils - Stop record
+[INFO ] 24-04-2023 22:39:45 [main] LogUtils - Test case:  is passed.
+[INFO ] 24-04-2023 22:39:45 [main] LogUtils - Test case:  is starting...
+[INFO ] 24-04-2023 22:39:45 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 22:39:45 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 22:39:47 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 22:39:49 [main] LogUtils - Entering text: hoanganh04092001@gmail.com
+[INFO ] 24-04-2023 22:39:49 [main] LogUtils - Entering text: 20102001
+[INFO ] 24-04-2023 22:39:49 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 22:39:53 [main] LogUtils - [>>ERROR<<]: |Keyword Not Found screenShot
+[INFO ] 24-04-2023 22:39:53 [main] LogUtils - Executing: | Verify Text
+[INFO ] 24-04-2023 22:39:53 [main] LogUtils - Executing: Click on button: xpath= //a[@class='nav-link py-3'][contains(text(),'xin vi')]
+[INFO ] 24-04-2023 22:39:55 [main] LogUtils - Executing: Click on button: xpath= //div/div/button/i
+[INFO ] 24-04-2023 22:39:56 [main] LogUtils - Executing: Click on element: xpath= //a[@href='/nguoi-tim-viec/ho-so/moi']
+[INFO ] 24-04-2023 22:39:59 [main] LogUtils - Executing: | Verify Text
+[INFO ] 24-04-2023 22:39:59 [main] LogUtils - Title expected: Thông tin cá nhân
+[INFO ] 24-04-2023 22:39:59 [main] LogUtils - Title actual: Thông tin cá nhân
+[INFO ] 24-04-2023 22:39:59 [main] LogUtils - Same result ---> Pass
+[INFO ] 24-04-2023 22:39:59 [main] LogUtils - Entering text: Hồ sơ xin việc
+[INFO ] 24-04-2023 22:39:59 [main] LogUtils - Executing: | Selection option: Việt Nam
+[INFO ] 24-04-2023 22:39:59 [main] LogUtils - Executing: | Selection option: 20
+[INFO ] 24-04-2023 22:40:00 [main] LogUtils - Executing: | Selection option: Tháng 10
+[INFO ] 24-04-2023 22:40:00 [main] LogUtils - Executing: | Selection option: 2001
+[INFO ] 24-04-2023 22:40:00 [main] LogUtils - Executing: Upload image: G:\\cute.jpg
+[INFO ] 24-04-2023 22:40:00 [main] LogUtils - Executing: Click on button: className= btn btn-primary ml-auto font-weight-bold d-flex align-items-center mr-2
+[INFO ] 24-04-2023 22:40:00 [main] LogUtils - Executing: Scroll mouse down and click element: //div[@id='form-edit-container']/div/form/div/div/label[3]/div[2]/label/div
+[INFO ] 24-04-2023 22:40:00 [main] LogUtils - Executing: Click on element: xpath= //div[@id='form-edit-container']/div/form/div/div/label[3]/div[2]/label/div
+[INFO ] 24-04-2023 22:40:02 [main] LogUtils - Executing: Click on element: xpath= //div[@id='form-edit-container']/div/form/div/div/label[4]/div[2]/label[2]/div
+[INFO ] 24-04-2023 22:40:03 [main] LogUtils - Executing: Click on button: id= go-to-next
+[INFO ] 24-04-2023 22:40:05 [main] LogUtils - Executing: | Verify Text
+[INFO ] 24-04-2023 22:40:05 [main] LogUtils - Title expected: Thông tin liên hệ
+[INFO ] 24-04-2023 22:40:05 [main] LogUtils - Title actual: Thông tin liên hệ
+[INFO ] 24-04-2023 22:40:05 [main] LogUtils - Same result ---> Pass
+[INFO ] 24-04-2023 22:40:05 [main] LogUtils - Entering text: 0978227010
+[INFO ] 24-04-2023 22:40:05 [main] LogUtils - Executing: Click on element: xpath= /html/body/div[3]/div[2]/div/div/form/div[3]/div/button/div/div
+[INFO ] 24-04-2023 22:40:07 [main] LogUtils - Executing: Click on element: xpath= //button[@type = 'button' and (text() = 'Viet Nam' or . = 'Viet Nam')]
+[INFO ] 24-04-2023 22:40:08 [main] LogUtils - Executing: Scroll mouse down and click element: //div[@id='form-edit-container']/div/form/div[4]/div/div/button
+[INFO ] 24-04-2023 22:40:08 [main] LogUtils - Executing: Click on element: xpath= /html/body/div[3]/div[2]/div/div/form/div[4]/div[1]/div/button/div/div
+[INFO ] 24-04-2023 22:40:10 [main] LogUtils - Executing: Click on element: xpath= //button[@type = 'button' and (text() = 'Hưng Yên' or . = 'Hưng Yên')]
+[INFO ] 24-04-2023 22:40:11 [main] LogUtils - Executing: Click on element: xpath= /html/body/div[3]/div[2]/div/div/form/div[4]/div[2]/div/button/div/div
+[INFO ] 24-04-2023 22:40:13 [main] LogUtils - Executing: Click on element: xpath= //button[@type = 'button' and (text() = 'Huyện Phù Cừ' or . = 'Huyện Phù Cừ')]
+[INFO ] 24-04-2023 22:40:15 [main] LogUtils - Entering text: Xã Minh Hoàng
+[INFO ] 24-04-2023 22:40:15 [main] LogUtils - Executing: Click on button: id= go-to-next
+[INFO ] 24-04-2023 22:40:16 [main] LogUtils - Executing: | Verify Text
+[INFO ] 24-04-2023 22:40:16 [main] LogUtils - Title expected: Học vấn
+[INFO ] 24-04-2023 22:40:16 [main] LogUtils - Title actual: Học vấn
+[INFO ] 24-04-2023 22:40:16 [main] LogUtils - Same result ---> Pass
+[INFO ] 24-04-2023 22:40:16 [main] LogUtils - Executing: Click on element: xpath= /html/body/div[3]/div[2]/div/div/form/div[1]/div/button/div/div
+[INFO ] 24-04-2023 22:40:18 [main] LogUtils - Executing: Click on element: xpath= //button[@type = 'button' and (text() = 'Kỹ sư' or . = 'Kỹ sư')]
+[INFO ] 24-04-2023 22:40:19 [main] LogUtils - Executing: Scroll mouse down and click element: //div[@id='form-edit-container']/div/form/div[4]/div/div/div/div/select
+[INFO ] 24-04-2023 22:40:20 [main] LogUtils - Executing: Click on element: xpath= /html/body/div[3]/div[2]/div/div/form/div[2]/div/div/div/button/div/div
+[INFO ] 24-04-2023 22:40:21 [main] LogUtils - Executing: Click on element: xpath= //div[@id='form-edit-container']/div/form/div[2]/div/div/div/div/div[4]/div/button[36]
+[INFO ] 24-04-2023 22:40:23 [main] LogUtils - Executing: Click on element: xpath= /html/body/div[3]/div[2]/div/div/form/div[3]/div/div/button/div/div
+[INFO ] 24-04-2023 22:40:24 [main] LogUtils - Executing: Click on element: xpath= //button[@type = 'button' and (text() = 'Khoa học Máy tính / Công nghệ thông tin' or . = 'Khoa học Máy tính / Công nghệ thông tin')]
+[INFO ] 24-04-2023 22:40:26 [main] LogUtils - Executing: | Selection option: Tháng 8
+[INFO ] 24-04-2023 22:40:26 [main] LogUtils - Executing: | Selection option: 2019
+[INFO ] 24-04-2023 22:40:26 [main] LogUtils - Executing: | Selection option: Tháng 6
+[INFO ] 24-04-2023 22:40:26 [main] LogUtils - Executing: | Selection option: 2023
+[INFO ] 24-04-2023 22:40:26 [main] LogUtils - Entering text: Quá trình học vấn
+[INFO ] 24-04-2023 22:40:27 [main] LogUtils - Executing: Click on button: id= go-to-next
+[INFO ] 24-04-2023 22:40:28 [main] LogUtils - Executing: Click on button: id= go-to-next
+[INFO ] 24-04-2023 22:40:30 [main] LogUtils - Executing: | Verify Text
+[INFO ] 24-04-2023 22:40:30 [main] LogUtils - Title expected: Ngoại ngữ
+[INFO ] 24-04-2023 22:40:30 [main] LogUtils - Title actual: Ngoại ngữ
+[INFO ] 24-04-2023 22:40:30 [main] LogUtils - Same result ---> Pass
+[INFO ] 24-04-2023 22:40:30 [main] LogUtils - Executing: Click on button: id= go-to-next
+[INFO ] 24-04-2023 22:40:31 [main] LogUtils - Executing: | Verify Text
+[INFO ] 24-04-2023 22:40:31 [main] LogUtils - Title expected: Kinh nghiệm làm việc
+[INFO ] 24-04-2023 22:40:31 [main] LogUtils - Title actual: Kinh nghiệp làm việc
+[ERROR] 24-04-2023 22:40:31 [main] LogUtils - Different result ---> Fail
+[INFO ] 24-04-2023 22:40:31 [main] LogUtils - Executing: Screenshot taken: onFailed_Mon_Apr_24_22_40_31_ICT_2023
+[INFO ] 24-04-2023 22:40:32 [main] LogUtils - Executing: | Selection option: 0
+[INFO ] 24-04-2023 22:40:32 [main] LogUtils - Executing: Click on button: id= go-to-next
+[INFO ] 24-04-2023 22:40:33 [main] LogUtils - Executing: | Verify Text
+[INFO ] 24-04-2023 22:40:33 [main] LogUtils - Title expected: Người tham khảo
+[INFO ] 24-04-2023 22:40:33 [main] LogUtils - Title actual: Người tham khảo
+[INFO ] 24-04-2023 22:40:33 [main] LogUtils - Same result ---> Pass
+[INFO ] 24-04-2023 22:40:33 [main] LogUtils - Executing: Click on button: id= go-to-next
+[INFO ] 24-04-2023 22:40:35 [main] LogUtils - Executing: | Verify Text
+[INFO ] 24-04-2023 22:40:35 [main] LogUtils - Title expected: Kỹ năng
+[INFO ] 24-04-2023 22:40:35 [main] LogUtils - Title actual: Kỹ năng
+[INFO ] 24-04-2023 22:40:35 [main] LogUtils - Same result ---> Pass
+[INFO ] 24-04-2023 22:40:35 [main] LogUtils - Executing: Click on button: id= go-to-next
+[INFO ] 24-04-2023 22:40:37 [main] LogUtils - Executing: | Verify Text
+[INFO ] 24-04-2023 22:40:37 [main] LogUtils - Title expected: Mục tiêu nghề nghiệp
+[INFO ] 24-04-2023 22:40:37 [main] LogUtils - Title actual: Mục tiêu nghề nghiệp
+[INFO ] 24-04-2023 22:40:37 [main] LogUtils - Same result ---> Pass
+[INFO ] 24-04-2023 22:40:37 [main] LogUtils - Entering text: Tester
+[INFO ] 24-04-2023 22:40:37 [main] LogUtils - Entering text: 10000000
+[INFO ] 24-04-2023 22:40:37 [main] LogUtils - Executing: Click on element: xpath= //div[contains(@class,'checkmark')])[1]
+[INFO ] 24-04-2023 22:40:37 [main] LogUtils - Executing: | Selection option: Thương lượng
+[INFO ] 24-04-2023 22:40:37 [main] LogUtils - Executing: | Selection option: Nhân viên toàn thời gian
+[INFO ] 24-04-2023 22:40:37 [main] LogUtils - Executing: | Selection option: Nhân viên
+[INFO ] 24-04-2023 22:40:37 [main] LogUtils - Executing: Scroll mouse down and click element: //div[@id='form-edit-container']/div/form/div[6]/div/div/div
+[INFO ] 24-04-2023 22:40:37 [main] LogUtils - Executing: Click on element: xpath= /html/body/div[3]/div[2]/div/div/form/div[6]/div/div[2]/div[1]
+[INFO ] 24-04-2023 22:40:39 [main] LogUtils - Executing: Click on element: xpath= //div[@id='form-edit-container']/div/form/div[6]/div/div[2]/div[2]/button[13]
+[INFO ] 24-04-2023 22:40:40 [main] LogUtils - Executing: Click on element: xpath= /html/body/div[3]/div[2]/div/div/form/div[7]/div/div[1]/div/div[1]/div/button/div/div
+[INFO ] 24-04-2023 22:40:42 [main] LogUtils - Executing: Click on element: xpath= //div[@id='form-edit-container']/div/form/div[7]/div/div/div/div/div/div/button[2]
+[INFO ] 24-04-2023 22:40:44 [main] LogUtils - Entering text: Trở thành Senior Tester trong 3 - 5 năm tới
+[INFO ] 24-04-2023 22:40:44 [main] LogUtils - Executing: Click on element: xpath= //div[@id='form-edit-container']/div/form/div[9]/div/div/label[2]/div
+[INFO ] 24-04-2023 22:40:45 [main] LogUtils - Executing: Click on element: xpath= //div[@id='form-edit-container']/div/form/div[10]/div/div/label/div
+[INFO ] 24-04-2023 22:40:47 [main] LogUtils - Executing: Click on button: id= go-to-next
+[INFO ] 24-04-2023 22:40:49 [main] LogUtils - Executing: | Verify Text
+[INFO ] 24-04-2023 22:40:49 [main] LogUtils - Title expected: Trạng thái hồ sơ
+[INFO ] 24-04-2023 22:40:49 [main] LogUtils - Title actual: Trạng thái hồ sơ
+[INFO ] 24-04-2023 22:40:49 [main] LogUtils - Same result ---> Pass
+[INFO ] 24-04-2023 22:40:49 [main] LogUtils - Executing: Click on element: xpath= //div[@id='form-edit-container']/div/div/form/div[3]/label/div
+[INFO ] 24-04-2023 22:40:50 [main] LogUtils - Executing: Click on button: id= go-to-next
+[INFO ] 24-04-2023 22:40:52 [main] LogUtils - [>>ERROR<<]: |Keyword Not Found screenShot
+[INFO ] 24-04-2023 22:40:52 [main] LogUtils - Executing: | Verify Text
+[INFO ] 24-04-2023 22:40:52 [main] LogUtils - Title expected: Hồ sơ xin việc
+[INFO ] 24-04-2023 22:40:52 [main] LogUtils - Title actual: Hồ sơ xin việcĐang chờ
+[INFO ] 24-04-2023 22:40:52 [main] LogUtils - Same result ---> Pass
+[INFO ] 24-04-2023 22:40:52 [main] LogUtils - [>>ERROR<<]: |Keyword Not Found closeBrower
+[INFO ] 24-04-2023 22:40:52 [main] LogUtils - Stop record
+[INFO ] 24-04-2023 22:40:52 [main] LogUtils - Test case:  is passed.
+[INFO ] 24-04-2023 22:40:52 [main] LogUtils - End Suite: Default Suite
+[INFO ] 24-04-2023 22:43:26 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 22:43:26 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 22:43:27 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 24-04-2023 22:43:27 [main] LogUtils - Test case:  is starting...
+[INFO ] 24-04-2023 22:43:50 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 22:43:50 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 22:43:55 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 22:43:57 [main] LogUtils - Entering text: "         "
+[INFO ] 24-04-2023 22:43:57 [main] LogUtils - Entering text: 20102002
+[INFO ] 24-04-2023 22:43:57 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 22:43:59 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 22:43:59 [main] LogUtils - Expected Result: Demo
+[INFO ] 24-04-2023 22:43:59 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 24-04-2023 22:43:59 [main] LogUtils - Different result ---> Fail
+[INFO ] 24-04-2023 22:44:00 [main] LogUtils - Executing: Screenshot taken: onFailed_Mon_Apr_24_22_43_59_ICT_2023
+[INFO ] 24-04-2023 22:44:00 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 22:44:00 [main] LogUtils - Stop record
+[INFO ] 24-04-2023 22:46:06 [main] LogUtils - Test case:  is passed.
+[INFO ] 24-04-2023 22:46:11 [main] LogUtils - End Suite: Default Suite
+[INFO ] 24-04-2023 22:51:05 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 22:51:05 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 22:51:06 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 24-04-2023 22:51:06 [main] LogUtils - Test case:  is starting...
+[INFO ] 24-04-2023 22:51:07 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 22:51:07 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 22:51:12 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 22:51:14 [main] LogUtils - Entering text: "         "
+[INFO ] 24-04-2023 22:51:14 [main] LogUtils - Entering text: 20102002
+[INFO ] 24-04-2023 22:51:14 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 22:51:16 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 22:51:16 [main] LogUtils - Expected Result: Demo
+[INFO ] 24-04-2023 22:51:16 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 24-04-2023 22:51:16 [main] LogUtils - Different result ---> Fail
+[INFO ] 24-04-2023 22:51:16 [main] LogUtils - Executing: Screenshot taken: onFailed_Mon_Apr_24_22_51_16_ICT_2023
+[INFO ] 24-04-2023 22:51:17 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 22:51:17 [main] LogUtils - Stop record
+[INFO ] 24-04-2023 22:51:17 [main] LogUtils - Test case:  is passed.
+[INFO ] 24-04-2023 22:51:17 [main] LogUtils - End Suite: Default Suite
+[INFO ] 24-04-2023 22:51:54 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 22:51:54 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 22:51:55 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 24-04-2023 22:51:56 [main] LogUtils - Test case:  is starting...
+[INFO ] 24-04-2023 22:51:57 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 22:51:57 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 22:52:03 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 22:52:05 [main] LogUtils - Entering text: "         "
+[INFO ] 24-04-2023 22:52:06 [main] LogUtils - Entering text: 20102002
+[INFO ] 24-04-2023 22:52:06 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 22:52:08 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 22:52:08 [main] LogUtils - Expected Result: Demo
+[INFO ] 24-04-2023 22:52:08 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 24-04-2023 22:52:08 [main] LogUtils - Different result ---> Fail
+[INFO ] 24-04-2023 22:52:08 [main] LogUtils - Executing: Screenshot taken: onFailed_Mon_Apr_24_22_52_08_ICT_2023
+[INFO ] 24-04-2023 22:52:08 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 22:52:09 [main] LogUtils - Stop record
+[INFO ] 24-04-2023 22:53:49 [main] LogUtils - Test case:  is passed.
+[INFO ] 24-04-2023 22:54:11 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 22:54:12 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 22:54:12 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 24-04-2023 22:54:13 [main] LogUtils - Test case:  is starting...
+[INFO ] 24-04-2023 22:54:14 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 22:54:14 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 22:54:20 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 22:54:22 [main] LogUtils - Entering text: "         "
+[INFO ] 24-04-2023 22:54:22 [main] LogUtils - Entering text: 20102002
+[INFO ] 24-04-2023 22:54:22 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 22:54:24 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 22:54:24 [main] LogUtils - Expected Result: Demo
+[INFO ] 24-04-2023 22:54:24 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 24-04-2023 22:54:24 [main] LogUtils - Different result ---> Fail
+[INFO ] 24-04-2023 22:54:40 [main] LogUtils - Executing: Screenshot taken: onFailed_Mon_Apr_24_22_54_39_ICT_2023
+[INFO ] 24-04-2023 22:55:14 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 22:55:21 [main] LogUtils - Stop record
+[INFO ] 24-04-2023 22:55:44 [main] LogUtils - Test case:  is passed.
+[INFO ] 24-04-2023 22:55:44 [main] LogUtils - End Suite: Default Suite
+[INFO ] 24-04-2023 22:55:53 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 22:55:53 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 22:55:54 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 24-04-2023 22:55:54 [main] LogUtils - Test case:  is starting...
+[INFO ] 24-04-2023 22:55:56 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 22:55:56 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 22:56:02 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 22:56:04 [main] LogUtils - Entering text: "         "
+[INFO ] 24-04-2023 22:56:04 [main] LogUtils - Entering text: 20102002
+[INFO ] 24-04-2023 22:56:04 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 22:56:06 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 22:56:06 [main] LogUtils - Expected Result: Demo
+[INFO ] 24-04-2023 22:56:06 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 24-04-2023 22:56:06 [main] LogUtils - Different result ---> Fail
+[INFO ] 24-04-2023 22:56:16 [main] LogUtils - Executing: Screenshot taken: onFailed_Mon_Apr_24_22_56_15_ICT_2023
+[INFO ] 24-04-2023 22:56:33 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 22:56:33 [main] LogUtils - Stop record
+[INFO ] 24-04-2023 22:57:49 [main] LogUtils - Test case:  is passed.
+[INFO ] 24-04-2023 22:57:58 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 22:57:59 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 22:57:59 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 24-04-2023 22:58:00 [main] LogUtils - Test case:  is starting...
+[INFO ] 24-04-2023 22:58:02 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 22:58:02 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 22:58:08 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 22:58:10 [main] LogUtils - Entering text: "         "
+[INFO ] 24-04-2023 22:58:11 [main] LogUtils - Entering text: 20102002
+[INFO ] 24-04-2023 22:58:11 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 22:58:13 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 22:58:13 [main] LogUtils - Expected Result: Demo
+[INFO ] 24-04-2023 22:58:13 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 24-04-2023 22:58:13 [main] LogUtils - Different result ---> Fail
+[INFO ] 24-04-2023 22:58:44 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 22:58:44 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 22:58:45 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 24-04-2023 22:58:45 [main] LogUtils - Test case:  is starting...
+[INFO ] 24-04-2023 22:58:47 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 22:58:47 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 22:58:53 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 22:58:55 [main] LogUtils - Entering text: "         "
+[INFO ] 24-04-2023 22:58:55 [main] LogUtils - Entering text: 20102002
+[INFO ] 24-04-2023 22:58:55 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 22:58:57 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 22:58:57 [main] LogUtils - Expected Result: Demo
+[INFO ] 24-04-2023 22:58:57 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 24-04-2023 22:58:57 [main] LogUtils - Different result ---> Fail
+[INFO ] 24-04-2023 22:59:46 [main] LogUtils - Executing: Screenshot taken: onFailed_Mon_Apr_24_22_59_46_ICT_2023
+[INFO ] 24-04-2023 22:59:47 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 22:59:47 [main] LogUtils - Stop record
+[INFO ] 24-04-2023 23:00:03 [main] LogUtils - Test case:  is passed.
+[INFO ] 24-04-2023 23:00:08 [main] LogUtils - End Suite: Default Suite
+[INFO ] 24-04-2023 23:17:25 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 23:17:26 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 23:17:26 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 24-04-2023 23:17:27 [main] LogUtils - Test case:  is starting...
+[INFO ] 24-04-2023 23:17:28 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 23:17:28 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 23:17:33 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 23:17:36 [main] LogUtils - Entering text: "         "
+[INFO ] 24-04-2023 23:17:37 [main] LogUtils - Entering text: 20102002
+[INFO ] 24-04-2023 23:17:37 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 23:17:38 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 23:17:39 [main] LogUtils - Expected Result: Demo
+[INFO ] 24-04-2023 23:17:39 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 24-04-2023 23:17:39 [main] LogUtils - Different result ---> Fail
+[INFO ] 24-04-2023 23:17:39 [main] LogUtils - Executing: Screenshot taken: onFailed_Mon_Apr_24_23_17_39_ICT_2023
+[INFO ] 24-04-2023 23:17:39 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 23:17:40 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 23:17:41 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 23:17:44 [main] LogUtils - Entering text: 
+[INFO ] 24-04-2023 23:17:44 [main] LogUtils - Entering text: 20102001
+[INFO ] 24-04-2023 23:17:44 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 23:17:46 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 23:17:46 [main] LogUtils - Expected Result: Please fill out this field.
+[INFO ] 24-04-2023 23:17:46 [main] LogUtils - Actual Result: Please fill out this field.
+[INFO ] 24-04-2023 23:17:46 [main] LogUtils - Same result ---> Pass
+[INFO ] 24-04-2023 23:17:46 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 23:17:46 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 23:17:48 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 23:17:51 [main] LogUtils - Entering text:         
+[INFO ] 24-04-2023 23:17:51 [main] LogUtils - Entering text: 20102001
+[INFO ] 24-04-2023 23:17:51 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 23:17:52 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 23:17:53 [main] LogUtils - Expected Result: Please fill out this field.
+[INFO ] 24-04-2023 23:17:53 [main] LogUtils - Actual Result: Please fill out this field.
+[INFO ] 24-04-2023 23:17:53 [main] LogUtils - Same result ---> Pass
+[INFO ] 24-04-2023 23:17:53 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 23:17:53 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 23:17:54 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 23:17:56 [main] LogUtils - Entering text: hoanganh 04092001@gmail.com
+[INFO ] 24-04-2023 23:17:56 [main] LogUtils - Entering text: 20102001
+[INFO ] 24-04-2023 23:17:57 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 23:17:58 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 23:17:58 [main] LogUtils - Expected Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 24-04-2023 23:17:58 [main] LogUtils - Actual Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 24-04-2023 23:17:58 [main] LogUtils - Same result ---> Pass
+[INFO ] 24-04-2023 23:17:58 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 23:17:59 [main] LogUtils - Stop record
+[INFO ] 24-04-2023 23:17:59 [main] LogUtils - Test case:  is passed.
+[INFO ] 24-04-2023 23:17:59 [main] LogUtils - End Suite: Default Suite
+[INFO ] 24-04-2023 23:20:46 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 23:20:46 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 23:20:47 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 24-04-2023 23:20:47 [main] LogUtils - Test case:  is starting...
+[INFO ] 24-04-2023 23:20:48 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 23:20:48 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 23:20:52 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 23:20:54 [main] LogUtils - Entering text: "         "
+[INFO ] 24-04-2023 23:20:54 [main] LogUtils - Entering text: 20102002
+[INFO ] 24-04-2023 23:20:54 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 23:20:56 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 23:20:56 [main] LogUtils - Expected Result: Demo
+[INFO ] 24-04-2023 23:20:56 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 24-04-2023 23:20:56 [main] LogUtils - Different result ---> Fail
+[INFO ] 24-04-2023 23:20:57 [main] LogUtils - Executing: Screenshot taken: onFailed_Mon_Apr_24_23_20_56_ICT_2023
+[INFO ] 24-04-2023 23:20:57 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 23:20:57 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 23:20:58 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 23:21:00 [main] LogUtils - Entering text: 
+[INFO ] 24-04-2023 23:21:01 [main] LogUtils - Entering text: 20102001
+[INFO ] 24-04-2023 23:21:01 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 23:21:02 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 23:21:02 [main] LogUtils - Expected Result: Please fill out this field.
+[INFO ] 24-04-2023 23:21:02 [main] LogUtils - Actual Result: Please fill out this field.
+[INFO ] 24-04-2023 23:21:02 [main] LogUtils - Same result ---> Pass
+[INFO ] 24-04-2023 23:21:02 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 23:21:03 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 23:21:04 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 23:21:06 [main] LogUtils - Entering text: hoanganh 04092001@gmail.com
+[INFO ] 24-04-2023 23:21:07 [main] LogUtils - Entering text: 20102001
+[INFO ] 24-04-2023 23:21:07 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 23:21:08 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 23:21:09 [main] LogUtils - Expected Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 24-04-2023 23:21:09 [main] LogUtils - Actual Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 24-04-2023 23:21:09 [main] LogUtils - Same result ---> Pass
+[INFO ] 24-04-2023 23:21:09 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 23:21:09 [main] LogUtils - Stop record
+[INFO ] 24-04-2023 23:21:09 [main] LogUtils - Test case:  is passed.
+[INFO ] 24-04-2023 23:21:09 [main] LogUtils - End Suite: Default Suite
+[INFO ] 24-04-2023 23:40:11 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 23:40:11 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 23:40:12 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 24-04-2023 23:40:12 [main] LogUtils - Test case:  is starting...
+[INFO ] 24-04-2023 23:40:14 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 23:40:14 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 23:40:18 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 23:40:22 [main] LogUtils - Entering text: "         "
+[INFO ] 24-04-2023 23:40:22 [main] LogUtils - Entering text: 20102002
+[INFO ] 24-04-2023 23:40:22 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 23:40:24 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 23:40:24 [main] LogUtils - Expected Result: Demo
+[INFO ] 24-04-2023 23:40:24 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 24-04-2023 23:40:24 [main] LogUtils - Different result ---> Fail
+[INFO ] 24-04-2023 23:40:24 [main] LogUtils - Executing: Screenshot taken: onFailed_Mon_Apr_24_23_40_24_ICT_2023
+[INFO ] 24-04-2023 23:40:24 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 23:40:26 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 23:40:27 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 23:40:29 [main] LogUtils - Entering text: 
+[INFO ] 24-04-2023 23:40:29 [main] LogUtils - Entering text: 20102001
+[INFO ] 24-04-2023 23:40:29 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 23:40:31 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 23:40:31 [main] LogUtils - Expected Result: Please fill out this field.
+[INFO ] 24-04-2023 23:40:31 [main] LogUtils - Actual Result: Please fill out this field.
+[INFO ] 24-04-2023 23:40:31 [main] LogUtils - Same result ---> Pass
+[INFO ] 24-04-2023 23:40:31 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 23:40:31 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 23:40:32 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 23:40:35 [main] LogUtils - Entering text: hoanganh 04092001@gmail.com
+[INFO ] 24-04-2023 23:40:35 [main] LogUtils - Entering text: 20102001
+[INFO ] 24-04-2023 23:40:35 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 23:40:37 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 23:40:37 [main] LogUtils - Expected Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 24-04-2023 23:40:37 [main] LogUtils - Actual Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 24-04-2023 23:40:37 [main] LogUtils - Same result ---> Pass
+[INFO ] 24-04-2023 23:40:37 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 23:40:37 [main] LogUtils - Stop record
+[INFO ] 24-04-2023 23:40:37 [main] LogUtils - Test case:  is passed.
+[INFO ] 24-04-2023 23:40:37 [main] LogUtils - End Suite: Default Suite
+[INFO ] 24-04-2023 23:51:21 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 23:51:21 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 23:51:21 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 24-04-2023 23:51:22 [main] LogUtils - Test case:  is starting...
+[INFO ] 24-04-2023 23:51:23 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 23:51:23 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 23:51:28 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 23:51:30 [main] LogUtils - Entering text: "         "
+[INFO ] 24-04-2023 23:51:30 [main] LogUtils - Entering text: 20102002
+[INFO ] 24-04-2023 23:51:30 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 23:51:32 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 23:51:32 [main] LogUtils - Expected Result: Demo
+[INFO ] 24-04-2023 23:51:32 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 24-04-2023 23:51:32 [main] LogUtils - Different result ---> Fail
+[INFO ] 24-04-2023 23:51:32 [main] LogUtils - Executing: Screenshot taken: onFailed_Mon_Apr_24_23_51_32_ICT_2023
+[INFO ] 24-04-2023 23:51:33 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 23:51:33 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 23:51:34 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 23:51:37 [main] LogUtils - Entering text: 
+[INFO ] 24-04-2023 23:51:37 [main] LogUtils - Entering text: 20102001
+[INFO ] 24-04-2023 23:51:37 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 23:51:38 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 23:51:39 [main] LogUtils - Expected Result: Please fill out this field.
+[INFO ] 24-04-2023 23:51:39 [main] LogUtils - Actual Result: Please fill out this field.
+[INFO ] 24-04-2023 23:51:39 [main] LogUtils - Same result ---> Pass
+[INFO ] 24-04-2023 23:51:39 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 23:51:39 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 23:51:40 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 23:51:42 [main] LogUtils - Entering text: hoanganh 04092001@gmail.com
+[INFO ] 24-04-2023 23:51:42 [main] LogUtils - Entering text: 20102001
+[INFO ] 24-04-2023 23:51:42 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 23:51:44 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 23:51:44 [main] LogUtils - Expected Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 24-04-2023 23:51:44 [main] LogUtils - Actual Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 24-04-2023 23:51:44 [main] LogUtils - Same result ---> Pass
+[INFO ] 24-04-2023 23:51:44 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 23:51:45 [main] LogUtils - Stop record
+[INFO ] 24-04-2023 23:51:45 [main] LogUtils - Test case:  is passed.
+[INFO ] 24-04-2023 23:51:45 [main] LogUtils - End Suite: Default Suite
+[INFO ] 24-04-2023 23:55:36 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 23:55:36 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 23:55:37 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 24-04-2023 23:55:37 [main] LogUtils - Test case:  is starting...
+[INFO ] 24-04-2023 23:55:39 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 23:55:39 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 23:55:43 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 23:55:46 [main] LogUtils - Entering text: "         "
+[INFO ] 24-04-2023 23:55:46 [main] LogUtils - Entering text: 20102002
+[INFO ] 24-04-2023 23:55:47 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 23:55:48 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 23:55:49 [main] LogUtils - Expected Result: Demo
+[INFO ] 24-04-2023 23:55:49 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 24-04-2023 23:55:49 [main] LogUtils - Different result ---> Fail
+[INFO ] 24-04-2023 23:55:49 [main] LogUtils - Executing: Screenshot taken: onFailed_Mon_Apr_24_23_55_49_ICT_2023
+[INFO ] 24-04-2023 23:55:50 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 23:55:50 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 23:55:51 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 23:55:54 [main] LogUtils - Entering text: 
+[INFO ] 24-04-2023 23:55:54 [main] LogUtils - Entering text: 20102001
+[INFO ] 24-04-2023 23:55:54 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 23:55:56 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 23:55:56 [main] LogUtils - Expected Result: Please fill out this field.
+[INFO ] 24-04-2023 23:55:56 [main] LogUtils - Actual Result: Please fill out this field.
+[INFO ] 24-04-2023 23:55:56 [main] LogUtils - Same result ---> Pass
+[INFO ] 24-04-2023 23:55:56 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 23:55:56 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 23:55:57 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 23:55:59 [main] LogUtils - Entering text: hoanganh 04092001@gmail.com
+[INFO ] 24-04-2023 23:55:59 [main] LogUtils - Entering text: 20102001
+[INFO ] 24-04-2023 23:56:00 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 23:56:01 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 23:56:01 [main] LogUtils - Expected Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 24-04-2023 23:56:01 [main] LogUtils - Actual Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 24-04-2023 23:56:01 [main] LogUtils - Same result ---> Pass
+[INFO ] 24-04-2023 23:56:01 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 23:56:02 [main] LogUtils - Stop record
+[INFO ] 24-04-2023 23:56:02 [main] LogUtils - Test case:  is passed.
+[INFO ] 24-04-2023 23:56:02 [main] LogUtils - End Suite: Default Suite
+[INFO ] 24-04-2023 23:58:15 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 23:58:15 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 23:58:16 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 24-04-2023 23:58:16 [main] LogUtils - Test case:  is starting...
+[INFO ] 24-04-2023 23:58:18 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 23:58:18 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 23:58:22 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 23:58:26 [main] LogUtils - Entering text: "         "
+[INFO ] 24-04-2023 23:58:26 [main] LogUtils - Entering text: 20102002
+[INFO ] 24-04-2023 23:58:26 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 23:58:28 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 23:58:28 [main] LogUtils - Expected Result: Demo
+[INFO ] 24-04-2023 23:58:28 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 24-04-2023 23:58:28 [main] LogUtils - Different result ---> Fail
+[INFO ] 24-04-2023 23:58:28 [main] LogUtils - Executing: Screenshot taken: onFailed_Mon_Apr_24_23_58_28_ICT_2023
+[INFO ] 24-04-2023 23:58:29 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 23:58:29 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 23:58:30 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 23:58:33 [main] LogUtils - Entering text: 
+[INFO ] 24-04-2023 23:58:33 [main] LogUtils - Entering text: 20102001
+[INFO ] 24-04-2023 23:58:33 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 23:58:35 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 23:58:35 [main] LogUtils - Expected Result: Please fill out this field.
+[INFO ] 24-04-2023 23:58:35 [main] LogUtils - Actual Result: Please fill out this field.
+[INFO ] 24-04-2023 23:58:35 [main] LogUtils - Same result ---> Pass
+[INFO ] 24-04-2023 23:58:35 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 23:58:35 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 23:58:36 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 23:58:39 [main] LogUtils - Entering text: hoanganh 04092001@gmail.com
+[INFO ] 24-04-2023 23:58:39 [main] LogUtils - Entering text: 20102001
+[INFO ] 24-04-2023 23:58:39 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 23:58:41 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 23:58:41 [main] LogUtils - Expected Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 24-04-2023 23:58:41 [main] LogUtils - Actual Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 24-04-2023 23:58:41 [main] LogUtils - Same result ---> Pass
+[INFO ] 24-04-2023 23:58:41 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 23:58:42 [main] LogUtils - Stop record
+[INFO ] 24-04-2023 23:58:42 [main] LogUtils - Test case:  is passed.
+[INFO ] 24-04-2023 23:58:42 [main] LogUtils - End Suite: Default Suite
+[INFO ] 24-04-2023 23:59:36 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 23:59:36 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 24-04-2023 23:59:37 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 24-04-2023 23:59:37 [main] LogUtils - Test case:  is starting...
+[INFO ] 24-04-2023 23:59:38 [main] LogUtils - Executing: Recording...
+[INFO ] 24-04-2023 23:59:38 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 23:59:43 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 23:59:46 [main] LogUtils - Entering text: "         "
+[INFO ] 24-04-2023 23:59:46 [main] LogUtils - Entering text: 20102002
+[INFO ] 24-04-2023 23:59:46 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 23:59:48 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 23:59:48 [main] LogUtils - Expected Result: Demo
+[INFO ] 24-04-2023 23:59:48 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 24-04-2023 23:59:48 [main] LogUtils - Different result ---> Fail
+[INFO ] 24-04-2023 23:59:49 [main] LogUtils - Executing: Screenshot taken: onFailed_Mon_Apr_24_23_59_48_ICT_2023
+[INFO ] 24-04-2023 23:59:49 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 23:59:49 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 23:59:51 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 23:59:53 [main] LogUtils - Entering text: 
+[INFO ] 24-04-2023 23:59:54 [main] LogUtils - Entering text: 20102001
+[INFO ] 24-04-2023 23:59:54 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 24-04-2023 23:59:56 [main] LogUtils - Executing: | Verify the result
+[INFO ] 24-04-2023 23:59:56 [main] LogUtils - Expected Result: Please fill out this field.
+[INFO ] 24-04-2023 23:59:56 [main] LogUtils - Actual Result: Please fill out this field.
+[INFO ] 24-04-2023 23:59:56 [main] LogUtils - Same result ---> Pass
+[INFO ] 24-04-2023 23:59:56 [main] LogUtils - Executing: Closing...
+[INFO ] 24-04-2023 23:59:56 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 24-04-2023 23:59:57 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 24-04-2023 23:59:59 [main] LogUtils - Entering text: hoanganh 04092001@gmail.com
+[INFO ] 24-04-2023 23:59:59 [main] LogUtils - Entering text: 20102001
+[INFO ] 24-04-2023 23:59:59 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 25-04-2023 00:00:01 [main] LogUtils - Executing: | Verify the result
+[INFO ] 25-04-2023 00:00:02 [main] LogUtils - Expected Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 25-04-2023 00:00:02 [main] LogUtils - Actual Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 25-04-2023 00:00:02 [main] LogUtils - Same result ---> Pass
+[INFO ] 25-04-2023 00:00:02 [main] LogUtils - Executing: Closing...
+[INFO ] 25-04-2023 00:00:02 [main] LogUtils - Stop record
+[INFO ] 25-04-2023 00:00:02 [main] LogUtils - Test case:  is passed.
+[INFO ] 25-04-2023 00:00:02 [main] LogUtils - End Suite: Default Suite
+[INFO ] 25-04-2023 00:03:11 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 25-04-2023 00:03:11 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 25-04-2023 00:03:12 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 25-04-2023 00:03:12 [main] LogUtils - Test case:  is starting...
+[INFO ] 25-04-2023 00:03:14 [main] LogUtils - Executing: Recording...
+[INFO ] 25-04-2023 00:03:14 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 25-04-2023 00:03:18 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 25-04-2023 00:03:21 [main] LogUtils - Entering text: "         "
+[INFO ] 25-04-2023 00:03:21 [main] LogUtils - Entering text: 20102002
+[INFO ] 25-04-2023 00:03:21 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 25-04-2023 00:03:23 [main] LogUtils - Executing: | Verify the result
+[INFO ] 25-04-2023 00:03:23 [main] LogUtils - Expected Result: Demo
+[INFO ] 25-04-2023 00:03:23 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 25-04-2023 00:03:23 [main] LogUtils - Different result ---> Fail
+[INFO ] 25-04-2023 00:03:23 [main] LogUtils - Executing: Screenshot taken: onFailed_Tue_Apr_25_00_03_23_ICT_2023
+[INFO ] 25-04-2023 00:03:24 [main] LogUtils - Executing: Closing...
+[INFO ] 25-04-2023 00:03:24 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 25-04-2023 00:03:25 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 25-04-2023 00:03:27 [main] LogUtils - Entering text: 
+[INFO ] 25-04-2023 00:03:27 [main] LogUtils - Entering text: 20102001
+[INFO ] 25-04-2023 00:03:27 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 25-04-2023 00:03:29 [main] LogUtils - Executing: | Verify the result
+[INFO ] 25-04-2023 00:03:29 [main] LogUtils - Expected Result: Please fill out this field.
+[INFO ] 25-04-2023 00:03:29 [main] LogUtils - Actual Result: Please fill out this field.
+[INFO ] 25-04-2023 00:03:29 [main] LogUtils - Same result ---> Pass
+[INFO ] 25-04-2023 00:03:29 [main] LogUtils - Executing: Closing...
+[INFO ] 25-04-2023 00:03:29 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 25-04-2023 00:03:30 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 25-04-2023 00:03:33 [main] LogUtils - Entering text: hoanganh 04092001@gmail.com
+[INFO ] 25-04-2023 00:03:33 [main] LogUtils - Entering text: 20102001
+[INFO ] 25-04-2023 00:03:33 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 25-04-2023 00:03:34 [main] LogUtils - Executing: | Verify the result
+[INFO ] 25-04-2023 00:03:35 [main] LogUtils - Expected Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 25-04-2023 00:03:35 [main] LogUtils - Actual Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 25-04-2023 00:03:35 [main] LogUtils - Same result ---> Pass
+[INFO ] 25-04-2023 00:03:35 [main] LogUtils - Executing: Closing...
+[INFO ] 25-04-2023 00:03:35 [main] LogUtils - Stop record
+[INFO ] 25-04-2023 00:03:35 [main] LogUtils - Test case:  is passed.
+[INFO ] 25-04-2023 00:03:35 [main] LogUtils - End Suite: Default Suite
+[INFO ] 25-04-2023 00:08:51 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 25-04-2023 00:08:51 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 25-04-2023 00:11:09 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 25-04-2023 00:11:09 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 25-04-2023 00:11:10 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 25-04-2023 00:11:10 [main] LogUtils - Test case:  is starting...
+[INFO ] 25-04-2023 00:11:11 [main] LogUtils - Executing: Recording...
+[INFO ] 25-04-2023 00:11:11 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 25-04-2023 00:11:16 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 25-04-2023 00:11:18 [main] LogUtils - Entering text: "         "
+[INFO ] 25-04-2023 00:11:18 [main] LogUtils - Entering text: 20102002
+[INFO ] 25-04-2023 00:11:18 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 25-04-2023 00:11:20 [main] LogUtils - Executing: | Verify the result
+[INFO ] 25-04-2023 00:11:20 [main] LogUtils - Expected Result: Demo
+[INFO ] 25-04-2023 00:11:20 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 25-04-2023 00:11:20 [main] LogUtils - Different result ---> Fail
+[INFO ] 25-04-2023 00:11:21 [main] LogUtils - Executing: Screenshot taken: onFailed_Tue_Apr_25_00_11_20_ICT_2023
+[INFO ] 25-04-2023 00:11:21 [main] LogUtils - Executing: Closing...
+[INFO ] 25-04-2023 00:11:22 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 25-04-2023 00:11:23 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 25-04-2023 00:11:25 [main] LogUtils - Entering text: 
+[INFO ] 25-04-2023 00:11:25 [main] LogUtils - Entering text: 20102001
+[INFO ] 25-04-2023 00:11:25 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 25-04-2023 00:11:27 [main] LogUtils - Executing: | Verify the result
+[INFO ] 25-04-2023 00:11:27 [main] LogUtils - Expected Result: Please fill out this field.
+[INFO ] 25-04-2023 00:11:27 [main] LogUtils - Actual Result: Please fill out this field.
+[INFO ] 25-04-2023 00:11:27 [main] LogUtils - Same result ---> Pass
+[INFO ] 25-04-2023 00:11:27 [main] LogUtils - Executing: Closing...
+[INFO ] 25-04-2023 00:11:27 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 25-04-2023 00:11:29 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 25-04-2023 00:11:31 [main] LogUtils - Entering text: hoanganh 04092001@gmail.com
+[INFO ] 25-04-2023 00:11:31 [main] LogUtils - Entering text: 20102001
+[INFO ] 25-04-2023 00:11:31 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 25-04-2023 00:11:33 [main] LogUtils - Executing: | Verify the result
+[INFO ] 25-04-2023 00:11:33 [main] LogUtils - Expected Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 25-04-2023 00:11:33 [main] LogUtils - Actual Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 25-04-2023 00:11:33 [main] LogUtils - Same result ---> Pass
+[INFO ] 25-04-2023 00:11:33 [main] LogUtils - Executing: Closing...
+[INFO ] 25-04-2023 00:11:33 [main] LogUtils - Stop record
+[INFO ] 25-04-2023 00:11:33 [main] LogUtils - Test case:  is passed.
+[INFO ] 25-04-2023 00:11:33 [main] LogUtils - End Suite: Default Suite
+[INFO ] 25-04-2023 00:13:13 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 25-04-2023 00:13:18 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 25-04-2023 00:13:19 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 25-04-2023 00:13:19 [main] LogUtils - Test case:  is starting...
+[INFO ] 25-04-2023 00:13:20 [main] LogUtils - Executing: Recording...
+[INFO ] 25-04-2023 00:13:20 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 25-04-2023 00:13:25 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 25-04-2023 00:13:28 [main] LogUtils - Entering text: "         "
+[INFO ] 25-04-2023 00:13:28 [main] LogUtils - Entering text: 20102002
+[INFO ] 25-04-2023 00:13:28 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 25-04-2023 00:13:30 [main] LogUtils - Executing: | Verify the result
+[INFO ] 25-04-2023 00:13:30 [main] LogUtils - Expected Result: Demo
+[INFO ] 25-04-2023 00:13:30 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 25-04-2023 00:13:30 [main] LogUtils - Different result ---> Fail
+[INFO ] 25-04-2023 00:13:31 [main] LogUtils - Executing: Screenshot taken: onFailed_Tue_Apr_25_00_13_30_ICT_2023
+[INFO ] 25-04-2023 00:13:31 [main] LogUtils - Executing: Closing...
+[INFO ] 25-04-2023 00:13:32 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 25-04-2023 00:13:33 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 25-04-2023 00:13:36 [main] LogUtils - Entering text: 
+[INFO ] 25-04-2023 00:13:36 [main] LogUtils - Entering text: 20102001
+[INFO ] 25-04-2023 00:13:36 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 25-04-2023 00:13:38 [main] LogUtils - Executing: | Verify the result
+[INFO ] 25-04-2023 00:13:38 [main] LogUtils - Expected Result: Please fill out this field.
+[INFO ] 25-04-2023 00:13:38 [main] LogUtils - Actual Result: Please fill out this field.
+[INFO ] 25-04-2023 00:13:38 [main] LogUtils - Same result ---> Pass
+[INFO ] 25-04-2023 00:13:38 [main] LogUtils - Executing: Closing...
+[INFO ] 25-04-2023 00:13:38 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 25-04-2023 00:13:39 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 25-04-2023 00:13:42 [main] LogUtils - Entering text: hoanganh 04092001@gmail.com
+[INFO ] 25-04-2023 00:13:42 [main] LogUtils - Entering text: 20102001
+[INFO ] 25-04-2023 00:13:42 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 25-04-2023 00:13:44 [main] LogUtils - Executing: | Verify the result
+[INFO ] 25-04-2023 00:13:44 [main] LogUtils - Expected Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 25-04-2023 00:13:44 [main] LogUtils - Actual Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 25-04-2023 00:13:44 [main] LogUtils - Same result ---> Pass
+[INFO ] 25-04-2023 00:13:44 [main] LogUtils - Executing: Closing...
+[INFO ] 25-04-2023 00:13:44 [main] LogUtils - Stop record
+[INFO ] 25-04-2023 00:13:45 [main] LogUtils - Test case:  is passed.
+[INFO ] 25-04-2023 00:13:45 [main] LogUtils - End Suite: Default Suite
+[INFO ] 25-04-2023 21:46:58 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 25-04-2023 21:46:58 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 25-04-2023 21:46:59 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 25-04-2023 21:46:59 [main] LogUtils - Test case:  is starting...
+[INFO ] 25-04-2023 21:47:00 [main] LogUtils - Executing: Recording...
+[INFO ] 25-04-2023 21:47:00 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 25-04-2023 21:47:06 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 25-04-2023 21:47:08 [main] LogUtils - Entering text: "         "
+[INFO ] 25-04-2023 21:47:08 [main] LogUtils - Entering text: 20102002
+[INFO ] 25-04-2023 21:47:08 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 25-04-2023 21:47:10 [main] LogUtils - Executing: | Verify the result
+[INFO ] 25-04-2023 21:47:10 [main] LogUtils - Expected Result: Demo
+[INFO ] 25-04-2023 21:47:10 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 25-04-2023 21:47:10 [main] LogUtils - Different result ---> Fail
+[INFO ] 25-04-2023 21:47:10 [main] LogUtils - Executing: Screenshot taken: onFailed_Tue_Apr_25_21_47_10_ICT_2023
+[INFO ] 25-04-2023 21:47:11 [main] LogUtils - Executing: Closing...
+[INFO ] 25-04-2023 21:47:11 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 25-04-2023 21:47:13 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 25-04-2023 21:47:15 [main] LogUtils - Entering text: 
+[INFO ] 25-04-2023 21:47:15 [main] LogUtils - Entering text: 20102001
+[INFO ] 25-04-2023 21:47:16 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 25-04-2023 21:47:17 [main] LogUtils - Executing: | Verify the result
+[INFO ] 25-04-2023 21:47:17 [main] LogUtils - Expected Result: Please fill out this field.
+[INFO ] 25-04-2023 21:47:17 [main] LogUtils - Actual Result: Please fill out this field.
+[INFO ] 25-04-2023 21:47:17 [main] LogUtils - Same result ---> Pass
+[INFO ] 25-04-2023 21:47:17 [main] LogUtils - Executing: Closing...
+[INFO ] 25-04-2023 21:47:18 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 25-04-2023 21:47:19 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 25-04-2023 21:47:21 [main] LogUtils - Entering text: hoanganh 04092001@gmail.com
+[INFO ] 25-04-2023 21:47:21 [main] LogUtils - Entering text: 20102001
+[INFO ] 25-04-2023 21:47:22 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 25-04-2023 21:47:23 [main] LogUtils - Executing: | Verify the result
+[INFO ] 25-04-2023 21:47:23 [main] LogUtils - Expected Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 25-04-2023 21:47:23 [main] LogUtils - Actual Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 25-04-2023 21:47:23 [main] LogUtils - Same result ---> Pass
+[INFO ] 25-04-2023 21:47:23 [main] LogUtils - Executing: Closing...
+[INFO ] 25-04-2023 21:47:30 [main] LogUtils - Stop record
+[INFO ] 25-04-2023 21:47:30 [main] LogUtils - Test case:  is passed.
+[INFO ] 25-04-2023 21:47:30 [main] LogUtils - End Suite: Default Suite
+[INFO ] 28-04-2023 22:59:07 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 28-04-2023 22:59:07 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 28-04-2023 22:59:08 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 28-04-2023 22:59:09 [main] LogUtils - Test case:  is starting...
+[INFO ] 28-04-2023 22:59:10 [main] LogUtils - Executing: Recording...
+[INFO ] 28-04-2023 22:59:10 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 28-04-2023 22:59:18 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 28-04-2023 22:59:20 [main] LogUtils - Entering text: "         "
+[INFO ] 28-04-2023 22:59:20 [main] LogUtils - Entering text: 20102002
+[INFO ] 28-04-2023 22:59:20 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 28-04-2023 22:59:22 [main] LogUtils - Executing: | Verify the result
+[INFO ] 28-04-2023 22:59:22 [main] LogUtils - Expected Result: Demo
+[INFO ] 28-04-2023 22:59:22 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 28-04-2023 22:59:22 [main] LogUtils - Different result ---> Fail
+[INFO ] 28-04-2023 22:59:22 [main] LogUtils - Executing: Screenshot taken: onFailed_Fri_Apr_28_22_59_22_ICT_2023
+[INFO ] 28-04-2023 22:59:23 [main] LogUtils - Executing: Closing...
+[INFO ] 28-04-2023 22:59:23 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 28-04-2023 22:59:24 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 28-04-2023 22:59:27 [main] LogUtils - Entering text: 
+[INFO ] 28-04-2023 22:59:27 [main] LogUtils - Entering text: 20102001
+[INFO ] 28-04-2023 22:59:27 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 28-04-2023 22:59:29 [main] LogUtils - Executing: | Verify the result
+[INFO ] 28-04-2023 22:59:29 [main] LogUtils - Expected Result: Please fill out this field.
+[INFO ] 28-04-2023 22:59:29 [main] LogUtils - Actual Result: Please fill out this field.
+[INFO ] 28-04-2023 22:59:29 [main] LogUtils - Same result ---> Pass
+[INFO ] 28-04-2023 22:59:29 [main] LogUtils - Executing: Closing...
+[INFO ] 28-04-2023 22:59:29 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 28-04-2023 22:59:30 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 28-04-2023 22:59:33 [main] LogUtils - Entering text: hoanganh 04092001@gmail.com
+[INFO ] 28-04-2023 22:59:33 [main] LogUtils - Entering text: 20102001
+[INFO ] 28-04-2023 22:59:33 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 28-04-2023 22:59:35 [main] LogUtils - Executing: | Verify the result
+[INFO ] 28-04-2023 22:59:35 [main] LogUtils - Expected Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 28-04-2023 22:59:35 [main] LogUtils - Actual Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 28-04-2023 22:59:35 [main] LogUtils - Same result ---> Pass
+[INFO ] 28-04-2023 22:59:35 [main] LogUtils - Executing: Closing...
+[INFO ] 28-04-2023 22:59:35 [main] LogUtils - Stop record
+[INFO ] 28-04-2023 22:59:35 [main] LogUtils - Test case:  is passed.
+[INFO ] 28-04-2023 22:59:35 [main] LogUtils - End Suite: Default Suite
+[INFO ] 28-04-2023 23:04:40 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 28-04-2023 23:04:41 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 28-04-2023 23:04:41 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 28-04-2023 23:04:41 [main] LogUtils - Test case:  is starting...
+[INFO ] 28-04-2023 23:04:43 [main] LogUtils - Executing: Recording...
+[INFO ] 28-04-2023 23:04:43 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 28-04-2023 23:04:47 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 28-04-2023 23:04:49 [main] LogUtils - Entering text: "         "
+[INFO ] 28-04-2023 23:04:49 [main] LogUtils - Entering text: 20102002
+[INFO ] 28-04-2023 23:04:49 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 28-04-2023 23:04:51 [main] LogUtils - Executing: | Verify the result
+[INFO ] 28-04-2023 23:04:51 [main] LogUtils - Expected Result: Demo
+[INFO ] 28-04-2023 23:04:51 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 28-04-2023 23:04:51 [main] LogUtils - Different result ---> Fail
+[INFO ] 28-04-2023 23:04:51 [main] LogUtils - Executing: Screenshot taken: onFailed_Fri_Apr_28_23_04_51_ICT_2023
+[INFO ] 28-04-2023 23:04:52 [main] LogUtils - Executing: Closing...
+[INFO ] 28-04-2023 23:04:52 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 28-04-2023 23:04:53 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 28-04-2023 23:04:56 [main] LogUtils - Entering text: 
+[INFO ] 28-04-2023 23:04:56 [main] LogUtils - Entering text: 20102001
+[INFO ] 28-04-2023 23:04:56 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 28-04-2023 23:04:58 [main] LogUtils - Executing: | Verify the result
+[INFO ] 28-04-2023 23:04:58 [main] LogUtils - Expected Result: Please fill out this field.
+[INFO ] 28-04-2023 23:04:58 [main] LogUtils - Actual Result: Please fill out this field.
+[INFO ] 28-04-2023 23:04:58 [main] LogUtils - Same result ---> Pass
+[INFO ] 28-04-2023 23:04:58 [main] LogUtils - Executing: Closing...
+[INFO ] 28-04-2023 23:04:58 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 28-04-2023 23:04:59 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 28-04-2023 23:05:01 [main] LogUtils - Entering text: hoanganh 04092001@gmail.com
+[INFO ] 28-04-2023 23:05:01 [main] LogUtils - Entering text: 20102001
+[INFO ] 28-04-2023 23:05:01 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 28-04-2023 23:05:03 [main] LogUtils - Executing: | Verify the result
+[INFO ] 28-04-2023 23:05:03 [main] LogUtils - Expected Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 28-04-2023 23:05:03 [main] LogUtils - Actual Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 28-04-2023 23:05:03 [main] LogUtils - Same result ---> Pass
+[INFO ] 28-04-2023 23:05:03 [main] LogUtils - Executing: Closing...
+[INFO ] 28-04-2023 23:05:03 [main] LogUtils - Stop record
+[INFO ] 28-04-2023 23:05:03 [main] LogUtils - Test case:  is passed.
+[INFO ] 28-04-2023 23:05:03 [main] LogUtils - End Suite: Default Suite
+[INFO ] 29-04-2023 00:01:59 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 29-04-2023 00:02:19 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 29-04-2023 00:03:11 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 29-04-2023 00:03:56 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 29-04-2023 00:04:56 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 29-04-2023 00:07:14 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 29-04-2023 00:16:22 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 29-04-2023 00:17:14 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 29-04-2023 00:19:22 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 29-04-2023 00:37:38 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 29-04-2023 00:37:39 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 29-04-2023 00:37:40 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 29-04-2023 00:37:40 [main] LogUtils - Test case:  is starting...
+[INFO ] 29-04-2023 00:37:42 [main] LogUtils - Executing: Recording...
+[INFO ] 29-04-2023 00:37:42 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 29-04-2023 00:37:49 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 29-04-2023 00:37:51 [main] LogUtils - Entering text: "         "
+[INFO ] 29-04-2023 00:37:51 [main] LogUtils - Entering text: 20102002
+[INFO ] 29-04-2023 00:37:51 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 29-04-2023 00:37:53 [main] LogUtils - Executing: | Verify the result
+[INFO ] 29-04-2023 00:37:53 [main] LogUtils - Expected Result: Demo
+[INFO ] 29-04-2023 00:37:53 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 29-04-2023 00:37:53 [main] LogUtils - Different result ---> Fail
+[INFO ] 29-04-2023 00:37:54 [main] LogUtils - Executing: Screenshot taken: onFailed_Sat_Apr_29_00_37_53_ICT_2023
+[INFO ] 29-04-2023 00:37:54 [main] LogUtils - Executing: Closing...
+[INFO ] 29-04-2023 00:37:54 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 29-04-2023 00:37:56 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 29-04-2023 00:37:58 [main] LogUtils - Entering text: 
+[INFO ] 29-04-2023 00:37:58 [main] LogUtils - Entering text: 20102001
+[INFO ] 29-04-2023 00:37:58 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 29-04-2023 00:38:00 [main] LogUtils - Executing: | Verify the result
+[INFO ] 29-04-2023 00:38:00 [main] LogUtils - Expected Result: Please fill out this field.
+[INFO ] 29-04-2023 00:38:00 [main] LogUtils - Actual Result: Please fill out this field.
+[INFO ] 29-04-2023 00:38:00 [main] LogUtils - Same result ---> Pass
+[INFO ] 29-04-2023 00:38:00 [main] LogUtils - Executing: Closing...
+[INFO ] 29-04-2023 00:38:00 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 29-04-2023 00:38:01 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 29-04-2023 00:38:04 [main] LogUtils - Entering text: hoanganh 04092001@gmail.com
+[INFO ] 29-04-2023 00:38:04 [main] LogUtils - Entering text: 20102001
+[INFO ] 29-04-2023 00:38:04 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 29-04-2023 00:38:05 [main] LogUtils - Executing: | Verify the result
+[INFO ] 29-04-2023 00:38:06 [main] LogUtils - Expected Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 29-04-2023 00:38:06 [main] LogUtils - Actual Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 29-04-2023 00:38:06 [main] LogUtils - Same result ---> Pass
+[INFO ] 29-04-2023 00:38:06 [main] LogUtils - Executing: Closing...
+[INFO ] 29-04-2023 00:38:06 [main] LogUtils - Stop record
+[INFO ] 29-04-2023 00:38:06 [main] LogUtils - Test case:  is passed.
+[INFO ] 29-04-2023 00:38:06 [main] LogUtils - End Suite: Default Suite
+[INFO ] 29-04-2023 01:22:44 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 29-04-2023 01:22:44 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 29-04-2023 01:22:45 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 29-04-2023 01:22:46 [main] LogUtils - Test case:  is starting...
+[INFO ] 29-04-2023 01:22:48 [main] LogUtils - Executing: Recording...
+[INFO ] 29-04-2023 01:22:48 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 29-04-2023 01:22:53 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 29-04-2023 01:22:55 [main] LogUtils - Entering text: "         "
+[INFO ] 29-04-2023 01:22:55 [main] LogUtils - Entering text: 20102002
+[INFO ] 29-04-2023 01:22:55 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 29-04-2023 01:22:57 [main] LogUtils - Executing: | Verify the result
+[INFO ] 29-04-2023 01:22:57 [main] LogUtils - Expected Result: Demo
+[INFO ] 29-04-2023 01:22:57 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 29-04-2023 01:22:57 [main] LogUtils - Different result ---> Fail
+[INFO ] 29-04-2023 01:22:58 [main] LogUtils - Executing: Screenshot taken: onFailed_Sat_Apr_29_01_22_57_ICT_2023
+[INFO ] 29-04-2023 01:22:58 [main] LogUtils - Executing: Closing...
+[INFO ] 29-04-2023 01:22:58 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 29-04-2023 01:23:00 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 29-04-2023 01:23:02 [main] LogUtils - Entering text: 
+[INFO ] 29-04-2023 01:23:02 [main] LogUtils - Entering text: 20102001
+[INFO ] 29-04-2023 01:23:03 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 29-04-2023 01:23:04 [main] LogUtils - Executing: | Verify the result
+[INFO ] 29-04-2023 01:23:04 [main] LogUtils - Expected Result: Please fill out this field.
+[INFO ] 29-04-2023 01:23:04 [main] LogUtils - Actual Result: Please fill out this field.
+[INFO ] 29-04-2023 01:23:04 [main] LogUtils - Same result ---> Pass
+[INFO ] 29-04-2023 01:23:04 [main] LogUtils - Executing: Closing...
+[INFO ] 29-04-2023 01:23:05 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 29-04-2023 01:23:06 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 29-04-2023 01:23:09 [main] LogUtils - Entering text: hoanganh 04092001@gmail.com
+[INFO ] 29-04-2023 01:23:09 [main] LogUtils - Entering text: 20102001
+[INFO ] 29-04-2023 01:23:10 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 29-04-2023 01:23:11 [main] LogUtils - Executing: | Verify the result
+[INFO ] 29-04-2023 01:23:11 [main] LogUtils - Expected Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 29-04-2023 01:23:11 [main] LogUtils - Actual Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 29-04-2023 01:23:11 [main] LogUtils - Same result ---> Pass
+[INFO ] 29-04-2023 01:23:11 [main] LogUtils - Executing: Closing...
+[INFO ] 29-04-2023 01:23:12 [main] LogUtils - Stop record
+[INFO ] 29-04-2023 01:23:12 [main] LogUtils - Test case:  is passed.
+[INFO ] 29-04-2023 01:23:12 [main] LogUtils - End Suite: Default Suite
+[INFO ] 30-04-2023 22:31:22 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 30-04-2023 22:31:22 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 30-04-2023 22:31:23 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 30-04-2023 22:31:23 [main] LogUtils - Test case:  is starting...
+[INFO ] 30-04-2023 22:31:24 [main] LogUtils - Executing: Recording...
+[INFO ] 30-04-2023 22:31:24 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 30-04-2023 22:31:30 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 30-04-2023 22:31:57 [main] LogUtils - Entering text: "         "
+[INFO ] 30-04-2023 22:31:57 [main] LogUtils - Entering text: 20102002
+[INFO ] 30-04-2023 22:31:58 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 30-04-2023 22:31:59 [main] LogUtils - Executing: | Verify the result
+[INFO ] 30-04-2023 22:31:59 [main] LogUtils - Expected Result: Demo
+[INFO ] 30-04-2023 22:31:59 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 30-04-2023 22:31:59 [main] LogUtils - Different result ---> Fail
+[INFO ] 30-04-2023 22:32:00 [main] LogUtils - Executing: Screenshot taken: onFailed_Sun_Apr_30_22_31_59_ICT_2023
+[INFO ] 30-04-2023 22:32:00 [main] LogUtils - Folder created: G:\Download\GP\reports\ExtentReports\images
+[INFO ] 30-04-2023 22:32:00 [main] LogUtils - Executing: Closing...
+[INFO ] 30-04-2023 22:32:00 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 30-04-2023 22:32:01 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 30-04-2023 22:32:21 [main] LogUtils - Entering text: 
+[INFO ] 30-04-2023 22:32:21 [main] LogUtils - Entering text: 20102001
+[INFO ] 30-04-2023 22:32:21 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 30-04-2023 22:32:22 [main] LogUtils - Executing: | Verify the result
+[INFO ] 30-04-2023 22:32:22 [main] LogUtils - Expected Result: Please fill out this field.
+[INFO ] 30-04-2023 22:32:22 [main] LogUtils - Actual Result: Please fill out this field.
+[INFO ] 30-04-2023 22:32:22 [main] LogUtils - Same result ---> Pass
+[INFO ] 30-04-2023 22:32:22 [main] LogUtils - Executing: Closing...
+[INFO ] 30-04-2023 22:32:23 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 30-04-2023 22:32:24 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 30-04-2023 22:32:41 [main] LogUtils - Entering text: hoanganh 04092001@gmail.com
+[INFO ] 30-04-2023 22:32:41 [main] LogUtils - Entering text: 20102001
+[INFO ] 30-04-2023 22:32:41 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 30-04-2023 22:32:42 [main] LogUtils - Executing: | Verify the result
+[INFO ] 30-04-2023 22:32:43 [main] LogUtils - Expected Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 30-04-2023 22:32:43 [main] LogUtils - Actual Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 30-04-2023 22:32:43 [main] LogUtils - Same result ---> Pass
+[INFO ] 30-04-2023 22:32:43 [main] LogUtils - Executing: Closing...
+[INFO ] 30-04-2023 22:32:43 [main] LogUtils - Stop record
+[INFO ] 30-04-2023 22:32:43 [main] LogUtils - Test case:  is passed.
+[INFO ] 30-04-2023 22:32:43 [main] LogUtils - End Suite: Default Suite
+[INFO ] 30-04-2023 22:34:07 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 30-04-2023 22:34:07 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 30-04-2023 22:34:08 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 30-04-2023 22:34:08 [main] LogUtils - Test case:  is starting...
+[INFO ] 30-04-2023 22:34:10 [main] LogUtils - Executing: Recording...
+[INFO ] 30-04-2023 22:34:10 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 30-04-2023 22:34:14 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 30-04-2023 22:34:32 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 30-04-2023 22:34:32 [main] LogUtils - Warning !! Can not Load All File.
+[INFO ] 30-04-2023 22:34:33 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 30-04-2023 22:34:33 [main] LogUtils - Test case:  is starting...
+[INFO ] 30-04-2023 22:34:36 [main] LogUtils - Executing: Recording...
+[INFO ] 30-04-2023 22:34:36 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 30-04-2023 22:34:42 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 30-04-2023 22:34:55 [main] LogUtils - Entering text: "         "
+[INFO ] 30-04-2023 22:34:56 [main] LogUtils - Entering text: 20102002
+[INFO ] 30-04-2023 22:34:56 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 30-04-2023 23:56:19 [main] LogUtils - Loaded all properties files.
+[INFO ] 30-04-2023 23:56:19 [main] LogUtils - {TARGET=local, OVERRIDE_REPORTS=yes, screenshot.rel.path=/screenshots/, SEND_EMAIL_TO_USERS=no, WAIT_DEFAULT=5, REMOTE_PORT=4444, screenshot.dir=screenshots/, allure.results.directory=target/allure-results, URL_HRM=https://www.careerlink.vn/nguoi-tim-viec/login, SCREENSHOT_ALL_STEPS=yes, EXTENT_REPORT_NAME=ExtentReports, extent.reporter.spark.start=true, EXPORT_VIDEO_PATH=ExportData/Videos, EXPORT_CAPTURE_PATH=ExportData//Images//, WAIT_PAGE_LOADED=40, SCREENSHOT_PASSED_STEPS=no, EXTENT_REPORT_FOLDER=reports//ExtentReports//, WAIT_EXPLICIT=10, BROWSER=chrome, SCREENSHOT_SKIPPED_STEPS=yes, REPORT_TITLE=Report | Automation Framework Selenium | Nguyen Hoang Anh , AUTHOR=Nguyen Hoang Anh, EXCEL_DATA_FILE_PATH=src/test/resources/data/data.xlsx, WAIT_IMPLICIT=20, PROJECT_NAME=Automation Framework Selenium | Nguyen Hoang Anh , extent.reporter.spark.out=reports/ExtentReports/ExtentReports.html, extent.reporter.pdf.start=true, extent.reporter.excel.out=reports/ExcelReport/ExtentExcel.xlsx, HEADLESS=false, REMOTE_URL=192.168.1.14, extent.reporter.spark.vieworder=dashboard,test,category,exception,author,device,log, XML_DATA_FILE_PATH=src/test/resources/data/data.xml, extent.reporter.pdf.out=reports/ExtentReports/ExtentPdfReport.pdf, SCREENSHOT_FAILED_STEPS=yes, extent.reporter.excel.start=true, JSON_DATA_FILE_PATH=src/test/resources/data/data.json, CSV_DATA_FILE_PATH=src/test/resources/data/DataSignIn.csv, ACTIVE_PAGE_LOADED=true, WAIT_SLEEP_STEP=0, OPEN_REPORTS_AFTER_EXECUTION=yes, extent.reporter.spark.base64imagesrc=true, LOCATE=vi}
+[INFO ] 30-04-2023 23:56:20 [main] LogUtils - Loaded all properties files.
+[INFO ] 30-04-2023 23:56:20 [main] LogUtils - {TARGET=local, OVERRIDE_REPORTS=yes, screenshot.rel.path=/screenshots/, SEND_EMAIL_TO_USERS=no, WAIT_DEFAULT=5, REMOTE_PORT=4444, screenshot.dir=screenshots/, allure.results.directory=target/allure-results, URL_HRM=https://www.careerlink.vn/nguoi-tim-viec/login, SCREENSHOT_ALL_STEPS=yes, EXTENT_REPORT_NAME=ExtentReports, extent.reporter.spark.start=true, EXPORT_VIDEO_PATH=ExportData/Videos, EXPORT_CAPTURE_PATH=ExportData//Images//, WAIT_PAGE_LOADED=40, SCREENSHOT_PASSED_STEPS=no, EXTENT_REPORT_FOLDER=reports//ExtentReports//, WAIT_EXPLICIT=10, BROWSER=chrome, SCREENSHOT_SKIPPED_STEPS=yes, REPORT_TITLE=Report | Automation Framework Selenium | Nguyen Hoang Anh , AUTHOR=Nguyen Hoang Anh, EXCEL_DATA_FILE_PATH=src/test/resources/data/data.xlsx, WAIT_IMPLICIT=20, PROJECT_NAME=Automation Framework Selenium | Nguyen Hoang Anh , extent.reporter.spark.out=reports/ExtentReports/ExtentReports.html, extent.reporter.pdf.start=true, extent.reporter.excel.out=reports/ExcelReport/ExtentExcel.xlsx, HEADLESS=false, REMOTE_URL=192.168.1.14, extent.reporter.spark.vieworder=dashboard,test,category,exception,author,device,log, XML_DATA_FILE_PATH=src/test/resources/data/data.xml, extent.reporter.pdf.out=reports/ExtentReports/ExtentPdfReport.pdf, SCREENSHOT_FAILED_STEPS=yes, extent.reporter.excel.start=true, JSON_DATA_FILE_PATH=src/test/resources/data/data.json, CSV_DATA_FILE_PATH=src/test/resources/data/DataSignIn.csv, ACTIVE_PAGE_LOADED=true, WAIT_SLEEP_STEP=0, OPEN_REPORTS_AFTER_EXECUTION=yes, extent.reporter.spark.base64imagesrc=true, LOCATE=vi}
+[INFO ] 30-04-2023 23:56:23 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 30-04-2023 23:56:24 [main] LogUtils - Test case:  is starting...
+[INFO ] 30-04-2023 23:56:27 [main] LogUtils - Executing: Recording...
+[INFO ] 30-04-2023 23:56:27 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 30-04-2023 23:56:34 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 30-04-2023 23:56:36 [main] LogUtils - Entering text: "         "
+[INFO ] 30-04-2023 23:56:36 [main] LogUtils - Entering text: 20102002
+[INFO ] 30-04-2023 23:56:36 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 30-04-2023 23:56:38 [main] LogUtils - Executing: | Verify the result
+[INFO ] 30-04-2023 23:56:38 [main] LogUtils - Expected Result: Demo
+[INFO ] 30-04-2023 23:56:38 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 30-04-2023 23:56:38 [main] LogUtils - Different result ---> Fail
+[INFO ] 30-04-2023 23:56:39 [main] LogUtils - Executing: Screenshot taken: onFailed_Sun_Apr_30_23_56_38_ICT_2023
+[INFO ] 30-04-2023 23:56:39 [main] LogUtils - Executing: Closing...
+[INFO ] 30-04-2023 23:56:39 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 30-04-2023 23:56:42 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 30-04-2023 23:56:44 [main] LogUtils - Entering text: 
+[INFO ] 30-04-2023 23:56:45 [main] LogUtils - Entering text: 20102001
+[INFO ] 30-04-2023 23:56:45 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 30-04-2023 23:56:47 [main] LogUtils - Executing: | Verify the result
+[INFO ] 30-04-2023 23:56:47 [main] LogUtils - Expected Result: Please fill out this field.
+[INFO ] 30-04-2023 23:56:47 [main] LogUtils - Actual Result: Please fill out this field.
+[INFO ] 30-04-2023 23:56:47 [main] LogUtils - Same result ---> Pass
+[INFO ] 30-04-2023 23:56:47 [main] LogUtils - Executing: Closing...
+[INFO ] 30-04-2023 23:56:47 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 30-04-2023 23:56:49 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 30-04-2023 23:56:51 [main] LogUtils - Entering text: hoanganh 04092001@gmail.com
+[INFO ] 30-04-2023 23:56:51 [main] LogUtils - Entering text: 20102001
+[INFO ] 30-04-2023 23:56:51 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 30-04-2023 23:56:53 [main] LogUtils - Executing: | Verify the result
+[INFO ] 30-04-2023 23:56:53 [main] LogUtils - Expected Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 30-04-2023 23:56:53 [main] LogUtils - Actual Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 30-04-2023 23:56:53 [main] LogUtils - Same result ---> Pass
+[INFO ] 30-04-2023 23:56:53 [main] LogUtils - Executing: Closing...
+[INFO ] 30-04-2023 23:56:54 [main] LogUtils - Stop record
+[INFO ] 30-04-2023 23:56:54 [main] LogUtils - Test case:  is passed.
+[INFO ] 30-04-2023 23:56:54 [main] LogUtils - End Suite: Default Suite
+[INFO ] 30-04-2023 23:58:45 [main] LogUtils - Loaded all properties files.
+[INFO ] 30-04-2023 23:58:45 [main] LogUtils - {TARGET=local, OVERRIDE_REPORTS=yes, screenshot.rel.path=/screenshots/, SEND_EMAIL_TO_USERS=no, WAIT_DEFAULT=5, REMOTE_PORT=4444, screenshot.dir=screenshots/, allure.results.directory=target/allure-results, URL_HRM=https://www.careerlink.vn/nguoi-tim-viec/login, SCREENSHOT_ALL_STEPS=yes, EXTENT_REPORT_NAME=ExtentReports, extent.reporter.spark.start=true, EXPORT_VIDEO_PATH=ExportData/Videos, EXPORT_CAPTURE_PATH=ExportData//Images//, WAIT_PAGE_LOADED=40, SCREENSHOT_PASSED_STEPS=no, EXTENT_REPORT_FOLDER=reports//ExtentReports//, WAIT_EXPLICIT=10, BROWSER=chrome, SCREENSHOT_SKIPPED_STEPS=yes, REPORT_TITLE=Report | Automation Framework Selenium | Nguyen Hoang Anh , AUTHOR=Nguyen Hoang Anh, EXCEL_DATA_FILE_PATH=src/test/resources/data/data.xlsx, WAIT_IMPLICIT=20, PROJECT_NAME=Automation Framework Selenium | Nguyen Hoang Anh , extent.reporter.spark.out=reports/ExtentReports/ExtentReports.html, extent.reporter.pdf.start=true, extent.reporter.excel.out=reports/ExcelReport/ExtentExcel.xlsx, HEADLESS=false, REMOTE_URL=192.168.1.14, extent.reporter.spark.vieworder=dashboard,test,category,exception,author,device,log, XML_DATA_FILE_PATH=src/test/resources/data/data.xml, extent.reporter.pdf.out=reports/ExtentReports/ExtentPdfReport.pdf, SCREENSHOT_FAILED_STEPS=yes, extent.reporter.excel.start=true, JSON_DATA_FILE_PATH=src/test/resources/data/data.json, CSV_DATA_FILE_PATH=src/test/resources/data/DataSignIn.csv, ACTIVE_PAGE_LOADED=true, WAIT_SLEEP_STEP=0, OPEN_REPORTS_AFTER_EXECUTION=yes, extent.reporter.spark.base64imagesrc=true, LOCATE=vi}
+[INFO ] 30-04-2023 23:58:45 [main] LogUtils - Loaded all properties files.
+[INFO ] 30-04-2023 23:58:45 [main] LogUtils - {TARGET=local, OVERRIDE_REPORTS=yes, screenshot.rel.path=/screenshots/, SEND_EMAIL_TO_USERS=no, WAIT_DEFAULT=5, REMOTE_PORT=4444, screenshot.dir=screenshots/, allure.results.directory=target/allure-results, URL_HRM=https://www.careerlink.vn/nguoi-tim-viec/login, SCREENSHOT_ALL_STEPS=yes, EXTENT_REPORT_NAME=ExtentReports, extent.reporter.spark.start=true, EXPORT_VIDEO_PATH=ExportData/Videos, EXPORT_CAPTURE_PATH=ExportData//Images//, WAIT_PAGE_LOADED=40, SCREENSHOT_PASSED_STEPS=no, EXTENT_REPORT_FOLDER=reports//ExtentReports//, WAIT_EXPLICIT=10, BROWSER=chrome, SCREENSHOT_SKIPPED_STEPS=yes, REPORT_TITLE=Report | Automation Framework Selenium | Nguyen Hoang Anh , AUTHOR=Nguyen Hoang Anh, EXCEL_DATA_FILE_PATH=src/test/resources/data/data.xlsx, WAIT_IMPLICIT=20, PROJECT_NAME=Automation Framework Selenium | Nguyen Hoang Anh , extent.reporter.spark.out=reports/ExtentReports/ExtentReports.html, extent.reporter.pdf.start=true, extent.reporter.excel.out=reports/ExcelReport/ExtentExcel.xlsx, HEADLESS=false, REMOTE_URL=192.168.1.14, extent.reporter.spark.vieworder=dashboard,test,category,exception,author,device,log, XML_DATA_FILE_PATH=src/test/resources/data/data.xml, extent.reporter.pdf.out=reports/ExtentReports/ExtentPdfReport.pdf, SCREENSHOT_FAILED_STEPS=yes, extent.reporter.excel.start=true, JSON_DATA_FILE_PATH=src/test/resources/data/data.json, CSV_DATA_FILE_PATH=src/test/resources/data/DataSignIn.csv, ACTIVE_PAGE_LOADED=true, WAIT_SLEEP_STEP=0, OPEN_REPORTS_AFTER_EXECUTION=yes, extent.reporter.spark.base64imagesrc=true, LOCATE=vi}
+[INFO ] 30-04-2023 23:58:46 [main] LogUtils - Starting Suite: Default Suite
+[INFO ] 30-04-2023 23:58:47 [main] LogUtils - Test case:  is starting...
+[INFO ] 30-04-2023 23:58:49 [main] LogUtils - Executing: Recording...
+[INFO ] 30-04-2023 23:58:49 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 30-04-2023 23:58:56 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 30-04-2023 23:58:58 [main] LogUtils - Entering text: "         "
+[INFO ] 30-04-2023 23:58:58 [main] LogUtils - Entering text: 20102002
+[INFO ] 30-04-2023 23:58:58 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 30-04-2023 23:59:00 [main] LogUtils - Executing: | Verify the result
+[INFO ] 30-04-2023 23:59:00 [main] LogUtils - Expected Result: Demo
+[INFO ] 30-04-2023 23:59:00 [main] LogUtils - Actual Result: Please include an '@' in the email address. '"         "' is missing an '@'.
+[ERROR] 30-04-2023 23:59:00 [main] LogUtils - Different result ---> Fail
+[INFO ] 30-04-2023 23:59:01 [main] LogUtils - Executing: Screenshot taken: onFailed_Sun_Apr_30_23_59_00_ICT_2023
+[INFO ] 30-04-2023 23:59:01 [main] LogUtils - Executing: Closing...
+[INFO ] 30-04-2023 23:59:02 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 30-04-2023 23:59:03 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 30-04-2023 23:59:06 [main] LogUtils - Entering text: 
+[INFO ] 30-04-2023 23:59:06 [main] LogUtils - Entering text: 20102001
+[INFO ] 30-04-2023 23:59:06 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 30-04-2023 23:59:08 [main] LogUtils - Executing: | Verify the result
+[INFO ] 30-04-2023 23:59:08 [main] LogUtils - Expected Result: Please fill out this field.
+[INFO ] 30-04-2023 23:59:08 [main] LogUtils - Actual Result: Please fill out this field.
+[INFO ] 30-04-2023 23:59:08 [main] LogUtils - Same result ---> Pass
+[INFO ] 30-04-2023 23:59:08 [main] LogUtils - Executing: Closing...
+[INFO ] 30-04-2023 23:59:08 [main] LogUtils - Executing: Open browser Chrome
+[INFO ] 30-04-2023 23:59:10 [main] LogUtils - Opening Url: https://www.careerlink.vn/nguoi-tim-viec/login
+[INFO ] 30-04-2023 23:59:13 [main] LogUtils - Entering text: hoanganh 04092001@gmail.com
+[INFO ] 30-04-2023 23:59:13 [main] LogUtils - Entering text: 20102001
+[INFO ] 30-04-2023 23:59:13 [main] LogUtils - Executing: Click on button: xpath= //button[contains(text(),'Đăng nhập')]
+[INFO ] 30-04-2023 23:59:15 [main] LogUtils - Executing: | Verify the result
+[INFO ] 30-04-2023 23:59:15 [main] LogUtils - Expected Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 30-04-2023 23:59:15 [main] LogUtils - Actual Result: A part followed by '@' should not contain the symbol ' '.
+[INFO ] 30-04-2023 23:59:15 [main] LogUtils - Same result ---> Pass
+[INFO ] 30-04-2023 23:59:15 [main] LogUtils - Executing: Closing...
+[INFO ] 30-04-2023 23:59:16 [main] LogUtils - Stop record
+[INFO ] 30-04-2023 23:59:16 [main] LogUtils - Test case:  is passed.
+[INFO ] 30-04-2023 23:59:16 [main] LogUtils - End Suite: Default Suite

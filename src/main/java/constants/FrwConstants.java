@@ -42,7 +42,7 @@ public final class FrwConstants {
 	public static final String SCREENSHOT_FAILED_STEPS = PropertiesHelpers.getValue("SCREENSHOT_FAILED_STEPS");
 	public static final String SCREENSHOT_SKIPPED_STEPS = PropertiesHelpers.getValue("SCREENSHOT_SKIPPED_STEPS");
 	public static final String SCREENSHOT_ALL_STEPS = PropertiesHelpers.getValue("SCREENSHOT_ALL_STEPS");
-	public static final String VIDEO_RECORD = PropertiesHelpers.getValue("VIDEO_RECORD");
+//	public static final String VIDEO_RECORD = PropertiesHelpers.getValue("VIDEO_RECORD");
 
 
 	public static final int WAIT_DEFAULT = Integer.parseInt(PropertiesHelpers.getValue("WAIT_DEFAULT"));

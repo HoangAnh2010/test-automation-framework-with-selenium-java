@@ -21,7 +21,7 @@ import org.testng.*;
 
 import static constants.FrwConstants.*;
 
-public class TestListener implements ITestListener, ISuiteListener, IInvokedMethodListener {
+public class TestListener implements ITestListener, ISuiteListener {
 
     static int count_totalTCs;
     static int count_passedTCs;
@@ -40,19 +40,6 @@ public class TestListener implements ITestListener, ISuiteListener, IInvokedMeth
     }
 
     @Override
-    public void beforeInvocation(IInvokedMethod method, ITestResult testResult) {
-        // Before every method in the Test Class
-        //System.out.println(method.getTestMethod().getMethodName());
-    }
-
-    @Override
-    public void afterInvocation(IInvokedMethod method, ITestResult testResult) {
-        // After every method in the Test Class
-        //System.out.println(method.getTestMethod().getMethodName());
-    }
-
-
-    @Override
     public void onStart(ISuite iSuite) {
         System.out.println("========= INSTALLING CONFIGURATION DATA =========");
         PropertiesHelpers.loadAllFiles();
@@ -67,12 +54,11 @@ public class TestListener implements ITestListener, ISuiteListener, IInvokedMeth
     public void onFinish(ISuite iSuite) {
         LogUtils.info("End Suite: " + iSuite.getName());
         ActionKeywords.stopSoftAssertAll();
-//        ExtentReportManager.createTest(iSuite.getName(),"asdasd");
         //End Suite and execute Extents Report
-
         ExtentReportManager.flushReports();
+
         //Send mail
-//        EmailSendUtils.sendEmail(count_totalTCs, count_passedTCs, count_failedTCs, count_skippedTCs);
+        EmailSendUtils.sendEmail(count_totalTCs, count_passedTCs, count_failedTCs, count_skippedTCs);
 
         //Write information in Allure Report
         AllureEnvironmentWriter.allureEnvironmentWriter(
@@ -90,7 +76,7 @@ public class TestListener implements ITestListener, ISuiteListener, IInvokedMeth
                         put("TCs Skipped", String.valueOf(count_skippedTCs)).
                         put("TCs Failed", String.valueOf(count_failedTCs)).
                         build());
-        
+
 
     }
 
@@ -119,8 +105,7 @@ public class TestListener implements ITestListener, ISuiteListener, IInvokedMeth
         ExtentReportManager.addAuthors(getAuthorType(iTestResult));
         ExtentReportManager.addCategories(getCategoryType(iTestResult));
         ExtentReportManager.addDevices();
-
-        ExtentReportManager.info(BrowserInfoUtils.getOSInfo());
+//        ExtentReportManager.info(BrowserInfoUtils.getOSInfo());
     }
 
     @Override
@@ -134,7 +119,7 @@ public class TestListener implements ITestListener, ISuiteListener, IInvokedMeth
 
         AllureManager.saveTextLog("Test case: " + getTestName(iTestResult) + " is passed.");
         //ExtentReports log operation for passed tests.
-        ExtentReportManager.logMessage(Status.PASS, "Test case: " + getTestName(iTestResult) + " is passed.");
+//        ExtentReportManager.logMessage(Status.PASS, "Test case: " + getTestName(iTestResult) + " is passed.");
 
     }
 
@@ -144,7 +129,6 @@ public class TestListener implements ITestListener, ISuiteListener, IInvokedMeth
         count_failedTCs = count_failedTCs + 1;
 
         if (SCREENSHOT_FAILED_STEPS.equals(YES)) {
-            System.out.println("Helloo em vao ham nay");
             CapturesUtils.captureScreenshot(DriverManager.getDriver(), getTestName(iTestResult));
         }
 
@@ -156,7 +140,7 @@ public class TestListener implements ITestListener, ISuiteListener, IInvokedMeth
         AllureManager.saveTextLog(iTestResult.getThrowable().toString());
 
         //Extent report screenshot file and log
-        ExtentReportManager.addScreenShot(Status.PASS, getTestName(iTestResult));
+        ExtentReportManager.addScreenShot(Status.INFO, getTestName(iTestResult));
 //        ExtentReportManager.logMessage(Status.FAIL, iTestResult.getThrowable().toString());
 
     }

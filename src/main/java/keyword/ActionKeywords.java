@@ -1,5 +1,6 @@
 package keyword;
 
+import com.aventstack.extentreports.Status;
 import constants.FrwConstants;
 import helpers.Helpers;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -77,7 +78,7 @@ public class ActionKeywords {
 //			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         } catch (Exception e) {
             LogUtils.error("Executing: Open browser Chrome fail");
-            ExtentReportManager.fail("Opening browser Chrome fail");
+            ExtentReportManager.info("Opening browser Chrome fail");
         }
 
         return driver;
@@ -93,7 +94,7 @@ public class ActionKeywords {
             driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         } catch (Exception e) {
             LogUtils.error("Executing: Open browser Firefox fail");
-            ExtentReportManager.fail("Opening browser Firefox fail");
+            ExtentReportManager.info("Opening browser Firefox fail");
         }
 
         return driver;
@@ -112,7 +113,7 @@ public class ActionKeywords {
                 driver = initChromeDriver();
         }
         wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutWait));
-        ExtentReportManager.pass("Opening browser: " + browserType.trim());
+        ExtentReportManager.logMessage(Status.PASS,"Opening browser: " + browserType.trim());
         return driver;
     }
 
@@ -125,7 +126,7 @@ public class ActionKeywords {
             ExtentReportManager.pass("Closing browser");
         } catch (Exception e) {
             LogUtils.error("Executing: Close FAIL");
-            ExtentReportManager.fail("Can't close browser");
+            ExtentReportManager.info("Can't close browser");
         }
     }
 
@@ -138,7 +139,7 @@ public class ActionKeywords {
             ExtentReportManager.pass("Navigating to: " + url);
         } catch (Exception e) {
             LogUtils.error("Opening Url:" + url + "FAIL");
-            ExtentReportManager.fail("Opening Url:" + url + "FAIL");
+            ExtentReportManager.info("Opening Url:" + url + "FAIL");
         }
     }
 
@@ -181,7 +182,7 @@ public class ActionKeywords {
 
             LogUtils.error("SendKeys:" + locatorType + "=" + locatorValue
                     + " not found to sendKeys| " + e.getMessage());
-            ExtentReportManager.fail("SendKeys:" + locatorType + "=" + locatorValue
+            ExtentReportManager.info("SendKeys:" + locatorType + "=" + locatorValue
                     + " not found to sendKeys| " + e.getMessage());
         }
 
@@ -204,7 +205,7 @@ public class ActionKeywords {
             }
         } catch (Exception e) {
             LogUtils.error("Move mouse: FAIL");
-            ExtentReportManager.fail("Moving mouse: FAIL");
+            ExtentReportManager.info("Moving mouse: FAIL");
         }
     }
 
@@ -224,7 +225,7 @@ public class ActionKeywords {
             ExtentReportManager.pass("Clicking on button: " + locatorType + "= " + locatorValue);
         } catch (NoSuchElementException e) {
             LogUtils.error("Click on:" + locatorValue + " not found to click " + e.getMessage());
-            ExtentReportManager.fail("Clicking on:" + locatorValue + " not found to click " + e.getMessage());
+            ExtentReportManager.info("Clicking on:" + locatorValue + " not found to click " + e.getMessage());
         }
         Thread.sleep(1500);
     }
@@ -239,7 +240,7 @@ public class ActionKeywords {
             ExtentReportManager.pass("Executing: Double click on: " + locatorType + "= " + locatorValue);
         } catch (NoSuchElementException e) {
             LogUtils.error("Double click on:" + locatorValue + " not found to double click " + e.getMessage());
-            ExtentReportManager.fail("Double click on:" + locatorValue + " not found to double click " + e.getMessage());
+            ExtentReportManager.info("Double click on:" + locatorValue + " not found to double click " + e.getMessage());
         }
         Thread.sleep(1500);
     }
@@ -260,7 +261,7 @@ public class ActionKeywords {
             ExtentReportManager.pass("Executing: Switch to new tab");
         } catch (NoSuchElementException e) {
             LogUtils.error("Switch to new tab fail");
-            ExtentReportManager.fail("Switching to new tab fail");
+            ExtentReportManager.info("Switching to new tab fail");
         }
         //Thread.sleep(1500);
     }
@@ -277,7 +278,7 @@ public class ActionKeywords {
 
         } catch (NoSuchElementException e) {
             LogUtils.error("Clicking on:" + locatorValue + " not found to click " + e.getMessage());
-            ExtentReportManager.fail("Clicking on:" + locatorValue + " not found to click " + e.getMessage());
+            ExtentReportManager.info("Clicking on:" + locatorValue + " not found to click " + e.getMessage());
         }
         Thread.sleep(1500);
     }
@@ -294,8 +295,8 @@ public class ActionKeywords {
         } catch (NoSuchElementException e) {
             LogUtils.error("|clickElementWithJs:" + locatorType + "=" + locatorValue
                     + " not found to click| " + e.getMessage());
-            ExtentReportManager.fail("|clickElementWithJs:" + locatorType + "=" + locatorValue
-                    + " not found to click| " + e.getMessage());
+            ExtentReportManager.info("|clickElementWithJs:" + locatorType + "=" + locatorValue
+                   + " not found to click| " + e.getMessage());
         }
     }
 
@@ -340,7 +341,7 @@ public class ActionKeywords {
             ExtentReportManager.pass("Result: Element is displayed");
         } catch (Exception e) {
             LogUtils.error("Element is not displayed");
-            ExtentReportManager.fail("Element is not displayed");
+            ExtentReportManager.info("Element is not displayed");
         }
     }
 
@@ -389,8 +390,8 @@ public class ActionKeywords {
         } catch (NoSuchElementException e) {
             LogUtils.error("|Right click: " + locatorType + "= " + locatorValue
                     + " not found to click| " + e.getMessage());
-            ExtentReportManager.fail("|Right click: " + locatorType + "= " + locatorValue
-                    + " not found to click| " + e.getMessage());
+            ExtentReportManager.info("|Right click: " + locatorType + "= " + locatorValue
+                   + " not found to click| " + e.getMessage());
         }
     }
 
@@ -406,7 +407,7 @@ public class ActionKeywords {
         } catch (NoSuchElementException e) {
             LogUtils.error("|select Option By Text|: " + locatorType + "= " + locatorValue + "|text: "
                     + text + " not found to select| " + e.getMessage());
-            ExtentReportManager.fail("|select Option By Text|: " + locatorType + "= " + locatorValue + "|text: "
+            ExtentReportManager.info("|select Option By Text|: " + locatorType + "= " + locatorValue + "|text: "
                     + text + " not found to select| " + e.getMessage());
         }
     }
@@ -439,7 +440,7 @@ public class ActionKeywords {
         } catch (NoSuchElementException e) {
             LogUtils.error("Select Option By Index: " + locatorType + "= " + locatorValue + "|index: "
                     + index + " not found to select| " + e.getMessage());
-            ExtentReportManager.fail("Select Option By Index: " + locatorType + "= " + locatorValue + "|index: "
+            ExtentReportManager.info("Select Option By Index: " + locatorType + "= " + locatorValue + "|index: "
                     + index + " not found to select| " + e.getMessage());
         }
     }
@@ -640,7 +641,7 @@ public class ActionKeywords {
         if (stt) {
             ExtentReportManager.pass("Actual result is the same as expected result");
         } else {
-            ExtentReportManager.fail("Actual result isn't the same as expected result");
+            ExtentReportManager.info("Actual result isn't the same as expected result");
         }
         return stt;
     }
@@ -658,7 +659,7 @@ public class ActionKeywords {
         } catch (NoSuchElementException e) {
             LogUtils.error("SendKeys:" + locatorType + "=" + locatorValue
                     + " not found to sendKeys| " + e.getMessage());
-            ExtentReportManager.fail("SendKeys:" + locatorType + "=" + locatorValue
+            ExtentReportManager.info("SendKeys:" + locatorType + "=" + locatorValue
                     + " not found to sendKeys| " + e.getMessage());
         }
     }

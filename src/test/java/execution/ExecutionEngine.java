@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-import com.aventstack.extentreports.Status;
 import model.Data;
 import model.DataOfSignIn;
 import model.Locator;
@@ -17,6 +16,7 @@ import org.testng.annotations.Test;
 
 import keyword.*;
 //import report.ExtentReportManager;
+import report.ExtentReportManager;
 import utils.*;
 
 @Listeners(listeners.TestListener.class)
@@ -41,13 +41,17 @@ public class ExecutionEngine {
     public static String signInCSVpath = System.getProperty("user.dir") + "\\src\\test\\resources\\data\\signIn.csv";
     public static String dataOfsignInCSVpath = System.getProperty("user.dir") + "\\src\\test\\resources\\data\\DataSignIn.csv";
 
-    int casePass = 0;
-    int caseFail = 0;
-    int caseSkip = 0;
-
+    int totalCasePass = 0;
+    int totalCaseFail = 0;
+    int totalCaseSkip = 0;
+    float casePass = 0;
+    float caseFail = 0;
+    float caseSkip = 0;
+    float STANDARD_PERCENT = (float) 0.75;
     @Ignore
-    @Test //(priority = 3) // Sign in
+    @Test
     public void TestScript_SignIn_XML() throws Exception {
+
         Data xmlData = XmlUtils.xmlToData(xmlPath);
         List<SignInPage> signInPages = xmlData.getSignInPage();
         List<DataOfSignIn> dataOfSignIns = xmlData.getDataOfSignIn();
@@ -71,10 +75,11 @@ public class ExecutionEngine {
         }
         reportInConsole();
         CapturesUtils.stopRecord();
+        considerTestCase();
     }
 
     @Ignore
-    @Test //(priority = 3) // Sign in
+    @Test
     public void TestScript_SignIn_JsonFile() throws Exception {
         Data jsonData = JsonUtils.readData(jsonPath);
         List<SignInPage> signInPages = jsonData.getSignInPage();
@@ -95,15 +100,16 @@ public class ExecutionEngine {
             for (SignInPage signInPage : signInPages) {
                 reuseSignIn(signInPage);
                 execute_Actions(testData, null, locators.get(i).getSignInEmail(), locators.get(i).getSignInPw(), null,
-                        locators.get(i).getSignInResult(), locators.get(i).getSignInTcId());
+                        locators.get(i).getSignInResult(),locators.get(i).getSignInTcId());
             }
         }
         reportInConsole();
         CapturesUtils.stopRecord();
+        considerTestCase();
     }
 
     @Ignore
-    @Test //(priority = 3) // Sign in
+    @Test
     public void TestScript_SignIn_CSVFile() throws Exception {
         List<SignInPage> signInPages = CsvUtils.readSignInPageCSVfile(signInCSVpath);
         List<DataOfSignIn> dataOfSignIns = CsvUtils.readDataOfSignInCSVfile(dataOfsignInCSVpath);
@@ -127,10 +133,11 @@ public class ExecutionEngine {
         }
         reportInConsole();
         CapturesUtils.stopRecord();
+        considerTestCase();
     }
 
 //    @Ignore
-    @Test //(priority = 3)
+    @Test
     public void TestScript_SignIn_ExcelFile() throws Exception {
         ExcelUtils.setExcelFile(excelPath, "SignInPage");
         Sheet sheet = ExcelUtils.getSheet("SignInPage");
@@ -165,28 +172,12 @@ public class ExecutionEngine {
         }
         reportInConsole();
         CapturesUtils.stopRecord();
-    }
-
-    public void reuseSignIn(SignInPage signInPage) {
-        scriptID = signInPage.getScriptID();
-        sActionKeyword = signInPage.getKeyword();
-        locatorType = signInPage.getLocatorType();
-        locatorValue = signInPage.getLocatorValue();
-        testData = signInPage.getTestData();
-    }
-
-    public void reuseSignIn(int iRow) {
-        scriptID = ExcelUtils.getCellData("SignInPage", iRow, 1);
-        sActionKeyword = ExcelUtils.getCellData("SignInPage", iRow, 5);
-        locatorType = ExcelUtils.getCellData("SignInPage", iRow, 6);
-        locatorValue = ExcelUtils.getCellData("SignInPage", iRow, 7);
-        testData = ExcelUtils.getCellData("SignInPage", iRow, 8);
+        considerTestCase();
     }
 
     @Ignore
-    @Test //(priority = 2) // Sign up
+    @Test
     public void TestSuite_SignUp() throws Exception {
-
         ExcelUtils.setExcelFile(excelPath, "SignUpPage");
         Sheet sheet = ExcelUtils.getSheet("SignUpPage");
         int rowCount = sheet.getLastRowNum();
@@ -233,56 +224,49 @@ public class ExecutionEngine {
         }
         reportInConsole();
         CapturesUtils.stopRecord();
-    }
-
-    public void reuseSignUp(int iRow) {
-        scriptID = ExcelUtils.getCellData("SignUpPage", iRow, 1);
-        sActionKeyword = ExcelUtils.getCellData("SignUpPage", iRow, 5);
-        locatorType = ExcelUtils.getCellData("SignUpPage", iRow, 6);
-        locatorValue = ExcelUtils.getCellData("SignUpPage", iRow, 7);
-        testData = ExcelUtils.getCellData("SignUpPage", iRow, 8);
+        considerTestCase();
     }
 
     @Ignore
-    @Test(priority = 4) // Create CV
+    @Test
     public void TestSuite_CreateCV() throws Exception {
-
         ExcelUtils.setExcelFile(excelPath, "CreateCV");
         Sheet sheet = ExcelUtils.getSheet("CreateCV");
         int rowCount = sheet.getLastRowNum();
-//		int row = 1;
-//		String tmp;
-//
-//		// Lấy dữ liệu trong sheet "test" và thêm vào từng mảng tương ứng
-//		ExcelUtils.setExcelFile(sPath, "DataOfCreateCV");
-//		Sheet data = ExcelUtils.getSheet("DataOfCreateCV");
-//		int rowCountTest = data.getLastRowNum();
-//		while (true) {
-//			if (row > rowCountTest)// tmp.trim().equals("")
-//				break;
-//
-//			tmp = ExcelUtils.getCellData("DataOfCreateCV", row, 1) + "";
-//			arrTCIDSignIn.add(tmp);
-//
-//			tmp = ExcelUtils.getCellData("DataOfCreateCV", row, 3) + "";
-//			arrEmailSignIn.add(tmp);
-//
-//			tmp = ExcelUtils.getCellData("DataOfCreateCV", row, 4) + "";
-//			arrPasswordSignIn.add(tmp);
-//
-//			tmp = ExcelUtils.getCellData("DataOfCreateCV", row, 5) + "";
-//			arrResultSignIn.add(tmp);
-//
-//			row = row + 1;
-//		}
         CapturesUtils.startRecord("CreateCV");
         // Bỏ hàng tiêu đề
         for (int iRow = 1; iRow <= rowCount; iRow++) {
             reuseCreateCV(iRow);
-            execute_Actions(testData, null, null, null, null, null, null);
+            execute_Actions(testData, null, null, null, null, null, "CRCV_01");
         }
         reportInConsole();
         CapturesUtils.stopRecord();
+        considerTestCase();
+    }
+
+    @Ignore
+    @Test
+    public void TestSuite_SearchAndViewJobDetails() throws Exception {
+        ExcelUtils.setExcelFile(excelPath, "Search");
+        Sheet sheet = ExcelUtils.getSheet("Search");
+        int rowCount = sheet.getLastRowNum();
+
+        CapturesUtils.startRecord("Search");
+        // Bỏ hàng tiêu đề
+        for (int iRow = 1; iRow <= rowCount; iRow++) {
+            reuseSearch(iRow);
+            execute_Actions(testData, null, null, null, null, null, "SJO_01");
+        }
+        reportInConsole();
+        CapturesUtils.stopRecord();
+    }
+
+    private void reuseSignIn(SignInPage signInPage) {
+        scriptID = signInPage.getScriptID();
+        sActionKeyword = signInPage.getKeyword();
+        locatorType = signInPage.getLocatorType();
+        locatorValue = signInPage.getLocatorValue();
+        testData = signInPage.getTestData();
     }
 
     public void reuseCreateCV(int iRow) {
@@ -293,22 +277,20 @@ public class ExecutionEngine {
         testData = ExcelUtils.getCellData("CreateCV", iRow, 8);
     }
 
-    @Ignore
-    @Test(priority = 1) // Search
-    public void TestSuite_SearchAndViewJobDetails() throws Exception {
+    public void reuseSignIn(int iRow) {
+        scriptID = ExcelUtils.getCellData("SignInPage", iRow, 1);
+        sActionKeyword = ExcelUtils.getCellData("SignInPage", iRow, 5);
+        locatorType = ExcelUtils.getCellData("SignInPage", iRow, 6);
+        locatorValue = ExcelUtils.getCellData("SignInPage", iRow, 7);
+        testData = ExcelUtils.getCellData("SignInPage", iRow, 8);
+    }
 
-        ExcelUtils.setExcelFile(excelPath, "Search");
-        Sheet sheet = ExcelUtils.getSheet("Search");
-        int rowCount = sheet.getLastRowNum();
-
-        CapturesUtils.startRecord("Search");
-        // Bỏ hàng tiêu đề
-        for (int iRow = 1; iRow <= rowCount; iRow++) {
-            reuseSearch(iRow);
-            execute_Actions(testData, null, null, null, null, null, null);
-        }
-        reportInConsole();
-        CapturesUtils.stopRecord();
+    public void reuseSignUp(int iRow) {
+        scriptID = ExcelUtils.getCellData("SignUpPage", iRow, 1);
+        sActionKeyword = ExcelUtils.getCellData("SignUpPage", iRow, 5);
+        locatorType = ExcelUtils.getCellData("SignUpPage", iRow, 6);
+        locatorValue = ExcelUtils.getCellData("SignUpPage", iRow, 7);
+        testData = ExcelUtils.getCellData("SignUpPage", iRow, 8);
     }
 
     private void reuseSearch(int iRow) {
@@ -320,11 +302,12 @@ public class ExecutionEngine {
     }
 
     private void execute_Actions(String testData, String sName, String sEmail, String sPass, String sPassCf,
-                                 String sResult, String sTCID) throws Exception {
+                                 String sResult,String sTCID) throws Exception {
         try {
             switch (sActionKeyword) {
                 case "openBrowser":
                     try {
+                        ExtentReportManager.info("Test case " + sTCID);
                         ActionKeywords.openBrowser(testData);
                     } catch (Exception e) {
                         //ExtentTestManager.logMessage(Status.FAIL, description);
@@ -391,15 +374,12 @@ public class ExecutionEngine {
                 case "uploadImage":
                     try {
                         ActionKeywords.uploadImage(locatorType, locatorValue, testData);
-                        //ExtentTestManager.logMessage(Status.PASS, description);
                     } catch (Exception e) {
-                        //ExtentTestManager.logMessage(Status.FAIL, description);
                     }
                     break;
                 case "clickButton":
                     try {
                         ActionKeywords.clickButton(locatorType, locatorValue);
-                        //ExtentTestManager.logMessage(Status.PASS, description);
                     } catch (NoSuchElementException e) {
                         //ExtentTestManager.logMessage(Status.FAIL, description);
                     }
@@ -429,6 +409,7 @@ public class ExecutionEngine {
                         //ExtentTestManager.logMessage(Status.PASS, description);
                     } else {
                         LogUtils.error("Different result ---> Fail");
+
                         onFailed();
                         break;
                     }
@@ -445,19 +426,23 @@ public class ExecutionEngine {
                 case "verifyTitle":
                     if (ActionKeywords.verifyTitle(testData)) {
                         LogUtils.info("Same result ---> Pass");
+
                         onPass();
                     } else {
                         LogUtils.error("Different result ---> Fail");
+
                         onFailed();
                     }
                     break;
                 case "verifyUrl":
                     if (ActionKeywords.getUrl(testData)) {
                         LogUtils.info("Same result ---> Pass");
+
                         onPass();
                         //ExtentTestManager.logMessage(Status.PASS, description);
                     } else {
                         LogUtils.error("Different result ---> Fail");
+
                         onFailed();
                         //ExtentTestManager.logMessage(Status.FAIL, description);
                     }
@@ -465,8 +450,10 @@ public class ExecutionEngine {
                 case "displayed":
                     try {
                         ActionKeywords.displayed(locatorType, locatorValue);
+
                         onPass();
                     } catch (Exception e) {
+
                         onFailed();
                         //ExtentTestManager.logMessage(Status.FAIL, description);
                     }
@@ -511,22 +498,37 @@ public class ExecutionEngine {
         }
     }
 
-    void onPass(){
+    private void onPass() {
+        totalCasePass++;
         casePass++;
     }
-    void onFailed(){
+
+    private void onFailed() {
+        totalCaseFail++;
         caseFail++;
         ActionKeywords.addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDate());
     }
-    public void reportInConsole() {
+
+    private void reportInConsole() {
         java.util.Date date = new java.util.Date();
         System.out.println("==========================================================");
         System.out.println("-----------" + date + "--------------");
-        System.out.println("Total number of Testcases run: " + (casePass + caseFail + caseSkip));
-        System.out.println("Total number of passed Testcases: " + casePass);
-        System.out.println("Total number of failed Testcases: " + caseFail);
-        System.out.println("Total number of skiped Testcases: " + caseSkip);
+        System.out.println("Total number of Testcases run: " + (totalCasePass + totalCaseFail + totalCaseSkip));
+        System.out.println("Total number of passed Testcases: " + totalCasePass);
+        System.out.println("Total number of failed Testcases: " + totalCaseFail);
+        System.out.println("Total number of skiped Testcases: " + totalCaseSkip);
         System.out.println("==========================================================");
-        EmailSendUtils.sendEmail(casePass + caseFail + caseSkip, casePass, caseFail, caseSkip);
+        EmailSendUtils.sendEmail(totalCasePass + totalCaseFail + totalCaseSkip, totalCasePass, totalCaseFail, totalCaseSkip);
+    }
+
+    private void considerTestCase() {
+        float rs = casePass / (caseSkip + caseFail + casePass);
+        if (rs < STANDARD_PERCENT)
+//            ExtentReportManager.fail("Test case Fail");
+        casePass = 0;
+
+        caseFail = 0;
+
+        caseSkip = 0;
     }
 }

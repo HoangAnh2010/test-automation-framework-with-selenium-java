@@ -26,14 +26,11 @@ G:\Download\GP\src\main\java\utils\LogUtils.java
 G:\Download\GP\src\main\java\utils\ExcelUtils.java
 G:\Download\GP\src\main\java\helpers\Helpers.java
 G:\Download\GP\src\main\java\enums\FailureHandling.java
-G:\Download\GP\src\main\java\driver\TargetFactory.java
 G:\Download\GP\src\main\java\exceptions\TargetNotValidException.java
 G:\Download\GP\src\main\java\report\AllureManager.java
 G:\Download\GP\src\main\java\report\ExtentReportManager.java
 G:\Download\GP\src\main\java\utils\LanguageUtils.java
 G:\Download\GP\src\main\java\exceptions\InvalidPathForExcelException.java
-G:\Download\GP\src\main\java\helpers\FileHelpers.java
-G:\Download\GP\src\main\java\config\Driver.java
 G:\Download\GP\src\main\java\utils\ReportUtils.java
 G:\Download\GP\src\main\java\model\DataOfSignUp.java
 G:\Download\GP\src\main\java\utils\CsvUtils.java

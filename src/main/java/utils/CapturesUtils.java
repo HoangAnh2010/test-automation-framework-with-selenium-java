@@ -1,6 +1,6 @@
 package utils;
 
-import config.Driver;
+import driver.DriverManager;
 import constants.FrwConstants;
 import helpers.Helpers;
 import org.apache.commons.io.FileUtils;
@@ -117,7 +117,7 @@ public class CapturesUtils extends ScreenRecorder{
     public static void takeScreenshot(ITestResult result) {
     	try {
             // Tạo tham chiếu của TakesScreenshot với driver hiện tại
-            TakesScreenshot ts = (TakesScreenshot) Driver.getDriver();
+            TakesScreenshot ts = (TakesScreenshot) DriverManager.getDriver();
             // Gọi hàm capture screenshot - getScreenshotAs
             File source = ts.getScreenshotAs(OutputType.FILE);
             //Kiểm tra folder tồn tại. Nêu không thì tạo mới folder
@@ -139,7 +139,7 @@ public class CapturesUtils extends ScreenRecorder{
     public static void takeScreenshot(String caseName) {
     	try {
             // Tạo tham chiếu của TakesScreenshot với driver hiện tại
-            TakesScreenshot ts = (TakesScreenshot) Driver.getDriver();
+            TakesScreenshot ts = (TakesScreenshot) DriverManager.getDriver();
             // Gọi hàm capture screenshot - getScreenshotAs
             File source = ts.getScreenshotAs(OutputType.FILE);
             //Kiểm tra folder tồn tại. Nếu không thì tạo mới folder

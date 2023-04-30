@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>010123</groupId>
-	<artifactId>P5</artifactId>
+		<artifactId>GP</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 	<dependencies>
@@ -168,12 +168,19 @@
 			<artifactId>allure-environment-writer</artifactId>
 			<version>1.0.0</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/tech.grasshopper/pdfextentreporter -->
+<!--		 https://mvnrepository.com/artifact/tech.grasshopper/pdfextentreporter-->
 		<dependency>
 			<groupId>tech.grasshopper</groupId>
 			<artifactId>pdfextentreporter</artifactId>
 			<version>1.3.2</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/tech.grasshopper/extent-pdf-report -->
+<!--		<dependency>-->
+<!--			<groupId>tech.grasshopper</groupId>-->
+<!--			<artifactId>extent-pdf-report</artifactId>-->
+<!--			<version>2.8.0</version>-->
+<!--		</dependency>-->
+
 		<!-- https://mvnrepository.com/artifact/org.zeroturnaround/zt-zip -->
 		<dependency>
 			<groupId>org.zeroturnaround</groupId>

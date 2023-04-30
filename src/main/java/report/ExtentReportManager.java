@@ -86,28 +86,6 @@ public class ExtentReportManager {
         }
     }
 
-    /**
-     * Adds the screenshot.
-     *
-     * @param status  the status
-     * @param message the message
-     */
-    public static void addScreenShot(Status status, String message) {
-        String base64Image = "data:image/png;base64," + ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(OutputType.BASE64);
-
-//        Base64 from Screenshot of Selenium
-        try {
-            ExtentTestManager.getExtentTest().log(status, String.valueOf(createScreenCaptureFromBase64String(base64Image).build()));
-            ExtentTestManager.getExtentTest().log(status, String.valueOf(createScreenCaptureFromPath(String.valueOf(CapturesUtils.getScreenshot(message))).build()));
-
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
-        //File Path from Screenshot of Java
-
-    }
-
     synchronized public static void addAuthors(AuthorType[] authors) {
         if (authors == null) {
             ExtentTestManager.getExtentTest().assignAuthor("NGUYEN HOANG ANH");

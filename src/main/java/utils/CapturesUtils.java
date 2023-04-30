@@ -157,31 +157,4 @@ public class CapturesUtils extends ScreenRecorder{
         }
     }
 
-    public static File getScreenshot(String screenshotName) {
-        Rectangle allScreenBounds = new Rectangle(Toolkit.getDefaultToolkit().getScreenSize());
-        String dateName = new SimpleDateFormat("yyyy-MM-dd-hh-mm-ss.SSS").format(new Date());
-        BufferedImage image = null;
-        try {
-            image = new Robot().createScreenCapture(allScreenBounds);
-        } catch (AWTException e) {
-            throw new RuntimeException(e);
-        }
-
-        String path = Helpers.getCurrentDir() + FrwConstants.EXTENT_REPORT_FOLDER + File.separator + "images";
-        File folder = new File(path);
-        if (!folder.exists()) {
-            folder.mkdir();
-            LogUtils.info("Folder created: " + folder);
-        }
-
-        String filePath = path + File.separator + screenshotName + dateName + ".png";
-        File file = new File(filePath);
-        try {
-            ImageIO.write(image, "PNG", file);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        return file;
-    }
-
 }

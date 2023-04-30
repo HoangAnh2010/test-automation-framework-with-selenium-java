@@ -48,7 +48,7 @@ public class ExecutionEngine {
     float caseFail = 0;
     float caseSkip = 0;
     float STANDARD_PERCENT = (float) 0.75;
-    @Ignore
+//    @Ignore
     @Test
     public void TestScript_SignIn_XML() throws Exception {
 

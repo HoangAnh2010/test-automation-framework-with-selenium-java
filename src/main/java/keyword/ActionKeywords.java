@@ -113,7 +113,7 @@ public class ActionKeywords {
                 driver = initChromeDriver();
         }
         wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutWait));
-        ExtentReportManager.logMessage(Status.PASS,"Opening browser: " + browserType.trim());
+        ExtentReportManager.logMessage(Status.PASS, "Opening browser: " + browserType.trim());
         return driver;
     }
 
@@ -296,7 +296,7 @@ public class ActionKeywords {
             LogUtils.error("|clickElementWithJs:" + locatorType + "=" + locatorValue
                     + " not found to click| " + e.getMessage());
             ExtentReportManager.info("|clickElementWithJs:" + locatorType + "=" + locatorValue
-                   + " not found to click| " + e.getMessage());
+                    + " not found to click| " + e.getMessage());
         }
     }
 
@@ -391,7 +391,7 @@ public class ActionKeywords {
             LogUtils.error("|Right click: " + locatorType + "= " + locatorValue
                     + " not found to click| " + e.getMessage());
             ExtentReportManager.info("|Right click: " + locatorType + "= " + locatorValue
-                   + " not found to click| " + e.getMessage());
+                    + " not found to click| " + e.getMessage());
         }
     }
 
@@ -664,7 +664,7 @@ public class ActionKeywords {
         }
     }
 
-    public static void screenShot(String CaseName) {
+    public static String screenShot(String CaseName) {
         try {
             // Tạo tham chiếu của TakesScreenshot với driver hiện tại
             TakesScreenshot ts = (TakesScreenshot) driver;
@@ -676,18 +676,20 @@ public class ActionKeywords {
             if (!theDir.exists()) {
                 theDir.mkdirs();
             }
+            String imgPath = theDir + "\\" + CaseName + ".png";
             // result.getName() lấy tên của test case xong gán cho tên File chụp màn hình luôn
-            FileHandler.copy(source, new File(path + CaseName + DateUtils.getCurrentDate() + ".png"));
-            LogUtils.info("Executing: Screenshot taken: " + CaseName);
+            FileHandler.copy(source, new File(imgPath));
+            LogUtils.info("Executing: Screenshot taken: " + imgPath);
+            return imgPath;
         } catch (Exception e) {
             LogUtils.error("Executing: Screenshot taken: " + CaseName + "FAIL");
         }
-
+        return "";
     }
 
     public static void addScreenshotToReport(String screenshotName) {
-        ActionKeywords.screenShot(screenshotName);
-        ExtentReportManager.addScreenShot(Helpers.makeSlug(screenshotName));
+//        ActionKeywords.screenShot(screenshotName);
+        ExtentReportManager.addScreenShot(ActionKeywords.screenShot(screenshotName));
     }
 
     public static void stopSoftAssertAll() {

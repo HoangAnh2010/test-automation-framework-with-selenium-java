@@ -1,9 +1,11 @@
 package report;
 
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import constants.FrwConstants;
 import driver.DriverManager;
 import enums.AuthorType;
 import enums.CategoryType;
+import org.apache.commons.io.FileUtils;
 import utils.CapturesUtils;
 import utils.BrowserInfoUtils;
 import utils.IconUtils;
@@ -12,15 +14,17 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.Markup;
-import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+//import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import tech.grasshopper.reporter.ExtentPDFReporter;
 
 import java.io.*;
+import java.util.Base64;
 import java.util.Objects;
 
+import static com.aventstack.extentreports.MediaEntityBuilder.*;
 import static constants.FrwConstants.*;
 
 public class ExtentReportManager {
@@ -33,19 +37,21 @@ public class ExtentReportManager {
             extentReports = new ExtentReports();
             link = EXTENT_REPORT_FILE_PATH;
             System.out.println("Link Extent Report: " + link);
-            ExtentPDFReporter pdf = new ExtentPDFReporter("reports/ExtentReports/PdfReport.pdf");
-            try {
-                pdf.loadJSONConfig(new File("src/test/resources/pdf-config.json"));
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-            extentReports.attachReporter(pdf);
+//            ExtentPDFReporter pdf = new ExtentPDFReporter("reports/ExtentReports/PdfReport.pdf");
+//            try {
+//                pdf.loadJSONConfig(new File("src/test/resources/pdf-config.json"));
+//            } catch (IOException e) {
+//                throw new RuntimeException(e);
+//            }
+//            extentReports.attachReporter(pdf);
+            ExtentHtmlReporter report = new ExtentHtmlReporter(link);
 
-            ExtentSparkReporter spark = new ExtentSparkReporter(link);
-            extentReports.attachReporter(spark);
-            spark.config().setTheme(Theme.STANDARD);
-            spark.config().setDocumentTitle(FrwConstants.REPORT_TITLE);
-            spark.config().setReportName(FrwConstants.REPORT_TITLE);
+//            ExtentSparkReporter report = new ExtentSparkReporter(link);
+            report.config().setTheme(Theme.STANDARD);
+            report.config().setDocumentTitle(FrwConstants.REPORT_TITLE);
+            report.config().setReportName(FrwConstants.REPORT_TITLE);
+            extentReports.attachReporter(report);
+
             extentReports.setSystemInfo("Framework Name", FrwConstants.REPORT_TITLE);
             extentReports.setSystemInfo("Author", FrwConstants.AUTHOR);
             System.out.println("Extent Reports is installed.");
@@ -64,22 +70,20 @@ public class ExtentReportManager {
         ExtentTestManager.setExtentTest(extentReports.createTest(IconUtils.getBrowserIcon() + " : " + testCaseName));
     }
 
-    public static void createTest(String testCaseName, String description) {
-        ExtentTestManager.setExtentTest(extentReports.createTest(testCaseName, description));
-    }
-
-    public static void removeTest(String testCaseName) {
-        // ExtentManager.setExtentTest(extent.createTest(testCaseName));
-        extentReports.removeTest(testCaseName);
-    }
 
     /**
      * Adds the screenshot.
      *
-     * @param message the message
+     * @param imageDir the message
      */
-        public static void addScreenShot(String message) {
-        ExtentTestManager.getExtentTest().log(Status.INFO, MediaEntityBuilder.createScreenCaptureFromPath(String.valueOf(CapturesUtils.getScreenshot(message))).build());
+    public static void addScreenShot(String imageDir) {
+        try {
+            byte[] fileContent = FileUtils.readFileToByteArray(new File(imageDir));
+            String encodedString = Base64.getEncoder().encodeToString(fileContent);
+            ExtentTestManager.getExtentTest().log(Status.INFO,"Screenshot", MediaEntityBuilder.createScreenCaptureFromBase64String(encodedString).build());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     /**
@@ -92,10 +96,15 @@ public class ExtentReportManager {
         String base64Image = "data:image/png;base64," + ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(OutputType.BASE64);
 
 //        Base64 from Screenshot of Selenium
-        ExtentTestManager.getExtentTest().log(status, MediaEntityBuilder.createScreenCaptureFromBase64String(base64Image).build());
+        try {
+            ExtentTestManager.getExtentTest().log(status, String.valueOf(createScreenCaptureFromBase64String(base64Image).build()));
+            ExtentTestManager.getExtentTest().log(status, String.valueOf(createScreenCaptureFromPath(String.valueOf(CapturesUtils.getScreenshot(message))).build()));
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
         //File Path from Screenshot of Java
-        ExtentTestManager.getExtentTest().log(status, MediaEntityBuilder.createScreenCaptureFromPath(String.valueOf(CapturesUtils.getScreenshot(message))).build());
 
     }
 
@@ -122,7 +131,7 @@ public class ExtentReportManager {
     }
 
     synchronized public static void addDevices() {
-        ExtentTestManager.getExtentTest().assignDevice(BrowserInfoUtils.getBrowserInfo());
+//        ExtentTestManager.getExtentTest().(BrowserInfoUtils.getBrowserInfo());
 //		ExtentReportManager.getExtentTest()
 //				.assignDevice(BrowserIconUtils.getBrowserIcon() + " : " + BrowserInfoUtils.getBrowserInfo());
     }

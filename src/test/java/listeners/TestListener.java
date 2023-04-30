@@ -6,19 +6,18 @@ import driver.DriverManager;
 import enums.AuthorType;
 import enums.Browser;
 import enums.CategoryType;
+import utils.BrowserInfoUtils;
 import utils.CapturesUtils;
 import helpers.PropertiesHelpers;
 import keyword.ActionKeywords;
 import report.AllureManager;
 import report.ExtentReportManager;
-import utils.BrowserInfoUtils;
 import utils.EmailSendUtils;
 import utils.LogUtils;
 import com.aventstack.extentreports.Status;
 import com.github.automatedowl.tools.AllureEnvironmentWriter;
 import com.google.common.collect.ImmutableMap;
 import org.testng.*;
-
 import static constants.FrwConstants.*;
 
 public class TestListener implements ITestListener, ISuiteListener {
@@ -46,7 +45,6 @@ public class TestListener implements ITestListener, ISuiteListener {
         AllureManager.setAllureEnvironmentInformation();
         ExtentReportManager.initReports();
         System.out.println("========= INSTALLED CONFIGURATION DATA =========");
-        System.out.println("");
         LogUtils.info("Starting Suite: " + iSuite.getName());
     }
 
@@ -55,6 +53,7 @@ public class TestListener implements ITestListener, ISuiteListener {
         LogUtils.info("End Suite: " + iSuite.getName());
         ActionKeywords.stopSoftAssertAll();
         //End Suite and execute Extents Report
+//        getExtentReports().flush();
         ExtentReportManager.flushReports();
 
         //Send mail
@@ -98,19 +97,18 @@ public class TestListener implements ITestListener, ISuiteListener {
 
     @Override
     public void onTestStart(ITestResult iTestResult) {
-        LogUtils.info("Test case: " + getTestDescription(iTestResult) + " is starting...");
+        LogUtils.info("Test case: " + getTestName(iTestResult) + " is starting...");
         count_totalTCs = count_totalTCs + 1;
-
         ExtentReportManager.createTest(iTestResult.getName());
         ExtentReportManager.addAuthors(getAuthorType(iTestResult));
         ExtentReportManager.addCategories(getCategoryType(iTestResult));
         ExtentReportManager.addDevices();
-//        ExtentReportManager.info(BrowserInfoUtils.getOSInfo());
+        ExtentReportManager.info(BrowserInfoUtils.getOSInfo());
     }
 
     @Override
     public void onTestSuccess(ITestResult iTestResult) {
-        LogUtils.info("Test case: " + getTestDescription(iTestResult) + " is passed.");
+        LogUtils.info("Test case: " + getTestName(iTestResult) + " is passed.");
         count_passedTCs = count_passedTCs + 1;
 
         if (SCREENSHOT_PASSED_STEPS.equals(YES)) {
@@ -119,13 +117,12 @@ public class TestListener implements ITestListener, ISuiteListener {
 
         AllureManager.saveTextLog("Test case: " + getTestName(iTestResult) + " is passed.");
         //ExtentReports log operation for passed tests.
-//        ExtentReportManager.logMessage(Status.PASS, "Test case: " + getTestName(iTestResult) + " is passed.");
-
+        ExtentReportManager.logMessage(Status.PASS, "Test case: " + getTestName(iTestResult) + " is passed.");
     }
 
     @Override
     public void onTestFailure(ITestResult iTestResult) {
-        LogUtils.error("Test case: " + getTestDescription(iTestResult) + " is failed.");
+        LogUtils.error("Test case: " + getTestName(iTestResult) + " is failed.");
         count_failedTCs = count_failedTCs + 1;
 
         if (SCREENSHOT_FAILED_STEPS.equals(YES)) {
@@ -140,14 +137,14 @@ public class TestListener implements ITestListener, ISuiteListener {
         AllureManager.saveTextLog(iTestResult.getThrowable().toString());
 
         //Extent report screenshot file and log
-        ExtentReportManager.addScreenShot(Status.INFO, getTestName(iTestResult));
-//        ExtentReportManager.logMessage(Status.FAIL, iTestResult.getThrowable().toString());
+//        ExtentReportManager.addScreenShot(Status.INFO, getTestName(iTestResult));
+        ExtentReportManager.logMessage(Status.FAIL, iTestResult.getThrowable().toString());
 
     }
 
     @Override
     public void onTestSkipped(ITestResult iTestResult) {
-        LogUtils.warn("Test case: " + getTestDescription(iTestResult) + " is skipped.");
+        LogUtils.warn("Test case: " + getTestName(iTestResult) + " is skipped.");
         count_skippedTCs = count_skippedTCs + 1;
 
         if (SCREENSHOT_SKIPPED_STEPS.equals(YES)) {
@@ -160,8 +157,8 @@ public class TestListener implements ITestListener, ISuiteListener {
 
     @Override
     public void onTestFailedButWithinSuccessPercentage(ITestResult iTestResult) {
-        LogUtils.error("Test failed but it is in defined success ratio: " + getTestDescription(iTestResult));
-        ExtentReportManager.logMessage("Test failed but it is in defined success ratio: " + getTestDescription(iTestResult));
+        LogUtils.error("Test failed but it is in defined success ratio: " + getTestName(iTestResult));
+        ExtentReportManager.logMessage("Test failed but it is in defined success ratio: " + getTestName(iTestResult));
     }
 
 }

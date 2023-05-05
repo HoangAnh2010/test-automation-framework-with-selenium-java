@@ -102,7 +102,7 @@ public class TestListener implements ITestListener, ISuiteListener {
         ExtentReportManager.createTest(iTestResult.getName());
         ExtentReportManager.addAuthors(getAuthorType(iTestResult));
         ExtentReportManager.addCategories(getCategoryType(iTestResult));
-        ExtentReportManager.addDevices();
+        //ExtentReportManager.addDevices();
         ExtentReportManager.info(BrowserInfoUtils.getOSInfo());
     }
 

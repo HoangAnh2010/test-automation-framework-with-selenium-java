@@ -18,13 +18,15 @@ import java.util.Date;
 import static org.monte.media.FormatKeys.*;
 import static org.monte.media.VideoFormatKeys.*;
 
-public class ScreenRecoderUtils extends ScreenRecorder {
+public class ScreenRecorderUtils extends ScreenRecorder {
 
+	public static ScreenRecorder screenRecorder;
+	public String name;
 	private String fileName;
 	private File currentFile;
 	private SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy HH-mm-ss");
 
-	public ScreenRecoderUtils() throws IOException, AWTException {
+	public ScreenRecorderUtils() throws IOException, AWTException {
 		super(GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice().getDefaultConfiguration(),
 				new Rectangle(0, 0, Toolkit.getDefaultToolkit().getScreenSize().width,
 						Toolkit.getDefaultToolkit().getScreenSize().height),
@@ -34,6 +36,10 @@ public class ScreenRecoderUtils extends ScreenRecorder {
 						Rational.valueOf(15), QualityKey, 1.0f, KeyFrameIntervalKey, 15 * 60),
 				new Format(MediaTypeKey, MediaType.VIDEO, EncodingKey, "black", FrameRateKey, Rational.valueOf(30)),
 				null, new File("./" + FrwConstants.EXPORT_VIDEO_PATH + "/"));
+	}
+	public ScreenRecorderUtils(GraphicsConfiguration cfg, Rectangle captureArea, Format fileFormat, Format screenFormat, Format mouseFormat, Format audioFormat, File movieFolder, String name) throws IOException, AWTException {
+		super(cfg, captureArea, fileFormat, screenFormat, mouseFormat, audioFormat, movieFolder);
+		this.name = name;
 	}
 
 	@Override
@@ -67,23 +73,48 @@ public class ScreenRecoderUtils extends ScreenRecorder {
 		return new File(fileName);
 	}
 
-	public void startRecording(String fileName) {
-		this.fileName = fileName;
+	// Hàm Start record video
+	public static void startRecord(String methodName) {
 		try {
-			start();
-		} catch (IOException e) {
-			throw new RuntimeException(e);
+			//Tạo thư mục để lưu file video vào
+			File file = new File("./VideoRecord/");
+			if (!file.exists()) {
+				file.mkdirs();
+			}
+
+			Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+			int width = screenSize.width;
+			int height = screenSize.height;
+
+			Rectangle captureSize = new Rectangle(0, 0, width, height);
+
+			GraphicsConfiguration gc = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice().getDefaultConfiguration();
+			try {
+				screenRecorder = new ScreenRecorderUtils(gc, captureSize, new Format(MediaTypeKey, MediaType.FILE, MimeTypeKey, MIME_AVI), new Format(MediaTypeKey, MediaType.VIDEO, EncodingKey, ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE, CompressorNameKey, ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE, DepthKey, 24, FrameRateKey, Rational.valueOf(15), QualityKey, 1.0f, KeyFrameIntervalKey, 15 * 60), new Format(MediaTypeKey, MediaType.VIDEO, EncodingKey, "black", FrameRateKey, Rational.valueOf(30)), null, file, methodName);
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			} catch (AWTException e) {
+				throw new RuntimeException(e);
+			}
+			try {
+				screenRecorder.start();
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+			LogUtils.info("Executing: Recording...");
+		} catch (Exception e) {
+			LogUtils.error("Cannot record");
 		}
 	}
 
-	public void stopRecording(boolean keepFile) {
+	public static void stopRecord() {
 		try {
-			stop();
+			LogUtils.info("Stop record");
+			screenRecorder.stop();
+
 		} catch (IOException e) {
+			LogUtils.error("Cannot stop record ");
 			throw new RuntimeException(e);
-		}
-		if (!keepFile) {
-			deleteRecording();
 		}
 	}
 

@@ -5,17 +5,11 @@ import javax.mail.internet.*;
 import java.io.IOException;
 import java.util.Date;
 import java.util.Properties;
-
-/**
- * https://www.codejava.net/java-ee/javamail/send-e-mail-with-attachment-in-java
- */
 public class EmailAttachmentsSender {
-
     public static void sendEmailWithAttachments(String host, String port, final String userName, final String password,
                                                 String[] toAddress, String subject, String message, String... attachFiles)
             throws AddressException, MessagingException {
         // sets SMTP server properties
-
         Properties properties = new Properties();
         properties.put("mail.smtp.host", host);
         properties.put("mail.smtp.port", port);
@@ -67,16 +61,12 @@ public class EmailAttachmentsSender {
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }
-
                 multipart.addBodyPart(attachPart);
             }
         }
-
         // sets the multi-part as e-mail's content
         msg.setContent(multipart);
-
         // sends the e-mail
         Transport.send(msg);
     }
-
 }

@@ -1,31 +1,24 @@
 package report;
 
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import constants.FrwConstants;
-import driver.DriverManager;
-import enums.AuthorType;
-import enums.CategoryType;
-import org.apache.commons.io.FileUtils;
-import utils.CapturesUtils;
-import utils.BrowserInfoUtils;
-import utils.IconUtils;
-import utils.ReportUtils;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.Markup;
-//import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import tech.grasshopper.reporter.ExtentPDFReporter;
+import constants.FrwConstants;
+import enums.AuthorType;
+import enums.CategoryType;
+import org.apache.commons.io.FileUtils;
+import utils.IconUtils;
+import utils.ReportUtils;
 
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
 import java.util.Base64;
 import java.util.Objects;
 
-import static com.aventstack.extentreports.MediaEntityBuilder.*;
-import static constants.FrwConstants.*;
+import static constants.FrwConstants.EXTENT_REPORT_FILE_PATH;
 
 public class ExtentReportManager {
 
@@ -44,9 +37,9 @@ public class ExtentReportManager {
 //                throw new RuntimeException(e);
 //            }
 //            extentReports.attachReporter(pdf);
-            ExtentHtmlReporter report = new ExtentHtmlReporter(link);
 
-//            ExtentSparkReporter report = new ExtentSparkReporter(link);
+            ExtentHtmlReporter report = new ExtentHtmlReporter(link);
+            //ExtentSparkReporter report = new ExtentSparkReporter(link);
             report.config().setTheme(Theme.STANDARD);
             report.config().setDocumentTitle(FrwConstants.REPORT_TITLE);
             report.config().setReportName(FrwConstants.REPORT_TITLE);
@@ -69,7 +62,6 @@ public class ExtentReportManager {
     public static void createTest(String testCaseName) {
         ExtentTestManager.setExtentTest(extentReports.createTest(IconUtils.getBrowserIcon() + " : " + testCaseName));
     }
-
 
     /**
      * Adds the screenshot.
@@ -108,11 +100,11 @@ public class ExtentReportManager {
         }
     }
 
-    synchronized public static void addDevices() {
+//    synchronized public static void addDevices() {
 //        ExtentTestManager.getExtentTest().(BrowserInfoUtils.getBrowserInfo());
 //		ExtentReportManager.getExtentTest()
 //				.assignDevice(BrowserIconUtils.getBrowserIcon() + " : " + BrowserInfoUtils.getBrowserInfo());
-    }
+//    }
 
     public static void logMessage(String message) {
         ExtentTestManager.getExtentTest().log(Status.INFO, message);
@@ -127,7 +119,6 @@ public class ExtentReportManager {
     }
 
     public static void pass(String message) {
-        //System.out.println("ExtentReportManager class: " + ExtentTestManager.getExtentTest());
         ExtentTestManager.getExtentTest().pass(message);
     }
 

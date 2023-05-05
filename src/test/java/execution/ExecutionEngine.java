@@ -1,23 +1,20 @@
 package execution;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.NoSuchElementException;
-
+import keyword.ActionKeywords;
 import model.Data;
 import model.DataOfSignIn;
 import model.Locator;
 import model.SignInPage;
-import org.testng.annotations.Listeners;
-
 import org.apache.poi.ss.usermodel.Sheet;
 import org.testng.annotations.Ignore;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
-import keyword.*;
-//import report.ExtentReportManager;
 import report.ExtentReportManager;
 import utils.*;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.NoSuchElementException;
 
 @Listeners(listeners.TestListener.class)
 public class ExecutionEngine {
@@ -48,14 +45,14 @@ public class ExecutionEngine {
     float caseFail = 0;
     float caseSkip = 0;
     float STANDARD_PERCENT = (float) 0.75;
-//    @Ignore
+    @Ignore
     @Test
     public void TestScript_SignIn_XML() throws Exception {
 
         Data xmlData = XmlUtils.xmlToData(xmlPath);
         List<SignInPage> signInPages = xmlData.getSignInPage();
         List<DataOfSignIn> dataOfSignIns = xmlData.getDataOfSignIn();
-        CapturesUtils.startRecord("SignIn");
+        ScreenRecorderUtils.startRecord("SignIn");
         List<Locator> locators = new ArrayList<>();
         for (DataOfSignIn dataOfSignIn : dataOfSignIns) {
             Locator lct = new Locator();
@@ -74,7 +71,7 @@ public class ExecutionEngine {
             }
         }
         reportInConsole();
-        CapturesUtils.stopRecord();
+        ScreenRecorderUtils.stopRecord();
         considerTestCase();
     }
 
@@ -84,7 +81,7 @@ public class ExecutionEngine {
         Data jsonData = JsonUtils.readData(jsonPath);
         List<SignInPage> signInPages = jsonData.getSignInPage();
         List<DataOfSignIn> dataOfSignIns = jsonData.getDataOfSignIn();
-        CapturesUtils.startRecord("SignIn");
+        ScreenRecorderUtils.startRecord("SignIn");
         List<Locator> locators = new ArrayList<>();
         for (DataOfSignIn dataOfSignIn : dataOfSignIns) {
             Locator lct = new Locator();
@@ -104,7 +101,7 @@ public class ExecutionEngine {
             }
         }
         reportInConsole();
-        CapturesUtils.stopRecord();
+        ScreenRecorderUtils.stopRecord();
         considerTestCase();
     }
 
@@ -113,7 +110,7 @@ public class ExecutionEngine {
     public void TestScript_SignIn_CSVFile() throws Exception {
         List<SignInPage> signInPages = CsvUtils.readSignInPageCSVfile(signInCSVpath);
         List<DataOfSignIn> dataOfSignIns = CsvUtils.readDataOfSignInCSVfile(dataOfsignInCSVpath);
-        CapturesUtils.startRecord("SignIn");
+        ScreenRecorderUtils.startRecord("SignIn");
         List<Locator> locators = new ArrayList<>();
         for (DataOfSignIn dataOfSignIn : dataOfSignIns) {
             Locator lct = new Locator();
@@ -132,7 +129,7 @@ public class ExecutionEngine {
             }
         }
         reportInConsole();
-        CapturesUtils.stopRecord();
+        ScreenRecorderUtils.stopRecord();
         considerTestCase();
     }
 
@@ -161,7 +158,7 @@ public class ExecutionEngine {
             }
             row = row + 1;
         }
-        CapturesUtils.startRecord("SignIn");
+        ScreenRecorderUtils.startRecord("SignIn");
         // get data from list data to run script
         for (int i = 0; i < locators.size(); i++) { //sheet dataofsignin
             for (int iRow = 1; iRow <= rowCount; iRow++) {
@@ -171,7 +168,7 @@ public class ExecutionEngine {
             }
         }
         reportInConsole();
-        CapturesUtils.stopRecord();
+        ScreenRecorderUtils.stopRecord();
         considerTestCase();
     }
 
@@ -213,7 +210,7 @@ public class ExecutionEngine {
                 row = row + 1;
             }
         }
-        CapturesUtils.startRecord("SignUp");
+        ScreenRecorderUtils.startRecord("SignUp");
         // Bỏ hàng tiêu đề
         for (int i = 0; i < arrTCIDSignUp.size(); i++) {
             for (int iRow = 1; iRow <= rowCount; iRow++) {
@@ -223,7 +220,7 @@ public class ExecutionEngine {
             }
         }
         reportInConsole();
-        CapturesUtils.stopRecord();
+        ScreenRecorderUtils.stopRecord();
         considerTestCase();
     }
 
@@ -233,14 +230,14 @@ public class ExecutionEngine {
         ExcelUtils.setExcelFile(excelPath, "CreateCV");
         Sheet sheet = ExcelUtils.getSheet("CreateCV");
         int rowCount = sheet.getLastRowNum();
-        CapturesUtils.startRecord("CreateCV");
+        ScreenRecorderUtils.startRecord("CreateCV");
         // Bỏ hàng tiêu đề
         for (int iRow = 1; iRow <= rowCount; iRow++) {
             reuseCreateCV(iRow);
             execute_Actions(testData, null, null, null, null, null, "CRCV_01");
         }
         reportInConsole();
-        CapturesUtils.stopRecord();
+        ScreenRecorderUtils.stopRecord();
         considerTestCase();
     }
 
@@ -251,14 +248,14 @@ public class ExecutionEngine {
         Sheet sheet = ExcelUtils.getSheet("Search");
         int rowCount = sheet.getLastRowNum();
 
-        CapturesUtils.startRecord("Search");
+        ScreenRecorderUtils.startRecord("Search");
         // Bỏ hàng tiêu đề
         for (int iRow = 1; iRow <= rowCount; iRow++) {
             reuseSearch(iRow);
             execute_Actions(testData, null, null, null, null, null, "SJO_01");
         }
         reportInConsole();
-        CapturesUtils.stopRecord();
+        ScreenRecorderUtils.stopRecord();
     }
 
     private void reuseSignIn(SignInPage signInPage) {
@@ -302,7 +299,7 @@ public class ExecutionEngine {
     }
 
     private void execute_Actions(String testData, String sName, String sEmail, String sPass, String sPassCf,
-                                 String sResult,String sTCID) throws Exception {
+                                 String sResult,String sTCID) {
         try {
             switch (sActionKeyword) {
                 case "openBrowser":

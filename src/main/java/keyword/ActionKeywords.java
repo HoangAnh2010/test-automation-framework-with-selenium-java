@@ -45,20 +45,15 @@ public class ActionKeywords {
     private static WebElement getElement(String locatorType, String locatorValue) {
         WebElement element = null;
 
-        if (locatorType.equalsIgnoreCase("className"))
-            element = driver.findElement(By.className(locatorValue));
+        if (locatorType.equalsIgnoreCase("className")) element = driver.findElement(By.className(locatorValue));
         else if (locatorType.equalsIgnoreCase("cssSelector"))
             element = driver.findElement(By.cssSelector(locatorValue));
-        else if (locatorType.equalsIgnoreCase("id"))
-            element = driver.findElement(By.id(locatorValue));
+        else if (locatorType.equalsIgnoreCase("id")) element = driver.findElement(By.id(locatorValue));
         else if (locatorType.equalsIgnoreCase("partialLinkText"))
             element = driver.findElement(By.partialLinkText(locatorValue));
-        else if (locatorType.equalsIgnoreCase("name"))
-            element = driver.findElement(By.name(locatorValue));
-        else if (locatorType.equalsIgnoreCase("xpath"))
-            element = driver.findElement(By.xpath(locatorValue));
-        else if (locatorType.equalsIgnoreCase("tagName"))
-            element = driver.findElement(By.tagName(locatorValue));
+        else if (locatorType.equalsIgnoreCase("name")) element = driver.findElement(By.name(locatorValue));
+        else if (locatorType.equalsIgnoreCase("xpath")) element = driver.findElement(By.xpath(locatorValue));
+        else if (locatorType.equalsIgnoreCase("tagName")) element = driver.findElement(By.tagName(locatorValue));
         else {
             LogUtils.error("GetElement " + locatorType + "=" + locatorValue);
         }
@@ -180,10 +175,8 @@ public class ActionKeywords {
             ExtentReportManager.pass("Entering text: " + value);
         } catch (NoSuchElementException e) {
 
-            LogUtils.error("SendKeys:" + locatorType + "=" + locatorValue
-                    + " not found to sendKeys| " + e.getMessage());
-            ExtentReportManager.info("SendKeys:" + locatorType + "=" + locatorValue
-                    + " not found to sendKeys| " + e.getMessage());
+            LogUtils.error("SendKeys:" + locatorType + "=" + locatorValue + " not found to sendKeys| " + e.getMessage());
+            ExtentReportManager.info("SendKeys:" + locatorType + "=" + locatorValue + " not found to sendKeys| " + e.getMessage());
         }
 
     }
@@ -196,8 +189,7 @@ public class ActionKeywords {
                 LogUtils.info("Moving mouse");
                 Actions a = new Actions(driver);
                 waitForPageLoaded();
-                a.moveToElement(driver.findElement(By.xpath(address))).
-                        build().perform();
+                a.moveToElement(driver.findElement(By.xpath(address))).build().perform();
                 ExtentReportManager.pass("Moving mouse");
             } else {
                 Actions a = new Actions(driver);
@@ -293,10 +285,8 @@ public class ActionKeywords {
             //js.executeScript("arguments[0].click();", element);
             ExtentReportManager.pass("Scrolling mouse down and click element: " + locatorValue);
         } catch (NoSuchElementException e) {
-            LogUtils.error("|clickElementWithJs:" + locatorType + "=" + locatorValue
-                    + " not found to click| " + e.getMessage());
-            ExtentReportManager.info("|clickElementWithJs:" + locatorType + "=" + locatorValue
-                    + " not found to click| " + e.getMessage());
+            LogUtils.error("|clickElementWithJs:" + locatorType + "=" + locatorValue + " not found to click| " + e.getMessage());
+            ExtentReportManager.info("|clickElementWithJs:" + locatorType + "=" + locatorValue + " not found to click| " + e.getMessage());
         }
     }
 
@@ -304,8 +294,7 @@ public class ActionKeywords {
         try {
             wait.until(new Function<WebDriver, Boolean>() {
                 public Boolean apply(WebDriver driver) {
-                    return String.valueOf(((JavascriptExecutor) driver).executeScript("return document.readyState"))
-                            .equals("complete");
+                    return String.valueOf(((JavascriptExecutor) driver).executeScript("return document.readyState")).equals("complete");
                 }
             });
         } catch (Throwable error) {
@@ -388,10 +377,8 @@ public class ActionKeywords {
             wait.until(ExpectedConditions.elementToBeClickable(element));
             action.contextClick().build().perform();
         } catch (NoSuchElementException e) {
-            LogUtils.error("|Right click: " + locatorType + "= " + locatorValue
-                    + " not found to click| " + e.getMessage());
-            ExtentReportManager.info("|Right click: " + locatorType + "= " + locatorValue
-                    + " not found to click| " + e.getMessage());
+            LogUtils.error("|Right click: " + locatorType + "= " + locatorValue + " not found to click| " + e.getMessage());
+            ExtentReportManager.info("|Right click: " + locatorType + "= " + locatorValue + " not found to click| " + e.getMessage());
         }
     }
 
@@ -405,10 +392,8 @@ public class ActionKeywords {
             Select select = new Select(element);
             select.selectByVisibleText(text);
         } catch (NoSuchElementException e) {
-            LogUtils.error("|select Option By Text|: " + locatorType + "= " + locatorValue + "|text: "
-                    + text + " not found to select| " + e.getMessage());
-            ExtentReportManager.info("|select Option By Text|: " + locatorType + "= " + locatorValue + "|text: "
-                    + text + " not found to select| " + e.getMessage());
+            LogUtils.error("|select Option By Text|: " + locatorType + "= " + locatorValue + "|text: " + text + " not found to select| " + e.getMessage());
+            ExtentReportManager.info("|select Option By Text|: " + locatorType + "= " + locatorValue + "|text: " + text + " not found to select| " + e.getMessage());
         }
     }
 
@@ -421,10 +406,8 @@ public class ActionKeywords {
             Select select = new Select(element);
             select.selectByValue(value);
         } catch (NoSuchElementException e) {
-            LogUtils.error("Select Option By Value: " + locatorType + "= " + locatorValue + "|value: "
-                    + value + " not found to select| " + e.getMessage());
-            ExtentReportManager.fail("Select Option By Value: " + locatorType + "= " + locatorValue + "|value: "
-                    + value + " not found to select| " + e.getMessage());
+            LogUtils.error("Select Option By Value: " + locatorType + "= " + locatorValue + "|value: " + value + " not found to select| " + e.getMessage());
+            ExtentReportManager.fail("Select Option By Value: " + locatorType + "= " + locatorValue + "|value: " + value + " not found to select| " + e.getMessage());
         }
     }
 
@@ -438,10 +421,8 @@ public class ActionKeywords {
             Select select = new Select(element);
             select.selectByIndex(index);
         } catch (NoSuchElementException e) {
-            LogUtils.error("Select Option By Index: " + locatorType + "= " + locatorValue + "|index: "
-                    + index + " not found to select| " + e.getMessage());
-            ExtentReportManager.info("Select Option By Index: " + locatorType + "= " + locatorValue + "|index: "
-                    + index + " not found to select| " + e.getMessage());
+            LogUtils.error("Select Option By Index: " + locatorType + "= " + locatorValue + "|index: " + index + " not found to select| " + e.getMessage());
+            ExtentReportManager.info("Select Option By Index: " + locatorType + "= " + locatorValue + "|index: " + index + " not found to select| " + e.getMessage());
         }
     }
 
@@ -506,8 +487,7 @@ public class ActionKeywords {
 
         ExpectedCondition<Boolean> jsload = new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver driver) {
-                return ((JavascriptExecutor) driver).executeScript("return document.readyState").toString()
-                        .equals("complete");
+                return ((JavascriptExecutor) driver).executeScript("return document.readyState").toString().equals("complete");
             }
         };
         try {
@@ -553,8 +533,7 @@ public class ActionKeywords {
             WebElement emailInSignInPage = getElement("name", "_username");//driver.findElement(By.name("_username"));
             WebElement pwInSignInPage = getElement("name", "_password");
             WebElement errorMessageInSignInPage = getElement("xpath", "//form[@id='login_form']/div");
-            if (emailInSignInPage.getText().trim() == "" || emailInSignInPage.getText() == null || emailInSignInPage.getText().trim().contains(" ") == true
-                    || emailInSignInPage.getText().trim().contains("@") == false) {
+            if (emailInSignInPage.getText().trim() == "" || emailInSignInPage.getText() == null || emailInSignInPage.getText().trim().contains(" ") == true || emailInSignInPage.getText().trim().contains("@") == false) {
                 actual = emailInSignInPage.getAttribute("validationMessage");
                 waitForPageLoaded();
                 LogUtils.info("Expected Result: " + expected);
@@ -587,8 +566,7 @@ public class ActionKeywords {
             WebElement pwInSignUpPage = getElement("id", "password");
             WebElement pwConfirmInSignInPage = getElement("id", "password_confirmation");
             WebElement errorMessageInSignUpPage = driver.findElement(By.id("invalid_password_feedback"));
-            if (emailInSignUpPage.getText().trim().contains("@") == false || emailInSignUpPage.getText().trim().contains(" ") == true ||
-                    emailInSignUpPage.getText().trim() == "" || emailInSignUpPage.getText() == null) {
+            if (emailInSignUpPage.getText().trim().contains("@") == false || emailInSignUpPage.getText().trim().contains(" ") == true || emailInSignUpPage.getText().trim() == "" || emailInSignUpPage.getText() == null) {
                 actual = emailInSignUpPage.getAttribute("validationMessage");
                 waitForPageLoaded();
                 LogUtils.info("Expected Result: " + expected);
@@ -657,10 +635,8 @@ public class ActionKeywords {
             //element.clear();
             element.sendKeys(value);
         } catch (NoSuchElementException e) {
-            LogUtils.error("SendKeys:" + locatorType + "=" + locatorValue
-                    + " not found to sendKeys| " + e.getMessage());
-            ExtentReportManager.info("SendKeys:" + locatorType + "=" + locatorValue
-                    + " not found to sendKeys| " + e.getMessage());
+            LogUtils.error("SendKeys:" + locatorType + "=" + locatorValue + " not found to sendKeys| " + e.getMessage());
+            ExtentReportManager.info("SendKeys:" + locatorType + "=" + locatorValue + " not found to sendKeys| " + e.getMessage());
         }
     }
 

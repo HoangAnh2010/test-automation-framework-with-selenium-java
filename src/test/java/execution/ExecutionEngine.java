@@ -32,11 +32,11 @@ public class ExecutionEngine {
     ArrayList<String> arrPasswordCfSignUp = new ArrayList<String>();
     ArrayList<String> arrResultSignUp = new ArrayList<String>();
 
-    public static String excelPath = System.getProperty("user.dir") + "\\src\\test\\resources\\data\\data.xlsx";
-    public static String jsonPath = System.getProperty("user.dir") + "\\src\\test\\resources\\data\\data.json";
-    public static String xmlPath = System.getProperty("user.dir") + "\\src\\test\\resources\\data\\data.xml";
-    public static String signInCSVpath = System.getProperty("user.dir") + "\\src\\test\\resources\\data\\signIn.csv";
-    public static String dataOfsignInCSVpath = System.getProperty("user.dir") + "\\src\\test\\resources\\data\\DataSignIn.csv";
+    public static String excelPath = System.getProperty("user.dir") + "/src/test/resources/data/data.xlsx";
+    public static String jsonPath = System.getProperty("user.dir") + "/src/test/resources/data/data.json";
+    public static String xmlPath = System.getProperty("user.dir") + "/src/test/resources/data/data.xml";
+    public static String signInCSVpath = System.getProperty("user.dir") + "/src/test/resources/data/signIn.csv";
+    public static String dataOfsignInCSVpath = System.getProperty("user.dir") + "/src/test/resources/data/DataSignIn.csv";
 
     int totalCasePass = 0;
     int totalCaseFail = 0;
@@ -75,7 +75,7 @@ public class ExecutionEngine {
         considerTestCase();
     }
 
-    @Ignore
+//    @Ignore
     @Test
     public void TestScript_SignIn_JsonFile() throws Exception {
         Data jsonData = JsonUtils.readData(jsonPath);
@@ -105,7 +105,7 @@ public class ExecutionEngine {
         considerTestCase();
     }
 
-    @Ignore
+//    @Ignore
     @Test
     public void TestScript_SignIn_CSVFile() throws Exception {
         List<SignInPage> signInPages = CsvUtils.readSignInPageCSVfile(signInCSVpath);

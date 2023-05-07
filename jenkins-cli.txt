@@ -1,0 +1,5 @@
+*run jenkins webserver
+java -jar ./jenkins.war --httpPort=9090 (default: 8080)
+
+*Configure jenkins to run maven
+-Dtest=execution/ExecutionEngine test

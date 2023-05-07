@@ -46,7 +46,7 @@ public class ExecutionEngine {
     float caseSkip = 0;
     float STANDARD_PERCENT = (float) 0.75;
 
-    @Ignore
+//    @Ignore
     @Severity(SeverityLevel.NORMAL)
     @Description("Test suite of login function written in XML file")
     @Epic("Website CareerLink")
@@ -80,7 +80,7 @@ public class ExecutionEngine {
         considerTestCase();
     }
 
-    @Ignore
+//    @Ignore
     @Severity(SeverityLevel.NORMAL)
     @Description("Test suite of login function written in Json file")
     @Epic("Website CareerLink")
@@ -115,7 +115,7 @@ public class ExecutionEngine {
         considerTestCase();
     }
 
-    @Ignore
+//    @Ignore
     @Severity(SeverityLevel.NORMAL)
     @Description("Test suite of login function written in CSV file")
     @Epic("Website CareerLink")

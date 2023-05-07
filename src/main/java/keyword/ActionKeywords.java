@@ -708,7 +708,7 @@ public class ActionKeywords {
         }
     }
 
-    @Step("Take a screenshot")
+//    @Step("Take a screenshot")
     public static String screenShot(String CaseName) {
         try {
             // Tạo tham chiếu của TakesScreenshot với driver hiện tại

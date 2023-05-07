@@ -18,6 +18,7 @@ import com.aventstack.extentreports.Status;
 import com.github.automatedowl.tools.AllureEnvironmentWriter;
 import com.google.common.collect.ImmutableMap;
 import org.testng.*;
+
 import static constants.FrwConstants.*;
 
 public class TestListener implements ITestListener, ISuiteListener {
@@ -75,8 +76,6 @@ public class TestListener implements ITestListener, ISuiteListener {
                         put("TCs Skipped", String.valueOf(count_skippedTCs)).
                         put("TCs Failed", String.valueOf(count_failedTCs)).
                         build());
-
-
     }
 
     public AuthorType[] getAuthorType(ITestResult iTestResult) {
@@ -117,7 +116,7 @@ public class TestListener implements ITestListener, ISuiteListener {
 
         AllureManager.saveTextLog("Test case: " + getTestName(iTestResult) + " is passed.");
         //ExtentReports log operation for passed tests.
-        ExtentReportManager.logMessage(Status.PASS, "Test case: " + getTestName(iTestResult) + " is passed.");
+        //ExtentReportManager.logMessage(Status.PASS, "Test case: " + getTestName(iTestResult) + " is passed.");
     }
 
     @Override
@@ -128,7 +127,6 @@ public class TestListener implements ITestListener, ISuiteListener {
         if (SCREENSHOT_FAILED_STEPS.equals(YES)) {
             CapturesUtils.captureScreenshot(DriverManager.getDriver(), getTestName(iTestResult));
         }
-
         //Allure report screenshot file and log
         LogUtils.error("FAILED !! Screenshot for test case: " + getTestName(iTestResult));
         LogUtils.error(iTestResult.getThrowable());
@@ -138,21 +136,17 @@ public class TestListener implements ITestListener, ISuiteListener {
 
         //Extent report screenshot file and log
 //        ExtentReportManager.addScreenShot(Status.INFO, getTestName(iTestResult));
-        ExtentReportManager.logMessage(Status.FAIL, iTestResult.getThrowable().toString());
-
+        //ExtentReportManager.logMessage(Status.FAIL, iTestResult.getThrowable().toString());
     }
 
     @Override
     public void onTestSkipped(ITestResult iTestResult) {
         LogUtils.warn("Test case: " + getTestName(iTestResult) + " is skipped.");
         count_skippedTCs = count_skippedTCs + 1;
-
         if (SCREENSHOT_SKIPPED_STEPS.equals(YES)) {
             CapturesUtils.captureScreenshot(DriverManager.getDriver(), getTestName(iTestResult));
         }
-
         ExtentReportManager.logMessage(Status.SKIP, "Test case: " + getTestName(iTestResult) + " is skipped.");
-
     }
 
     @Override
@@ -160,5 +154,4 @@ public class TestListener implements ITestListener, ISuiteListener {
         LogUtils.error("Test failed but it is in defined success ratio: " + getTestName(iTestResult));
         ExtentReportManager.logMessage("Test failed but it is in defined success ratio: " + getTestName(iTestResult));
     }
-
 }

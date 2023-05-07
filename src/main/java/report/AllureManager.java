@@ -1,16 +1,10 @@
-/*
- * Copyright (c) 2022 Anh Tester
- * Automation Framework Selenium
- */
-
 package report;
 
+import com.github.automatedowl.tools.AllureEnvironmentWriter;
+import com.google.common.collect.ImmutableMap;
 import constants.FrwConstants;
 import driver.DriverManager;
 import enums.Browser;
-import utils.BrowserInfoUtils;
-import com.github.automatedowl.tools.AllureEnvironmentWriter;
-import com.google.common.collect.ImmutableMap;
 import io.qameta.allure.Attachment;
 import org.openqa.selenium.TakesScreenshot;
 
@@ -58,11 +52,10 @@ public class AllureManager {
         return new byte[0];
     }
 
-    @Attachment(value = "Browser Information", type = "text/plain")
-    public static String addBrowserInformationOnAllureReport() {
-        return BrowserInfoUtils.getOSInfo();
-    }
-
+//    @Attachment(value = "Browser Information", type = "text/plain")
+//    public static String addBrowserInformationOnAllureReport() {
+//        return BrowserInfoUtils.getOSInfo();
+//    }
 
     //Text attachments for Allure
     @Attachment(value = "{0}", type = "text/plain")
@@ -75,5 +68,4 @@ public class AllureManager {
     public static String attachHtml(String html) {
         return html;
     }
-
 }

@@ -1,5 +1,6 @@
 package execution;
 
+import io.qameta.allure.*;
 import keyword.ActionKeywords;
 import model.Data;
 import model.DataOfSignIn;
@@ -14,7 +15,6 @@ import utils.*;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.NoSuchElementException;
 
 @Listeners(listeners.TestListener.class)
 public class ExecutionEngine {
@@ -45,10 +45,15 @@ public class ExecutionEngine {
     float caseFail = 0;
     float caseSkip = 0;
     float STANDARD_PERCENT = (float) 0.75;
-    @Ignore
-    @Test
-    public void TestScript_SignIn_XML() throws Exception {
 
+    @Ignore
+    @Severity(SeverityLevel.NORMAL)
+    @Description("Test suite of login function written in XML file")
+    @Epic("Website CareerLink")
+    @Feature("Sign in")
+    @Story("Read data test from XML file")
+    @Test
+    public void TestSuite_SignIn_XMLFile() throws Exception {
         Data xmlData = XmlUtils.xmlToData(xmlPath);
         List<SignInPage> signInPages = xmlData.getSignInPage();
         List<DataOfSignIn> dataOfSignIns = xmlData.getDataOfSignIn();
@@ -76,8 +81,13 @@ public class ExecutionEngine {
     }
 
     @Ignore
+    @Severity(SeverityLevel.NORMAL)
+    @Description("Test suite of login function written in Json file")
+    @Epic("Website CareerLink")
+    @Feature("Sign in")
+    @Story("Read data test from Json file")
     @Test
-    public void TestScript_SignIn_JsonFile() throws Exception {
+    public void TestSuite_SignIn_JsonFile() throws Exception {
         Data jsonData = JsonUtils.readData(jsonPath);
         List<SignInPage> signInPages = jsonData.getSignInPage();
         List<DataOfSignIn> dataOfSignIns = jsonData.getDataOfSignIn();
@@ -97,7 +107,7 @@ public class ExecutionEngine {
             for (SignInPage signInPage : signInPages) {
                 reuseSignIn(signInPage);
                 execute_Actions(testData, null, locators.get(i).getSignInEmail(), locators.get(i).getSignInPw(), null,
-                        locators.get(i).getSignInResult(),locators.get(i).getSignInTcId());
+                        locators.get(i).getSignInResult(), locators.get(i).getSignInTcId());
             }
         }
         reportInConsole();
@@ -106,8 +116,13 @@ public class ExecutionEngine {
     }
 
     @Ignore
+    @Severity(SeverityLevel.NORMAL)
+    @Description("Test suite of login function written in CSV file")
+    @Epic("Website CareerLink")
+    @Feature("Sign in")
+    @Story("Read data test from CSV file")
     @Test
-    public void TestScript_SignIn_CSVFile() throws Exception {
+    public void TestSuite_SignIn_CSVFile() throws Exception {
         List<SignInPage> signInPages = CsvUtils.readSignInPageCSVfile(signInCSVpath);
         List<DataOfSignIn> dataOfSignIns = CsvUtils.readDataOfSignInCSVfile(dataOfsignInCSVpath);
         ScreenRecorderUtils.startRecord("SignIn");
@@ -133,9 +148,14 @@ public class ExecutionEngine {
         considerTestCase();
     }
 
-//    @Ignore
+    //@Ignore
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Test suite of login function written in Excel file")
+    @Epic("Website CareerLink")
+    @Feature("Sign in")
+    @Story("Read data test from Excel file")
     @Test
-    public void TestScript_SignIn_ExcelFile() throws Exception {
+    public void TestSuite_SignIn_ExcelFile() throws Exception {
         ExcelUtils.setExcelFile(excelPath, "SignInPage");
         Sheet sheet = ExcelUtils.getSheet("SignInPage");
         int rowCount = sheet.getLastRowNum();
@@ -173,8 +193,13 @@ public class ExecutionEngine {
     }
 
     @Ignore
+    @Severity(SeverityLevel.NORMAL)
+    @Description("Test suite of register function written in Excel file")
+    @Epic("Website CareerLink")
+    @Feature("Sign up")
+    @Story("Read data test from Excel file")
     @Test
-    public void TestSuite_SignUp() throws Exception {
+    public void TestSuite_SignUp_ExcelFile() throws Exception {
         ExcelUtils.setExcelFile(excelPath, "SignUpPage");
         Sheet sheet = ExcelUtils.getSheet("SignUpPage");
         int rowCount = sheet.getLastRowNum();
@@ -225,6 +250,11 @@ public class ExecutionEngine {
     }
 
     @Ignore
+    @Severity(SeverityLevel.BLOCKER)
+    @Description("Test suite of create CV function")
+    @Epic("Website CareerLink")
+    @Feature("Create CV")
+    //@Story("Read data test from Excel file")
     @Test
     public void TestSuite_CreateCV() throws Exception {
         ExcelUtils.setExcelFile(excelPath, "CreateCV");
@@ -242,6 +272,11 @@ public class ExecutionEngine {
     }
 
     @Ignore
+    @Severity(SeverityLevel.NORMAL)
+    @Description("Test suite of search and view job details function")
+    @Epic("Website CareerLink")
+    @Feature("Search and View job detail")
+    //@Story("Read data test from Excel file")
     @Test
     public void TestSuite_SearchAndViewJobDetails() throws Exception {
         ExcelUtils.setExcelFile(excelPath, "Search");
@@ -299,114 +334,62 @@ public class ExecutionEngine {
     }
 
     private void execute_Actions(String testData, String sName, String sEmail, String sPass, String sPassCf,
-                                 String sResult,String sTCID) {
+                                 String sResult, String sTCID) {
         try {
             switch (sActionKeyword) {
                 case "openBrowser":
-                    try {
-                        ExtentReportManager.info("Test case " + sTCID);
-                        ActionKeywords.openBrowser(testData);
-                    } catch (Exception e) {
-                        //ExtentTestManager.logMessage(Status.FAIL, description);
-                    }
+                    ExtentReportManager.info("Test case " + sTCID);
+                    ActionKeywords.openBrowser(testData);
                     break;
                 case "move":
-                    try {
-                        ActionKeywords.elementPerform(locatorValue);
-                        //ExtentTestManager.logMessage(Status.PASS, description);
-                    } catch (Exception e) {
-                        //ExtentTestManager.logMessage(Status.FAIL, description);
-                    }
+                    ActionKeywords.elementPerform(locatorValue);
                     break;
                 case "switchTo":
-                    try {
-                        ActionKeywords.switchTo(testData);
-                        //ExtentTestManager.logMessage(Status.PASS, description);
-                    } catch (Exception e) {
-                        //ExtentTestManager.logMessage(Status.FAIL, description);
-                    }
+                    ActionKeywords.switchTo(testData);
                     break;
                 case "clear":
-                    try {
-                        ActionKeywords.clear(locatorType, locatorValue);
-                        //ExtentTestManager.logMessage(Status.PASS, description);
-                    } catch (Exception e) {
-                        //ExtentTestManager.logMessage(Status.FAIL, description);
-                    }
+                    ActionKeywords.clear(locatorType, locatorValue);
                     break;
                 case "navigate":
-                    try {
-                        ActionKeywords.navigate(testData);
-                        //ExtentTestManager.logMessage(Status.PASS, description);
-                    } catch (Exception e) {
-                        //ExtentTestManager.logMessage(Status.FAIL, description);
-                    }
+                    ActionKeywords.navigate(testData);
                     break;
                 case "setText":
-                    try {
-                        if (testData.equalsIgnoreCase("varEmail"))
-                            ActionKeywords.setText(locatorType, locatorValue, sEmail);
-                        else {
-                            if (testData.equalsIgnoreCase("varName")) {
-                                ActionKeywords.setText(locatorType, locatorValue, sName);
+                    if (testData.equalsIgnoreCase("varEmail"))
+                        ActionKeywords.setText(locatorType, locatorValue, sEmail);
+                    else {
+                        if (testData.equalsIgnoreCase("varName")) {
+                            ActionKeywords.setText(locatorType, locatorValue, sName);
+                        } else {
+                            if (testData.equalsIgnoreCase("varPassword")) {
+                                ActionKeywords.setText(locatorType, locatorValue, sPass);
                             } else {
-                                if (testData.equalsIgnoreCase("varPassword")) {
-                                    ActionKeywords.setText(locatorType, locatorValue, sPass);
+                                if (testData.equalsIgnoreCase("varPasswordCf")) {
+                                    ActionKeywords.setText(locatorType, locatorValue, sPassCf);
                                 } else {
-                                    if (testData.equalsIgnoreCase("varPasswordCf")) {
-                                        ActionKeywords.setText(locatorType, locatorValue, sPassCf);
-                                    } else {
-                                        ActionKeywords.setText(locatorType, locatorValue, testData);
-                                    }
+                                    ActionKeywords.setText(locatorType, locatorValue, testData);
                                 }
                             }
                         }
-
-                        //ExtentTestManager.logMessage(Status.PASS, description);
-                    } catch (NoSuchElementException e) {
-                        //ExtentTestManager.logMessage(Status.FAIL, description);
                     }
-
                     break;
                 case "uploadImage":
-                    try {
-                        ActionKeywords.uploadImage(locatorType, locatorValue, testData);
-                    } catch (Exception e) {
-                    }
+                    ActionKeywords.uploadImage(locatorType, locatorValue, testData);
                     break;
                 case "clickButton":
-                    try {
-                        ActionKeywords.clickButton(locatorType, locatorValue);
-                    } catch (NoSuchElementException e) {
-                        //ExtentTestManager.logMessage(Status.FAIL, description);
-                    }
-
+                    ActionKeywords.clickButton(locatorType, locatorValue);
                     break;
                 case "doubleClick":
-                    try {
-                        ActionKeywords.doubleClick(locatorType, locatorValue);
-                        //ExtentTestManager.logMessage(Status.PASS, description);
-                    } catch (NoSuchElementException e) {
-                        //ExtentTestManager.logMessage(Status.FAIL, description);
-                    }
-
+                    ActionKeywords.doubleClick(locatorType, locatorValue);
                     break;
                 case "clickElement":
-                    try {
-                        ActionKeywords.clickElement(locatorType, locatorValue);
-                        //ExtentTestManager.logMessage(Status.PASS, description);
-                    } catch (NoSuchElementException e) {
-                        //ExtentTestManager.logMessage(Status.FAIL, description);
-                    }
+                    ActionKeywords.clickElement(locatorType, locatorValue);
                     break;
                 case "verifyResults":
                     if (ActionKeywords.verifyResults(sResult)) {
                         LogUtils.info("Same result ---> Pass");
                         onPass();
-                        //ExtentTestManager.logMessage(Status.PASS, description);
                     } else {
                         LogUtils.error("Different result ---> Fail");
-
                         onFailed();
                         break;
                     }
@@ -423,69 +406,40 @@ public class ExecutionEngine {
                 case "verifyTitle":
                     if (ActionKeywords.verifyTitle(testData)) {
                         LogUtils.info("Same result ---> Pass");
-
                         onPass();
                     } else {
                         LogUtils.error("Different result ---> Fail");
-
                         onFailed();
                     }
                     break;
-                case "verifyUrl":
-                    if (ActionKeywords.getUrl(testData)) {
+                case "verifyURL":
+                    if (ActionKeywords.verifyURL(testData)) {
                         LogUtils.info("Same result ---> Pass");
-
                         onPass();
-                        //ExtentTestManager.logMessage(Status.PASS, description);
                     } else {
                         LogUtils.error("Different result ---> Fail");
-
                         onFailed();
-                        //ExtentTestManager.logMessage(Status.FAIL, description);
                     }
                     break;
                 case "displayed":
                     try {
                         ActionKeywords.displayed(locatorType, locatorValue);
-
                         onPass();
                     } catch (Exception e) {
-
                         onFailed();
-                        //ExtentTestManager.logMessage(Status.FAIL, description);
                     }
                     break;
                 case "selectOptionByValue":
-                    try {
-                        ActionKeywords.selectOptionByValue(locatorType, locatorValue, testData);
-                        //ExtentTestManager.logMessage(Status.PASS, description);
-                    } catch (NoSuchElementException e) {
-                        //ExtentTestManager.logMessage(Status.FAIL, description);
-                    }
+                    ActionKeywords.selectOptionByValue(locatorType, locatorValue, testData);
                     break;
                 case "selectOptionByText":
-                    try {
-                        ActionKeywords.selectOptionByText(locatorType, locatorValue, testData);
-                        //ExtentTestManager.logMessage(Status.PASS, description);
-                    } catch (NoSuchElementException e) {
-                        //ExtentTestManager.logMessage(Status.FAIL, description);
-                    }
+                    ActionKeywords.selectOptionByText(locatorType, locatorValue, testData);
                     break;
                 case "scrollDown":
-                    try {
-                        ActionKeywords.clickElementWithJs(locatorType, locatorValue);
-                        //ExtentTestManager.logMessage(Status.PASS, description);
-                    } catch (NoSuchElementException e) {
-                        //ExtentTestManager.logMessage(Status.FAIL, description);
-                    }
+                    ActionKeywords.scrollAndClick(locatorType, locatorValue);
                     break;
                 case "closeBrowser":
-                    try {
-                        ActionKeywords.closeBrowser();
-                        //ExtentTestManager.logMessage(Status.PASS, description);
-                    } catch (Exception e) {
-                        //ExtentTestManager.logMessage(Status.FAIL, description);
-                    }
+                    ActionKeywords.closeBrowser();
                     break;
                 default:
                     LogUtils.info("[>>ERROR<<]: |Keyword Not Found " + sActionKeyword);
@@ -521,11 +475,9 @@ public class ExecutionEngine {
     private void considerTestCase() {
         float rs = casePass / (caseSkip + caseFail + casePass);
         if (rs < STANDARD_PERCENT)
-//            ExtentReportManager.fail("Test case Fail");
-        casePass = 0;
-
-        caseFail = 0;
-
-        caseSkip = 0;
+            //ExtentReportManager.fail("Test case Fail");
+            casePass = 0;
+            caseFail = 0;
+            caseSkip = 0;
     }
 }

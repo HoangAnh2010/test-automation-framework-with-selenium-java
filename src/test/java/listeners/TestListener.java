@@ -107,7 +107,7 @@ public class TestListener implements ITestListener, ISuiteListener {
 
     @Override
     public void onTestSuccess(ITestResult iTestResult) {
-        LogUtils.info("Test case: " + getTestName(iTestResult) + " is passed.");
+//        LogUtils.info("Test case: " + getTestName(iTestResult) + " is passed.");
         count_passedTCs = count_passedTCs + 1;
 
         if (SCREENSHOT_PASSED_STEPS.equals(YES)) {
@@ -131,7 +131,7 @@ public class TestListener implements ITestListener, ISuiteListener {
         LogUtils.error("FAILED !! Screenshot for test case: " + getTestName(iTestResult));
         LogUtils.error(iTestResult.getThrowable());
 
-        AllureManager.takeScreenshotToAttachOnAllureReport();
+//        AllureManager.takeScreenshotToAttachOnAllureReport(ActionKeywords.screenShot(screenshotName));?
         AllureManager.saveTextLog(iTestResult.getThrowable().toString());
 
         //Extent report screenshot file and log

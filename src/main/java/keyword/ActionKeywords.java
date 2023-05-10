@@ -4,6 +4,7 @@ import com.aventstack.extentreports.Status;
 import constants.FrwConstants;
 import helpers.Helpers;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.Allure;
 import io.qameta.allure.Step;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,6 +20,7 @@ import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 import report.AllureManager;
 import report.ExtentReportManager;
+import utils.DateUtils;
 import utils.LogUtils;
 
 import java.io.File;
@@ -159,9 +161,9 @@ public class ActionKeywords {
 
     @Step("Enter text")
     public void setText(WebElement element, String value) {
-        LogUtils.info("Enter text: "+value);
-        ExtentReportManager.pass("Enter text: "+value);
-        AllureManager.saveTextLog("Enter text: "+value);
+        LogUtils.info("Enter text: " + value);
+        ExtentReportManager.pass("Enter text: " + value);
+        AllureManager.saveTextLog("Enter text: " + value);
         wait.until(ExpectedConditions.elementToBeClickable(element));
         element.clear();
         element.sendKeys(value);
@@ -332,7 +334,8 @@ public class ActionKeywords {
             res = false;
             LogUtils.info("Page loaded(" + res + "): " + pageLoadedText);
             ExtentReportManager.info("Page loaded(" + res + "): " + pageLoadedText);
-            AllureManager.saveTextLog("Page loaded(" + res + "): " + pageLoadedText);}
+            AllureManager.saveTextLog("Page loaded(" + res + "): " + pageLoadedText);
+        }
         return res;
     }
 
@@ -363,14 +366,14 @@ public class ActionKeywords {
     }
 
     @Step("Verify URL")
-    public static boolean verifyURL (String expected) throws InterruptedException {
+    public static boolean verifyURL(String expected) throws InterruptedException {
         LogUtils.info("Verify URL");
         ExtentReportManager.info("Verify URL");
         waitForPageLoaded();
         String actual = driver.getCurrentUrl();
         LogUtils.info("Expected URL: " + expected);
         LogUtils.info("Actual URL: " + actual);
-        AllureManager.saveTextLog("actual: "+actual);
+        AllureManager.saveTextLog("actual: " + actual);
         if (expected.equals(actual)) {
             statusVerify(true);
             return true;
@@ -482,7 +485,7 @@ public class ActionKeywords {
         actual = element.getText();
         LogUtils.info("Expected result: " + expected);
         LogUtils.info("Actual result: " + actual);
-        AllureManager.saveTextLog("actual: "+actual);
+        AllureManager.saveTextLog("actual: " + actual);
         if (actual.equals(expected)) {
             statusVerify(true);
             return true;
@@ -549,7 +552,7 @@ public class ActionKeywords {
         String actual = element.getText();
         LogUtils.info("Expected result: " + expected);
         LogUtils.info("Actual result: " + actual);
-        AllureManager.saveTextLog("actual: "+actual);
+        AllureManager.saveTextLog("actual: " + actual);
         if (actual.contains(expected)) {
             statusVerify(true);
             return true;
@@ -567,7 +570,7 @@ public class ActionKeywords {
         waitForPageLoaded();
         LogUtils.info("Expected result: " + expected);
         LogUtils.info("Actual result: " + actual);
-        AllureManager.saveTextLog("actual: "+actual);
+        AllureManager.saveTextLog("actual: " + actual);
         if (actual.contains(expected)) {
             statusVerify(true);
             return true;
@@ -577,7 +580,8 @@ public class ActionKeywords {
         }
     }
 
-    @Step("Verify the result")
+
+    @Step(value = "Verify the result")
     public static boolean verifyResults(String expected) throws InterruptedException {
         LogUtils.info("Verify the result");
         ExtentReportManager.info("Verify the result");
@@ -592,7 +596,7 @@ public class ActionKeywords {
                 waitForPageLoaded();
                 LogUtils.info("Expected result: " + expected);
                 LogUtils.info("Actual result: " + actual);
-                AllureManager.saveTextLog("actual: "+actual);
+                AllureManager.saveTextLog("actual: " + actual);
                 if (expected.equals(actual)) {
                     stt = true;
                 }
@@ -602,7 +606,7 @@ public class ActionKeywords {
                     waitForPageLoaded();
                     LogUtils.info("Expected result: " + expected);
                     LogUtils.info("Actual result: " + actual);
-                    AllureManager.saveTextLog("actual: "+actual);
+                    AllureManager.saveTextLog("actual: " + actual);
                     if (expected.equals(actual)) {
                         stt = true;
                     }
@@ -611,7 +615,7 @@ public class ActionKeywords {
                     waitForPageLoaded();
                     LogUtils.info("Expected result: " + expected);
                     LogUtils.info("Actual result: " + actual);
-                    AllureManager.saveTextLog("actual: "+actual);
+                    AllureManager.saveTextLog("actual: " + actual);
                     if (expected.equals(actual)) {
                         stt = true;
                     }
@@ -628,7 +632,7 @@ public class ActionKeywords {
                 waitForPageLoaded();
                 LogUtils.info("Expected result: " + expected);
                 LogUtils.info("Actual result: " + actual);
-                AllureManager.saveTextLog("actual: "+actual);
+                AllureManager.saveTextLog("actual: " + actual);
                 if (expected.equals(actual)) {
                     stt = true;
                 }
@@ -638,7 +642,7 @@ public class ActionKeywords {
                     waitForPageLoaded();
                     LogUtils.info("Expected result: " + expected);
                     LogUtils.info("Actual result: " + actual);
-                    AllureManager.saveTextLog("actual: "+actual);
+                    AllureManager.saveTextLog("actual: " + actual);
                     if (expected.equals(actual)) {
                         stt = true;
                     }
@@ -648,7 +652,7 @@ public class ActionKeywords {
                         waitForPageLoaded();
                         LogUtils.info("Expected result: " + expected);
                         LogUtils.info("Actual result: " + actual);
-                        AllureManager.saveTextLog("actual: "+actual);
+                        AllureManager.saveTextLog("actual: " + actual);
                         if (expected.equals(actual)) {
                             stt = true;
                         }
@@ -657,7 +661,7 @@ public class ActionKeywords {
                         waitForPageLoaded();
                         LogUtils.info("Expected result: " + expected);
                         LogUtils.info("Actual result: " + actual);
-                        AllureManager.saveTextLog("actual: "+actual);
+                        AllureManager.saveTextLog("actual: " + actual);
                         if (expected.equals(actual)) {
                             stt = true;
                         }
@@ -671,7 +675,7 @@ public class ActionKeywords {
             waitForPageLoaded();
             LogUtils.info("Expected result: " + expected);
             LogUtils.info("Actual result: " + actual);
-            AllureManager.saveTextLog("actual: "+actual);
+            AllureManager.saveTextLog("actual: " + actual);
             if (expected.equals(actual)) {
                 stt = true;
             }
@@ -680,14 +684,19 @@ public class ActionKeywords {
         return stt;
     }
 
-    private static void statusVerify (Boolean stt){
+    private static void statusVerify(Boolean stt) {
+
         if (stt) {
             ExtentReportManager.pass("Actual result is the same as expected result");
             AllureManager.saveTextLog("Actual result is the same as expected result");
         } else {
             ExtentReportManager.fail("Actual result is different from expected result");
             AllureManager.saveTextLog("Actual result is different from expected result");
+            AllureManager.takeScreenshotStep(ActionKeywords.screenShot(DateUtils.getCurrentDate()));
+            Allure.getLifecycle().updateStep(stepResult -> stepResult.setStatus(io.qameta.allure.model.Status.FAILED));
+            Allure.getLifecycle().stopStep();
         }
+
     }
 
     //upload image
@@ -708,7 +717,7 @@ public class ActionKeywords {
         }
     }
 
-//    @Step("Take a screenshot")
+    //    @Step("Take a screenshot")
     public static String screenShot(String CaseName) {
         try {
             // Tạo tham chiếu của TakesScreenshot với driver hiện tại
@@ -734,9 +743,26 @@ public class ActionKeywords {
         return "";
     }
 
+    public void handleChatboxMessenger() {
+        driver.navigate().to("https://anhtester.com/contact");
+        System.out.println("iframe total: " + driver.findElements(By.tagName("iframe")).size());
+        //----Switch to content of Messenger--------
+        driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@data-testid='dialog_iframe']")));
+        //Get title
+        System.out.println(driver.findElement(By.xpath("//strong")).getText());
+        //Get description
+        System.out.println(driver.findElement(By.xpath("(((//strong/parent::div)/parent::div)/following-sibling::div)[2]")).getText());
+
+        //----Switch to icon of Messenger---------
+        //1. Switch to Parent WindowHandle
+        driver.switchTo().parentFrame();
+        //2. Switch to iframe icon of Messenger
+        driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@data-testid='bubble_iframe']")));
+        driver.findElement(By.tagName("svg")).click(); //Nhấn icon để ẩn messenger chat đi
+    }
+
     public static void addScreenshotToReport(String screenshotName) {
-//        ActionKeywords.screenShot(screenshotName);
-        ExtentReportManager.addScreenShot(ActionKeywords.screenShot(screenshotName));
+            ExtentReportManager.addScreenShot(ActionKeywords.screenShot(screenshotName));
     }
 
     public static void stopSoftAssertAll() {

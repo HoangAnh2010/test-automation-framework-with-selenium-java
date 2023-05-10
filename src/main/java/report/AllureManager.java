@@ -3,12 +3,11 @@ package report;
 import com.github.automatedowl.tools.AllureEnvironmentWriter;
 import com.google.common.collect.ImmutableMap;
 import constants.FrwConstants;
-import driver.DriverManager;
 import enums.Browser;
 import io.qameta.allure.Attachment;
-import org.openqa.selenium.TakesScreenshot;
+import org.apache.commons.io.FileUtils;
 
-import static org.openqa.selenium.OutputType.BYTES;
+import java.io.File;
 
 public class AllureManager {
 
@@ -32,10 +31,10 @@ public class AllureManager {
 
     }
 
-    @Attachment(value = "Failed test screenshot", type = "image/png")
-    public static byte[] takeScreenshotToAttachOnAllureReport() {
+//    @Attachment(value = "Failed test screenshot", type = "image/png")
+    public static byte[] takeScreenshotToAttachOnAllureReport(String s) {
         try {
-            return ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(BYTES);
+            return FileUtils.readFileToByteArray(new File(s));
         } catch (Exception ex) {
             ex.getMessage();
         }
@@ -43,9 +42,9 @@ public class AllureManager {
     }
 
     @Attachment(value = "Take step screenshot", type = "image/png")
-    public static byte[] takeScreenshotStep() {
+    public static byte[] takeScreenshotStep(String s) {
         try {
-            return ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(BYTES);
+            return FileUtils.readFileToByteArray(new File(s));
         } catch (Exception ex) {
             ex.getMessage();
         }

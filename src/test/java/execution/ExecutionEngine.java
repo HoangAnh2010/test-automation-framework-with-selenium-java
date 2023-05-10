@@ -165,17 +165,13 @@ public class ExecutionEngine {
         Sheet data = ExcelUtils.getSheet("DataOfSignIn");
         int rowCountTest = data.getLastRowNum();
         List<Locator> locators = new ArrayList<>();
-        while (true) {
-            if (row > rowCountTest)
-                break;
-            else {
-                Locator lct = new Locator();
-                lct.setSignInTcId(ExcelUtils.getCellData("DataOfSignIn", row, 1) + "");
-                lct.setSignInEmail(ExcelUtils.getCellData("DataOfSignIn", row, 3) + "");
-                lct.setSignInPw(ExcelUtils.getCellData("DataOfSignIn", row, 4) + "");
-                lct.setSignInResult(ExcelUtils.getCellData("DataOfSignIn", row, 5) + "");
-                locators.add(lct);
-            }
+        while (row <= rowCountTest) {
+            Locator lct = new Locator();
+            lct.setSignInTcId(ExcelUtils.getCellData("DataOfSignIn", row, 1) + "");
+            lct.setSignInEmail(ExcelUtils.getCellData("DataOfSignIn", row, 3) + "");
+            lct.setSignInPw(ExcelUtils.getCellData("DataOfSignIn", row, 4) + "");
+            lct.setSignInResult(ExcelUtils.getCellData("DataOfSignIn", row, 5) + "");
+            locators.add(lct);
             row = row + 1;
         }
         ScreenRecorderUtils.startRecord("SignIn");
@@ -210,30 +206,27 @@ public class ExecutionEngine {
         ExcelUtils.setExcelFile(excelPath, "DataOfSignUp");
         Sheet data = ExcelUtils.getSheet("DataOfSignUp");
         int rowCountTest = data.getLastRowNum();
-        while (true) {
-            if (row > rowCountTest)// tmp.trim().equals("")
-                break;
-            else {
-                tmp = ExcelUtils.getCellData("DataOfSignUp", row, 1) + "";
-                arrTCIDSignUp.add(tmp);
+        while (row <= rowCountTest) {
+            tmp = ExcelUtils.getCellData("DataOfSignUp", row, 1) + "";
+            arrTCIDSignUp.add(tmp);
 
-                tmp = ExcelUtils.getCellData("DataOfSignUp", row, 3) + "";
-                arrNameSignUp.add(tmp);
+            tmp = ExcelUtils.getCellData("DataOfSignUp", row, 3) + "";
+            arrNameSignUp.add(tmp);
 
-                tmp = ExcelUtils.getCellData("DataOfSignUp", row, 4) + "";
-                arrEmailSignUp.add(tmp);
+            tmp = ExcelUtils.getCellData("DataOfSignUp", row, 4) + "";
+            arrEmailSignUp.add(tmp);
 
-                tmp = ExcelUtils.getCellData("DataOfSignUp", row, 5) + "";
-                arrPasswordSignUp.add(tmp);
+            tmp = ExcelUtils.getCellData("DataOfSignUp", row, 5) + "";
+            arrPasswordSignUp.add(tmp);
 
-                tmp = ExcelUtils.getCellData("DataOfSignUp", row, 6) + "";
-                arrPasswordCfSignUp.add(tmp);
+            tmp = ExcelUtils.getCellData("DataOfSignUp", row, 6) + "";
+            arrPasswordCfSignUp.add(tmp);
 
-                tmp = ExcelUtils.getCellData("DataOfSignUp", row, 7) + "";
-                arrResultSignUp.add(tmp);
+            tmp = ExcelUtils.getCellData("DataOfSignUp", row, 7) + "";
+            arrResultSignUp.add(tmp);
 
-                row = row + 1;
-            }
+            row = row + 1;
+
         }
         ScreenRecorderUtils.startRecord("SignUp");
         // Bỏ hàng tiêu đề
@@ -391,8 +384,8 @@ public class ExecutionEngine {
                     } else {
                         LogUtils.error("Different result ---> Fail");
                         onFailed();
-                        Allure.getLifecycle().updateTestCase(tc->tc.setStatus(io.qameta.allure.model.Status.FAILED));
-                        Allure.getLifecycle().updateTestCase(tc-> System.out.println(tc.getUuid()));
+                        Allure.getLifecycle().updateTestCase(tc -> tc.setStatus(io.qameta.allure.model.Status.FAILED));
+                        Allure.getLifecycle().updateTestCase(tc -> System.out.println(tc.getUuid()));
                         break;
                     }
                     break;
@@ -479,7 +472,7 @@ public class ExecutionEngine {
         if (rs < STANDARD_PERCENT)
             //ExtentReportManager.fail("Test case Fail");
             casePass = 0;
-            caseFail = 0;
-            caseSkip = 0;
+        caseFail = 0;
+        caseSkip = 0;
     }
 }

@@ -391,8 +391,8 @@ public class ExecutionEngine {
                     } else {
                         LogUtils.error("Different result ---> Fail");
                         onFailed();
-                        Allure.getLifecycle().updateTestCase(tc->tc.setStatus(io.qameta.allure.model.Status.FAILED));
-                        Allure.getLifecycle().updateTestCase(tc-> System.out.println(tc.getUuid()));
+                        Allure.getLifecycle().updateTestCase(tc -> tc.setStatus(io.qameta.allure.model.Status.FAILED));
+                        Allure.getLifecycle().updateTestCase(tc -> System.out.println(tc.getUuid()));
                         break;
                     }
                     break;
@@ -477,9 +477,9 @@ public class ExecutionEngine {
     private void considerTestCase() {
         float rs = casePass / (caseSkip + caseFail + casePass);
         if (rs < STANDARD_PERCENT)
-            //ExtentReportManager.fail("Test case Fail");
-            casePass = 0;
-            caseFail = 0;
-            caseSkip = 0;
+            ExtentReportManager.fail("Test case Fail");
+        casePass = 0;
+        caseFail = 0;
+        caseSkip = 0;
     }
 }

@@ -17,6 +17,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.asserts.SoftAssert;
 import report.AllureManager;
 import report.ExtentReportManager;
@@ -684,6 +685,7 @@ public class ActionKeywords {
         return stt;
     }
 
+
     private static void statusVerify(Boolean stt) {
 
         if (stt) {
@@ -695,6 +697,7 @@ public class ActionKeywords {
             AllureManager.takeScreenshotStep(ActionKeywords.screenShot(DateUtils.getCurrentDate()));
             Allure.getLifecycle().updateStep(stepResult -> stepResult.setStatus(io.qameta.allure.model.Status.FAILED));
             Allure.getLifecycle().stopStep();
+            Assert.fail("Actual result is different from expected result");
         }
 
     }
@@ -762,7 +765,7 @@ public class ActionKeywords {
     }
 
     public static void addScreenshotToReport(String screenshotName) {
-            ExtentReportManager.addScreenShot(ActionKeywords.screenShot(screenshotName));
+        ExtentReportManager.addScreenShot(ActionKeywords.screenShot(screenshotName));
     }
 
     public static void stopSoftAssertAll() {

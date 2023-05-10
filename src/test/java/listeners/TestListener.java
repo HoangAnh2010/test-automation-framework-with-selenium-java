@@ -54,11 +54,10 @@ public class TestListener implements ITestListener, ISuiteListener {
         LogUtils.info("End Suite: " + iSuite.getName());
         ActionKeywords.stopSoftAssertAll();
         //End Suite and execute Extents Report
-//        getExtentReports().flush();
         ExtentReportManager.flushReports();
 
         //Send mail
-        EmailSendUtils.sendEmail(count_totalTCs, count_passedTCs, count_failedTCs, count_skippedTCs);
+//        EmailSendUtils.sendEmail(count_totalTCs, count_passedTCs, count_failedTCs, count_skippedTCs);
 
         //Write information in Allure Report
         AllureEnvironmentWriter.allureEnvironmentWriter(
@@ -101,13 +100,11 @@ public class TestListener implements ITestListener, ISuiteListener {
         ExtentReportManager.createTest(iTestResult.getName());
         ExtentReportManager.addAuthors(getAuthorType(iTestResult));
         ExtentReportManager.addCategories(getCategoryType(iTestResult));
-        //ExtentReportManager.addDevices();
         ExtentReportManager.info(BrowserInfoUtils.getOSInfo());
     }
 
     @Override
     public void onTestSuccess(ITestResult iTestResult) {
-//        LogUtils.info("Test case: " + getTestName(iTestResult) + " is passed.");
         count_passedTCs = count_passedTCs + 1;
 
         if (SCREENSHOT_PASSED_STEPS.equals(YES)) {
@@ -115,28 +112,18 @@ public class TestListener implements ITestListener, ISuiteListener {
         }
 
         AllureManager.saveTextLog("Test case: " + getTestName(iTestResult) + " is passed.");
-        //ExtentReports log operation for passed tests.
-        //ExtentReportManager.logMessage(Status.PASS, "Test case: " + getTestName(iTestResult) + " is passed.");
     }
 
     @Override
     public void onTestFailure(ITestResult iTestResult) {
-        LogUtils.error("Test case: " + getTestName(iTestResult) + " is failed.");
         count_failedTCs = count_failedTCs + 1;
 
         if (SCREENSHOT_FAILED_STEPS.equals(YES)) {
             CapturesUtils.captureScreenshot(DriverManager.getDriver(), getTestName(iTestResult));
         }
         //Allure report screenshot file and log
-        LogUtils.error("FAILED !! Screenshot for test case: " + getTestName(iTestResult));
-        LogUtils.error(iTestResult.getThrowable());
-
-//        AllureManager.takeScreenshotToAttachOnAllureReport(ActionKeywords.screenShot(screenshotName));?
-        AllureManager.saveTextLog(iTestResult.getThrowable().toString());
-
-        //Extent report screenshot file and log
-//        ExtentReportManager.addScreenShot(Status.INFO, getTestName(iTestResult));
-        //ExtentReportManager.logMessage(Status.FAIL, iTestResult.getThrowable().toString());
+//        LogUtils.error("FAILED !! Screenshot for test case: " + getTestName(iTestResult));
+//        LogUtils.error(iTestResult.getThrowable());
     }
 
     @Override

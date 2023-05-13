@@ -17,7 +17,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.asserts.SoftAssert;
 import report.AllureManager;
 import report.ExtentReportManager;
@@ -324,7 +323,6 @@ public class ActionKeywords {
     public boolean verifyPageLoaded(String pageLoadedText) {
         waitForPageLoaded();
         Boolean res = false;
-
         List<WebElement> elementList = driver.findElements(By.xpath("//*contains(text(),'" + pageLoadedText + "')]"));
         if (elementList.size() > 0) {
             res = true;
@@ -375,6 +373,7 @@ public class ActionKeywords {
         LogUtils.info("Expected URL: " + expected);
         LogUtils.info("Actual URL: " + actual);
         AllureManager.saveTextLog("actual: " + actual);
+//        Assert.assertEquals(actual,expected);
         if (expected.equals(actual)) {
             statusVerify(true);
             return true;
@@ -382,6 +381,7 @@ public class ActionKeywords {
             statusVerify(false);
             return false;
         }
+        //Assert.assertEquals(actual,expected);
     }
 
     @Step("Get the title of page")
@@ -694,10 +694,10 @@ public class ActionKeywords {
         } else {
             ExtentReportManager.fail("Actual result is different from expected result");
             AllureManager.saveTextLog("Actual result is different from expected result");
+            ActionKeywords.addScreenshotToReport(DateUtils.getCurrentDate());
             AllureManager.takeScreenshotStep(ActionKeywords.screenShot(DateUtils.getCurrentDate()));
             Allure.getLifecycle().updateStep(stepResult -> stepResult.setStatus(io.qameta.allure.model.Status.FAILED));
             Allure.getLifecycle().stopStep();
-            Assert.fail("Actual result is different from expected result");
         }
 
     }

@@ -1,14 +1,13 @@
 package input;
 
-import java.io.Serializable;
-
-
 import com.google.gson.annotations.SerializedName;
 import com.opencsv.bean.CsvBindByPosition;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
+
+import java.io.Serializable;
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class DataProvider implements Serializable {
@@ -45,6 +44,17 @@ public class DataProvider implements Serializable {
     @XmlElement(name = "TestData")
     @SerializedName("TestData")
     private String testData;
+
+    public DataProvider(String scriptID, String scriptTitle, String stepID, String description, String keyword, String locatorType, String locatorValue, String testData) {
+        this.scriptID = scriptID;
+        this.scriptTitle = scriptTitle;
+        this.stepID = stepID;
+        this.description = description;
+        this.keyword = keyword;
+        this.locatorType = locatorType;
+        this.locatorValue = locatorValue;
+        this.testData = testData;
+    }
 
     public String getScriptID() {
         return scriptID;

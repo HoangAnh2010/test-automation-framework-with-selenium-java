@@ -1,28 +1,27 @@
 package listeners;
 
 import annotations.FrwAnnotation;
+import com.aventstack.extentreports.Status;
+import com.github.automatedowl.tools.AllureEnvironmentWriter;
+import com.google.common.collect.ImmutableMap;
 import constants.FrwConstants;
 import driver.DriverManager;
 import enums.AuthorType;
 import enums.Browser;
 import enums.CategoryType;
-import utils.BrowserInfoUtils;
-import utils.CapturesUtils;
 import helpers.PropertiesHelpers;
 import keyword.ActionKeywords;
+import org.testng.ISuite;
+import org.testng.ISuiteListener;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
 import report.AllureManager;
 import report.ExtentReportManager;
-import utils.EmailSendUtils;
-import utils.LogUtils;
-import com.aventstack.extentreports.Status;
-import com.github.automatedowl.tools.AllureEnvironmentWriter;
-import com.google.common.collect.ImmutableMap;
-import org.testng.*;
+import utils.*;
 
 import static constants.FrwConstants.*;
 
 public class TestListener implements ITestListener, ISuiteListener {
-
     static int count_totalTCs;
     static int count_passedTCs;
     static int count_skippedTCs;
@@ -55,9 +54,9 @@ public class TestListener implements ITestListener, ISuiteListener {
         ActionKeywords.stopSoftAssertAll();
         //End Suite and execute Extents Report
         ExtentReportManager.flushReports();
-
+        reportInConsole();
         //Send mail
-//        EmailSendUtils.sendEmail(count_totalTCs, count_passedTCs, count_failedTCs, count_skippedTCs);
+        EmailSendUtils.sendEmail(count_totalTCs, count_passedTCs, count_failedTCs, count_skippedTCs);
 
         //Write information in Allure Report
         AllureEnvironmentWriter.allureEnvironmentWriter(
@@ -117,10 +116,11 @@ public class TestListener implements ITestListener, ISuiteListener {
     @Override
     public void onTestFailure(ITestResult iTestResult) {
         count_failedTCs = count_failedTCs + 1;
+//        if (SCREENSHOT_FAILED_STEPS.equals(YES)) {
+//            CapturesUtils.captureScreenshot(DriverManager.getDriver(), getTestName(iTestResult));
+//        }
+//        ActionKeywords.addScreenshotToReport(DateUtils.getCurrentDate());
 
-        if (SCREENSHOT_FAILED_STEPS.equals(YES)) {
-            CapturesUtils.captureScreenshot(DriverManager.getDriver(), getTestName(iTestResult));
-        }
         //Allure report screenshot file and log
 //        LogUtils.error("FAILED !! Screenshot for test case: " + getTestName(iTestResult));
 //        LogUtils.error(iTestResult.getThrowable());
@@ -140,5 +140,15 @@ public class TestListener implements ITestListener, ISuiteListener {
     public void onTestFailedButWithinSuccessPercentage(ITestResult iTestResult) {
         LogUtils.error("Test failed but it is in defined success ratio: " + getTestName(iTestResult));
         ExtentReportManager.logMessage("Test failed but it is in defined success ratio: " + getTestName(iTestResult));
+    }
+    private void reportInConsole() {
+        java.util.Date date = new java.util.Date();
+        System.out.println("==========================================================");
+        System.out.println("-----------" + date + "--------------");
+        System.out.println("Total number of Testcases run: " + (count_totalTCs + count_failedTCs + count_skippedTCs));
+        System.out.println("Total number of passed Testcases: " + count_passedTCs);
+        System.out.println("Total number of failed Testcases: " + count_failedTCs);
+        System.out.println("Total number of skiped Testcases: " + count_skippedTCs);
+        System.out.println("==========================================================");
     }
 }

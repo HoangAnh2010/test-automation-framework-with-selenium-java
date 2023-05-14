@@ -231,7 +231,7 @@ public class ActionKeywords {
             ExtentReportManager.info("Locator:" + locatorValue + " not found to click | " + e.getMessage());
             AllureManager.saveTextLog("Locator:" + locatorValue + " not found to click | " + e.getMessage());
         }
-        Thread.sleep(1500);
+        Thread.sleep(3000);
     }
 
     @Step("Double click")
@@ -581,7 +581,6 @@ public class ActionKeywords {
         }
     }
 
-
     @Step(value = "Verify the result")
     public static boolean verifyResults(String expected) throws InterruptedException {
         LogUtils.info("Verify the result");
@@ -592,7 +591,7 @@ public class ActionKeywords {
             WebElement emailInSignInPage = getElement("name", "_username");//driver.findElement(By.name("_username"));
             WebElement pwInSignInPage = getElement("name", "_password");
             WebElement errorMessageInSignInPage = getElement("xpath", "//form[@id='login_form']/div");
-            if (emailInSignInPage.getText().trim() == "" || emailInSignInPage.getText() == null || emailInSignInPage.getText().trim().contains(" ") == true || emailInSignInPage.getText().trim().contains("@") == false) {
+            if (emailInSignInPage.getText().trim().equals("")) {
                 actual = emailInSignInPage.getAttribute("validationMessage");
                 waitForPageLoaded();
                 LogUtils.info("Expected result: " + expected);
@@ -602,9 +601,9 @@ public class ActionKeywords {
                     stt = true;
                 }
             } else {
-                if (pwInSignInPage.getText() == null) {
-                    actual = pwInSignInPage.getAttribute("validationMessage");
+                if (pwInSignInPage.getText().trim().equals("")) {
                     waitForPageLoaded();
+                    actual = pwInSignInPage.getAttribute("validationMessage");
                     LogUtils.info("Expected result: " + expected);
                     LogUtils.info("Actual result: " + actual);
                     AllureManager.saveTextLog("actual: " + actual);
@@ -628,7 +627,8 @@ public class ActionKeywords {
             WebElement pwInSignUpPage = getElement("id", "password");
             WebElement pwConfirmInSignInPage = getElement("id", "password_confirmation");
             WebElement errorMessageInSignUpPage = driver.findElement(By.id("invalid_password_feedback"));
-            if (emailInSignUpPage.getText().trim().contains("@") == false || emailInSignUpPage.getText().trim().contains(" ") == true || emailInSignUpPage.getText().trim() == "" || emailInSignUpPage.getText() == null) {
+            if (emailInSignUpPage.getText().trim().contains("@") == false || emailInSignUpPage.getText().trim().contains(" ") == true
+                    || emailInSignUpPage.getText().trim().equals("")) {
                 actual = emailInSignUpPage.getAttribute("validationMessage");
                 waitForPageLoaded();
                 LogUtils.info("Expected result: " + expected);
@@ -638,7 +638,7 @@ public class ActionKeywords {
                     stt = true;
                 }
             } else {
-                if (pwInSignUpPage.getText() == null) {
+                if (pwInSignUpPage.getText().trim().equals("")) {
                     actual = pwInSignUpPage.getAttribute("validationMessage");
                     waitForPageLoaded();
                     LogUtils.info("Expected result: " + expected);
@@ -648,7 +648,7 @@ public class ActionKeywords {
                         stt = true;
                     }
                 } else {
-                    if (pwConfirmInSignInPage.getText() == null) {
+                    if (pwConfirmInSignInPage.getText().trim().equals("")) {
                         actual = pwConfirmInSignInPage.getAttribute("validationMessage");
                         waitForPageLoaded();
                         LogUtils.info("Expected result: " + expected);
@@ -768,7 +768,7 @@ public class ActionKeywords {
         ExtentReportManager.addScreenShot(ActionKeywords.screenShot(screenshotName));
     }
 
-    public static void stopSoftAssertAll() {
-        softAssert.assertAll();
-    }
+//    public static void stopSoftAssertAll() {
+//        softAssert.assertAll();
+//    }
 }

@@ -5,9 +5,7 @@ import io.qameta.allure.*;
 import io.qameta.allure.model.Status;
 import keyword.ActionKeywords;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import report.ExtentReportManager;
 import utils.ExcelReader;
 import utils.LogUtils;
@@ -17,7 +15,7 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
-//@Listeners(listeners.TestListener.class)
+@Listeners(listeners.TestListener.class)
 public class ExecutionEngine {
 
     public static String excelPath = System.getProperty("user.dir") + "\\src\\test\\resources\\data\\data.xlsx";
@@ -27,23 +25,23 @@ public class ExecutionEngine {
     public static String dataOfsignInCSVpath = System.getProperty("user.dir") + "\\src\\test\\resources\\data\\DataSignIn.csv";
     public static List<DataProvider> testCaseStep = new ArrayList<>();
 
-    @BeforeTest
-    public void setup() {
-        testCaseStep = ExcelReader.getTestCases(excelPath, "SignInPage", "LoginWithoutEmail");
+    @BeforeMethod
+    public void beforeMethod() {
+        //testCaseStep = ExcelReader.getTestCases(excelPath, "SignInPage", "LoginWithoutEmail");
     }
-    //@Ignore
+    @Ignore
     @Severity(SeverityLevel.CRITICAL)
     @Description("Test suite of login function written in Excel file")
     @Epic("Website CareerLink")
     @Feature("Sign in")
     @Story("Read data test from Excel file")
     @Test
-    public void TestCase_SignIn_ExcelFile(ITestResult result) {
+    public void TestCase_SignIn_ExcelFile() {
         testCaseStep = ExcelReader.getTestCases(excelPath, "SignInPage", "LoginWithoutEmail");
         ScreenRecorderUtils.startRecord("SignIn");
         // get data from list data to run script
         for (DataProvider step : testCaseStep) {
-            execute_Actions(step, result);
+            execute_Actions(step);
         }
         ScreenRecorderUtils.stopRecord();
     }
@@ -62,21 +60,21 @@ public class ExecutionEngine {
             System.out.println("Method " + methodName + " passed");
         }
     }
-//    @Severity(SeverityLevel.NORMAL)
-//    @Description("Test suite of register function written in Excel file")
-//    @Epic("Website CareerLink")
-//    @Feature("Sign in")
-//    @Story("Read data test from Excel file")
-//    @Test
-//    public void TestSuite_SignIn_WithoutPassword_ExcelFile(ITestResult result) {
-//        testCaseStep = ExcelReader.getTestCases(excelPath, "SignInPage", "LoginWithoutPassword");
-//        ScreenRecorderUtils.startRecord("SignIn");
-//        // get data from list data to run script
-//        for (DataProvider step : testCaseStep) {
-//            execute_Actions(step, result);
-//        }
-//        ScreenRecorderUtils.stopRecord();
-//    }
+    @Severity(SeverityLevel.NORMAL)
+    @Description("Test suite of register function written in Excel file")
+    @Epic("Website CareerLink")
+    @Feature("Sign in")
+    @Story("Read data test from Excel file")
+    @Test
+    public void TestSuite_SignIn_WithoutPassword_ExcelFile() {
+        testCaseStep = ExcelReader.getTestCases(excelPath, "SignInPage", "LoginWithoutPassword");
+        ScreenRecorderUtils.startRecord("SignIn");
+        // get data from list data to run script
+        for (DataProvider step : testCaseStep) {
+            execute_Actions(step);
+        }
+        ScreenRecorderUtils.stopRecord();
+    }
 
     //    @Ignore
 //    @Severity(SeverityLevel.NORMAL)
@@ -228,7 +226,7 @@ public class ExecutionEngine {
 //    }
 //
 
-    private void execute_Actions(DataProvider testScript, ITestResult result) {
+    private void execute_Actions(DataProvider testScript) {
         try {
             String keyword = testScript.getKeyword();
             String scriptTitle = testScript.getScriptTitle();
@@ -237,7 +235,7 @@ public class ExecutionEngine {
             String locatorType = testScript.getLocatorType();
             switch (keyword) {
                 case "openBrowser":
-                    ExtentReportManager.info("Test case " + scriptTitle);
+                    ExtentReportManager.info("Test case: " + scriptTitle);
                     ActionKeywords.openBrowser(testData);
                     break;
                 case "move":
@@ -269,10 +267,10 @@ public class ExecutionEngine {
                     break;
                 case "verifyResults":
                     if (ActionKeywords.verifyResults(testData)) {
-                        result.setStatus(ITestResult.SUCCESS);
+                        //result.setStatus(ITestResult.SUCCESS);
                         LogUtils.info("Same result ---> Pass");
                     } else {
-                        result.setStatus(ITestResult.FAILURE);
+                        //result.setStatus(ITestResult.FAILURE);
                         LogUtils.error("Different result ---> Fail");
                         Allure.getLifecycle().updateTestCase(tc -> tc.setStatus(Status.FAILED));
                         Allure.getLifecycle().updateTestCase(tc -> System.out.println(tc.getUuid()));

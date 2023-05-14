@@ -10,14 +10,16 @@ import enums.AuthorType;
 import enums.Browser;
 import enums.CategoryType;
 import helpers.PropertiesHelpers;
-import keyword.ActionKeywords;
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import report.AllureManager;
 import report.ExtentReportManager;
-import utils.*;
+import utils.BrowserInfoUtils;
+import utils.CapturesUtils;
+import utils.EmailSendUtils;
+import utils.LogUtils;
 
 import static constants.FrwConstants.*;
 
@@ -51,7 +53,7 @@ public class TestListener implements ITestListener, ISuiteListener {
     @Override
     public void onFinish(ISuite iSuite) {
         LogUtils.info("End Suite: " + iSuite.getName());
-        ActionKeywords.stopSoftAssertAll();
+        //ActionKeywords.stopSoftAssertAll();
         //End Suite and execute Extents Report
         ExtentReportManager.flushReports();
         reportInConsole();

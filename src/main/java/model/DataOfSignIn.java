@@ -36,6 +36,15 @@ public class DataOfSignIn implements Serializable {
     @SerializedName("Note")
     private String note;
 
+    public DataOfSignIn(String tcId, String tCDescription, String email, String password, String result, String note) {
+        this.tcId = tcId;
+        this.tCDescription = tCDescription;
+        this.email = email;
+        this.password = password;
+        this.result = result;
+        this.note = note;
+    }
+
     public String getTcId() {
         return tcId;
     }

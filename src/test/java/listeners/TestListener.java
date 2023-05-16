@@ -11,17 +11,14 @@ import enums.Browser;
 import enums.CategoryType;
 import helpers.PropertiesHelpers;
 import keyword.ActionKeywords;
-import org.testng.ISuite;
-import org.testng.ISuiteListener;
-import org.testng.ITestListener;
-import org.testng.ITestResult;
+import org.testng.*;
 import report.AllureManager;
 import report.ExtentReportManager;
 import utils.*;
 
 import static constants.FrwConstants.*;
 
-public class TestListener implements ITestListener, ISuiteListener {
+public class TestListener  implements ITestListener   {
     static int count_totalTCs;
     static int count_passedTCs;
     static int count_skippedTCs;
@@ -39,7 +36,7 @@ public class TestListener implements ITestListener, ISuiteListener {
     }
 
     @Override
-    public void onStart(ISuite iSuite) {
+    public void onStart(ITestContext iSuite) {
         System.out.println("========= INSTALLING CONFIGURATION DATA =========");
         PropertiesHelpers.loadAllFiles();
         AllureManager.setAllureEnvironmentInformation();
@@ -49,7 +46,7 @@ public class TestListener implements ITestListener, ISuiteListener {
     }
 
     @Override
-    public void onFinish(ISuite iSuite) {
+    public void onFinish(ITestContext iSuite) {
         LogUtils.info("End Suite: " + iSuite.getName());
         ActionKeywords.stopSoftAssertAll();
         //End Suite and execute Extents Report
@@ -105,11 +102,6 @@ public class TestListener implements ITestListener, ISuiteListener {
     @Override
     public void onTestSuccess(ITestResult iTestResult) {
         count_passedTCs = count_passedTCs + 1;
-
-        if (SCREENSHOT_PASSED_STEPS.equals(YES)) {
-            CapturesUtils.captureScreenshot(DriverManager.getDriver(), getTestName(iTestResult));
-        }
-
         AllureManager.saveTextLog("Test case: " + getTestName(iTestResult) + " is passed.");
         ExtentReportManager.logMessage(Status.PASS, "Test case: " + getTestName(iTestResult) + " is passed.");
     }
@@ -118,26 +110,12 @@ public class TestListener implements ITestListener, ISuiteListener {
     public void onTestFailure(ITestResult iTestResult) {
         LogUtils.error("Test case: " + getTestDescription(iTestResult) + " is failed.");
         count_failedTCs = count_failedTCs + 1;
-        if (SCREENSHOT_FAILED_STEPS.equals(YES)) {
-            CapturesUtils.captureScreenshot(DriverManager.getDriver(), getTestName(iTestResult));
-        }
-        ActionKeywords.addScreenshotToReport(DateUtils.getCurrentDate());
-
-        //Allure report screenshot file and log
-        LogUtils.error("FAILED !! Screenshot for test case: " + getTestName(iTestResult));
-        LogUtils.error(iTestResult.getThrowable());
-        //Extent report screenshot file and log
-        ExtentReportManager.logMessage(Status.FAIL, iTestResult.getThrowable().toString());
     }
 
     @Override
     public void onTestSkipped(ITestResult iTestResult) {
         LogUtils.warn("Test case: " + getTestName(iTestResult) + " is skipped.");
         count_skippedTCs = count_skippedTCs + 1;
-        if (SCREENSHOT_SKIPPED_STEPS.equals(YES)) {
-            CapturesUtils.captureScreenshot(DriverManager.getDriver(), getTestName(iTestResult));
-        }
-        ExtentReportManager.logMessage(Status.SKIP, "Test case: " + getTestName(iTestResult) + " is skipped.");
     }
 
     @Override
@@ -149,7 +127,7 @@ public class TestListener implements ITestListener, ISuiteListener {
         java.util.Date date = new java.util.Date();
         System.out.println("==========================================================");
         System.out.println("-----------" + date + "--------------");
-        System.out.println("Total number of Testcases run: " + (count_totalTCs + count_failedTCs + count_skippedTCs));
+        System.out.println("Total number of Testcases run: " + (count_totalTCs));
         System.out.println("Total number of passed Testcases: " + count_passedTCs);
         System.out.println("Total number of failed Testcases: " + count_failedTCs);
         System.out.println("Total number of skiped Testcases: " + count_skippedTCs);

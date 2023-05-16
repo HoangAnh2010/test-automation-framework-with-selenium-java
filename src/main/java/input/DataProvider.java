@@ -6,6 +6,8 @@ import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
+import model.SignInPage;
+import model.SignUpPage;
 
 import java.io.Serializable;
 @XmlRootElement
@@ -45,6 +47,27 @@ public class DataProvider implements Serializable {
     @SerializedName("TestData")
     private String testData;
 
+    public DataProvider(SignInPage signInPage) {
+        this.scriptID = signInPage.getScriptID();
+        this.scriptTitle = signInPage.getScriptTitle();
+        this.stepID = signInPage.getStepID();
+        this.description = signInPage.getDescription();
+        this.keyword = signInPage.getKeyword();
+        this.locatorType = signInPage.getLocatorType();
+        this.locatorValue = signInPage.getLocatorValue();
+        this.testData = signInPage.getTestData();
+    }
+
+    public DataProvider(SignUpPage signUpPage){
+        this.scriptID = signUpPage.getScriptID();
+        this.scriptTitle = signUpPage.getScriptTitle();
+        this.stepID = signUpPage.getStepID();
+        this.description = signUpPage.getDescription();
+        this.keyword = signUpPage.getKeyword();
+        this.locatorType = signUpPage.getLocatorType();
+        this.locatorValue = signUpPage.getLocatorValue();
+        this.testData = signUpPage.getTestData();
+    }
     public DataProvider(String scriptID, String scriptTitle, String stepID, String description, String keyword, String locatorType, String locatorValue, String testData) {
         this.scriptID = scriptID;
         this.scriptTitle = scriptTitle;

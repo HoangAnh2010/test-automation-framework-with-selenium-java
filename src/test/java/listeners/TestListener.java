@@ -10,16 +10,14 @@ import enums.AuthorType;
 import enums.Browser;
 import enums.CategoryType;
 import helpers.PropertiesHelpers;
+import keyword.ActionKeywords;
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import report.AllureManager;
 import report.ExtentReportManager;
-import utils.BrowserInfoUtils;
-import utils.CapturesUtils;
-import utils.EmailSendUtils;
-import utils.LogUtils;
+import utils.*;
 
 import static constants.FrwConstants.*;
 
@@ -53,7 +51,7 @@ public class TestListener implements ITestListener, ISuiteListener {
     @Override
     public void onFinish(ISuite iSuite) {
         LogUtils.info("End Suite: " + iSuite.getName());
-        //ActionKeywords.stopSoftAssertAll();
+        ActionKeywords.stopSoftAssertAll();
         //End Suite and execute Extents Report
         ExtentReportManager.flushReports();
         reportInConsole();
@@ -113,19 +111,23 @@ public class TestListener implements ITestListener, ISuiteListener {
         }
 
         AllureManager.saveTextLog("Test case: " + getTestName(iTestResult) + " is passed.");
+        ExtentReportManager.logMessage(Status.PASS, "Test case: " + getTestName(iTestResult) + " is passed.");
     }
 
     @Override
     public void onTestFailure(ITestResult iTestResult) {
+        LogUtils.error("Test case: " + getTestDescription(iTestResult) + " is failed.");
         count_failedTCs = count_failedTCs + 1;
-//        if (SCREENSHOT_FAILED_STEPS.equals(YES)) {
-//            CapturesUtils.captureScreenshot(DriverManager.getDriver(), getTestName(iTestResult));
-//        }
-//        ActionKeywords.addScreenshotToReport(DateUtils.getCurrentDate());
+        if (SCREENSHOT_FAILED_STEPS.equals(YES)) {
+            CapturesUtils.captureScreenshot(DriverManager.getDriver(), getTestName(iTestResult));
+        }
+        ActionKeywords.addScreenshotToReport(DateUtils.getCurrentDate());
 
         //Allure report screenshot file and log
-//        LogUtils.error("FAILED !! Screenshot for test case: " + getTestName(iTestResult));
-//        LogUtils.error(iTestResult.getThrowable());
+        LogUtils.error("FAILED !! Screenshot for test case: " + getTestName(iTestResult));
+        LogUtils.error(iTestResult.getThrowable());
+        //Extent report screenshot file and log
+        ExtentReportManager.logMessage(Status.FAIL, iTestResult.getThrowable().toString());
     }
 
     @Override

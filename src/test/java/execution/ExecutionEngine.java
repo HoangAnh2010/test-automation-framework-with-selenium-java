@@ -4,13 +4,16 @@ import input.DataProvider;
 import io.qameta.allure.*;
 import io.qameta.allure.model.Status;
 import keyword.ActionKeywords;
+import model.Data;
+import model.DataOfSignIn;
+import model.SignInPage;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 import report.ExtentReportManager;
-import utils.ExcelReader;
+import utils.DataReaderUtils;
 import utils.LogUtils;
 import utils.ScreenRecorderUtils;
-
+import utils.XmlUtils;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
@@ -29,15 +32,19 @@ public class ExecutionEngine {
     public void beforeMethod() {
         //testCaseStep = ExcelReader.getTestCases(excelPath, "SignInPage", "LoginWithoutEmail");
     }
-    @Ignore
+
+//    @Ignore
     @Severity(SeverityLevel.CRITICAL)
     @Description("Test suite of login function written in Excel file")
     @Epic("Website CareerLink")
     @Feature("Sign in")
     @Story("Read data test from Excel file")
     @Test
-    public void TestCase_SignIn_ExcelFile() {
-        testCaseStep = ExcelReader.getTestCases(excelPath, "SignInPage", "LoginWithoutEmail");
+    public void testCase_ExcelFile_SignInWithoutEmail() {
+//        testCaseStep = ExcelReader.getTestCases(excelPath, "SignInPage", "SignInWithoutEmail");
+        List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignInPage");
+        List<DataOfSignIn> dataOfSignIns = DataReaderUtils.getDataSignIn(excelPath, "DataOfSignIn", "TC_DN1");
+        testCaseStep = DataReaderUtils.getFinalDataSignIn(listHaveVar, dataOfSignIns);
         ScreenRecorderUtils.startRecord("SignIn");
         // get data from list data to run script
         for (DataProvider step : testCaseStep) {
@@ -46,28 +53,18 @@ public class ExecutionEngine {
         ScreenRecorderUtils.stopRecord();
     }
 
-    @AfterMethod
-    public void afterMethod(ITestResult result) {
-        if (result.getStatus() == ITestResult.FAILURE) {
-            // Test failed
-            Method method = result.getMethod().getConstructorOrMethod().getMethod();
-            String methodName = method.getName();
-            System.out.println("Method " + methodName + " failed");
-        } else if (result.getStatus() == ITestResult.SUCCESS) {
-            // Test passed
-            Method method = result.getMethod().getConstructorOrMethod().getMethod();
-            String methodName = method.getName();
-            System.out.println("Method " + methodName + " passed");
-        }
-    }
+//    @Ignore
     @Severity(SeverityLevel.NORMAL)
     @Description("Test suite of register function written in Excel file")
     @Epic("Website CareerLink")
     @Feature("Sign in")
     @Story("Read data test from Excel file")
     @Test
-    public void TestSuite_SignIn_WithoutPassword_ExcelFile() {
-        testCaseStep = ExcelReader.getTestCases(excelPath, "SignInPage", "LoginWithoutPassword");
+    public void testCase_ExcelFile_SignInWithoutPassword() {
+//        testCaseStep = DataReaderUtils.getTestCases(excelPath, "SignInPage", "SignInWithoutPassword");
+        List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignInPage");
+        List<DataOfSignIn> dataOfSignIns = DataReaderUtils.getDataSignIn(excelPath, "DataOfSignIn", "TC_DN2");
+        testCaseStep = DataReaderUtils.getFinalDataSignIn(listHaveVar, dataOfSignIns);
         ScreenRecorderUtils.startRecord("SignIn");
         // get data from list data to run script
         for (DataProvider step : testCaseStep) {
@@ -77,38 +74,44 @@ public class ExecutionEngine {
     }
 
     //    @Ignore
-//    @Severity(SeverityLevel.NORMAL)
-//    @Description("Test suite of login function written in XML file")
-//    @Epic("Website CareerLink")
-//    @Feature("Sign in")
-//    @Story("Read data test from XML file")
-//    @Test
-//    public void TestSuite_SignIn_XMLFile() throws Exception {
-//        Data xmlData = XmlUtils.xmlToData(xmlPath);
-//        List<SignInPage> signInPages = xmlData.getSignInPage();
-//        List<DataOfSignIn> dataOfSignIns = xmlData.getDataOfSignIn();
-//        ScreenRecorderUtils.startRecord("SignIn");
-//        List<Locator> locators = new ArrayList<>();
-//        for (DataOfSignIn dataOfSignIn : dataOfSignIns) {
-//            Locator lct = new Locator();
-//            lct.setSignInTcId(dataOfSignIn.getTcId());
-//            lct.setSignInEmail(dataOfSignIn.getEmail());
-//            lct.setSignInPw(dataOfSignIn.getPassword());
-//            lct.setSignInResult(dataOfSignIn.getResult());
-//            locators.add(lct);
-//        }
-//        // get data from list data to run script
-//        for (int i = 0; i < locators.size(); i++) { //sheet dataofsignin
-//            for (SignInPage signInPage : signInPages) { //signin
-//                reuseSignIn(signInPage);
-//                execute_Actions(testData, null, locators.get(i).getSignInEmail(), locators.get(i).getSignInPw(), null,
-//                        locators.get(i).getSignInResult(), locators.get(i).getSignInTcId());
-//            }
-//        }
-//        reportInConsole();
-//        ScreenRecorderUtils.stopRecord();
-//        considerTestCase();
-//    }
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Test suite of login function written in Excel file")
+    @Epic("Website CareerLink")
+    @Feature("Sign in")
+    @Story("Read data test from Excel file")
+    @Test
+    public void testCase_ExcelFile_SignInWithInvalidAccount() {
+//        testCaseStep = ExcelReader.getTestCases(excelPath, "SignInPage", "SignInWithoutEmail");
+        List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignInPage");
+        List<DataOfSignIn> dataOfSignIns = DataReaderUtils.getDataSignIn(excelPath, "DataOfSignIn", "TC_DN3");
+        testCaseStep = DataReaderUtils.getFinalDataSignIn(listHaveVar, dataOfSignIns);
+        ScreenRecorderUtils.startRecord("SignIn");
+        // get data from list data to run script
+        for (DataProvider step : testCaseStep) {
+            execute_Actions(step);
+        }
+        ScreenRecorderUtils.stopRecord();
+    }
+
+    @Ignore
+    @Severity(SeverityLevel.NORMAL)
+    @Description("Test suite of login function written in XML file")
+    @Epic("Website CareerLink")
+    @Feature("Sign in")
+    @Story("Read data test from XML file")
+    @Test
+    public void TestSuite_SignIn_XMLFile() {
+        Data xmlData = XmlUtils.xmlToData(xmlPath);
+        List<SignInPage> signInPages = xmlData.getSignInPage();
+        List<DataOfSignIn> dataOfSignIns = xmlData.getDataOfSignIn();
+        testCaseStep = DataReaderUtils.getFinalDataSignIn(DataReaderUtils.convertSignInToDataProvider(signInPages), dataOfSignIns);
+        ScreenRecorderUtils.startRecord("SignIn");
+        // get data from list data to run script
+        for (DataProvider step : testCaseStep) {
+            execute_Actions(step);
+        }
+        ScreenRecorderUtils.stopRecord();
+    }
 //
 //    @Ignore
 //    @Severity(SeverityLevel.NORMAL)
@@ -181,7 +184,7 @@ public class ExecutionEngine {
 //
 
 
-//    @Ignore
+    //    @Ignore
 //    @Severity(SeverityLevel.BLOCKER)
 //    @Description("Test suite of create CV function")
 //    @Epic("Website CareerLink")
@@ -225,6 +228,20 @@ public class ExecutionEngine {
 //        ScreenRecorderUtils.stopRecord();
 //    }
 //
+    @AfterMethod
+    public void afterMethod(ITestResult result) {
+        if (result.getStatus() == ITestResult.FAILURE) {
+            // Test failed
+            Method method = result.getMethod().getConstructorOrMethod().getMethod();
+            String methodName = method.getName();
+            System.out.println("Method " + methodName + " failed");
+        } else if (result.getStatus() == ITestResult.SUCCESS) {
+            // Test passed
+            Method method = result.getMethod().getConstructorOrMethod().getMethod();
+            String methodName = method.getName();
+            System.out.println("Method " + methodName + " passed");
+        }
+    }
 
     private void execute_Actions(DataProvider testScript) {
         try {
@@ -238,17 +255,17 @@ public class ExecutionEngine {
                     ExtentReportManager.info("Test case: " + scriptTitle);
                     ActionKeywords.openBrowser(testData);
                     break;
-                case "move":
-                    ActionKeywords.elementPerform(locatorValue);
-                    break;
-                case "switchTo":
-                    ActionKeywords.switchTo(testData);
+                case "navigate":
+                    ActionKeywords.navigate(testData);
                     break;
                 case "clear":
                     ActionKeywords.clear(locatorType, locatorValue);
                     break;
-                case "navigate":
-                    ActionKeywords.navigate(testData);
+                case "move":
+                    ActionKeywords.moveElement(locatorValue);
+                    break;
+                case "switchTo":
+                    ActionKeywords.switchTo(testData);
                     break;
                 case "setText":
                     ActionKeywords.setText(locatorType, locatorValue, testData);
@@ -317,7 +334,7 @@ public class ExecutionEngine {
                     LogUtils.error("Keyword Not Found " + keyword);
             }
         } catch (Exception e) {
-            e.getMessage(); //->log
+            e.printStackTrace();
             //handle (show ra report) -> khong tim thay element
         }
     }

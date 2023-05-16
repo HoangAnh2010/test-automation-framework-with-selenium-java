@@ -7,8 +7,6 @@ import keyword.ActionKeywords;
 import model.Data;
 import model.DataOfSignIn;
 import model.SignInPage;
-import org.testng.Assert;
-import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.*;
@@ -32,6 +30,7 @@ public class ExecutionEngine {
     public static List<DataProvider> testCaseStep = new ArrayList<>();
 
 
+
 //    @Ignore
     @Severity(SeverityLevel.CRITICAL)
     @Description("Test suite of login function written in Excel file")
@@ -40,7 +39,6 @@ public class ExecutionEngine {
     @Story("Read data test from Excel file")
     @Test
     public void testCase_ExcelFile_SignInWithoutEmail() {
-//        System.out.println(Reporter.getCurrentTestResult().getTestName()+"huhuhu");
         List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignInPage");
         List<DataOfSignIn> dataOfSignIns = DataReaderUtils.getDataSignIn(excelPath, "DataOfSignIn", "TC_DN1");
         testCaseStep = DataReaderUtils.getFinalDataSignIn(listHaveVar, dataOfSignIns);
@@ -51,7 +49,6 @@ public class ExecutionEngine {
         }
         ScreenRecorderUtils.stopRecord();
     }
-
 
 //    @Ignore
     @Severity(SeverityLevel.NORMAL)
@@ -65,13 +62,11 @@ public class ExecutionEngine {
         List<DataOfSignIn> dataOfSignIns = DataReaderUtils.getDataSignIn(excelPath, "DataOfSignIn", "TC_DN2");
         testCaseStep = DataReaderUtils.getFinalDataSignIn(listHaveVar, dataOfSignIns);
         ScreenRecorderUtils.startRecord("SignIn");
-        // get data from list data to run script
         for (DataProvider step : testCaseStep) {
             execute_Actions(step);
         }
         ScreenRecorderUtils.stopRecord();
     }
-
 
     //    @Ignore
     @Severity(SeverityLevel.CRITICAL)
@@ -80,7 +75,8 @@ public class ExecutionEngine {
     @Feature("Sign in")
     @Story("Read data test from Excel file")
     @Test
-    public void testCase_ExcelFile_SignInWithInvalidAccount(ITestContext context) {
+    public void testCase_ExcelFile_SignInWithInvalidAccount() {
+//        testCaseStep = ExcelReader.getTestCases(excelPath, "SignInPage", "SignInWithoutEmail");
         List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignInPage");
         List<DataOfSignIn> dataOfSignIns = DataReaderUtils.getDataSignIn(excelPath, "DataOfSignIn", "TC_DN3");
         testCaseStep = DataReaderUtils.getFinalDataSignIn(listHaveVar, dataOfSignIns);
@@ -227,21 +223,6 @@ public class ExecutionEngine {
 //        ScreenRecorderUtils.stopRecord();
 //    }
 //
-//    @AfterMethod
-//    public void afterMethod(ITestResult result) {
-//        if (result.getStatus() == ITestResult.FAILURE) {
-//            // Test failed
-//            Method method = result.getMethod().getConstructorOrMethod().getMethod();
-//            String methodName = method.getName();
-//            System.out.println("Method " + methodName + " failed");
-//        } else if (result.getStatus() == ITestResult.SUCCESS) {
-//            // Test passed
-//            Method method = result.getMethod().getConstructorOrMethod().getMethod();
-//            String methodName = method.getName();
-//            System.out.println("Method " + methodName + " passed");
-//        }
-//    }
-
     private void execute_Actions(DataProvider testScript) {
         try {
             String keyword = testScript.getKeyword();
@@ -283,32 +264,31 @@ public class ExecutionEngine {
                     break;
                 case "verifyResults":
                     if (ActionKeywords.verifyResults(testData)) {
-                        LogUtils.info("Same  ---> Pass");
+                        LogUtils.info("Same result ---> Pass");
                     } else {
-                        LogUtils.error("Different  ---> Fail");
+                        LogUtils.error("Different result ---> Fail");
                         Reporter.getCurrentTestResult().setStatus(ITestResult.FAILURE);
                     }
-//                    Assert.assertTrue(ActionKeywords.verifyResults(testData));
                     break;
                 case "verifyText":
                     if (ActionKeywords.verifyText(locatorType, locatorValue, testData)) {
-                        LogUtils.info("Same  ---> Pass");
+                        LogUtils.info("Same result ---> Pass");
                     } else {
-                        LogUtils.error("Different  ---> Fail");
+                        LogUtils.error("Different result ---> Fail");
                     }
                     break;
                 case "verifyTitle":
                     if (ActionKeywords.verifyTitle(testData)) {
-                        LogUtils.info("Same  ---> Pass");
+                        LogUtils.info("Same result ---> Pass");
                     } else {
-                        LogUtils.error("Different  ---> Fail");
+                        LogUtils.error("Different result ---> Fail");
                     }
                     break;
                 case "verifyURL":
                     if (ActionKeywords.verifyURL(testData)) {
-                        LogUtils.info("Same  ---> Pass");
+                        LogUtils.info("Same result ---> Pass");
                     } else {
-                        LogUtils.error("Different  ---> Fail");
+                        LogUtils.error("Different result ---> Fail");
                     }
                     break;
                 case "displayed":

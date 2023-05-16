@@ -634,6 +634,7 @@ public class ActionKeywords {
     }
 
     private static void statusVerify(Boolean stt) {
+
         if (stt) {
             ExtentReportManager.pass("Actual result is the same as expected result");
             AllureManager.saveTextLog("Actual result is the same as expected result");

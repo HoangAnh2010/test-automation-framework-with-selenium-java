@@ -18,7 +18,7 @@ import utils.*;
 
 import static constants.FrwConstants.*;
 
-public class TestListener  implements ITestListener   {
+public class TestListener implements ITestListener {
     static int count_totalTCs;
     static int count_passedTCs;
     static int count_skippedTCs;
@@ -102,19 +102,15 @@ public class TestListener  implements ITestListener   {
     @Override
     public void onTestSuccess(ITestResult iTestResult) {
         count_passedTCs = count_passedTCs + 1;
-        AllureManager.saveTextLog("Test case: " + getTestName(iTestResult) + " is passed.");
-        ExtentReportManager.logMessage(Status.PASS, "Test case: " + getTestName(iTestResult) + " is passed.");
     }
 
     @Override
     public void onTestFailure(ITestResult iTestResult) {
-        LogUtils.error("Test case: " + getTestDescription(iTestResult) + " is failed.");
         count_failedTCs = count_failedTCs + 1;
     }
 
     @Override
     public void onTestSkipped(ITestResult iTestResult) {
-        LogUtils.warn("Test case: " + getTestName(iTestResult) + " is skipped.");
         count_skippedTCs = count_skippedTCs + 1;
     }
 

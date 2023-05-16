@@ -8,6 +8,7 @@ import model.Data;
 import model.DataOfSignIn;
 import model.SignInPage;
 import org.testng.ITestResult;
+import org.testng.Reporter;
 import org.testng.annotations.*;
 import report.ExtentReportManager;
 import utils.DataReaderUtils;
@@ -28,10 +29,7 @@ public class ExecutionEngine {
     public static String dataOfsignInCSVpath = System.getProperty("user.dir") + "\\src\\test\\resources\\data\\DataSignIn.csv";
     public static List<DataProvider> testCaseStep = new ArrayList<>();
 
-    @BeforeMethod
-    public void beforeMethod() {
-        //testCaseStep = ExcelReader.getTestCases(excelPath, "SignInPage", "LoginWithoutEmail");
-    }
+
 
 //    @Ignore
     @Severity(SeverityLevel.CRITICAL)
@@ -41,7 +39,6 @@ public class ExecutionEngine {
     @Story("Read data test from Excel file")
     @Test
     public void testCase_ExcelFile_SignInWithoutEmail() {
-//        testCaseStep = ExcelReader.getTestCases(excelPath, "SignInPage", "SignInWithoutEmail");
         List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignInPage");
         List<DataOfSignIn> dataOfSignIns = DataReaderUtils.getDataSignIn(excelPath, "DataOfSignIn", "TC_DN1");
         testCaseStep = DataReaderUtils.getFinalDataSignIn(listHaveVar, dataOfSignIns);
@@ -61,12 +58,10 @@ public class ExecutionEngine {
     @Story("Read data test from Excel file")
     @Test
     public void testCase_ExcelFile_SignInWithoutPassword() {
-//        testCaseStep = DataReaderUtils.getTestCases(excelPath, "SignInPage", "SignInWithoutPassword");
         List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignInPage");
         List<DataOfSignIn> dataOfSignIns = DataReaderUtils.getDataSignIn(excelPath, "DataOfSignIn", "TC_DN2");
         testCaseStep = DataReaderUtils.getFinalDataSignIn(listHaveVar, dataOfSignIns);
         ScreenRecorderUtils.startRecord("SignIn");
-        // get data from list data to run script
         for (DataProvider step : testCaseStep) {
             execute_Actions(step);
         }
@@ -228,21 +223,6 @@ public class ExecutionEngine {
 //        ScreenRecorderUtils.stopRecord();
 //    }
 //
-    @AfterMethod
-    public void afterMethod(ITestResult result) {
-        if (result.getStatus() == ITestResult.FAILURE) {
-            // Test failed
-            Method method = result.getMethod().getConstructorOrMethod().getMethod();
-            String methodName = method.getName();
-            System.out.println("Method " + methodName + " failed");
-        } else if (result.getStatus() == ITestResult.SUCCESS) {
-            // Test passed
-            Method method = result.getMethod().getConstructorOrMethod().getMethod();
-            String methodName = method.getName();
-            System.out.println("Method " + methodName + " passed");
-        }
-    }
-
     private void execute_Actions(DataProvider testScript) {
         try {
             String keyword = testScript.getKeyword();
@@ -284,14 +264,10 @@ public class ExecutionEngine {
                     break;
                 case "verifyResults":
                     if (ActionKeywords.verifyResults(testData)) {
-                        //result.setStatus(ITestResult.SUCCESS);
                         LogUtils.info("Same result ---> Pass");
                     } else {
-                        //result.setStatus(ITestResult.FAILURE);
                         LogUtils.error("Different result ---> Fail");
-                        Allure.getLifecycle().updateTestCase(tc -> tc.setStatus(Status.FAILED));
-                        Allure.getLifecycle().updateTestCase(tc -> System.out.println(tc.getUuid()));
-                        break;
+                        Reporter.getCurrentTestResult().setStatus(ITestResult.FAILURE);
                     }
                     break;
                 case "verifyText":

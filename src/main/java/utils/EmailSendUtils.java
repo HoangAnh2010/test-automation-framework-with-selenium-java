@@ -1,10 +1,11 @@
 package utils;
 
 import constants.FrwConstants;
-import static mail.EmailConfig.*;
 import mail.EmailAttachmentsSender;
 
 import javax.mail.MessagingException;
+
+import static mail.EmailConfig.*;
 
 public class EmailSendUtils {
 
@@ -49,31 +50,94 @@ public class EmailSendUtils {
         System.out.println("count_failedTCs: " + count_failedTCs);
         System.out.println("count_skippedTCs: " + count_skippedTCs);
 
-        return "<html>\r\n" + "\r\n" + " \r\n" + "\r\n"
-                + "        <body> \r\n<table class=\"container\" align=\"center\" style=\"padding-top:20px\">\r\n<tr align=\"center\"><td colspan=\"4\"><h2>"
-                + FrwConstants.REPORT_TITLE + "</h2></td></tr>\r\n<tr><td>\r\n\r\n"
-                + "       <table style=\"background:#67c2ef;width:120px\" >\r\n"
-                + "                     <tr><td style=\"font-size: 36px\" class=\"value\" align=\"center\">"
-                + count_totalTCs + "</td></tr>\r\n"
-                + "                     <tr><td align=\"center\">Total</td></tr>\r\n" + "       \r\n"
-                + "                </table>\r\n" + "                </td>\r\n" + "                <td>\r\n"
-                + "               \r\n" + "                 <table style=\"background:#79c447;width:120px\">\r\n"
-                + "                     <tr><td style=\"font-size: 36px\" class=\"value\" align=\"center\">"
-                + count_passedTCs + "</td></tr>\r\n"
-                + "                     <tr><td align=\"center\">Passed</td></tr>\r\n" + "       \r\n"
-                + "                </table>\r\n" + "                </td>\r\n" + "                <td>\r\n"
-                + "                <table style=\"background:#ff5454;width:120px\">\r\n"
-                + "                     <tr><td style=\"font-size: 36px\" class=\"value\" align=\"center\">"
-                + count_failedTCs + "</td></tr>\r\n"
-                + "                     <tr><td align=\"center\">Failed</td></tr>\r\n" + "       \r\n"
-                + "                </table>\r\n" + "                \r\n" + "                </td>\r\n"
-                + "                <td>\r\n" + "                <table style=\"background:#fabb3d;width:120px\">\r\n"
-                + "                     <tr><td style=\"font-size: 36px\" class=\"value\" align=\"center\">"
-                + count_skippedTCs + "</td></tr>\r\n"
-                + "                     <tr><td align=\"center\">Skipped</td></tr>\r\n" + "       \r\n"
-                + "                </table>\r\n" + "                \r\n" + "                </td>\r\n"
-                + "                </tr>\r\n" + "               \r\n" + "                \r\n"
-                + "            </table>\r\n" + "       \r\n" + "    </body>\r\n" + "</html>";
+        return "<!DOCTYPE html>\n" +
+                "<html>\n" +
+                "<body>\n" +
+                "<table class='container' align='left' style='padding-top:20px'>\n" +
+                "<tr>\n" +
+                "<td colspan='4'>\n" +
+                "<table align='left' style='padding-top:13px'>\n" +
+                "<tr>\n" +
+                "<td>Dear Mr./Ms.,</td>\n" +
+                "</tr>\n" +
+                "<tr>\n" +
+                "<td>\n" +
+                "I send you automation test results on " + DateUtils.getCurrentDateTime() + "\n" +
+                "</td>\n" +
+                "</tr>\n" +
+                "</table>\n" +
+                "</td>\n" +
+                "</tr>\n" +
+                "<tr align='center'>\n" +
+                "<td colspan='4'>\n" +
+                "<h2>\n" + FrwConstants.REPORT_TITLE + "\n" +
+                "</h2>\n" +
+                "</td>\n" +
+                "</tr>\n" +
+                "<tr>\n" +
+                "<td>\n" +
+                "<table style='background:#67c2ef;width:120px'>\n" +
+                "<tr><td align='center'>Total</td></tr>\n" +
+                "<tr>\n" +
+                "<td style='font-size: 36px' class='value' align='center'>\n" +
+                count_totalTCs+"\n" +
+                "</td>\n" +
+                "</tr>\n" +
+                "</table>\n" +
+                "</td>\n" +
+                "<td>\n" +
+                "<table style='background:#79c447;width:120px'>\n" +
+                "<tr><td align='center'>Passed</td></tr>\n" +
+                "<tr>\n<td style='font-size: 36px' class='value' align='center'>\n" +
+                count_passedTCs+"\n" +
+                "</td>\n" +
+                "</tr>\n" +
+                "</table>\n" +
+                "</td>\n" +
+                "<td>\n" +
+                "<table style='background:#ff5454;width:120px'>\n" +
+                "<tr><td align='center'>Failed</td></tr>\n" +
+                "<tr>\n" +
+                "<td style='font-size: 36px' class='value' align='center'>\n" +
+                count_failedTCs+"\n" +
+                "</td>\n" +
+                "</tr>\n" +
+                "</table>\n" +
+                "</td>\n" +
+                "<td>\n" +
+                "<table style='background:#fabb3d;width:120px'>\n" +
+                "<tr><td align='center'>Skipped</td></tr>\n" +
+                "<tr>\n" +
+                "<td style='font-size: 36px' class='value' align='center'>\n" +
+                count_skippedTCs+"\n" +
+                "</td>\n" +
+                "</tr>\n" +
+                "</table>\n" +
+                "</td>\n" +
+                "</tr>\n" +
+                "<tr>\n" +
+                "<td colspan='4'>\n" +
+                "<table class='container' align='left' style='padding-top:13px'>\n" +
+                "<tr>\n" +
+                "<td>Have a nice day and stay safe!</td>\n" +
+                "</tr>\n" +
+                "<tr>\n" +
+                "<td>\n" +
+                "Best regards,\n" +
+                "</td>\n" +
+                "</tr>\n" +
+                "<tr>\n" +
+                "<td>\n" +
+                FrwConstants.AUTHOR +"\n" +
+                "</td>\n" +
+                "</tr>\n" +
+                "</table>\n" +
+                "</td>\n" +
+                "</tr>\n" +
+                "</table>\n" +
+                "</body>\n" +
+                "</html>";
+
     }
 
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <data>
     <SignInPage>
-        <ScriptID>SSI_01</ScriptID>
-        <ScriptTitle>Validate data in textbox</ScriptTitle>
-        <StepID>S_01</StepID>
+        <ScriptID>ScriptSI</ScriptID>
+        <ScriptTitle>Validate data in text field</ScriptTitle>
+        <StepID>Step_1</StepID>
         <Description>Mở trình duyệt</Description>
         <Keyword>openBrowser</Keyword>
         <LocatorType>null</LocatorType>
@@ -11,7 +11,7 @@
         <TestData>Chrome</TestData>
     </SignInPage>
     <SignInPage>
-        <StepID>S_02</StepID>
+        <StepID>Step_2</StepID>
         <Description>Chuyển tới trang web</Description>
         <Keyword>navigate</Keyword>
         <LocatorType>null</LocatorType>
@@ -19,7 +19,7 @@
         <TestData>https://www.careerlink.vn/nguoi-tim-viec/login</TestData>
     </SignInPage>
     <SignInPage>
-        <StepID>S_03</StepID>
+        <StepID>Step_3</StepID>
         <Description>Nhập email</Description>
         <Keyword>setText</Keyword>
         <LocatorType>name</LocatorType>
@@ -27,7 +27,7 @@
         <TestData>varEmail</TestData>
     </SignInPage>
     <SignInPage>
-        <StepID>S_04</StepID>
+        <StepID>Step_4</StepID>
         <Description>Nhập password</Description>
         <Keyword>setText</Keyword>
         <LocatorType>name</LocatorType>
@@ -35,35 +35,35 @@
         <TestData>varPassword</TestData>
     </SignInPage>
     <SignInPage>
-        <StepID>S_05</StepID>
+        <StepID>Step_5</StepID>
         <Description>Nhấn nút Đăng nhập</Description>
         <Keyword>clickButton</Keyword>
         <LocatorType>xpath</LocatorType>
         <LocatorValue>//button[contains(text(),'Đăng nhập')]</LocatorValue>
     </SignInPage>
     <SignInPage>
-        <StepID>S_06</StepID>
+        <StepID>Step_6</StepID>
         <Description>So sánh kết quả mong đợi</Description>
         <Keyword>verifyResults</Keyword>
-        <TestData>varResult</TestData>
+        <TestData>varExpected</TestData>
     </SignInPage>
     <SignInPage>
-        <StepID>S_07</StepID>
+        <StepID>Step_7</StepID>
         <Description>Đóng trình duyệt</Description>
         <Keyword>closeBrowser</Keyword>
     </SignInPage>
     <DataOfSignIn>
-        <TC_ID>TC_DN2</TC_ID>
+        <TC_ID>SIN_VAL_02</TC_ID>
         <TC_Description>Để trống trường Email</TC_Description>
         <Email />
-        <Password>20102001</Password>
+        <Password>123456789</Password>
         <Result>Please fill out this field.</Result>
         <Note>Vui lòng điền vào trường này.</Note>
     </DataOfSignIn>
     <SignUpPage>
-        <scriptID>SSU_01</scriptID>
+        <scriptID>ScriptSU</scriptID>
         <scriptTitle>Validate data in textbox</scriptTitle>
-        <stepID>S_01</stepID>
+        <stepID>Step_1</stepID>
         <Description>Mở trình duyệt</Description>
         <Keyword>openBrowser</Keyword>
         <LocatorType>null</LocatorType>
@@ -71,7 +71,7 @@
         <TestData>Chrome</TestData>
     </SignUpPage>
     <SignUpPage>
-        <stepID>S_02</stepID>
+        <stepID>Step_2</stepID>
         <Description>Chuyển tới trang web</Description>
         <Keyword>navigate</Keyword>
         <LocatorType>null</LocatorType>
@@ -79,7 +79,7 @@
         <TestData>https://www.careerlink.vn/nguoi-tim-viec/dang-ky</TestData>
     </SignUpPage>
     <SignUpPage>
-        <stepID>S_03</stepID>
+        <stepID>Step_3</stepID>
         <Description>Nhập tên</Description>
         <Keyword>setText</Keyword>
         <LocatorType>id</LocatorType>
@@ -87,7 +87,7 @@
         <TestData>varName</TestData>
     </SignUpPage>
     <SignUpPage>
-        <stepID>S_04</stepID>
+        <stepID>Step_4</stepID>
         <Description>Nhập email</Description>
         <Keyword>setText</Keyword>
         <LocatorType>id</LocatorType>
@@ -95,7 +95,7 @@
         <TestData>varEmail</TestData>
     </SignUpPage>
     <SignUpPage>
-        <stepID>S_05</stepID>
+        <stepID>Step_5</stepID>
         <Description>Nhập password</Description>
         <Keyword>setText</Keyword>
         <LocatorType>id</LocatorType>
@@ -103,7 +103,7 @@
         <TestData>varPassword</TestData>
     </SignUpPage>
     <SignUpPage>
-        <stepID>S_06</stepID>
+        <stepID>Step_6</stepID>
         <Description>Nhập lại password</Description>
         <Keyword>setText</Keyword>
         <LocatorType>id</LocatorType>
@@ -111,127 +111,49 @@
         <TestData>varPasswordCf</TestData>
     </SignUpPage>
     <SignUpPage>
-        <stepID>S_07</stepID>
+        <stepID>Step_7</stepID>
         <Description>Nhấn nút Đăng ký</Description>
         <Keyword>clickButton</Keyword>
         <LocatorType>id</LocatorType>
         <LocatorValue>register_submit</LocatorValue>
     </SignUpPage>
     <SignUpPage>
-        <stepID>S_08</stepID>
+        <stepID>Step_8</stepID>
         <Description>So sánh kết quả mong đợi</Description>
         <Keyword>verifyResults</Keyword>
-        <TestData>varResult</TestData>
+        <TestData>varExpected</TestData>
     </SignUpPage>
     <SignUpPage>
-        <stepID>S_09</stepID>
+        <stepID>Step_9</stepID>
         <Description>Đóng trình duyệt</Description>
         <Keyword>closeBrowser</Keyword>
     </SignUpPage>
     <DataOfSignUp>
-        <TC_ID>TC_DK2</TC_ID>
+        <TC_ID>SUP_VAL_02</TC_ID>
         <TC_Description>Để trống trường Họ tên</TC_Description>
-        <Email>hoanganh04092001@gmail.com</Email>
-        <Password>20102001</Password>
-        <Password_Confirm>20102001</Password_Confirm>
+        <Email>test@gmail.com</Email>
+        <Password>123456789</Password>
+        <Password_Confirm>123456789</Password_Confirm>
         <Result>Please fill out this field.</Result>
         <Note>Vui lòng điền vào trường này.</Note>
     </DataOfSignUp>
     <DataOfSignUp>
-        <TC_ID>TC_DK3</TC_ID>
-        <TC_Description>Chỉ nhập ký tự trắng ở trường Họ tên</TC_Description>
-        <Name></Name>
-        <Email>hoanganh04092001@gmail.com</Email>
-        <Password>20102001</Password>
-        <Password_Confirm>20102001</Password_Confirm>
-        <Result>Please fill out this field.</Result>
-        <Note>Vui lòng điền vào trường này.</Note>
-    </DataOfSignUp>
-    <DataOfSignUp>
-        <TC_ID>TC_DK8</TC_ID>
+        <TC_ID>SUP_VAL_08</TC_ID>
         <TC_Description>Để trống trường Email</TC_Description>
         <Name>Anh</Name>
-        <Password>20102001</Password>
-        <Password_Confirm>20102001</Password_Confirm>
+        <Password>123456789</Password>
+        <Password_Confirm>123456789</Password_Confirm>
         <Result>Please fill out this field.</Result>
         <Note>Vui lòng điền vào trường này.</Note>
     </DataOfSignUp>
     <DataOfSignUp>
-        <TC_ID>TC_DK9</TC_ID>
-        <TC_Description>Chỉ nhập ký tự trắng ở trường Email</TC_Description>
-        <Name>Anh</Name>
-        <Email></Email>
-        <Password>20102001</Password>
-        <Password_Confirm>20102001</Password_Confirm>
-        <Result>Please fill out this field.</Result>
-        <Note>Vui lòng điền vào trường này.</Note>
-    </DataOfSignUp>
-    <DataOfSignUp>
-        <TC_ID>TC_DK10</TC_ID>
+        <TC_ID>SUP_VAL_10</TC_ID>
         <TC_Description>Nhập email có chứa ký tự trắng</TC_Description>
         <Name>Anh</Name>
-        <Email>hoanganh 04092001@gmail.com</Email>
-        <Password>20102001</Password>
-        <Password_Confirm>20102001</Password_Confirm>
+        <Email>test @gmail.com</Email>
+        <Password>123456789</Password>
+        <Password_Confirm>123456789</Password_Confirm>
         <Result>A part followed by '@' should not contain the symbol ' '.</Result>
         <Note>Phần đứng trước '@' không được chứa biểu tượng ' '.</Note>
-    </DataOfSignUp>
-    <DataOfSignUp>
-        <TC_ID>TC_DK13</TC_ID>
-        <TC_Description>Nhập ký tự có dấu trong trường email</TC_Description>
-        <Name>Anh</Name>
-        <Email>hoànganh04092001@gmail.com</Email>
-        <Password>20102001</Password>
-        <Password_Confirm>20102001</Password_Confirm>
-        <Result>A part followed by '@' should not contain the symbol 'à'.</Result>
-        <Note>Phần đứng trước '@' không được chứa biểu tượng 'à'.</Note>
-    </DataOfSignUp>
-    <DataOfSignUp>
-        <TC_ID>TC_DK14</TC_ID>
-        <TC_Description>Nhập thiếu "@" trong trường email</TC_Description>
-        <Name>Anh</Name>
-        <Email>hoanganh04092001gmail.com</Email>
-        <Password>20102001</Password>
-        <Password_Confirm>20102001</Password_Confirm>
-        <Result>Please include an '@' in the email address. 'hoanganh04092001gmail.com' is missing an '@'.</Result>
-        <Note>Vui lòng bao gồm '@' trong địa chỉ email.</Note>
-    </DataOfSignUp>
-    <DataOfSignUp>
-        <TC_ID>TC_DK19</TC_ID>
-        <TC_Description>Để trống trường Mật khẩu</TC_Description>
-        <Name>Anh</Name>
-        <Email>hoanganh04092001@gmail.com</Email>
-        <Password_Confirm>20102001</Password_Confirm>
-        <Result>Please fill out this field.</Result>
-        <Note>Vui lòng điền vào trường này.</Note>
-    </DataOfSignUp>
-    <DataOfSignUp>
-        <TC_ID>TC_DK20</TC_ID>
-        <TC_Description>Chỉ nhập ký tự trắng ở trường Mật khẩu</TC_Description>
-        <Name>Anh</Name>
-        <Email>hoanganh04092001@gmail.com</Email>
-        <Password></Password>
-        <Password_Confirm>20102001</Password_Confirm>
-        <Result>Mật khẩu không khớp. Hãy nhập lại</Result>
-        <Note>Mật khẩu không khớp. Hãy nhập lại</Note>
-    </DataOfSignUp>
-    <DataOfSignUp>
-        <TC_ID>TC_DK26</TC_ID>
-        <TC_Description>Để trống trường Nhập lại mật khẩu</TC_Description>
-        <Name>Anh</Name>
-        <Email>hoanganh04092001@gmail.com</Email>
-        <Password>20102001</Password>
-        <Result>Please fill out this field.</Result>
-        <Note>Vui lòng điền vào trường này.</Note>
-    </DataOfSignUp>
-    <DataOfSignUp>
-        <TC_ID>TC_DK30</TC_ID>
-        <TC_Description>Chỉ nhập số ở trường  Nhập lại mật khẩu</TC_Description>
-        <Name>Anh</Name>
-        <Email>hoanganh04092001@gmail.com</Email>
-        <Password>20102001</Password>
-        <Password_Confirm>123456</Password_Confirm>
-        <Result>Mật khẩu không khớp. Hãy nhập lại</Result>
-        <Note>Mật khẩu không khớp. Hãy nhập lại</Note>
     </DataOfSignUp>
 </data>

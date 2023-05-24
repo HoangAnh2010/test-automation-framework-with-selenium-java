@@ -29,14 +29,14 @@ public class DataReaderUtils {
             List<DataOfSignIn> testSteps = new ArrayList<>();
             for (int j = 1; j <= sheet.getLastRowNum(); j++) {
                 XSSFRow row = sheet.getRow(j);
-                String scriptID = row.getCell(0)==null?"":row.getCell(0).getStringCellValue();
+                String tcID = row.getCell(0)==null?"":row.getCell(0).getStringCellValue();
                 String description = row.getCell(1)==null?"":row.getCell(1).getStringCellValue();
                 String email = row.getCell(2)==null?"":row.getCell(2).getStringCellValue();
                 String password = row.getCell(3)==null?"":row.getCell(3).getStringCellValue();
                 String result = row.getCell(4)==null?"":row.getCell(4).getStringCellValue();
                 String note = "";
 
-                testSteps.add(new DataOfSignIn(scriptID, description, email, password, result, note));
+                testSteps.add(new DataOfSignIn(tcID, description, email, password, result, note));
             }
            return testSteps.stream().filter(t->t.getTcId().equals(scriptId)).collect(Collectors.toList());
         } catch (IOException e) {
@@ -83,7 +83,7 @@ public class DataReaderUtils {
             List<DataOfSignUp> testSteps = new ArrayList<>();
             for (int j = 1; j <= sheet.getLastRowNum(); j++) {
                 XSSFRow row = sheet.getRow(j);
-                String scriptID = row.getCell(0)==null?"":row.getCell(0).getStringCellValue();
+                String tcID = row.getCell(0)==null?"":row.getCell(0).getStringCellValue();
                 String description = row.getCell(1)==null?"":row.getCell(1).getStringCellValue();
                 String name = row.getCell(2)==null?"":row.getCell(2).getStringCellValue();
                 String email = row.getCell(3)==null?"":row.getCell(3).getStringCellValue();
@@ -92,7 +92,7 @@ public class DataReaderUtils {
                 String result = row.getCell(6)==null?"":row.getCell(6).getStringCellValue();
                 String note = "";
 
-                testSteps.add(new DataOfSignUp(scriptID,description,email,password,passConfirm,result,note,name));
+                testSteps.add(new DataOfSignUp(tcID,description,email,password,passConfirm,result,note,name));
             }
             return testSteps.stream().filter(t->t.getTcId().equals(scriptId)).collect(Collectors.toList());
         } catch (IOException e) {
@@ -110,13 +110,13 @@ public class DataReaderUtils {
                     continue;
                 }
                 if(t.getTestData().equals("varEmail")){
-                    t.setTestData(dataOfSignIn.getEmail());
+                    t.setTestData(dataOfSignIn.getEmail()==null?"":dataOfSignIn.getEmail());
                 }
                 if(t.getTestData().equals("varPassword")){
-                    t.setTestData(dataOfSignIn.getPassword());
+                    t.setTestData(dataOfSignIn.getPassword()==null?"":dataOfSignIn.getPassword());
                 }
-                if(t.getTestData().equals("varResult")){
-                    t.setTestData(dataOfSignIn.getResult());
+                if(t.getTestData().equals("varExpected")){
+                    t.setTestData(dataOfSignIn.getResult()==null?"":dataOfSignIn.getResult());
                 }
             }
             return dataProviders;
@@ -129,22 +129,20 @@ public class DataReaderUtils {
             if(Objects.isNull(t.getTestData())){
                 continue;
             }
-            if(t.getTestData().equals("varEmail")){
-                t.setTestData(dataOfSignUp.getEmail());
-            }
-
-            if(t.getTestData().equals("varPassword")){
-                t.setTestData(dataOfSignUp.getPassword());
-            }
             if(t.getTestData().equals("varName")){
-                t.setTestData(dataOfSignUp.getName());
+                t.setTestData(dataOfSignUp.getName()==null?"":dataOfSignUp.getName());
             }
-
+            if(t.getTestData().equals("varEmail")){
+                t.setTestData(dataOfSignUp.getEmail()==null?"":dataOfSignUp.getEmail());
+            }
+            if(t.getTestData().equals("varPassword")){
+                t.setTestData(dataOfSignUp.getPassword()==null?"":dataOfSignUp.getPassword());
+            }
             if(t.getTestData().equals("varPasswordCf")){
-                t.setTestData(dataOfSignUp.getPasswordConfirm());
+                t.setTestData(dataOfSignUp.getPasswordConfirm()==null?"":dataOfSignUp.getPasswordConfirm());
             }
-            if(t.getTestData().equals("varResult")){
-                t.setTestData(dataOfSignUp.getResult());
+            if(t.getTestData().equals("varExpected")){
+                t.setTestData(dataOfSignUp.getResult()==null?"":dataOfSignUp.getResult());
             }
         }
 
@@ -169,7 +167,6 @@ public class DataReaderUtils {
     public static void main(String[] args) {
         List<DataProvider> signIn = getFinalDataSignIn(getTestStep(excelPath,"SignInPage"),getDataSignIn(excelPath,"DataOfSignIn","TC_DN1"));
         List<DataProvider> signUp = getFinalDataSignUp(getTestStep(excelPath,"SignUpPage"),getDataSignUp(excelPath,"DataOfSignUp","TC_DK10"));
-        System.out.println("sadasdasdsdada");
     }
 }
 

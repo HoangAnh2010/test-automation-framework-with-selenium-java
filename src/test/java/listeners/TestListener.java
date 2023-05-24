@@ -1,11 +1,9 @@
 package listeners;
 
 import annotations.FrwAnnotation;
-import com.aventstack.extentreports.Status;
 import com.github.automatedowl.tools.AllureEnvironmentWriter;
 import com.google.common.collect.ImmutableMap;
 import constants.FrwConstants;
-import driver.DriverManager;
 import enums.AuthorType;
 import enums.Browser;
 import enums.CategoryType;
@@ -14,17 +12,27 @@ import keyword.ActionKeywords;
 import org.testng.*;
 import report.AllureManager;
 import report.ExtentReportManager;
-import utils.*;
+import utils.BrowserInfoUtils;
+import utils.EmailSendUtils;
+import utils.LogUtils;
+import utils.ScreenRecorderUtils;
 
-import static constants.FrwConstants.*;
+import java.awt.*;
+import java.io.IOException;
 
-public class TestListener implements ITestListener {
+public class TestListener implements ITestListener, ISuiteListener, IInvokedMethodListener {
     static int count_totalTCs;
     static int count_passedTCs;
     static int count_skippedTCs;
     static int count_failedTCs;
 
+    private ScreenRecorderUtils screenRecorder;
     public TestListener() {
+        try {
+            screenRecorder = new ScreenRecorderUtils();
+        } catch (IOException | AWTException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     public String getTestName(ITestResult result) {
@@ -106,7 +114,9 @@ public class TestListener implements ITestListener {
 
     @Override
     public void onTestFailure(ITestResult iTestResult) {
+        LogUtils.error("Test case: " + getTestDescription(iTestResult) + " is failed.");
         count_failedTCs = count_failedTCs + 1;
+
     }
 
     @Override

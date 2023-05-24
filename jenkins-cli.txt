@@ -1,5 +1,17 @@
-*run jenkins webserver
-java -jar ./jenkins.war --httpPort=9090 (default: 8080)
+step1:
+open file C:\Users\ITmart\.jenkins\GP
+step2:
+launch Terminal --> java -jar ./jenkins.war --> enter
+step3:
+open browser --> localhost:8080 --httpPort=9090 (default: 8080)--
+step4:
+login with account below
+------------
 
+***Configure
 *Configure jenkins to run maven
--Dtest=execution/ExecutionEngine test
+mvn -Dtest=execution/ExecutionEngine test
+
+------------
+Account: hoanganh - Jenkin
+

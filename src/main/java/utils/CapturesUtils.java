@@ -34,11 +34,8 @@ public class CapturesUtils extends ScreenRecorder {
             }
 
             LogUtils.info("Driver for Screenshot: " + driver);
-            // Tạo tham chiếu của TakesScreenshot
             TakesScreenshot ts = (TakesScreenshot) driver;
-            // Gọi hàm capture screenshot - getScreenshotAs
             File source = ts.getScreenshotAs(OutputType.FILE);
-            // result.getName() lấy tên của test case xong gán cho tên File chụp màn hình
             FileUtils.copyFile(source, new File(path + "/" + screenName + "_" + dateFormat.format(new Date()) + ".png"));
             LogUtils.info("Screenshot taken: " + screenName);
             LogUtils.info("Screenshot taken current URL: " + driver.getCurrentUrl());

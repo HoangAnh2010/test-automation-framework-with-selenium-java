@@ -10,10 +10,7 @@ import java.io.Reader;
 public class JsonUtils {
     public static Data readData(String filePath){
         Gson gson = new Gson();
-
         try (Reader reader = new FileReader(filePath)) {
-
-            // Convert JSON File to Java Object
             Data data = gson.fromJson(reader, Data.class);
             return data;
 

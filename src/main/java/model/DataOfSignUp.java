@@ -35,6 +35,20 @@ public class DataOfSignUp  implements Serializable {
     @SerializedName("Name")
     private String name;
 
+    public DataOfSignUp() {
+    }
+
+    public DataOfSignUp(String tcId, String tCDescription, String email, String password, String passwordConfirm, String result, String note, String name) {
+        this.tcId = tcId;
+        this.tCDescription = tCDescription;
+        this.email = email;
+        this.password = password;
+        this.passwordConfirm = passwordConfirm;
+        this.result = result;
+        this.note = note;
+        this.name = name;
+    }
+
     @Override
     public String toString() {
         return "DataOfSignUp{" +

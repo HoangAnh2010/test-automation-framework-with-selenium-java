@@ -35,6 +35,20 @@ public class SignUpPage implements Serializable {
     @SerializedName("TestData")
     private String testData;
 
+    public SignUpPage() {
+    }
+
+    public SignUpPage(String scriptID, String scriptTitle, String stepID, String description, String keyword, String locatorType, String locatorValue, String testData) {
+        this.scriptID = scriptID;
+        this.scriptTitle = scriptTitle;
+        this.stepID = stepID;
+        this.description = description;
+        this.keyword = keyword;
+        this.locatorType = locatorType;
+        this.locatorValue = locatorValue;
+        this.testData = testData;
+    }
+
     public String getScriptID() {
         return scriptID;
     }

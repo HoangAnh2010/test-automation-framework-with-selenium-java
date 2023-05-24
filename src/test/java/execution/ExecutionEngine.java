@@ -1,13 +1,16 @@
 package execution;
 
+import enums.FailureHandling;
+import input.DataProvider;
 import io.qameta.allure.*;
 import keyword.ActionKeywords;
 import model.Data;
 import model.DataOfSignIn;
-import model.Locator;
+import model.DataOfSignUp;
 import model.SignInPage;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.testng.annotations.Ignore;
+import org.testng.Assert;
+import org.testng.ITestResult;
+import org.testng.Reporter;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import report.ExtentReportManager;
@@ -18,411 +21,93 @@ import java.util.List;
 
 @Listeners(listeners.TestListener.class)
 public class ExecutionEngine {
-    private static String scriptID;
-    private static String description;
-    private static String sActionKeyword;
-    private static String locatorType;
-    private static String locatorValue;
-    private static String testData;
-
-    ArrayList<String> arrTCIDSignUp = new ArrayList<String>();
-    ArrayList<String> arrNameSignUp = new ArrayList<String>();
-    ArrayList<String> arrEmailSignUp = new ArrayList<String>();
-    ArrayList<String> arrPasswordSignUp = new ArrayList<String>();
-    ArrayList<String> arrPasswordCfSignUp = new ArrayList<String>();
-    ArrayList<String> arrResultSignUp = new ArrayList<String>();
-
     public static String excelPath = System.getProperty("user.dir") + "\\src\\test\\resources\\data\\data.xlsx";
     public static String jsonPath = System.getProperty("user.dir") + "\\src\\test\\resources\\data\\data.json";
     public static String xmlPath = System.getProperty("user.dir") + "\\src\\test\\resources\\data\\data.xml";
     public static String signInCSVpath = System.getProperty("user.dir") + "\\src\\test\\resources\\data\\signIn.csv";
     public static String dataOfsignInCSVpath = System.getProperty("user.dir") + "\\src\\test\\resources\\data\\DataSignIn.csv";
+    public static List<DataProvider> testCaseStep = new ArrayList<>();
 
-    int totalCasePass = 0;
-    int totalCaseFail = 0;
-    int totalCaseSkip = 0;
-    float casePass = 0;
-    float caseFail = 0;
-    float caseSkip = 0;
-    float STANDARD_PERCENT = (float) 0.75;
-
-    @Ignore
-    @Severity(SeverityLevel.NORMAL)
-    @Description("Test suite of login function written in XML file")
-    @Epic("Website CareerLink")
-    @Feature("Sign in")
-    @Story("Read data test from XML file")
-    @Test
-    public void TestSuite_SignIn_XMLFile() throws Exception {
-        Data xmlData = XmlUtils.xmlToData(xmlPath);
-        List<SignInPage> signInPages = xmlData.getSignInPage();
-        List<DataOfSignIn> dataOfSignIns = xmlData.getDataOfSignIn();
-        ScreenRecorderUtils.startRecord("SignIn");
-        List<Locator> locators = new ArrayList<>();
-        for (DataOfSignIn dataOfSignIn : dataOfSignIns) {
-            Locator lct = new Locator();
-            lct.setSignInTcId(dataOfSignIn.getTcId());
-            lct.setSignInEmail(dataOfSignIn.getEmail());
-            lct.setSignInPw(dataOfSignIn.getPassword());
-            lct.setSignInResult(dataOfSignIn.getResult());
-            locators.add(lct);
+    private static boolean isPass = false;
+    private void considerTestCase(){
+        if(!isPass){
+            Assert.fail("Actual result is the same as expected result");
         }
-        // get data from list data to run script
-        for (int i = 0; i < locators.size(); i++) { //sheet dataofsignin
-            for (SignInPage signInPage : signInPages) { //signin
-                reuseSignIn(signInPage);
-                execute_Actions(testData, null, locators.get(i).getSignInEmail(), locators.get(i).getSignInPw(), null,
-                        locators.get(i).getSignInResult(), locators.get(i).getSignInTcId());
-            }
-        }
-        reportInConsole();
-        ScreenRecorderUtils.stopRecord();
-        considerTestCase();
     }
-
-    @Ignore
-    @Severity(SeverityLevel.NORMAL)
-    @Description("Test suite of login function written in Json file")
-    @Epic("Website CareerLink")
-    @Feature("Sign in")
-    @Story("Read data test from Json file")
-    @Test
-    public void TestSuite_SignIn_JsonFile() throws Exception {
-        Data jsonData = JsonUtils.readData(jsonPath);
-        List<SignInPage> signInPages = jsonData.getSignInPage();
-        List<DataOfSignIn> dataOfSignIns = jsonData.getDataOfSignIn();
-        ScreenRecorderUtils.startRecord("SignIn");
-        List<Locator> locators = new ArrayList<>();
-        for (DataOfSignIn dataOfSignIn : dataOfSignIns) {
-            Locator lct = new Locator();
-            lct.setSignInTcId(dataOfSignIn.getTcId());
-            lct.setSignInEmail(dataOfSignIn.getEmail());
-            lct.setSignInPw(dataOfSignIn.getPassword());
-            lct.setSignInResult(dataOfSignIn.getResult());
-            locators.add(lct);
-        }
-        // get data from list data to run script
-
-        for (int i = 0; i < locators.size(); i++) { //sheet dataofsignin
-            for (SignInPage signInPage : signInPages) {
-                reuseSignIn(signInPage);
-                execute_Actions(testData, null, locators.get(i).getSignInEmail(), locators.get(i).getSignInPw(), null,
-                        locators.get(i).getSignInResult(), locators.get(i).getSignInTcId());
-            }
-        }
-        reportInConsole();
-        ScreenRecorderUtils.stopRecord();
-        considerTestCase();
-    }
-
-    @Ignore
-    @Severity(SeverityLevel.NORMAL)
-    @Description("Test suite of login function written in CSV file")
-    @Epic("Website CareerLink")
-    @Feature("Sign in")
-    @Story("Read data test from CSV file")
-    @Test
-    public void TestSuite_SignIn_CSVFile() throws Exception {
-        List<SignInPage> signInPages = CsvUtils.readSignInPageCSVfile(signInCSVpath);
-        List<DataOfSignIn> dataOfSignIns = CsvUtils.readDataOfSignInCSVfile(dataOfsignInCSVpath);
-        ScreenRecorderUtils.startRecord("SignIn");
-        List<Locator> locators = new ArrayList<>();
-        for (DataOfSignIn dataOfSignIn : dataOfSignIns) {
-            Locator lct = new Locator();
-            lct.setSignInTcId(dataOfSignIn.getTcId());
-            lct.setSignInEmail(dataOfSignIn.getEmail());
-            lct.setSignInPw(dataOfSignIn.getPassword());
-            lct.setSignInResult(dataOfSignIn.getResult());
-            locators.add(lct);
-        }
-        // get data from list data to run script
-        for (int i = 0; i < locators.size(); i++) { //sheet dataofsignin
-            for (SignInPage signInPage : signInPages) {
-                reuseSignIn(signInPage);
-                execute_Actions(testData, null, locators.get(i).getSignInEmail(), locators.get(i).getSignInPw(), null,
-                        locators.get(i).getSignInResult(), locators.get(i).getSignInTcId());
-            }
-        }
-        reportInConsole();
-        ScreenRecorderUtils.stopRecord();
-        considerTestCase();
-    }
-
-    //@Ignore
-    @Severity(SeverityLevel.CRITICAL)
-    @Description("Test suite of login function written in Excel file")
-    @Epic("Website CareerLink")
-    @Feature("Sign in")
-    @Story("Read data test from Excel file")
-    @Test
-    public void TestSuite_SignIn_ExcelFile() throws Exception {
-        ExcelUtils.setExcelFile(excelPath, "SignInPage");
-        Sheet sheet = ExcelUtils.getSheet("SignInPage");
-        int rowCount = sheet.getLastRowNum();
-        int row = 1;
-        // get data in sheet and add on list data
-        ExcelUtils.setExcelFile(excelPath, "DataOfSignIn");
-        Sheet data = ExcelUtils.getSheet("DataOfSignIn");
-        int rowCountTest = data.getLastRowNum();
-        List<Locator> locators = new ArrayList<>();
-        while (row <= rowCountTest) {
-            Locator lct = new Locator();
-            lct.setSignInTcId(ExcelUtils.getCellData("DataOfSignIn", row, 1) + "");
-            lct.setSignInEmail(ExcelUtils.getCellData("DataOfSignIn", row, 3) + "");
-            lct.setSignInPw(ExcelUtils.getCellData("DataOfSignIn", row, 4) + "");
-            lct.setSignInResult(ExcelUtils.getCellData("DataOfSignIn", row, 5) + "");
-            locators.add(lct);
-            row = row + 1;
-        }
-        ScreenRecorderUtils.startRecord("SignIn");
-        // get data from list data to run script
-        for (int i = 0; i < locators.size(); i++) { //sheet dataofsignin
-            for (int iRow = 1; iRow <= rowCount; iRow++) {
-                reuseSignIn(iRow);
-                execute_Actions(testData, null, locators.get(i).getSignInEmail(), locators.get(i).getSignInPw(), null,
-                        locators.get(i).getSignInResult(), locators.get(i).getSignInTcId());
-            }
-        }
-        reportInConsole();
-        ScreenRecorderUtils.stopRecord();
-        considerTestCase();
-    }
-
-    @Ignore
-    @Severity(SeverityLevel.NORMAL)
-    @Description("Test suite of register function written in Excel file")
-    @Epic("Website CareerLink")
-    @Feature("Sign up")
-    @Story("Read data test from Excel file")
-    @Test
-    public void TestSuite_SignUp_ExcelFile() throws Exception {
-        ExcelUtils.setExcelFile(excelPath, "SignUpPage");
-        Sheet sheet = ExcelUtils.getSheet("SignUpPage");
-        int rowCount = sheet.getLastRowNum();
-        int row = 1;
-        String tmp;
-
-        // Lấy dữ liệu trong sheet "test" và thêm vào từng mảng tương ứng
-        ExcelUtils.setExcelFile(excelPath, "DataOfSignUp");
-        Sheet data = ExcelUtils.getSheet("DataOfSignUp");
-        int rowCountTest = data.getLastRowNum();
-        while (row <= rowCountTest) {
-            tmp = ExcelUtils.getCellData("DataOfSignUp", row, 1) + "";
-            arrTCIDSignUp.add(tmp);
-
-            tmp = ExcelUtils.getCellData("DataOfSignUp", row, 3) + "";
-            arrNameSignUp.add(tmp);
-
-            tmp = ExcelUtils.getCellData("DataOfSignUp", row, 4) + "";
-            arrEmailSignUp.add(tmp);
-
-            tmp = ExcelUtils.getCellData("DataOfSignUp", row, 5) + "";
-            arrPasswordSignUp.add(tmp);
-
-            tmp = ExcelUtils.getCellData("DataOfSignUp", row, 6) + "";
-            arrPasswordCfSignUp.add(tmp);
-
-            tmp = ExcelUtils.getCellData("DataOfSignUp", row, 7) + "";
-            arrResultSignUp.add(tmp);
-
-            row = row + 1;
-
-        }
-        ScreenRecorderUtils.startRecord("SignUp");
-        // Bỏ hàng tiêu đề
-        for (int i = 0; i < arrTCIDSignUp.size(); i++) {
-            for (int iRow = 1; iRow <= rowCount; iRow++) {
-                reuseSignUp(iRow);
-                execute_Actions(testData, arrNameSignUp.get(i), arrEmailSignUp.get(i), arrPasswordSignUp.get(i),
-                        arrPasswordCfSignUp.get(i), arrResultSignUp.get(i), arrTCIDSignUp.get(i));
-            }
-        }
-        reportInConsole();
-        ScreenRecorderUtils.stopRecord();
-        considerTestCase();
-    }
-
-    @Ignore
-    @Severity(SeverityLevel.BLOCKER)
-    @Description("Test suite of create CV function")
-    @Epic("Website CareerLink")
-    @Feature("Create CV")
-    //@Story("Read data test from Excel file")
-    @Test
-    public void TestSuite_CreateCV() throws Exception {
-        ExcelUtils.setExcelFile(excelPath, "CreateCV");
-        Sheet sheet = ExcelUtils.getSheet("CreateCV");
-        int rowCount = sheet.getLastRowNum();
-        ScreenRecorderUtils.startRecord("CreateCV");
-        // Bỏ hàng tiêu đề
-        for (int iRow = 1; iRow <= rowCount; iRow++) {
-            reuseCreateCV(iRow);
-            execute_Actions(testData, null, null, null, null, null, "CRCV_01");
-        }
-        reportInConsole();
-        ScreenRecorderUtils.stopRecord();
-        considerTestCase();
-    }
-
-    @Ignore
-    @Severity(SeverityLevel.NORMAL)
-    @Description("Test suite of search and view job details function")
-    @Epic("Website CareerLink")
-    @Feature("Search and View job detail")
-    //@Story("Read data test from Excel file")
-    @Test
-    public void TestSuite_SearchAndViewJobDetails() throws Exception {
-        ExcelUtils.setExcelFile(excelPath, "Search");
-        Sheet sheet = ExcelUtils.getSheet("Search");
-        int rowCount = sheet.getLastRowNum();
-
-        ScreenRecorderUtils.startRecord("Search");
-        // Bỏ hàng tiêu đề
-        for (int iRow = 1; iRow <= rowCount; iRow++) {
-            reuseSearch(iRow);
-            execute_Actions(testData, null, null, null, null, null, "SJO_01");
-        }
-        reportInConsole();
-        ScreenRecorderUtils.stopRecord();
-    }
-
-    private void reuseSignIn(SignInPage signInPage) {
-        scriptID = signInPage.getScriptID();
-        sActionKeyword = signInPage.getKeyword();
-        locatorType = signInPage.getLocatorType();
-        locatorValue = signInPage.getLocatorValue();
-        testData = signInPage.getTestData();
-    }
-
-    public void reuseCreateCV(int iRow) {
-        scriptID = ExcelUtils.getCellData("CreateCV", iRow, 1);
-        sActionKeyword = ExcelUtils.getCellData("CreateCV", iRow, 5);
-        locatorType = ExcelUtils.getCellData("CreateCV", iRow, 6);
-        locatorValue = ExcelUtils.getCellData("CreateCV", iRow, 7);
-        testData = ExcelUtils.getCellData("CreateCV", iRow, 8);
-    }
-
-    public void reuseSignIn(int iRow) {
-        scriptID = ExcelUtils.getCellData("SignInPage", iRow, 1);
-        sActionKeyword = ExcelUtils.getCellData("SignInPage", iRow, 5);
-        locatorType = ExcelUtils.getCellData("SignInPage", iRow, 6);
-        locatorValue = ExcelUtils.getCellData("SignInPage", iRow, 7);
-        testData = ExcelUtils.getCellData("SignInPage", iRow, 8);
-    }
-
-    public void reuseSignUp(int iRow) {
-        scriptID = ExcelUtils.getCellData("SignUpPage", iRow, 1);
-        sActionKeyword = ExcelUtils.getCellData("SignUpPage", iRow, 5);
-        locatorType = ExcelUtils.getCellData("SignUpPage", iRow, 6);
-        locatorValue = ExcelUtils.getCellData("SignUpPage", iRow, 7);
-        testData = ExcelUtils.getCellData("SignUpPage", iRow, 8);
-    }
-
-    private void reuseSearch(int iRow) {
-        scriptID = ExcelUtils.getCellData("Search", iRow, 1);
-        sActionKeyword = ExcelUtils.getCellData("Search", iRow, 5);
-        locatorType = ExcelUtils.getCellData("Search", iRow, 6);
-        locatorValue = ExcelUtils.getCellData("Search", iRow, 7);
-        testData = ExcelUtils.getCellData("Search", iRow, 8);
-    }
-
-    private void execute_Actions(String testData, String sName, String sEmail, String sPass, String sPassCf,
-                                 String sResult, String sTCID) {
+    private void executeActions(DataProvider testScript) {
         try {
-            switch (sActionKeyword) {
+            String keyword = testScript.getKeyword();
+            String scriptTitle = testScript.getScriptTitle();
+            String testData = testScript.getTestData();
+            String locatorValue = testScript.getLocatorValue();
+            String locatorType = testScript.getLocatorType();
+            switch (keyword) {
                 case "openBrowser":
-                    ExtentReportManager.info("Test case " + sTCID);
+                    ExtentReportManager.info("Test case: " + scriptTitle);
                     ActionKeywords.openBrowser(testData);
-                    break;
-                case "move":
-                    ActionKeywords.elementPerform(locatorValue);
-                    break;
-                case "switchTo":
-                    ActionKeywords.switchTo(testData);
-                    break;
-                case "clear":
-                    ActionKeywords.clear(locatorType, locatorValue);
                     break;
                 case "navigate":
                     ActionKeywords.navigate(testData);
                     break;
+                case "clear":
+                    ActionKeywords.clear(locatorType, locatorValue);
+                    break;
+                case "move":
+                    ActionKeywords.moveElement(locatorValue);
+                    break;
+                case "switchTo":
+                    ActionKeywords.switchTo(testData);
+                    break;
                 case "setText":
-                    if (testData.equalsIgnoreCase("varEmail"))
-                        ActionKeywords.setText(locatorType, locatorValue, sEmail);
-                    else {
-                        if (testData.equalsIgnoreCase("varName")) {
-                            ActionKeywords.setText(locatorType, locatorValue, sName);
-                        } else {
-                            if (testData.equalsIgnoreCase("varPassword")) {
-                                ActionKeywords.setText(locatorType, locatorValue, sPass);
-                            } else {
-                                if (testData.equalsIgnoreCase("varPasswordCf")) {
-                                    ActionKeywords.setText(locatorType, locatorValue, sPassCf);
-                                } else {
-                                    ActionKeywords.setText(locatorType, locatorValue, testData);
-                                }
-                            }
-                        }
-                    }
+                    ActionKeywords.setText(locatorType, locatorValue, testData);
                     break;
                 case "uploadImage":
-                    ActionKeywords.uploadImage(locatorType, locatorValue, testData);
+                    ActionKeywords.uploadImage(testData);
                     break;
                 case "clickButton":
                     ActionKeywords.clickButton(locatorType, locatorValue);
                     break;
-                case "doubleClick":
-                    ActionKeywords.doubleClick(locatorType, locatorValue);
-                    break;
                 case "clickElement":
                     ActionKeywords.clickElement(locatorType, locatorValue);
                     break;
+                case "doubleClick":
+                    ActionKeywords.doubleClick(locatorType, locatorValue);
+                    break;
                 case "verifyResults":
-                    if (ActionKeywords.verifyResults(sResult)) {
+                    isPass = ActionKeywords.verifyResults(testData, FailureHandling.CONTINUE_ON_FAILURE);
+                    if (isPass) {
                         LogUtils.info("Same result ---> Pass");
-                        onPass();
                     } else {
                         LogUtils.error("Different result ---> Fail");
-                        onFailed();
-                        Allure.getLifecycle().updateTestCase(tc->tc.setStatus(io.qameta.allure.model.Status.FAILED));
-                        Allure.getLifecycle().updateTestCase(tc-> System.out.println(tc.getUuid()));
-                        break;
+                        Reporter.getCurrentTestResult().setStatus(ITestResult.FAILURE);
                     }
                     break;
                 case "verifyText":
-                    if (ActionKeywords.verifyText(locatorType, locatorValue, testData)) {
+                    isPass = ActionKeywords.verifyText(locatorType, locatorValue, testData, FailureHandling.CONTINUE_ON_FAILURE);
+                    if (isPass) {
                         LogUtils.info("Same result ---> Pass");
-                        onPass();
                     } else {
                         LogUtils.error("Different result ---> Fail");
-                        onFailed();
                     }
                     break;
                 case "verifyTitle":
-                    if (ActionKeywords.verifyTitle(testData)) {
+                    isPass = ActionKeywords.verifyTitle(testData, FailureHandling.CONTINUE_ON_FAILURE);
+                    if (isPass) {
                         LogUtils.info("Same result ---> Pass");
-                        onPass();
                     } else {
                         LogUtils.error("Different result ---> Fail");
-                        onFailed();
                     }
                     break;
                 case "verifyURL":
-                    if (ActionKeywords.verifyURL(testData)) {
+                    isPass = ActionKeywords.verifyURL(testData);
+                    if (isPass) {
                         LogUtils.info("Same result ---> Pass");
-                        onPass();
                     } else {
                         LogUtils.error("Different result ---> Fail");
-                        onFailed();
                     }
                     break;
                 case "displayed":
-                    try {
-                        ActionKeywords.displayed(locatorType, locatorValue);
-                        onPass();
-                    } catch (Exception e) {
-                        onFailed();
-                    }
+                    ActionKeywords.displayed(locatorType, locatorValue);
                     break;
                 case "selectOptionByValue":
                     ActionKeywords.selectOptionByValue(locatorType, locatorValue, testData);
@@ -437,42 +122,336 @@ public class ExecutionEngine {
                     ActionKeywords.closeBrowser();
                     break;
                 default:
-                    LogUtils.info("[>>ERROR<<]: |Keyword Not Found " + sActionKeyword);
+                    LogUtils.error("Keyword Not Found " + keyword);
             }
         } catch (Exception e) {
-            e.getMessage();
+            e.printStackTrace();
         }
     }
 
-    private void onPass() {
-        totalCasePass++;
-        casePass++;
+    //@Ignore
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Test suite of login function written in Excel file")
+    @Epic("Website CareerLink")
+    @Feature("Sign in")
+    @Story("Read data test from Excel file")
+    @Test (priority = 0)
+    public void testCase_ExcelFile_SignInWithoutEmail() {
+        List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignInPage");
+        List<DataOfSignIn> dataOfSignIns = DataReaderUtils.getDataSignIn(excelPath, "DataOfSignIn", "SIN_VAL_02");
+        testCaseStep = DataReaderUtils.getFinalDataSignIn(listHaveVar, dataOfSignIns);
+        ScreenRecorderUtils.startRecord("ExcelFile_SignInWithoutEmail");
+        for (DataProvider step : testCaseStep) {
+            executeActions(step);
+        }
+        considerTestCase();
+        ScreenRecorderUtils.stopRecord();
     }
 
-    private void onFailed() {
-        totalCaseFail++;
-        caseFail++;
-        ActionKeywords.addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDate());
+    //@Ignore
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Test suite of register function written in Excel file")
+    @Epic("Website CareerLink")
+    @Feature("Sign in")
+    @Story("Read data test from Excel file")
+    @Test (priority = 1)
+    public void testCase_ExcelFile_SignInWithWrongEmailFormat_HaveSpace() {
+        List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignInPage");
+        List<DataOfSignIn> dataOfSignIns = DataReaderUtils.getDataSignIn(excelPath, "DataOfSignIn", "SIN_VAL_04");
+        testCaseStep = DataReaderUtils.getFinalDataSignIn(listHaveVar, dataOfSignIns);
+        ScreenRecorderUtils.startRecord("ExcelFile_SignInWithWrongEmailFormat_HaveSpace");
+        for (DataProvider step : testCaseStep) {
+            executeActions(step);
+        }
+        considerTestCase();
+        ScreenRecorderUtils.stopRecord();
+
     }
 
-    private void reportInConsole() {
-        java.util.Date date = new java.util.Date();
-        System.out.println("==========================================================");
-        System.out.println("-----------" + date + "--------------");
-        System.out.println("Total number of Testcases run: " + (totalCasePass + totalCaseFail + totalCaseSkip));
-        System.out.println("Total number of passed Testcases: " + totalCasePass);
-        System.out.println("Total number of failed Testcases: " + totalCaseFail);
-        System.out.println("Total number of skiped Testcases: " + totalCaseSkip);
-        System.out.println("==========================================================");
-        EmailSendUtils.sendEmail(totalCasePass + totalCaseFail + totalCaseSkip, totalCasePass, totalCaseFail, totalCaseSkip);
+    //@Ignore
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Test suite of register function written in Excel file")
+    @Epic("Website CareerLink")
+    @Feature("Sign in")
+    @Story("Read data test from Excel file")
+    @Test(priority = 2)
+    public void testCase_ExcelFile_SignInWithWrongEmailFormat_MissingSymbol() {
+        List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignInPage");
+        List<DataOfSignIn> dataOfSignIns = DataReaderUtils.getDataSignIn(excelPath, "DataOfSignIn", "SIN_VAL_07");
+        testCaseStep = DataReaderUtils.getFinalDataSignIn(listHaveVar, dataOfSignIns);
+        ScreenRecorderUtils.startRecord("ExcelFile_SignInWithWrongEmailFormat_MissingSymbol");
+        for (DataProvider step : testCaseStep) {
+            executeActions(step);
+        }
+        considerTestCase();
+        ScreenRecorderUtils.stopRecord();
+
     }
 
-    private void considerTestCase() {
-        float rs = casePass / (caseSkip + caseFail + casePass);
-        if (rs < STANDARD_PERCENT)
-            ExtentReportManager.fail("Test case Fail");
-        casePass = 0;
-        caseFail = 0;
-        caseSkip = 0;
+    //@Ignore
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Test suite of login function written in Excel file")
+    @Epic("Website CareerLink")
+    @Feature("Sign in")
+    @Story("Read data test from Excel file")
+    @Test (priority = 3)
+    public void testCase_ExcelFile_SignInWithInvalidAccount() {
+        List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignInPage");
+        List<DataOfSignIn> dataOfSignIns = DataReaderUtils.getDataSignIn(excelPath, "DataOfSignIn", "SIN_VAL_08");
+        testCaseStep = DataReaderUtils.getFinalDataSignIn(listHaveVar, dataOfSignIns);
+        ScreenRecorderUtils.startRecord("ExcelFile_SignInWithInvalidAccount");
+        for (DataProvider step : testCaseStep) {
+            executeActions(step);
+        }
+        considerTestCase();
+        ScreenRecorderUtils.stopRecord();
     }
+
+    //@Ignore
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Test suite of login function written in Excel file")
+    @Epic("Website CareerLink")
+    @Feature("Sign in")
+    @Story("Read data test from Excel file")
+    @Test (priority = 4)
+    public void testCase_ExcelFile_SignInWithoutPassword() {
+        List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignInPage");
+        List<DataOfSignIn> dataOfSignIns = DataReaderUtils.getDataSignIn(excelPath, "DataOfSignIn", "SIN_VAL_12");
+        testCaseStep = DataReaderUtils.getFinalDataSignIn(listHaveVar, dataOfSignIns);
+        ScreenRecorderUtils.startRecord("ExcelFile_SignInWithoutPassword");
+        for (DataProvider step : testCaseStep) {
+            executeActions(step);
+        }
+        considerTestCase();
+        ScreenRecorderUtils.stopRecord();
+    }
+
+    //@Ignore
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Test suite of login function written in XML file")
+    @Epic("Website CareerLink")
+    @Feature("Sign in")
+    @Story("Read data test from XML file")
+    @Test (priority = 5)
+    public void testCase_XMLFile_SignInWithoutEmail() {
+        Data xmlData = XmlUtils.xmlToData(xmlPath);
+        List<SignInPage> signInPages = xmlData.getSignInPage();
+        List<DataOfSignIn> dataOfSignIns = xmlData.getDataOfSignIn();
+        testCaseStep = DataReaderUtils.getFinalDataSignIn(DataReaderUtils.convertSignInToDataProvider(signInPages), dataOfSignIns);
+        ScreenRecorderUtils.startRecord("XMLFile_SignInWithoutEmail");
+        for (DataProvider step : testCaseStep) {
+            executeActions(step);
+        }
+        considerTestCase();
+        ScreenRecorderUtils.stopRecord();
+    }
+
+    //@Ignore
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Test suite of login function written in JSON file")
+    @Epic("Website CareerLink")
+    @Feature("Sign in")
+    @Story("Read data test from JSON file")
+    @Test (priority = 6)
+    public void testCase_JSONFile_SignInWithoutEmail() {
+        Data jsonData = JsonUtils.readData(jsonPath);
+        List<SignInPage> signInPages = jsonData.getSignInPage();
+        List<DataOfSignIn> dataOfSignIns = jsonData.getDataOfSignIn();
+        testCaseStep = DataReaderUtils.getFinalDataSignIn(DataReaderUtils.convertSignInToDataProvider(signInPages), dataOfSignIns);
+        ScreenRecorderUtils.startRecord("JSONFile_SignInWithoutEmail");
+
+        for (DataProvider step : testCaseStep) {
+            executeActions(step);
+        }
+        considerTestCase();
+        ScreenRecorderUtils.stopRecord();
+    }
+
+    //@Ignore
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Test suite of login function written in CSV file")
+    @Epic("Website CareerLink")
+    @Feature("Sign in")
+    @Story("Read data test from CSV file")
+    @Test (priority = 7)
+    public void testCase_CSVFile_SignInWithoutEmail() {
+        List<SignInPage> signInPages = CsvUtils.readSignInPageCSVfile(signInCSVpath);
+        List<DataOfSignIn> dataOfSignIns = CsvUtils.readDataOfSignInCSVfile(dataOfsignInCSVpath);
+        testCaseStep = DataReaderUtils.getFinalDataSignIn(DataReaderUtils.convertSignInToDataProvider(signInPages), dataOfSignIns);
+        ScreenRecorderUtils.startRecord("CSVFile_SignInWithoutEmail");
+
+        for (DataProvider step : testCaseStep) {
+            executeActions(step);
+        }
+        considerTestCase();
+        ScreenRecorderUtils.stopRecord();
+    }
+
+    //@Ignore
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Test suite of register function written in Excel file")
+    @Epic("Website CareerLink")
+    @Feature("Sign up")
+    @Story("Read data test from Excel file")
+    @Test (priority = 8)
+    public void testCase_ExcelFile_SignUpWithoutName() {
+        List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignUpPage");
+        List<DataOfSignUp> dataOfSignUps = DataReaderUtils.getDataSignUp(excelPath, "DataOfSignUp", "SUP_VAL_02");
+        testCaseStep = DataReaderUtils.getFinalDataSignUp(listHaveVar, dataOfSignUps);
+        ScreenRecorderUtils.startRecord("ExcelFile_SignUpWithoutName");
+        for (DataProvider step : testCaseStep) {
+            executeActions(step);
+        }
+        considerTestCase();
+        ScreenRecorderUtils.stopRecord();
+    }
+
+    //@Ignore
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Test suite of register function written in Excel file")
+    @Epic("Website CareerLink")
+    @Feature("Sign up")
+    @Story("Read data test from Excel file")
+    @Test (priority = 8)
+    public void testCase_ExcelFile_SignUpWithoutEmail() {
+        List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignUpPage");
+        List<DataOfSignUp> dataOfSignUps = DataReaderUtils.getDataSignUp(excelPath, "DataOfSignUp", "SUP_VAL_08");
+        testCaseStep = DataReaderUtils.getFinalDataSignUp(listHaveVar, dataOfSignUps);
+        ScreenRecorderUtils.startRecord("ExcelFile_SignUpWithoutEmail");
+        for (DataProvider step : testCaseStep) {
+            executeActions(step);
+        }
+        considerTestCase();
+        ScreenRecorderUtils.stopRecord();
+    }
+
+    //@Ignore
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Test suite of register function written in Excel file")
+    @Epic("Website CareerLink")
+    @Feature("Sign up")
+    @Story("Read data test from Excel file")
+    @Test (priority = 9)
+    public void testCase_ExcelFile_SignUpWithWrongEmailFormat_HaveSpace() {
+        List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignUpPage");
+        List<DataOfSignUp> dataOfSignUps = DataReaderUtils.getDataSignUp(excelPath, "DataOfSignUp", "SUP_VAL_10");
+        testCaseStep = DataReaderUtils.getFinalDataSignUp(listHaveVar, dataOfSignUps);
+        ScreenRecorderUtils.startRecord("ExcelFile_SignUpWithWrongEmailFormat_HaveSpace");
+        for (DataProvider step : testCaseStep) {
+            executeActions(step);
+        }
+        considerTestCase();
+        ScreenRecorderUtils.stopRecord();
+    }
+
+    //@Ignore
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Test suite of register function written in Excel file")
+    @Epic("Website CareerLink")
+    @Feature("Sign up")
+    @Story("Read data test from Excel file")
+    @Test (priority = 10)
+    public void testCase_ExcelFile_SignUpWithWrongEmailFormat_MissingSymbol() {
+        List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignUpPage");
+        List<DataOfSignUp> dataOfSignUps = DataReaderUtils.getDataSignUp(excelPath, "DataOfSignUp", "SUP_VAL_14");
+        testCaseStep = DataReaderUtils.getFinalDataSignUp(listHaveVar, dataOfSignUps);
+        ScreenRecorderUtils.startRecord("ExcelFile_SignUpWithWrongEmailFormat_MissingSymbol");
+        for (DataProvider step : testCaseStep) {
+            executeActions(step);
+        }
+        considerTestCase();
+        ScreenRecorderUtils.stopRecord();
+    }
+
+    //@Ignore
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Test suite of register function written in Excel file")
+    @Epic("Website CareerLink")
+    @Feature("Sign up")
+    @Story("Read data test from Excel file")
+    @Test (priority = 11)
+    public void testCase_ExcelFile_SignUpWithoutPassword() {
+        List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignUpPage");
+        List<DataOfSignUp> dataOfSignUps = DataReaderUtils.getDataSignUp(excelPath, "DataOfSignUp", "SUP_VAL_18");
+        testCaseStep = DataReaderUtils.getFinalDataSignUp(listHaveVar, dataOfSignUps);
+        ScreenRecorderUtils.startRecord("ExcelFile_SignUpWithoutPassword");
+        for (DataProvider step : testCaseStep) {
+            executeActions(step);
+        }
+        considerTestCase();
+        ScreenRecorderUtils.stopRecord();
+    }
+
+    //@Ignore
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Test suite of register function written in Excel file")
+    @Epic("Website CareerLink")
+    @Feature("Sign up")
+    @Story("Read data test from Excel file")
+    @Test (priority = 12)
+    public void testCase_ExcelFile_SignUpWithoutPasswordConfirm() {
+        List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignUpPage");
+        List<DataOfSignUp> dataOfSignUps = DataReaderUtils.getDataSignUp(excelPath, "DataOfSignUp", "SUP_VAL_21");
+        testCaseStep = DataReaderUtils.getFinalDataSignUp(listHaveVar, dataOfSignUps);
+        ScreenRecorderUtils.startRecord("ExcelFile_SignUpWithoutPasswordConfirm");
+        for (DataProvider step : testCaseStep) {
+            executeActions(step);
+        }
+        considerTestCase();
+        ScreenRecorderUtils.stopRecord();
+    }
+
+    //@Ignore
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Test suite of register function written in Excel file")
+    @Epic("Website CareerLink")
+    @Feature("Sign up")
+    @Story("Read data test from Excel file")
+    @Test (priority = 13)
+    public void testCase_ExcelFile_SignUpWithPwDiffFromPwCf() {
+        List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignUpPage");
+        List<DataOfSignUp> dataOfSignUps = DataReaderUtils.getDataSignUp(excelPath, "DataOfSignUp", "SUP_VAL_22");
+        testCaseStep = DataReaderUtils.getFinalDataSignUp(listHaveVar, dataOfSignUps);
+        ScreenRecorderUtils.startRecord("ExcelFile_SignUpWithPwDiffFromPwCf");
+        for (DataProvider step : testCaseStep) {
+            executeActions(step);
+        }
+        considerTestCase();
+        ScreenRecorderUtils.stopRecord();
+    }
+
+    //@Ignore
+    @Severity(SeverityLevel.BLOCKER)
+    @Description("Test suite of Create CV function")
+    @Epic("Website CareerLink")
+    @Feature("Create CV")
+    @Story("Read data test from Excel file")
+    @Test (priority = 14)
+    public void testCaseCreateCV() {
+        testCaseStep = DataReaderUtils.getTestStep(excelPath, "CreateCV");
+        ScreenRecorderUtils.startRecord("CreateCV");
+        for (DataProvider step : testCaseStep) {
+            executeActions(step);
+        }
+        considerTestCase();
+        ScreenRecorderUtils.stopRecord();
+    }
+
+    //@Ignore
+    @Severity(SeverityLevel.NORMAL)
+    @Description("Test suite of search and view job details function")
+    @Epic("Website CareerLink")
+    @Feature("Search and View job details")
+    @Story("Read data test from Excel file")
+    @Test (priority = 15)
+    public void testCaseSearchAndViewJobDetails() {
+        testCaseStep = DataReaderUtils.getTestStep(excelPath, "Search");
+        ScreenRecorderUtils.startRecord("SearchAndViewJobDetRails");
+        for (DataProvider step : testCaseStep) {
+            executeActions(step);
+        }
+        considerTestCase();
+        ScreenRecorderUtils.stopRecord();
+    }
+
 }

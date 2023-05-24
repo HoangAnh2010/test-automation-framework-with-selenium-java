@@ -2,6 +2,7 @@ package keyword;
 
 import com.aventstack.extentreports.Status;
 import constants.FrwConstants;
+import enums.FailureHandling;
 import helpers.Helpers;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Allure;
@@ -17,13 +18,16 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.asserts.SoftAssert;
 import report.AllureManager;
 import report.ExtentReportManager;
+import report.ExtentTestManager;
 import utils.DateUtils;
 import utils.LogUtils;
 
+import java.awt.*;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.time.Duration;
 import java.util.List;
@@ -43,7 +47,8 @@ public class ActionKeywords {
     private static WebElement getElement(String locatorType, String locatorValue) {
         WebElement element = null;
 
-        if (locatorType.equalsIgnoreCase("className")) element = driver.findElement(By.className(locatorValue));
+        if (locatorType.equalsIgnoreCase("className"))
+            element = driver.findElement(By.className(locatorValue));
         else if (locatorType.equalsIgnoreCase("cssSelector"))
             element = driver.findElement(By.cssSelector(locatorValue));
         else if (locatorType.equalsIgnoreCase("id")) element = driver.findElement(By.id(locatorValue));
@@ -58,7 +63,6 @@ public class ActionKeywords {
         return element;
     }
 
-    //init Chrome browser
     private static WebDriver initChromeDriver() {
         try {
             LogUtils.info("Open browser: Chrome");
@@ -67,8 +71,6 @@ public class ActionKeywords {
             options.addArguments("--remote-allow-origins=*");
             driver = new ChromeDriver(options);
             driver.manage().window().maximize();
-//			driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-//			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         } catch (Exception e) {
             LogUtils.error("Can't open browser Chrome");
             ExtentReportManager.info("Can't open browser Chrome");
@@ -77,7 +79,6 @@ public class ActionKeywords {
         return driver;
     }
 
-    //init Firefox browser
     private static WebDriver initFirefoxDriver() {
         try {
             LogUtils.info("Open browser: Firefox");
@@ -112,7 +113,6 @@ public class ActionKeywords {
         return driver;
     }
 
-    //close browser
     @Step("Close browser")
     public static void closeBrowser() {
         try {
@@ -127,7 +127,6 @@ public class ActionKeywords {
         }
     }
 
-    //navigate to url
     @Step("Navigate to: {0}")
     public static void navigate(String url) {
         try {
@@ -142,7 +141,6 @@ public class ActionKeywords {
         }
     }
 
-    //refresh page
     @Step("Refresh the website")
     public static void refresh() throws InterruptedException {
         LogUtils.info("Refresh the website");
@@ -151,7 +149,6 @@ public class ActionKeywords {
         Thread.sleep(3000);
     }
 
-    //clear
     @Step("Clear the element")
     public static void clear(String locatorType, String locatorValue) throws InterruptedException {
         LogUtils.info("Clear the element");
@@ -170,7 +167,6 @@ public class ActionKeywords {
         element.sendKeys(value);
     }
 
-    //set text
     @Step("Enter text")
     public static void setText(String locatorType, String locatorValue, String value) {
         try {
@@ -189,9 +185,8 @@ public class ActionKeywords {
         }
     }
 
-    //move to element
     @Step("Move to the element")
-    public static void elementPerform(String address) {
+    public static void moveElement(String address) {
         try {
             if (address.contains("[")) {
                 LogUtils.info("Move to the element");
@@ -218,9 +213,8 @@ public class ActionKeywords {
         element.click();
     }
 
-    //click on button
     @Step("Click on button")
-    public static void clickButton(String locatorType, String locatorValue) throws Exception {
+    public static void clickButton(String locatorType, String locatorValue) throws InterruptedException {
         try {
             LogUtils.info("Click on button: " + locatorType + "= " + locatorValue);
             WebElement element = getElement(locatorType, locatorValue);
@@ -232,7 +226,39 @@ public class ActionKeywords {
             ExtentReportManager.info("Locator:" + locatorValue + " not found to click | " + e.getMessage());
             AllureManager.saveTextLog("Locator:" + locatorValue + " not found to click | " + e.getMessage());
         }
-        Thread.sleep(1500);
+        Thread.sleep(2000);
+    }
+
+    @Step("Click on element")
+    public static void clickElement(String locatorType, String locatorValue) throws InterruptedException {
+        try {
+            LogUtils.info("Click on element: " + locatorType + "= " + locatorValue);
+            WebElement element = getElement(locatorType,locatorValue);
+            //waitForPageLoaded();
+            element.click();
+            ExtentReportManager.pass("Click on element: " + locatorType + "= " + locatorValue);
+        } catch (NoSuchElementException e) {
+            LogUtils.error("Locator:" + locatorValue + " not found to click | " + e.getMessage());
+            ExtentReportManager.info("Locator:" + locatorValue + " not found to click | " + e.getMessage());
+            AllureManager.saveTextLog("Locator:" + locatorValue + " not found to click | " + e.getMessage());
+        }
+        Thread.sleep(1000);
+    }
+
+    @Step("Right click on element")
+    public void rightClickElement(String locatorType, String locatorValue) {
+        try {
+            LogUtils.info("Right click on element: " + locatorType + "= " + locatorValue);
+            ExtentReportManager.pass("Right click on element: " + locatorType + "= " + locatorValue);
+            WebElement element = getElement(locatorType, locatorValue);
+            waitForPageLoaded();
+            wait.until(ExpectedConditions.elementToBeClickable(element));
+            action.contextClick().build().perform();
+        } catch (NoSuchElementException e) {
+            LogUtils.error("Locator: " + locatorType + "= " + locatorValue + " not found to right click | " + e.getMessage());
+            ExtentReportManager.info("Locator: " + locatorType + "= " + locatorValue + " not found to right click | " + e.getMessage());
+            AllureManager.saveTextLog("Locator: " + locatorType + "= " + locatorValue + " not found to right click | " + e.getMessage());
+        }
     }
 
     @Step("Double click")
@@ -252,6 +278,22 @@ public class ActionKeywords {
         Thread.sleep(1500);
     }
 
+    @Step("Scroll mouse down and click element")
+    public static void scrollAndClick(String locatorType, String locatorValue) {
+        js = (JavascriptExecutor) driver;
+        try {
+            LogUtils.info("Scroll mouse down and click element: " + locatorValue);
+            WebElement element = getElement(locatorType, locatorValue);
+            waitForPageLoaded();
+            js.executeScript("arguments[0].scrollIntoView(true)", element);
+            ExtentReportManager.pass("Scroll mouse down and click element: " + locatorValue);
+        } catch (NoSuchElementException e) {
+            LogUtils.error("Locator: " + locatorType + "=" + locatorValue + " not found to click | " + e.getMessage());
+            ExtentReportManager.info("Locator: " + locatorType + "=" + locatorValue + " not found to click | " + e.getMessage());
+            AllureManager.saveTextLog("Locator: " + locatorType + "=" + locatorValue + " not found to click | " + e.getMessage());
+        }
+    }
+
     @Step("Switch to new tab")
     public static void switchTo(String value) throws Exception {
         try {
@@ -259,7 +301,6 @@ public class ActionKeywords {
             String currentWindow = driver.getWindowHandle();  //will keep current window to switch back
             for (String winHandle : driver.getWindowHandles()) {
                 if (driver.switchTo().window(winHandle).getTitle().equals(value)) {
-                    //This is the one you're looking for
                     break;
                 } else {
                     driver.switchTo().window(currentWindow);
@@ -271,41 +312,6 @@ public class ActionKeywords {
             LogUtils.error("Can't switch to new tab");
             ExtentReportManager.info("Can't switch to new tab");
             AllureManager.saveTextLog("Can't switch to new tab");
-        }
-        //Thread.sleep(1500);
-    }
-
-    @Step("Click on element")
-    public static void clickElement(String locatorType, String locatorValue) throws Exception {
-        try {
-            LogUtils.info("Click on element: " + locatorType + "= " + locatorValue);
-            WebElement element = getElement(locatorType, locatorValue);
-            waitForPageLoaded();
-            //Thread.sleep(4000);
-            element.click();
-            ExtentReportManager.pass("Click on element: " + locatorType + "= " + locatorValue);
-        } catch (NoSuchElementException e) {
-            LogUtils.error("Locator:" + locatorValue + " not found to click | " + e.getMessage());
-            ExtentReportManager.info("Locator:" + locatorValue + " not found to click | " + e.getMessage());
-            AllureManager.saveTextLog("Locator:" + locatorValue + " not found to click | " + e.getMessage());
-        }
-        Thread.sleep(1500);
-    }
-
-    @Step("Scroll mouse down and click element")
-    public static void scrollAndClick(String locatorType, String locatorValue) {
-        js = (JavascriptExecutor) driver;
-        try {
-            LogUtils.info("Scroll mouse down and click element: " + locatorValue);
-            WebElement element = getElement(locatorType, locatorValue);
-            waitForPageLoaded();
-            js.executeScript("arguments[0].scrollIntoView(true)", element);
-            //js.executeScript("arguments[0].click();", element);
-            ExtentReportManager.pass("Scroll mouse down and click element: " + locatorValue);
-        } catch (NoSuchElementException e) {
-            LogUtils.error("Locator: " + locatorType + "=" + locatorValue + " not found to click | " + e.getMessage());
-            ExtentReportManager.info("Locator: " + locatorType + "=" + locatorValue + " not found to click | " + e.getMessage());
-            AllureManager.saveTextLog("Locator: " + locatorType + "=" + locatorValue + " not found to click | " + e.getMessage());
         }
     }
 
@@ -321,26 +327,6 @@ public class ActionKeywords {
         }
     }
 
-    public boolean verifyPageLoaded(String pageLoadedText) {
-        waitForPageLoaded();
-        Boolean res = false;
-
-        List<WebElement> elementList = driver.findElements(By.xpath("//*contains(text(),'" + pageLoadedText + "')]"));
-        if (elementList.size() > 0) {
-            res = true;
-            LogUtils.info("Page loaded(" + res + "): " + pageLoadedText);
-            ExtentReportManager.info("Page loaded(" + res + "): " + pageLoadedText);
-            AllureManager.saveTextLog("Page loaded(" + res + "): " + pageLoadedText);
-        } else {
-            res = false;
-            LogUtils.info("Page loaded(" + res + "): " + pageLoadedText);
-            ExtentReportManager.info("Page loaded(" + res + "): " + pageLoadedText);
-            AllureManager.saveTextLog("Page loaded(" + res + "): " + pageLoadedText);
-        }
-        return res;
-    }
-
-    //displayed
     @Step("Verify element displayed")
     public static void displayed(String locatorType, String locatorValue) {
         LogUtils.info("Verify element displayed");
@@ -358,30 +344,11 @@ public class ActionKeywords {
         }
     }
 
-    //get current URL
     @Step("Get current URL")
     public boolean getURL(String url) {
         LogUtils.info("Get current URL");
         ExtentReportManager.pass("Get current URL");
         return driver.getCurrentUrl().contains(url);
-    }
-
-    @Step("Verify URL")
-    public static boolean verifyURL(String expected) throws InterruptedException {
-        LogUtils.info("Verify URL");
-        ExtentReportManager.info("Verify URL");
-        waitForPageLoaded();
-        String actual = driver.getCurrentUrl();
-        LogUtils.info("Expected URL: " + expected);
-        LogUtils.info("Actual URL: " + actual);
-        AllureManager.saveTextLog("actual: " + actual);
-        if (expected.equals(actual)) {
-            statusVerify(true);
-            return true;
-        } else {
-            statusVerify(false);
-            return false;
-        }
     }
 
     @Step("Get the title of page")
@@ -392,31 +359,6 @@ public class ActionKeywords {
         return driver.getTitle();
     }
 
-    @Step("Verify the title of page")
-    public boolean verifyPageTitle(String pageTitle) {
-        LogUtils.info("Verify the title of page");
-        ExtentReportManager.info("Verify the title of page");
-        return getPageTitle().equals(pageTitle);
-    }
-
-    //right click
-    @Step("Right click on element")
-    public void rightClickElement(String locatorType, String locatorValue) {
-        try {
-            LogUtils.info("Right click on element: " + locatorType + "= " + locatorValue);
-            ExtentReportManager.pass("Right click on element: " + locatorType + "= " + locatorValue);
-            WebElement element = getElement(locatorType, locatorValue);
-            waitForPageLoaded();
-            wait.until(ExpectedConditions.elementToBeClickable(element));
-            action.contextClick().build().perform();
-        } catch (NoSuchElementException e) {
-            LogUtils.error("Locator: " + locatorType + "= " + locatorValue + " not found to right click | " + e.getMessage());
-            ExtentReportManager.info("Locator: " + locatorType + "= " + locatorValue + " not found to right click | " + e.getMessage());
-            AllureManager.saveTextLog("Locator: " + locatorType + "= " + locatorValue + " not found to right click | " + e.getMessage());
-        }
-    }
-
-    //select data from dropdown
     @Step("Select option by text")
     public static void selectOptionByText(String locatorType, String locatorValue, String text) {
         try {
@@ -468,48 +410,6 @@ public class ActionKeywords {
         }
     }
 
-    @Step("Verify the text of element")
-    public boolean verifyElementText(WebElement element, String textValue) {
-        LogUtils.info("Verify the text of element");
-        ExtentReportManager.info("Verify the text of element");
-        wait.until(ExpectedConditions.visibilityOf(element));
-        return element.getText().equals(textValue);
-    }
-
-    @Step("Verify the text of element")
-    public static boolean verifyElementText(String locatorType, String locatorValue, String expected) {
-        LogUtils.info("Verify the text of element");
-        ExtentReportManager.info("Verify the text of element");
-        String actual;
-        WebElement element = getElement(locatorType, locatorValue);
-        waitForPageLoaded();
-        actual = element.getText();
-        LogUtils.info("Expected result: " + expected);
-        LogUtils.info("Actual result: " + actual);
-        AllureManager.saveTextLog("actual: " + actual);
-        if (actual.equals(expected)) {
-            statusVerify(true);
-            return true;
-        } else {
-            statusVerify(false);
-            return false;
-        }
-    }
-
-    @Step("Verify Element Exist")
-    public boolean verifyElementExist(By elementBy) {
-        // Tạo list lưu tất cả các đối tượng WebElement
-        LogUtils.info("Verify Element Exist");
-        ExtentReportManager.info("Verify Element Exist");
-        List<WebElement> listElement = driver.findElements(elementBy);
-        int total = listElement.size();
-        if (total > 0) {
-            return true;
-        }
-        return false;
-    }
-
-    // wait for Javascript to Loaded
     public void waitForJQueryLoaded() {
         ExpectedCondition<Boolean> jQueryload = new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver driver) {
@@ -529,7 +429,6 @@ public class ActionKeywords {
         }
     }
 
-    // wait for Javascript to Loaded
     public void waitForJSLoaded() {
         ExpectedCondition<Boolean> jsload = new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver driver) {
@@ -544,8 +443,110 @@ public class ActionKeywords {
         }
     }
 
+    public boolean verifyPageLoaded(String pageLoadedText) {
+        waitForPageLoaded();
+        Boolean res = false;
+        List<WebElement> elementList = driver.findElements(By.xpath("//*contains(text(),'" + pageLoadedText + "')]"));
+        if (elementList.size() > 0) {
+            res = true;
+            LogUtils.info("Page loaded(" + res + "): " + pageLoadedText);
+            ExtentReportManager.info("Page loaded(" + res + "): " + pageLoadedText);
+            AllureManager.saveTextLog("Page loaded(" + res + "): " + pageLoadedText);
+        } else {
+            res = false;
+            LogUtils.info("Page loaded(" + res + "): " + pageLoadedText);
+            ExtentReportManager.info("Page loaded(" + res + "): " + pageLoadedText);
+            AllureManager.saveTextLog("Page loaded(" + res + "): " + pageLoadedText);
+        }
+        return res;
+    }
+
+    @Step("Verify Element Exist")
+    public boolean verifyElementExist(By elementBy) {
+        // Tạo list lưu tất cả các đối tượng WebElement
+        LogUtils.info("Verify Element Exist");
+        ExtentReportManager.info("Verify Element Exist");
+        List<WebElement> listElement = driver.findElements(elementBy);
+        int total = listElement.size();
+        if (total > 0) {
+            return true;
+        }
+        return false;
+    }
+
+    @Step("Verify the title of page")
+    public boolean verifyPageTitle(String pageTitle) {
+        LogUtils.info("Verify the title of page");
+        ExtentReportManager.info("Verify the title of page");
+        return getPageTitle().equals(pageTitle);
+    }
+
+    @Step("Verify URL")
+    public static boolean verifyURL(String expected) throws InterruptedException {
+        LogUtils.info("Verify URL");
+        ExtentReportManager.info("Verify URL");
+        waitForPageLoaded();
+        String actual = driver.getCurrentUrl();
+        LogUtils.info("Expected URL: " + expected);
+        LogUtils.info("Actual URL: " + actual);
+        AllureManager.saveTextLog("actual: " + actual);
+        if (expected.equals(actual)) {
+            statusVerify(true);
+            return true;
+        } else {
+            statusVerify(false);
+            return false;
+        }
+    }
+
+    @Step("Verify the text of element")
+    public boolean verifyElementText(WebElement element, String textValue) {
+        LogUtils.info("Verify the text of element");
+        ExtentReportManager.info("Verify the text of element");
+        wait.until(ExpectedConditions.visibilityOf(element));
+        return element.getText().equals(textValue);
+    }
+
+    @Step("Verify the text of element")
+    public static boolean verifyElementText(String locatorType, String locatorValue, String expected, FailureHandling flowControl) {
+        LogUtils.info("Verify the text of element");
+        ExtentReportManager.info("Verify the text of element");
+        String actual;
+        WebElement element = getElement(locatorType, locatorValue);
+        waitForPageLoaded();
+        actual = element.getText();
+        LogUtils.info("Expected result: " + expected);
+        LogUtils.info("Actual result: " + actual);
+        AllureManager.saveTextLog("actual: " + actual);
+        Boolean result = actual.equals(expected);
+
+        if (flowControl.equals(FailureHandling.STOP_ON_FAILURE)) {
+            Assert.assertEquals(actual, expected, "The actual text is [" + actual + "] not equals [" + expected + "]");
+        }
+        if (flowControl.equals(FailureHandling.CONTINUE_ON_FAILURE)) {
+//            softAssert.assertEquals(actual, expected, "The actual text is [" + actual + "] not equals [" + expected + "]");
+            if (result == false) {
+                ExtentReportManager.fail("The actual text is [" + actual + "] not equals [" + expected + "]");
+            }
+        }
+        if (flowControl.equals(FailureHandling.OPTIONAL)) {
+            if (ExtentTestManager.getExtentTest() != null) {
+                ExtentReportManager.warning("Verify text of an element [Equals] - " + result.toString().toUpperCase());
+                ExtentReportManager.warning("The actual text is [" + actual + "] not equals [" + expected + "]");
+            }
+            AllureManager.saveTextLog("Verify text of an element [Equals] - " + result.toString().toUpperCase() + ". The actual text is [" + actual + "] not equals [" + expected + "]");
+        }
+        if (result) {
+            statusVerify(true);
+            return true;
+        } else {
+            statusVerify(false);
+            return false;
+        }
+    }
+
     @Step("Verify text")
-    public static boolean verifyText(String locatorType, String locatorValue, String expected) {
+    public static boolean verifyText(String locatorType, String locatorValue, String expected, FailureHandling flowControl) throws InterruptedException {
         LogUtils.info("Verify Text");
         ExtentReportManager.info("Verify Text");
         WebElement element = getElement(locatorType, locatorValue);
@@ -554,7 +555,25 @@ public class ActionKeywords {
         LogUtils.info("Expected result: " + expected);
         LogUtils.info("Actual result: " + actual);
         AllureManager.saveTextLog("actual: " + actual);
-        if (actual.contains(expected)) {
+        Boolean result = actual.contains(expected);
+
+        if (flowControl.equals(FailureHandling.STOP_ON_FAILURE)) {
+            Assert.assertEquals(actual, expected, "The actual text is [" + actual + "] not equals [" + expected + "]");
+        }
+        if (flowControl.equals(FailureHandling.CONTINUE_ON_FAILURE)) {
+            softAssert.assertEquals(actual, expected, "The actual text is [" + actual + "] not equals [" + expected + "]");
+            if (result == false) {
+                ExtentReportManager.fail("The actual text is [" + actual + "] not equals [" + expected + "]");
+            }
+        }
+        if (flowControl.equals(FailureHandling.OPTIONAL)) {
+            if (ExtentTestManager.getExtentTest() != null) {
+                ExtentReportManager.warning("Verify text of an element [Equals] - " + result.toString().toUpperCase());
+                ExtentReportManager.warning("The actual text is [" + actual + "] not equals [" + expected + "]");
+            }
+            AllureManager.saveTextLog("Verify text of an element [Equals] - " + result.toString().toUpperCase() + ". The actual text is [" + actual + "] not equals [" + expected + "]");
+        }
+        if (result) {
             statusVerify(true);
             return true;
         } else {
@@ -564,7 +583,7 @@ public class ActionKeywords {
     }
 
     @Step("Verify title")
-    public static boolean verifyTitle(String expected) {
+    public static boolean verifyTitle(String expected, FailureHandling flowControl) {
         LogUtils.info("Verify Title");
         ExtentReportManager.info("Verify Title");
         String actual = driver.getTitle();
@@ -572,7 +591,25 @@ public class ActionKeywords {
         LogUtils.info("Expected result: " + expected);
         LogUtils.info("Actual result: " + actual);
         AllureManager.saveTextLog("actual: " + actual);
-        if (actual.contains(expected)) {
+        Boolean result = actual.equals(expected);
+
+        if (flowControl.equals(FailureHandling.STOP_ON_FAILURE)) {
+            Assert.assertEquals(actual, expected, "The actual text is [" + actual + "] not equals [" + expected + "]");
+        }
+        if (flowControl.equals(FailureHandling.CONTINUE_ON_FAILURE)) {
+            softAssert.assertEquals(actual, expected, "The actual text is [" + actual + "] not equals [" + expected + "]");
+            if (result == false) {
+                ExtentReportManager.fail("The actual text is [" + actual + "] not equals [" + expected + "]");
+            }
+        }
+        if (flowControl.equals(FailureHandling.OPTIONAL)) {
+            if (ExtentTestManager.getExtentTest() != null) {
+                ExtentReportManager.warning("Verify text of an element [Equals] - " + result.toString().toUpperCase());
+                ExtentReportManager.warning("The actual text is [" + actual + "] not equals [" + expected + "]");
+            }
+            AllureManager.saveTextLog("Verify text of an element [Equals] - " + result.toString().toUpperCase() + ". The actual text is [" + actual + "] not equals [" + expected + "]");
+        }
+        if (result) {
             statusVerify(true);
             return true;
         } else {
@@ -581,160 +618,146 @@ public class ActionKeywords {
         }
     }
 
-
-    @Step(value = "Verify the result")
-    public static boolean verifyResults(String expected) throws InterruptedException {
+    @Step("Verify the result")
+    public static boolean verifyResults(String expected, FailureHandling flowControl) {
         LogUtils.info("Verify the result");
         ExtentReportManager.info("Verify the result");
-        Boolean stt = false;
-        String actual;
+        String actual = "";
+        waitForPageLoaded();
         if (driver.getCurrentUrl().contains("login")) {
-            WebElement emailInSignInPage = getElement("name", "_username");//driver.findElement(By.name("_username"));
+            WebElement emailInSignInPage = getElement("name", "_username");
             WebElement pwInSignInPage = getElement("name", "_password");
             WebElement errorMessageInSignInPage = getElement("xpath", "//form[@id='login_form']/div");
-            if (emailInSignInPage.getText().trim() == "" || emailInSignInPage.getText() == null || emailInSignInPage.getText().trim().contains(" ") == true || emailInSignInPage.getText().trim().contains("@") == false) {
-                actual = emailInSignInPage.getAttribute("validationMessage");
-                waitForPageLoaded();
-                LogUtils.info("Expected result: " + expected);
-                LogUtils.info("Actual result: " + actual);
-                AllureManager.saveTextLog("actual: " + actual);
-                if (expected.equals(actual)) {
-                    stt = true;
-                }
+            if (errorMessageInSignInPage.getText().equals("")) {
+                actual = (emailInSignInPage.getAttribute("validationMessage").equals("") ?
+                        pwInSignInPage.getAttribute("validationMessage") :
+                        emailInSignInPage.getAttribute("validationMessage"));
             } else {
-                if (pwInSignInPage.getText() == null) {
-                    actual = pwInSignInPage.getAttribute("validationMessage");
-                    waitForPageLoaded();
-                    LogUtils.info("Expected result: " + expected);
-                    LogUtils.info("Actual result: " + actual);
-                    AllureManager.saveTextLog("actual: " + actual);
-                    if (expected.equals(actual)) {
-                        stt = true;
-                    }
-                } else {
-                    actual = errorMessageInSignInPage.getText();
-                    waitForPageLoaded();
-                    LogUtils.info("Expected result: " + expected);
-                    LogUtils.info("Actual result: " + actual);
-                    AllureManager.saveTextLog("actual: " + actual);
-                    if (expected.equals(actual)) {
-                        stt = true;
-                    }
-                }
+                actual = errorMessageInSignInPage.getText();
             }
         }
+
         if (driver.getCurrentUrl().contains("dang-ky")) {
+            WebElement nameInSignUpPage = getElement("id","full_name");
             WebElement emailInSignUpPage = getElement("id", "email");//driver.findElement(By.id("email"));
             WebElement pwInSignUpPage = getElement("id", "password");
             WebElement pwConfirmInSignInPage = getElement("id", "password_confirmation");
             WebElement errorMessageInSignUpPage = driver.findElement(By.id("invalid_password_feedback"));
-            if (emailInSignUpPage.getText().trim().contains("@") == false || emailInSignUpPage.getText().trim().contains(" ") == true || emailInSignUpPage.getText().trim() == "" || emailInSignUpPage.getText() == null) {
-                actual = emailInSignUpPage.getAttribute("validationMessage");
-                waitForPageLoaded();
-                LogUtils.info("Expected result: " + expected);
-                LogUtils.info("Actual result: " + actual);
-                AllureManager.saveTextLog("actual: " + actual);
-                if (expected.equals(actual)) {
-                    stt = true;
-                }
+            if (errorMessageInSignUpPage.getText().equals("")) {
+                actual = (nameInSignUpPage.getAttribute("validationMessage").equals("")?
+                        ((emailInSignUpPage.getAttribute("validationMessage").equals("") ?
+                        (pwInSignUpPage.getAttribute("validationMessage").equals("") ?
+                                pwConfirmInSignInPage.getAttribute("validationMessage") :
+                                pwInSignUpPage.getAttribute("validationMessage")) :
+                                emailInSignUpPage.getAttribute("validationMessage"))):
+                                nameInSignUpPage.getAttribute("validationMessage"));
+
             } else {
-                if (pwInSignUpPage.getText() == null) {
-                    actual = pwInSignUpPage.getAttribute("validationMessage");
-                    waitForPageLoaded();
-                    LogUtils.info("Expected result: " + expected);
-                    LogUtils.info("Actual result: " + actual);
-                    AllureManager.saveTextLog("actual: " + actual);
-                    if (expected.equals(actual)) {
-                        stt = true;
-                    }
-                } else {
-                    if (pwConfirmInSignInPage.getText() == null) {
-                        actual = pwConfirmInSignInPage.getAttribute("validationMessage");
-                        waitForPageLoaded();
-                        LogUtils.info("Expected result: " + expected);
-                        LogUtils.info("Actual result: " + actual);
-                        AllureManager.saveTextLog("actual: " + actual);
-                        if (expected.equals(actual)) {
-                            stt = true;
-                        }
-                    } else {
-                        actual = errorMessageInSignUpPage.getText();
-                        waitForPageLoaded();
-                        LogUtils.info("Expected result: " + expected);
-                        LogUtils.info("Actual result: " + actual);
-                        AllureManager.saveTextLog("actual: " + actual);
-                        if (expected.equals(actual)) {
-                            stt = true;
-                        }
-                    }
-                }
+                actual = errorMessageInSignUpPage.getText();
             }
         }
-        if (driver.getCurrentUrl().contains("nguoi-tim-viec") && !driver.getCurrentUrl().contains("login")) {
+
+        if (driver.getCurrentUrl().equals("https://www.careerlink.vn/nguoi-tim-viec")) {
             WebElement successSignIn = driver.findElement(By.xpath("//span[contains(text(),'Nguyễn Hoàng Anh')]"));
             actual = successSignIn.getText();
-            waitForPageLoaded();
-            LogUtils.info("Expected result: " + expected);
-            LogUtils.info("Actual result: " + actual);
-            AllureManager.saveTextLog("actual: " + actual);
-            if (expected.equals(actual)) {
-                stt = true;
+        }
+
+        LogUtils.info("Expected result: " + expected);
+        LogUtils.info("Actual result: " + actual);
+        AllureManager.saveTextLog("actual: " + actual);
+
+        Boolean result = actual.equals(expected);
+
+        if (flowControl.equals(FailureHandling.STOP_ON_FAILURE)) {
+            Assert.assertEquals(actual, expected, "The actual text is [" + actual + "] not equals [" + expected + "]");
+        }
+        if (flowControl.equals(FailureHandling.CONTINUE_ON_FAILURE)) {
+//            softAssert.assertTrue(result, "The actual text is [" + actual + "] not equals [" + expected + "]");
+            if(!result) {
+//                Reporter.getCurrentTestResult().setStatus(ITestResult.FAILURE);
+                ExtentReportManager.fail("The actual text is [" + actual + "] not equals [" + expected + "]");
             }
         }
-        statusVerify(stt);
-        return stt;
+        if (flowControl.equals(FailureHandling.OPTIONAL)) {
+            if (ExtentTestManager.getExtentTest() != null) {
+                ExtentReportManager.warning("Verify text of an element [Equals] - " + result.toString().toUpperCase());
+                ExtentReportManager.warning("The actual text is [" + actual + "] not equals [" + expected + "]");
+            }
+            AllureManager.saveTextLog("Verify text of an element [Equals] - " + result.toString().toUpperCase() + ". The actual text is [" + actual + "] not equals [" + expected + "]");
+        }
+        if (result) {
+            statusVerify(true);
+            return true;
+        } else {
+            statusVerify(false);
+            return false;
+        }
     }
 
-
     private static void statusVerify(Boolean stt) {
-
         if (stt) {
             ExtentReportManager.pass("Actual result is the same as expected result");
             AllureManager.saveTextLog("Actual result is the same as expected result");
         } else {
-            ExtentReportManager.fail("Actual result is different from expected result");
-            AllureManager.saveTextLog("Actual result is different from expected result");
+            //ExtentReportManager.fail("Actual result is different from expected result");
+            //AllureManager.saveTextLog("Actual result is different from expected result");
+            ActionKeywords.addScreenshotToReport(DateUtils.getCurrentDate());
             AllureManager.takeScreenshotStep(ActionKeywords.screenShot(DateUtils.getCurrentDate()));
             Allure.getLifecycle().updateStep(stepResult -> stepResult.setStatus(io.qameta.allure.model.Status.FAILED));
             Allure.getLifecycle().stopStep();
-            Assert.fail("Actual result is different from expected result");
+//            Allure.getLifecycle().updateTestCase(t->t.setStatus(io.qameta.allure.model.Status.FAILED));
         }
-
     }
 
     //upload image
     @Step("Upload image")
-    public static void uploadImage(String locatorType, String locatorValue, String value) {
+    public static void uploadImage(String path) {
         try {
-            LogUtils.info("Upload image: " + value);
-            ExtentReportManager.pass("Upload image: " + value);
-            WebElement element = getElement(locatorType, locatorValue);
+            LogUtils.info("Upload image: " + path);
+            ExtentReportManager.pass("Upload image: " + path);
             waitForPageLoaded();
-            wait.until(ExpectedConditions.visibilityOf(element));
-            //element.clear();
-            element.sendKeys(value);
-        } catch (NoSuchElementException e) {
-            LogUtils.error("Locator:" + locatorType + "=" + locatorValue + " not found to upload image | " + e.getMessage());
-            ExtentReportManager.info("Locator:" + locatorType + "=" + locatorValue + " not found to upload image | " + e.getMessage());
-            AllureManager.saveTextLog("Locator:" + locatorType + "=" + locatorValue + " not found to upload image | " + e.getMessage());
+
+            Robot rb = null;
+            try {
+                rb = new Robot();
+            } catch (AWTException e) {
+                e.printStackTrace();
+            }
+            StringSelection str = new StringSelection(path);
+            Toolkit.getDefaultToolkit().getSystemClipboard().setContents(str,null);
+            Thread.sleep(1000);
+
+            rb.keyPress(KeyEvent.VK_CONTROL);
+            rb.keyPress(KeyEvent.VK_V);
+
+            rb.keyRelease(KeyEvent.VK_CONTROL);
+            rb.keyRelease(KeyEvent.VK_V);
+
+            Thread.sleep(1000);
+
+            rb.keyPress(KeyEvent.VK_ENTER);
+            rb.keyRelease(KeyEvent.VK_ENTER);
+
+            Thread.sleep(2000);
+
+        } catch (NoSuchElementException | InterruptedException e) {
+            LogUtils.error("Can not found image to upload | " + e.getMessage());
+            ExtentReportManager.info("Can not found image to upload | " + e.getMessage());
+            AllureManager.saveTextLog("Can not found image to upload | " + e.getMessage());
         }
     }
 
     //    @Step("Take a screenshot")
     public static String screenShot(String CaseName) {
         try {
-            // Tạo tham chiếu của TakesScreenshot với driver hiện tại
             TakesScreenshot ts = (TakesScreenshot) driver;
-            // Gọi hàm capture screenshot - getScreenshotAs
             File source = ts.getScreenshotAs(OutputType.FILE);
-            //Kiểm tra folder tồn tại. Nêu không thì tạo mới folder
             String path = Helpers.getCurrentDir() + FrwConstants.EXPORT_CAPTURE_PATH;
             File theDir = new File(path);
             if (!theDir.exists()) {
                 theDir.mkdirs();
             }
             String imgPath = theDir + "\\" + CaseName + ".png";
-            // result.getName() lấy tên của test case xong gán cho tên File chụp màn hình luôn
             FileHandler.copy(source, new File(imgPath));
             LogUtils.info("Take a screenshot: " + imgPath);
             return imgPath;
@@ -747,21 +770,13 @@ public class ActionKeywords {
     }
 
     public void handleChatboxMessenger() {
-        driver.navigate().to("https://anhtester.com/contact");
-        System.out.println("iframe total: " + driver.findElements(By.tagName("iframe")).size());
-        //----Switch to content of Messenger--------
         driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@data-testid='dialog_iframe']")));
-        //Get title
         System.out.println(driver.findElement(By.xpath("//strong")).getText());
-        //Get description
         System.out.println(driver.findElement(By.xpath("(((//strong/parent::div)/parent::div)/following-sibling::div)[2]")).getText());
 
-        //----Switch to icon of Messenger---------
-        //1. Switch to Parent WindowHandle
         driver.switchTo().parentFrame();
-        //2. Switch to iframe icon of Messenger
         driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@data-testid='bubble_iframe']")));
-        driver.findElement(By.tagName("svg")).click(); //Nhấn icon để ẩn messenger chat đi
+        driver.findElement(By.tagName("svg")).click();
     }
 
     public static void addScreenshotToReport(String screenshotName) {
@@ -769,6 +784,6 @@ public class ActionKeywords {
     }
 
     public static void stopSoftAssertAll() {
-        softAssert.assertAll();
+        //softAssert.asserFtAll();
     }
 }

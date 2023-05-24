@@ -3,7 +3,6 @@ package constants;
 import helpers.Helpers;
 import helpers.PropertiesHelpers;
 import utils.ReportUtils;
-
 import java.io.File;
 
 public final class FrwConstants {

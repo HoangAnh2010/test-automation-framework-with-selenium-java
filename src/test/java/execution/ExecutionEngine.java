@@ -446,7 +446,7 @@ public class ExecutionEngine {
     @Test (priority = 15)
     public void testCaseSearchAndViewJobDetails() {
         testCaseStep = DataReaderUtils.getTestStep(excelPath, "Search");
-        ScreenRecorderUtils.startRecord("SearchAndViewJobDetails");
+        ScreenRecorderUtils.startRecord("SearchAndViewJobDetRails");
         for (DataProvider step : testCaseStep) {
             executeActions(step);
         }

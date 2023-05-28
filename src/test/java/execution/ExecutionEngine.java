@@ -29,11 +29,13 @@ public class ExecutionEngine {
     public static List<DataProvider> testCaseStep = new ArrayList<>();
 
     private static boolean isPass = false;
-    private void considerTestCase(){
-        if(!isPass){
+
+    private void considerTestCase() {
+        if (!isPass) {
             Assert.fail("Actual result is the same as expected result");
         }
     }
+
     private void executeActions(DataProvider testScript) {
         try {
             String keyword = testScript.getKeyword();
@@ -135,7 +137,7 @@ public class ExecutionEngine {
     @Epic("Website CareerLink")
     @Feature("Sign in")
     @Story("Read data test from Excel file")
-    @Test (priority = 0)
+    @Test(priority = 0)
     public void testCase_ExcelFile_SignInWithoutEmail() {
         List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignInPage");
         List<DataOfSignIn> dataOfSignIns = DataReaderUtils.getDataSignIn(excelPath, "DataOfSignIn", "SIN_VAL_02");
@@ -154,7 +156,7 @@ public class ExecutionEngine {
     @Epic("Website CareerLink")
     @Feature("Sign in")
     @Story("Read data test from Excel file")
-    @Test (priority = 1)
+    @Test(priority = 1)
     public void testCase_ExcelFile_SignInWithWrongEmailFormat_HaveSpace() {
         List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignInPage");
         List<DataOfSignIn> dataOfSignIns = DataReaderUtils.getDataSignIn(excelPath, "DataOfSignIn", "SIN_VAL_04");
@@ -185,7 +187,6 @@ public class ExecutionEngine {
         }
         considerTestCase();
         ScreenRecorderUtils.stopRecord();
-
     }
 
     //@Ignore
@@ -194,7 +195,7 @@ public class ExecutionEngine {
     @Epic("Website CareerLink")
     @Feature("Sign in")
     @Story("Read data test from Excel file")
-    @Test (priority = 3)
+    @Test(priority = 3)
     public void testCase_ExcelFile_SignInWithInvalidAccount() {
         List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignInPage");
         List<DataOfSignIn> dataOfSignIns = DataReaderUtils.getDataSignIn(excelPath, "DataOfSignIn", "SIN_VAL_08");
@@ -213,7 +214,7 @@ public class ExecutionEngine {
     @Epic("Website CareerLink")
     @Feature("Sign in")
     @Story("Read data test from Excel file")
-    @Test (priority = 4)
+    @Test(priority = 4)
     public void testCase_ExcelFile_SignInWithoutPassword() {
         List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignInPage");
         List<DataOfSignIn> dataOfSignIns = DataReaderUtils.getDataSignIn(excelPath, "DataOfSignIn", "SIN_VAL_12");
@@ -232,7 +233,7 @@ public class ExecutionEngine {
     @Epic("Website CareerLink")
     @Feature("Sign in")
     @Story("Read data test from XML file")
-    @Test (priority = 5)
+    @Test(priority = 5)
     public void testCase_XMLFile_SignInWithoutEmail() {
         Data xmlData = XmlUtils.xmlToData(xmlPath);
         List<SignInPage> signInPages = xmlData.getSignInPage();
@@ -252,7 +253,7 @@ public class ExecutionEngine {
     @Epic("Website CareerLink")
     @Feature("Sign in")
     @Story("Read data test from JSON file")
-    @Test (priority = 6)
+    @Test(priority = 6)
     public void testCase_JSONFile_SignInWithoutEmail() {
         Data jsonData = JsonUtils.readData(jsonPath);
         List<SignInPage> signInPages = jsonData.getSignInPage();
@@ -273,7 +274,7 @@ public class ExecutionEngine {
     @Epic("Website CareerLink")
     @Feature("Sign in")
     @Story("Read data test from CSV file")
-    @Test (priority = 7)
+    @Test(priority = 7)
     public void testCase_CSVFile_SignInWithoutEmail() {
         List<SignInPage> signInPages = CsvUtils.readSignInPageCSVfile(signInCSVpath);
         List<DataOfSignIn> dataOfSignIns = CsvUtils.readDataOfSignInCSVfile(dataOfsignInCSVpath);
@@ -293,7 +294,7 @@ public class ExecutionEngine {
     @Epic("Website CareerLink")
     @Feature("Sign up")
     @Story("Read data test from Excel file")
-    @Test (priority = 8)
+    @Test(priority = 8)
     public void testCase_ExcelFile_SignUpWithoutName() {
         List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignUpPage");
         List<DataOfSignUp> dataOfSignUps = DataReaderUtils.getDataSignUp(excelPath, "DataOfSignUp", "SUP_VAL_02");
@@ -312,7 +313,7 @@ public class ExecutionEngine {
     @Epic("Website CareerLink")
     @Feature("Sign up")
     @Story("Read data test from Excel file")
-    @Test (priority = 8)
+    @Test(priority = 8)
     public void testCase_ExcelFile_SignUpWithoutEmail() {
         List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignUpPage");
         List<DataOfSignUp> dataOfSignUps = DataReaderUtils.getDataSignUp(excelPath, "DataOfSignUp", "SUP_VAL_08");
@@ -331,7 +332,7 @@ public class ExecutionEngine {
     @Epic("Website CareerLink")
     @Feature("Sign up")
     @Story("Read data test from Excel file")
-    @Test (priority = 9)
+    @Test(priority = 9)
     public void testCase_ExcelFile_SignUpWithWrongEmailFormat_HaveSpace() {
         List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignUpPage");
         List<DataOfSignUp> dataOfSignUps = DataReaderUtils.getDataSignUp(excelPath, "DataOfSignUp", "SUP_VAL_10");
@@ -350,7 +351,7 @@ public class ExecutionEngine {
     @Epic("Website CareerLink")
     @Feature("Sign up")
     @Story("Read data test from Excel file")
-    @Test (priority = 10)
+    @Test(priority = 10)
     public void testCase_ExcelFile_SignUpWithWrongEmailFormat_MissingSymbol() {
         List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignUpPage");
         List<DataOfSignUp> dataOfSignUps = DataReaderUtils.getDataSignUp(excelPath, "DataOfSignUp", "SUP_VAL_14");
@@ -369,7 +370,7 @@ public class ExecutionEngine {
     @Epic("Website CareerLink")
     @Feature("Sign up")
     @Story("Read data test from Excel file")
-    @Test (priority = 11)
+    @Test(priority = 11)
     public void testCase_ExcelFile_SignUpWithoutPassword() {
         List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignUpPage");
         List<DataOfSignUp> dataOfSignUps = DataReaderUtils.getDataSignUp(excelPath, "DataOfSignUp", "SUP_VAL_18");
@@ -388,7 +389,7 @@ public class ExecutionEngine {
     @Epic("Website CareerLink")
     @Feature("Sign up")
     @Story("Read data test from Excel file")
-    @Test (priority = 12)
+    @Test(priority = 12)
     public void testCase_ExcelFile_SignUpWithoutPasswordConfirm() {
         List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignUpPage");
         List<DataOfSignUp> dataOfSignUps = DataReaderUtils.getDataSignUp(excelPath, "DataOfSignUp", "SUP_VAL_21");
@@ -407,7 +408,7 @@ public class ExecutionEngine {
     @Epic("Website CareerLink")
     @Feature("Sign up")
     @Story("Read data test from Excel file")
-    @Test (priority = 13)
+    @Test(priority = 13)
     public void testCase_ExcelFile_SignUpWithPwDiffFromPwCf() {
         List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignUpPage");
         List<DataOfSignUp> dataOfSignUps = DataReaderUtils.getDataSignUp(excelPath, "DataOfSignUp", "SUP_VAL_22");
@@ -426,7 +427,7 @@ public class ExecutionEngine {
     @Epic("Website CareerLink")
     @Feature("Create CV")
     @Story("Read data test from Excel file")
-    @Test (priority = 14)
+    @Test(priority = 14)
     public void testCaseCreateCV() {
         testCaseStep = DataReaderUtils.getTestStep(excelPath, "CreateCV");
         ScreenRecorderUtils.startRecord("CreateCV");
@@ -443,7 +444,7 @@ public class ExecutionEngine {
     @Epic("Website CareerLink")
     @Feature("Search and View job details")
     @Story("Read data test from Excel file")
-    @Test (priority = 15)
+    @Test(priority = 15)
     public void testCaseSearchAndViewJobDetails() {
         testCaseStep = DataReaderUtils.getTestStep(excelPath, "Search");
         ScreenRecorderUtils.startRecord("SearchAndViewJobDetRails");

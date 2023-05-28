@@ -4,7 +4,7 @@
     <groupId>010123</groupId>
     <artifactId>GP</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-<!--    demo webhook       -->
+<!--    demo webhook 2.1      -->
     <dependencies>
         <dependency>
             <groupId>org.testng</groupId>

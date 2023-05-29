@@ -150,7 +150,7 @@ public class ExecutionEngine {
         ScreenRecorderUtils.stopRecord();
     }
 
-    //@Ignore
+    @Ignore
     @Severity(SeverityLevel.CRITICAL)
     @Description("Test suite of register function written in Excel file")
     @Epic("Website CareerLink")
@@ -170,7 +170,7 @@ public class ExecutionEngine {
 
     }
 
-    //@Ignore
+    @Ignore
     @Severity(SeverityLevel.CRITICAL)
     @Description("Test suite of register function written in Excel file")
     @Epic("Website CareerLink")
@@ -189,7 +189,7 @@ public class ExecutionEngine {
         ScreenRecorderUtils.stopRecord();
     }
 
-    //@Ignore
+    @Ignore
     @Severity(SeverityLevel.CRITICAL)
     @Description("Test suite of login function written in Excel file")
     @Epic("Website CareerLink")
@@ -208,7 +208,7 @@ public class ExecutionEngine {
         ScreenRecorderUtils.stopRecord();
     }
 
-    //@Ignore
+    @Ignore
     @Severity(SeverityLevel.CRITICAL)
     @Description("Test suite of login function written in Excel file")
     @Epic("Website CareerLink")
@@ -227,7 +227,7 @@ public class ExecutionEngine {
         ScreenRecorderUtils.stopRecord();
     }
 
-    //@Ignore
+    @Ignore
     @Severity(SeverityLevel.CRITICAL)
     @Description("Test suite of login function written in XML file")
     @Epic("Website CareerLink")
@@ -247,7 +247,7 @@ public class ExecutionEngine {
         ScreenRecorderUtils.stopRecord();
     }
 
-    //@Ignore
+    @Ignore
     @Severity(SeverityLevel.CRITICAL)
     @Description("Test suite of login function written in JSON file")
     @Epic("Website CareerLink")
@@ -268,7 +268,7 @@ public class ExecutionEngine {
         ScreenRecorderUtils.stopRecord();
     }
 
-    //@Ignore
+    @Ignore
     @Severity(SeverityLevel.CRITICAL)
     @Description("Test suite of login function written in CSV file")
     @Epic("Website CareerLink")
@@ -288,7 +288,7 @@ public class ExecutionEngine {
         ScreenRecorderUtils.stopRecord();
     }
 
-    //@Ignore
+    @Ignore
     @Severity(SeverityLevel.CRITICAL)
     @Description("Test suite of register function written in Excel file")
     @Epic("Website CareerLink")
@@ -307,7 +307,7 @@ public class ExecutionEngine {
         ScreenRecorderUtils.stopRecord();
     }
 
-    //@Ignore
+    @Ignore
     @Severity(SeverityLevel.CRITICAL)
     @Description("Test suite of register function written in Excel file")
     @Epic("Website CareerLink")
@@ -326,7 +326,7 @@ public class ExecutionEngine {
         ScreenRecorderUtils.stopRecord();
     }
 
-    //@Ignore
+    @Ignore
     @Severity(SeverityLevel.CRITICAL)
     @Description("Test suite of register function written in Excel file")
     @Epic("Website CareerLink")
@@ -345,7 +345,7 @@ public class ExecutionEngine {
         ScreenRecorderUtils.stopRecord();
     }
 
-    //@Ignore
+    @Ignore
     @Severity(SeverityLevel.CRITICAL)
     @Description("Test suite of register function written in Excel file")
     @Epic("Website CareerLink")
@@ -364,7 +364,7 @@ public class ExecutionEngine {
         ScreenRecorderUtils.stopRecord();
     }
 
-    //@Ignore
+    @Ignore
     @Severity(SeverityLevel.CRITICAL)
     @Description("Test suite of register function written in Excel file")
     @Epic("Website CareerLink")
@@ -383,7 +383,7 @@ public class ExecutionEngine {
         ScreenRecorderUtils.stopRecord();
     }
 
-    //@Ignore
+    @Ignore
     @Severity(SeverityLevel.CRITICAL)
     @Description("Test suite of register function written in Excel file")
     @Epic("Website CareerLink")
@@ -402,7 +402,7 @@ public class ExecutionEngine {
         ScreenRecorderUtils.stopRecord();
     }
 
-    //@Ignore
+    @Ignore
     @Severity(SeverityLevel.CRITICAL)
     @Description("Test suite of register function written in Excel file")
     @Epic("Website CareerLink")
@@ -421,7 +421,7 @@ public class ExecutionEngine {
         ScreenRecorderUtils.stopRecord();
     }
 
-    //@Ignore
+    @Ignore
     @Severity(SeverityLevel.BLOCKER)
     @Description("Test suite of Create CV function")
     @Epic("Website CareerLink")
@@ -438,7 +438,7 @@ public class ExecutionEngine {
         ScreenRecorderUtils.stopRecord();
     }
 
-    //@Ignore
+    @Ignore
     @Severity(SeverityLevel.NORMAL)
     @Description("Test suite of search and view job details function")
     @Epic("Website CareerLink")

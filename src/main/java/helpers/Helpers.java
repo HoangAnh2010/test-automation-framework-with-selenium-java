@@ -1,10 +1,7 @@
 package helpers;
 
-import java.io.*;
-import java.nio.charset.Charset;
-import java.text.Normalizer;
+import java.io.File;
 import java.util.ArrayList;
-import java.util.Locale;
 import java.util.regex.Pattern;
 
 public final class Helpers {
@@ -57,6 +54,7 @@ public final class Helpers {
         for (String s : str.split(valueSplit, 0)) {
             arrayListString.add(s);
         }
+        System.out.println("DEmo github webhook");
         return arrayListString;
     }
 }

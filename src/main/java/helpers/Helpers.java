@@ -54,7 +54,6 @@ public final class Helpers {
         for (String s : str.split(valueSplit, 0)) {
             arrayListString.add(s);
         }
-        System.out.println("DEmo github webhook");
         return arrayListString;
     }
 }

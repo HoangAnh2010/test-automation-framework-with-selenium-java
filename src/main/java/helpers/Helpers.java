@@ -16,32 +16,6 @@ public final class Helpers {
     private static final Pattern NONLATIN = Pattern.compile("[^\\w-]");
     private static final Pattern WHITESPACE = Pattern.compile("[\\s]");
 
-//    public static String makeSlug(String input) {
-//        if (input == null) throw new IllegalArgumentException();
-//
-//        String noWhiteSpace = WHITESPACE.matcher(input).replaceAll("_");
-//        String normalized = Normalizer.normalize(noWhiteSpace, Normalizer.Form.NFD);
-//        String slug = NONLATIN.matcher(normalized).replaceAll("");
-//        return slug.toLowerCase(Locale.ENGLISH);
-//    }
-
-//    public static String readFile(String file) throws IOException {
-//        Charset cs = Charset.forName("UTF-8");
-//        FileInputStream stream = new FileInputStream(file);
-//        try {
-//            Reader reader = new BufferedReader(new InputStreamReader(stream, cs));
-//            StringBuilder builder = new StringBuilder();
-//            char[] buffer = new char[8192];
-//            int read;
-//            while ((read = ((BufferedReader) reader).read(buffer, 0, buffer.length)) > 0) {
-//                builder.append(buffer, 0, read);
-//            }
-//            return builder.toString();
-//        } finally {
-//            stream.close();
-//        }
-//    }
-
     /**
      * @return lấy đường dẫn đến thư mục nguồn source mình có thêm dấu / ở cuối luôn
      */

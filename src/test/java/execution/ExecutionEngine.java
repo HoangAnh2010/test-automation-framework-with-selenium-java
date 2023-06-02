@@ -141,7 +141,7 @@ public class ExecutionEngine {
     @Test(priority = 0)
     public void testCase_ExcelFile_SignInWithoutEmail() {
         List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignInPage");
-        List<DataOfSignIn> dataOfSignIns = DataReaderUtils.getDataSignIn(excelPath, "DataOfSignIn", "SIN_VAL_02");
+        List<DataOfSignIn> dataOfSignIns = DataReaderUtils.getDataSignIn(excelPath, "DataOfSignIn", "SIN_TD_02");
         testCaseStep = DataReaderUtils.getFinalDataSignIn(listHaveVar, dataOfSignIns);
         ScreenRecorderUtils.startRecord("ExcelFile_SignInWithoutEmail");
         for (DataProvider step : testCaseStep) {
@@ -160,7 +160,7 @@ public class ExecutionEngine {
     @Test(priority = 1)
     public void testCase_ExcelFile_SignInWithWrongEmailFormat_HaveSpace() {
         List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignInPage");
-        List<DataOfSignIn> dataOfSignIns = DataReaderUtils.getDataSignIn(excelPath, "DataOfSignIn", "SIN_VAL_04");
+        List<DataOfSignIn> dataOfSignIns = DataReaderUtils.getDataSignIn(excelPath, "DataOfSignIn", "SIN_TD_04");
         testCaseStep = DataReaderUtils.getFinalDataSignIn(listHaveVar, dataOfSignIns);
         ScreenRecorderUtils.startRecord("ExcelFile_SignInWithWrongEmailFormat_HaveSpace");
         for (DataProvider step : testCaseStep) {
@@ -180,7 +180,7 @@ public class ExecutionEngine {
     @Test(priority = 2)
     public void testCase_ExcelFile_SignInWithWrongEmailFormat_MissingSymbol() {
         List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignInPage");
-        List<DataOfSignIn> dataOfSignIns = DataReaderUtils.getDataSignIn(excelPath, "DataOfSignIn", "SIN_VAL_07");
+        List<DataOfSignIn> dataOfSignIns = DataReaderUtils.getDataSignIn(excelPath, "DataOfSignIn", "SIN_TD_06");
         testCaseStep = DataReaderUtils.getFinalDataSignIn(listHaveVar, dataOfSignIns);
         ScreenRecorderUtils.startRecord("ExcelFile_SignInWithWrongEmailFormat_MissingSymbol");
         for (DataProvider step : testCaseStep) {
@@ -199,7 +199,7 @@ public class ExecutionEngine {
     @Test(priority = 3)
     public void testCase_ExcelFile_SignInWithInvalidAccount() {
         List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignInPage");
-        List<DataOfSignIn> dataOfSignIns = DataReaderUtils.getDataSignIn(excelPath, "DataOfSignIn", "SIN_VAL_08");
+        List<DataOfSignIn> dataOfSignIns = DataReaderUtils.getDataSignIn(excelPath, "DataOfSignIn", "SIN_TD_07");
         testCaseStep = DataReaderUtils.getFinalDataSignIn(listHaveVar, dataOfSignIns);
         ScreenRecorderUtils.startRecord("ExcelFile_SignInWithInvalidAccount");
         for (DataProvider step : testCaseStep) {
@@ -218,7 +218,7 @@ public class ExecutionEngine {
     @Test(priority = 4)
     public void testCase_ExcelFile_SignInWithoutPassword() {
         List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignInPage");
-        List<DataOfSignIn> dataOfSignIns = DataReaderUtils.getDataSignIn(excelPath, "DataOfSignIn", "SIN_VAL_12");
+        List<DataOfSignIn> dataOfSignIns = DataReaderUtils.getDataSignIn(excelPath, "DataOfSignIn", "SIN_TD_11");
         testCaseStep = DataReaderUtils.getFinalDataSignIn(listHaveVar, dataOfSignIns);
         ScreenRecorderUtils.startRecord("ExcelFile_SignInWithoutPassword");
         for (DataProvider step : testCaseStep) {
@@ -289,7 +289,7 @@ public class ExecutionEngine {
         ScreenRecorderUtils.stopRecord();
     }
 
-    @Ignore
+    //@Ignore
     @Severity(SeverityLevel.CRITICAL)
     @Description("Test suite of register function written in Excel file")
     @Epic("Website CareerLink")
@@ -298,7 +298,7 @@ public class ExecutionEngine {
     @Test(priority = 8)
     public void testCase_ExcelFile_SignUpWithoutName() {
         List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignUpPage");
-        List<DataOfSignUp> dataOfSignUps = DataReaderUtils.getDataSignUp(excelPath, "DataOfSignUp", "SUP_VAL_02");
+        List<DataOfSignUp> dataOfSignUps = DataReaderUtils.getDataSignUp(excelPath, "DataOfSignUp", "SUP_TD_02");
         testCaseStep = DataReaderUtils.getFinalDataSignUp(listHaveVar, dataOfSignUps);
         ScreenRecorderUtils.startRecord("ExcelFile_SignUpWithoutName");
         for (DataProvider step : testCaseStep) {
@@ -317,7 +317,7 @@ public class ExecutionEngine {
     @Test(priority = 8)
     public void testCase_ExcelFile_SignUpWithoutEmail() {
         List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignUpPage");
-        List<DataOfSignUp> dataOfSignUps = DataReaderUtils.getDataSignUp(excelPath, "DataOfSignUp", "SUP_VAL_08");
+        List<DataOfSignUp> dataOfSignUps = DataReaderUtils.getDataSignUp(excelPath, "DataOfSignUp", "SUP_TD_08");
         testCaseStep = DataReaderUtils.getFinalDataSignUp(listHaveVar, dataOfSignUps);
         ScreenRecorderUtils.startRecord("ExcelFile_SignUpWithoutEmail");
         for (DataProvider step : testCaseStep) {
@@ -336,7 +336,7 @@ public class ExecutionEngine {
     @Test(priority = 9)
     public void testCase_ExcelFile_SignUpWithWrongEmailFormat_HaveSpace() {
         List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignUpPage");
-        List<DataOfSignUp> dataOfSignUps = DataReaderUtils.getDataSignUp(excelPath, "DataOfSignUp", "SUP_VAL_10");
+        List<DataOfSignUp> dataOfSignUps = DataReaderUtils.getDataSignUp(excelPath, "DataOfSignUp", "SUP_TD_10");
         testCaseStep = DataReaderUtils.getFinalDataSignUp(listHaveVar, dataOfSignUps);
         ScreenRecorderUtils.startRecord("ExcelFile_SignUpWithWrongEmailFormat_HaveSpace");
         for (DataProvider step : testCaseStep) {
@@ -355,7 +355,7 @@ public class ExecutionEngine {
     @Test(priority = 10)
     public void testCase_ExcelFile_SignUpWithWrongEmailFormat_MissingSymbol() {
         List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignUpPage");
-        List<DataOfSignUp> dataOfSignUps = DataReaderUtils.getDataSignUp(excelPath, "DataOfSignUp", "SUP_VAL_14");
+        List<DataOfSignUp> dataOfSignUps = DataReaderUtils.getDataSignUp(excelPath, "DataOfSignUp", "SUP_TD_14");
         testCaseStep = DataReaderUtils.getFinalDataSignUp(listHaveVar, dataOfSignUps);
         ScreenRecorderUtils.startRecord("ExcelFile_SignUpWithWrongEmailFormat_MissingSymbol");
         for (DataProvider step : testCaseStep) {
@@ -374,7 +374,7 @@ public class ExecutionEngine {
     @Test(priority = 11)
     public void testCase_ExcelFile_SignUpWithoutPassword() {
         List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignUpPage");
-        List<DataOfSignUp> dataOfSignUps = DataReaderUtils.getDataSignUp(excelPath, "DataOfSignUp", "SUP_VAL_18");
+        List<DataOfSignUp> dataOfSignUps = DataReaderUtils.getDataSignUp(excelPath, "DataOfSignUp", "SUP_TD_18");
         testCaseStep = DataReaderUtils.getFinalDataSignUp(listHaveVar, dataOfSignUps);
         ScreenRecorderUtils.startRecord("ExcelFile_SignUpWithoutPassword");
         for (DataProvider step : testCaseStep) {
@@ -393,7 +393,7 @@ public class ExecutionEngine {
     @Test(priority = 12)
     public void testCase_ExcelFile_SignUpWithoutPasswordConfirm() {
         List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignUpPage");
-        List<DataOfSignUp> dataOfSignUps = DataReaderUtils.getDataSignUp(excelPath, "DataOfSignUp", "SUP_VAL_21");
+        List<DataOfSignUp> dataOfSignUps = DataReaderUtils.getDataSignUp(excelPath, "DataOfSignUp", "SUP_TD_19");
         testCaseStep = DataReaderUtils.getFinalDataSignUp(listHaveVar, dataOfSignUps);
         ScreenRecorderUtils.startRecord("ExcelFile_SignUpWithoutPasswordConfirm");
         for (DataProvider step : testCaseStep) {
@@ -412,7 +412,7 @@ public class ExecutionEngine {
     @Test(priority = 13)
     public void testCase_ExcelFile_SignUpWithPwDiffFromPwCf() {
         List<DataProvider> listHaveVar = DataReaderUtils.getTestStep(excelPath, "SignUpPage");
-        List<DataOfSignUp> dataOfSignUps = DataReaderUtils.getDataSignUp(excelPath, "DataOfSignUp", "SUP_VAL_22");
+        List<DataOfSignUp> dataOfSignUps = DataReaderUtils.getDataSignUp(excelPath, "DataOfSignUp", "SUP_TD_20");
         testCaseStep = DataReaderUtils.getFinalDataSignUp(listHaveVar, dataOfSignUps);
         ScreenRecorderUtils.startRecord("ExcelFile_SignUpWithPwDiffFromPwCf");
         for (DataProvider step : testCaseStep) {

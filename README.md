@@ -34,17 +34,22 @@ Use the command below to clone the repository to your local directory
 
 ```
 git clone https://github.com/HoangAnh2010/GP.git
-
 ```
 
 Navigate (using `cd` command) to the root directory of the project (basically - it's where the `pom.xml` file is located)
 
-Run the command below in order to run the tests
+Run the command below to compile project
 
 ```
-mvn clean test
+mvn clean compile
+```
+
+Run test by using command below
 
 ```
+mvn -Dtest=execution/ExecutionEngine test
+```
+
 ## Contact information
 
 Email: `hoanganh04092001@gmail.com`

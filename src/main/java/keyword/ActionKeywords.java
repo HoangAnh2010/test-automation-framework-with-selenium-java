@@ -733,7 +733,7 @@ public class ActionKeywords {
             rb.keyRelease(KeyEvent.VK_CONTROL);
             rb.keyRelease(KeyEvent.VK_V);
 
-            Thread.sleep(1000);
+            Thread.sleep(2000);
 
             rb.keyPress(KeyEvent.VK_ENTER);
             rb.keyRelease(KeyEvent.VK_ENTER);

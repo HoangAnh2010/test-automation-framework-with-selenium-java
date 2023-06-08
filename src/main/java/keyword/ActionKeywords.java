@@ -725,7 +725,7 @@ public class ActionKeywords {
             }
             StringSelection str = new StringSelection(path);
             Toolkit.getDefaultToolkit().getSystemClipboard().setContents(str,null);
-            Thread.sleep(1000);
+            Thread.sleep(2000);
 
             rb.keyPress(KeyEvent.VK_CONTROL);
             rb.keyPress(KeyEvent.VK_V);

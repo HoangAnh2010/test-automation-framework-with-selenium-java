@@ -12,10 +12,8 @@ import keyword.ActionKeywords;
 import org.testng.*;
 import report.AllureManager;
 import report.ExtentReportManager;
-import utils.BrowserInfoUtils;
-import utils.EmailSendUtils;
-import utils.LogUtils;
-import utils.ScreenRecorderUtils;
+import report.TelegramManager;
+import utils.*;
 
 import java.awt.*;
 import java.io.IOException;
@@ -57,9 +55,14 @@ public class TestListener implements ITestListener, ISuiteListener, IInvokedMeth
     public void onFinish(ITestContext iSuite) {
         LogUtils.info("End Suite: " + iSuite.getName());
         ActionKeywords.stopSoftAssertAll();
+
         //End Suite and execute Extents Report
         ExtentReportManager.flushReports();
         reportInConsole();
+
+        //Send notification to Telegram
+        TelegramManager.sendReportPath();
+
         //Send mail
         EmailSendUtils.sendEmail(count_totalTCs, count_passedTCs, count_failedTCs, count_skippedTCs);
 

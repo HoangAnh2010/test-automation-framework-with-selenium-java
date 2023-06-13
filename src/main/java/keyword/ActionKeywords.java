@@ -113,12 +113,26 @@ public class ActionKeywords {
         return driver;
     }
 
+    @Step("Quit browser")
+    public static void quitBrowser() {
+        try {
+            LogUtils.info("Quit browser");
+            driver.manage().deleteAllCookies();
+            driver.quit();
+            ExtentReportManager.pass("Quit browser");
+        } catch (Exception e) {
+            LogUtils.error("Can't quit browser");
+            ExtentReportManager.info("Can't quit browser");
+            AllureManager.saveTextLog("Can't quit browser");
+        }
+    }
+
     @Step("Close browser")
     public static void closeBrowser() {
         try {
             LogUtils.info("Close browser");
             driver.manage().deleteAllCookies();
-            driver.quit();
+            driver.close();
             ExtentReportManager.pass("Close browser");
         } catch (Exception e) {
             LogUtils.error("Can't close browser");
@@ -767,16 +781,6 @@ public class ActionKeywords {
             AllureManager.saveTextLog("Can't take a screenshot: " + CaseName);
         }
         return "";
-    }
-
-    public void handleChatboxMessenger() {
-        driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@data-testid='dialog_iframe']")));
-        System.out.println(driver.findElement(By.xpath("//strong")).getText());
-        System.out.println(driver.findElement(By.xpath("(((//strong/parent::div)/parent::div)/following-sibling::div)[2]")).getText());
-
-        driver.switchTo().parentFrame();
-        driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@data-testid='bubble_iframe']")));
-        driver.findElement(By.tagName("svg")).click();
     }
 
     public static void addScreenshotToReport(String screenshotName) {
